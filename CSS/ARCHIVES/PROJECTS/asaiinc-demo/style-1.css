@@ -1,0 +1,79 @@
+
+/*  CSS Syntax: 
+
+Selector{
+    Property: Value;
+}
+
+*/
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background: url(./ARTEMIS.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Brush Script MT', cursive;
+}
+
+h1, h2{
+    color: #AA4139;
+    text-align: center;
+    border: 3px solid rgb(255, 176, 170);       /* rgba(255, 176, 170, 0.5) */
+    cursor: pointer;
+    font-family: 'Brush Script MT', cursive;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+.login-register{
+    text-align: right;
+    margin-right: 15px;
+}
+
+p{
+    color: blue;
+    text-transform: uppercase;
+    font-family: 'Brush Script MT', cursive;
+}
+
+/* Last value is the final value to the element */
+p{
+    color: #00ff00;
+}
+
+li{
+    list-style-type: disc;
+}
+
+.buffer {
+  height: 27rem;
+}
+
+footer{
+    clear: both;
+    text-align: center;
+}
+
+
+       
+
+/* TIPS :)
+
+>_ Don't bother HTML file with CSS, keep each file seprate from each other.
+
+>_ Use (.boxmodel): [content, padding, border, margin]
+
+>_  (TOP, RIGHT, BOTTOM, LEFT) = (clockwise) = (12, 3, 6, 9)
+    The "top" border = 10 pixels
+    The "right" border = 1pixel?
+    The "bottom" border = 5 pixels
+    The "left" border = 20 pixels
+*/
+

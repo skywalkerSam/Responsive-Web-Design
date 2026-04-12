@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+    <!-- I'm listening to music now, duh! -->
+    
+</head>
+<body>
+    <!-- header -->
+    <header>
+        Starboy
+    </header>
+    
+    <!-- nav -->
+    <nav>
+        <div class="menu">
+            <a href="#">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="register.html">Register</a> |
+            <a href="#">Sign in</a>
+        </div>
+    </nav>
+    
+<!-- figure -->
+    <div>
+        <figure>
+            <img src="images/Skills-Network-Logo.svg" alt="IBM Developer Skills Network Logo" width="190" height="160"/>
+            <figcaption>IBM Developer Skills Network Logo</figcaption>
+        </figure>
+    </div>
+
+<!-- div TAG -->
+    <div>
+        <h1>Common HTML5 Tags and Structural Elements</h1>
+    </div>
+
+<!-- section TAG -->
+    <section>
+        <h1>section tag</h1>
+        <p>Testing the section tag...</p>
+    </section>
+    <section>
+        <h1>Starboy</h1>
+        <p>I'm Sam Skywalker, you can call me starboy...</p>
+    </section>
+
+<!-- article TAG -->
+    <article>
+        <h1>Article 1</h1>
+        <p>This paragraph is related only to article one and is meaningful on its own, without the rest of the code.</p>
+    </article>
+    <article>
+        <h1>Article 2</h1>
+        <p>This paragraph is related only to article two and is meaningful on its own, without the rest of the code.</p>
+    </article>
+    
+    <!-- aside -->    
+    <p>This is a paragraph of text that casually mentions a concept and continues explaining the main point</p>
+    <aside>
+        <h4>Concept Definition</h4>
+        <p>This goes over the concept mentioned in the paragraph to provide readers with further explanation if needed. However, it does not detract from the main content.</p>
+    </aside>    
+    
+    <!-- canvas -->
+    <div>
+        <canvas>
+            Your browser does not support the canvas tag.
+        </canvas>
+        <script>
+            var canvas = document.getElementsByTagName("canvas")[0];
+            var context = canvas.getContext("2d");
+            context.fillRect(10, 10, 130, 130);
+            </script>
+    </div>
+    
+    <!-- embed -->
+    <div>
+        <embed type="text/html" src="Mr_Watson.html">
+        </div>
+        
+<!-- audio -->
+    <div>
+        <audio controls preload="auto">
+            <!-- <source src="audio/dusk_till_dawn.m4a" type="audio/x-m4a"> -->
+            <source src="audio/sunflower.m4a" type="audio/x-m4a">
+            Your browser does not support the audio formats provided.
+        </audio>
+    </div>
+
+<!-- video & track -->
+    <div>
+        <video>
+            <source src="motionPictures/sunflower.mp4" type="video/mp4">
+            <track src="english_subtitles.vtt" kind="subtitles" srclang="en" label="English">
+            <track src="spanish_subtitles.vtt" kind="subtitles" srclang="es" label="Spanish">
+        </video>
+    </div>
+        
+<!-- footer -->
+    <div>
+        <footer>
+            &copy; 2023 | starboy@skywalkersam.dev
+        </footer>
+    </div>
+</body>
+</html>

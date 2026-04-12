@@ -1,0 +1,92 @@
+body {
+    margin: 10px;
+    background-color: cyan;
+    padding: 10px;
+}
+
+#home {
+    margin-top: -1;
+    margin-left: -1;
+    margin-right: -1;
+    background-color: black;
+}
+
+header {
+    font-size: 66px;
+    color: greenyellow;
+    padding-left: 30px;
+}
+
+button {
+    background-color: rgb(252, 129, 129);
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    border: transparent;
+    border-radius: 30px;
+    font-size: 21px;
+}
+
+button:hover {
+    color: cyan;
+    font-weight: bold;
+    background-color: black;
+    cursor: pointer;
+}
+
+/* Container for all the three conversion calculator sections   */
+#all-conversion-sections{
+    display: grid;
+    justify-content: center;
+}
+
+figure {
+    float:left; 
+    justify-self: auto; 
+    width:200px
+}
+
+img {
+    width: 200px;
+}
+
+figcaption {
+    color:black;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* The calculator panel */
+.b{
+    border-top-style: solid;
+    background-color: white;
+    border-top-width: 20px;
+    width: 600px;
+    height: 400px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    display: flex;
+}
+
+.temperature{
+    border-top-color: green;
+}
+
+.weight{
+    border-top-color: coral;
+}
+
+.distance{
+    border-top-color: cyan;
+
+}
+
+legend {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.calc {
+    margin-left: 50px;
+}

@@ -1,4 +1,4 @@
-# [HTML](https://www.freecodecamp.org/learn/responsive-web-design-v9/) Notes
+# [introduction To HTML](https://www.freecodecamp.org/learn/responsive-web-design-v9/)
 
 w/ freeCodeCamp.org
 

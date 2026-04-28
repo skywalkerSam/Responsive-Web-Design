@@ -117,9 +117,11 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
     ```
   - **Named character references** start with an *ampersand* sign (`&`) and end with a *semicolon* (`;`).
   
-    - `&lt;`
+    - `&lt;` (&lt;)
 
-    - `&gt;`
+    - `&gt;` (&gt;)
+
+    - `&mdash;` (&mdash;)
 
   - **Decimal numeric references** starts with an *ampersand* sign (`&`) and *hash* symbol (`#`), followed by one or more *decimal digits*, followed by a *semicolon* (`;`).
 

@@ -965,15 +965,84 @@ The `time` element is used to represent a specific moment in time.
 
 &nbsp;
 
-## 
+## Mathematical Equations & Chemical Formulas
+
+### Superscript Element
+
+The **superscript element** is used to display a piece of text as a superscript. 
+
+```html
+<p>2<sup>2</sup> (2 squared) is 4.</p>
+```
+
+- A superscript is a symbol or letter printed **above the normal line of text**.
+
+&nbsp;
+
+### Subscript Element
 
 
+To represent chemical equations inside HTML, one would use the **subscript element**.
+
+```html
+<p>CO<sub>2</sub></p>
+```
+
+- This element uses a subscript which displays a **lowered baseline** using smaller text.
 
 
+&nbsp;
+
+`Note`: These elements should **only** be used for **typographical** reasons. Use CSS for styling.
+
+&nbsp;
+
+## The Code Element
+
+### inline code element
+
+The inline code element is used to represent **short snippets of code** inside text.
+
+```html
+<p>
+  To set the text color to blue in CSS, use the following code:
+  <code>color: blue;</code>
+</p>
+```
+
+- For technical articles and documentation pages.
+
+- The code element is meant to represent a **single line of code**. 
+
+&nbsp;
+
+### Multi-line code
+
+if you want to represent multiple lines of code, you will need to place a `code` element **inside a preformatted text** element.
+
+```html
+<pre>
+  <code>
+    body {
+      color: red;
+    }
+  </code>
+</pre>
+```
+
+- When using the `pre` element, you will need to be mindful of spacing because it will **display exactly as written** inside the HTML document.
+
+&nbsp;
+
+`Note`: When it comes to including code examples inside your HTML document, you should use the `code` element for **short inline** examples. if you need to display **longer code** snippets, then you will need to use the `pre` and `code` elements. The default formatting for code elements is **monospaced** font.
+
+&nbsp;
+
+## U, S, and Ruby Elements
 
 
 
 &nbsp;
 
-
 &nbsp;
+

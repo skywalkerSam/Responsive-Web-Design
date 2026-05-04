@@ -1040,9 +1040,58 @@ if you want to represent multiple lines of code, you will need to place a `code`
 
 ## U, S, and Ruby Elements
 
+### Unarticulated Annotation
+
+The unarticulated annotation element, or `u` element for short, is used to represent **inline text** that has **non-textual annotation** applied.
+
+```html
+<p>
+  You can use the unarticulated annotation element to highlight
+  <u>inccccort</u> <u>spling</u> <u>issses</u>.
+</p>
+```
+
+- The default styling for the `u` element is a **black underline underneath** the text.
+
+&nbsp;
+
+### Strikethrough Element
+
+The strikethrough element, or `s` element for short, should be used to represent when text is **no longer accurate or relevant**.
+
+```html
+<p><s>Tomorrow's hike will be meeting at noon.</s></p>
+
+<p>Due to unforeseen weather conditions, the hike has been canceled.</p>
+```
+
+&nbsp;
+
+`Note`: The `s` element should **never** be used **just to show changes** to a document. More appropriate elements in that case would be the **deleted text** element and the **inserted text** element.
+
+&nbsp;
+
+### Ruby Element
+
+The `ruby` element represents **small text shown above or below** the main text. it is typically used to show the **pronunciation** of East Asian characters.
+
+```html
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+```
+
+- The `rp` element, or **ruby fallback parenthesis** element, is used as a fallback for browsers lacking support for displaying ruby annotations.
+
+- The `rt` element, or **ruby text** element, is used to indicate text for the ruby annotation. This text is usually used for **pronunciation**, or **translation** details in East Asian typography.
+
+&nbsp;
+
+## 
+
+
+
+
 
 
 &nbsp;
 
-&nbsp;
 

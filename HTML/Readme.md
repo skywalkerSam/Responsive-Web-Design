@@ -1,4 +1,4 @@
-# [HTML](https://www.freecodecamp.org/learn/responsive-web-design-v9/) Notes
+# [introduction To HTML](https://www.freecodecamp.org/learn/responsive-web-design-v9/)
 
 w/ freeCodeCamp.org
 
@@ -117,9 +117,11 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
     ```
   - **Named character references** start with an *ampersand* sign (`&`) and end with a *semicolon* (`;`).
   
-    - `&lt;`
+    - `&lt;` (&lt;)
 
-    - `&gt;`
+    - `&gt;` (&gt;)
+
+    - `&mdash;` (&mdash;)
 
   - **Decimal numeric references** starts with an *ampersand* sign (`&`) and *hash* symbol (`#`), followed by one or more *decimal digits*, followed by a *semicolon* (`;`).
 
@@ -963,6 +965,126 @@ The `time` element is used to represent a specific moment in time.
 
 &nbsp;
 
+## Mathematical Equations & Chemical Formulas
+
+### Superscript Element
+
+The **superscript element** is used to display a piece of text as a superscript. 
+
+```html
+<p>2<sup>2</sup> (2 squared) is 4.</p>
+```
+
+- A superscript is a symbol or letter printed **above the normal line of text**.
+
+&nbsp;
+
+### Subscript Element
+
+
+To represent chemical equations inside HTML, one would use the **subscript element**.
+
+```html
+<p>CO<sub>2</sub></p>
+```
+
+- This element uses a subscript which displays a **lowered baseline** using smaller text.
+
+
+&nbsp;
+
+`Note`: These elements should **only** be used for **typographical** reasons. Use CSS for styling.
+
+&nbsp;
+
+## The Code Element
+
+### inline code element
+
+The inline code element is used to represent **short snippets of code** inside text.
+
+```html
+<p>
+  To set the text color to blue in CSS, use the following code:
+  <code>color: blue;</code>
+</p>
+```
+
+- For technical articles and documentation pages.
+
+- The code element is meant to represent a **single line of code**. 
+
+&nbsp;
+
+### Multi-line code
+
+if you want to represent multiple lines of code, you will need to place a `code` element **inside a preformatted text** element.
+
+```html
+<pre>
+  <code>
+    body {
+      color: red;
+    }
+  </code>
+</pre>
+```
+
+- When using the `pre` element, you will need to be mindful of spacing because it will **display exactly as written** inside the HTML document.
+
+&nbsp;
+
+`Note`: When it comes to including code examples inside your HTML document, you should use the `code` element for **short inline** examples. if you need to display **longer code** snippets, then you will need to use the `pre` and `code` elements. The default formatting for code elements is **monospaced** font.
+
+&nbsp;
+
+## U, S, and Ruby Elements
+
+### Unarticulated Annotation
+
+The unarticulated annotation element, or `u` element for short, is used to represent **inline text** that has **non-textual annotation** applied.
+
+```html
+<p>
+  You can use the unarticulated annotation element to highlight
+  <u>inccccort</u> <u>spling</u> <u>issses</u>.
+</p>
+```
+
+- The default styling for the `u` element is a **black underline underneath** the text.
+
+&nbsp;
+
+### Strikethrough Element
+
+The strikethrough element, or `s` element for short, should be used to represent when text is **no longer accurate or relevant**.
+
+```html
+<p><s>Tomorrow's hike will be meeting at noon.</s></p>
+
+<p>Due to unforeseen weather conditions, the hike has been canceled.</p>
+```
+
+&nbsp;
+
+`Note`: The `s` element should **never** be used **just to show changes** to a document. More appropriate elements in that case would be the **deleted text** element and the **inserted text** element.
+
+&nbsp;
+
+### Ruby Element
+
+The `ruby` element represents **small text shown above or below** the main text. it is typically used to show the **pronunciation** of East Asian characters.
+
+```html
+<ruby> 明日 <rp>(</rp><rt>Ashita</rt><rp>)</rp> </ruby>
+```
+
+- The `rp` element, or **ruby fallback parenthesis** element, is used as a fallback for browsers lacking support for displaying ruby annotations.
+
+- The `rt` element, or **ruby text** element, is used to indicate text for the ruby annotation. This text is usually used for **pronunciation**, or **translation** details in East Asian typography.
+
+&nbsp;
+
 ## 
 
 
@@ -970,8 +1092,6 @@ The `time` element is used to represent a specific moment in time.
 
 
 
-
 &nbsp;
 
 
-&nbsp;

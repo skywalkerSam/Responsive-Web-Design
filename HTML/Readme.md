@@ -7,7 +7,6 @@ w/ freeCodeCamp.org
 - **Separation of concerns** is a design principle where you separate your programs into distinct sections and have each section address a separate concern.
 
 - HTML **attributes** are special words used inside the opening tag of an element to control the element's behavior.
-
   - The `id` attribute adds a **unique** identifier (`#`) to an HTML element. (`#id`)
 
   - `class` is best used when you want to apply a set of styles to **many** elements. (`.class`)
@@ -20,17 +19,16 @@ it tells browsers that the document is an `HTML5` document.
 
 - All pages should begin with `<!DOCTYPE html>`.
 
-`Note`: This special string is known as a *declaration* and ensures the browser tries to meet *industry-wide* specifications.
+`Note`: This special string is known as a _declaration_ and ensures the browser tries to meet _industry-wide_ specifications.
 
 &nbsp;
 
 ## Basic HTML Syntax
 
 ```html
-<element attribute="value">
-  inner text
-</element>
+<element attribute="value"> inner text </element>
 ```
+
 &nbsp;
 
 ## Void Elements
@@ -39,34 +37,33 @@ Some HTML elements **do not hold any content**, and therefore they **do not requ
 
 - Here is an example of an image element which is a void element: `<img>`, `<link>`, `<hr>`, `<br>`
 
-
-`Note`: While many code formatters like _Prettier_, will choose to include the `/` in void elements (`<img />`), the HTML spec states that the presence of the `/` "does not mark the start tag as self-closing but instead is *unnecessary* and has no effect of any kind".
+`Note`: While many code formatters like _Prettier_, will choose to include the `/` in void elements (`<img />`), the HTML spec states that the presence of the `/` "does not mark the start tag as self-closing but instead is _unnecessary_ and has no effect of any kind".
 
 &nbsp;
 
 ## `<main></main>`
 
-The *main* element is used to represent the **main content** of the body of an HTML document.
+The _main_ element is used to represent the **main content** of the body of an HTML document.
 
-- Content inside the *main* element should be **unique** to the document and should not be repeated in other parts of the document.
+- Content inside the _main_ element should be **unique** to the document and should not be repeated in other parts of the document.
 
 &nbsp;
 
 ## `<section></section>`
 
-The *section* element is used to define sections in a document, such as **chapters**, **headers**, **footers**, or any other sections of the document.
+The _section_ element is used to define sections in a document, such as **chapters**, **headers**, **footers**, or any other sections of the document.
 
-- it is a semantic element that helps with *SEO* and *accessibility*.
+- it is a semantic element that helps with _SEO_ and _accessibility_.
 
 &nbsp;
 
 ## `<div></div>`
 
-The div element is used as a **container** to group other elements that will share a set of CSS *styles*.
+The div element is used as a **container** to group other elements that will share a set of CSS _styles_.
 
 - if you wanted to divide up your content into sections, then the `<section></section>` element would be more appropriate than a `div` element.
 
-- The `section` element has semantic meaning over the `div` element which is not *semantic*.
+- The `section` element has semantic meaning over the `div` element which is not _semantic_.
 
 `NOTE`: `<article></article>` elements commonly contain **multiple elements** that have **related information**.
 
@@ -74,12 +71,11 @@ The div element is used as a **container** to group other elements that will sha
 
 ## `<figure></figure>`
 
-The *figure element* represents self-contained content and will allow you to associate an image with a *caption*.
+The _figure element_ represents self-contained content and will allow you to associate an image with a _caption_.
 
 ```html
-
 <figure>
-  <img src="image.jpg" alt="A description of the image">
+  <img src="image.jpg" alt="A description of the image" />
   <figcaption>A cute image</figcaption>
 </figure>
 ```
@@ -88,9 +84,9 @@ The *figure element* represents self-contained content and will allow you to ass
 
 ## `<blockquote></blockquote>`
 
-Blockquotes are used to indicate a section of text that is a quotation from another source. 
+Blockquotes are used to indicate a section of text that is a quotation from another source.
 
-- Browsers typically add indentation(`&nbsp;`) and sometimes *italicize* the text.
+- Browsers typically add indentation(`&nbsp;`) and sometimes _italicize_ the text.
 
   ```html
   <p>Paragraph 1</p>
@@ -104,27 +100,26 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
 ## HTML "entities"
 
 - An HTML entity, or **character reference**, is a set of characters used to represent a **reserved character** in HTML.
-
   - if you want to write this:
 
     ```html
     <p>This is an <img /> element</p>
     ```
+
   - You have to write it like this using HTML "**entities**"
 
-    ```html 
+    ```html
     <p>This is an &lt;img /&gt; element</p>
     ```
-  - **Named character references** start with an *ampersand* sign (`&`) and end with a *semicolon* (`;`).
-  
+
+  - **Named character references** start with an _ampersand_ sign (`&`) and end with a _semicolon_ (`;`).
     - `&lt;` (&lt;)
 
     - `&gt;` (&gt;)
 
     - `&mdash;` (&mdash;)
 
-  - **Decimal numeric references** starts with an *ampersand* sign (`&`) and *hash* symbol (`#`), followed by one or more *decimal digits*, followed by a *semicolon* (`;`).
-
+  - **Decimal numeric references** starts with an _ampersand_ sign (`&`) and _hash_ symbol (`#`), followed by one or more _decimal digits_, followed by a _semicolon_ (`;`).
     - &#60;
 
       ```html
@@ -143,16 +138,15 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
       &#174;
       ```
 
-  - **Hexadecimal numeric reference** starts with an *ampersand* sign (`&`), *hash* symbol (`#`), and the letter `x`. Then it is followed by one or more `ASCII hex` digits and ends with a *semicolon* (`;`).
-
+  - **Hexadecimal numeric reference** starts with an _ampersand_ sign (`&`), _hash_ symbol (`#`), and the letter `x`. Then it is followed by one or more `ASCII hex` digits and ends with a _semicolon_ (`;`).
     - &#x3C;
 
       ```html
       &#x3C;
-      ``` 
+      ```
 
-    - &#x20AC; 
-      
+    - &#x20AC;
+
       ```html
       &#x20AC;
       ```
@@ -161,13 +155,13 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
 
       ```html
       &#x03A9;
-      ``` 
+      ```
 
 &nbsp;
 
-## Anchor Tags (`<a></a>`) 
+## Anchor Tags (`<a></a>`)
 
-in other words, *<u>links</u>*
+in other words, _<u>links</u>_
 
 ```html
 <a href="https://freecodecamp.org" target="_blank">Visit freeCodeCamp</a>
@@ -179,9 +173,9 @@ in other words, *<u>links</u>*
 
 2. `_blank`, which opens the link in a **new browsing context**. Typically, this will open in a **new tab**. But some users might configure their browsers to open a **new window** instead.
 
-3. ` _parent`, which opens the link in the **parent of the current context**. For example, if your website has an `iframe`, a `_parent` value in that `iframe` would open in your website's tab/window, **not in the embedded frame**. 
+3. ` _parent`, which opens the link in the **parent of the current context**. For example, if your website has an `iframe`, a `_parent` value in that `iframe` would open in your website's tab/window, **not in the embedded frame**.
 
-4. `_top`, which opens the link in **the top-most browsing context** - think **"the parent of the parent"**. This is similar to `_parent`, but the link will always open in the full **browser tab/window**, even for nested embedded frames. 
+4. `_top`, which opens the link in **the top-most browsing context** - think **"the parent of the parent"**. This is similar to `_parent`, but the link will always open in the full **browser tab/window**, even for nested embedded frames.
 
 5. `_unfencedTop`, which is currently used for the **experimental FencedFrame API**. At the time of this lesson, you probably won't have a reason to use this one yet.
 
@@ -189,15 +183,15 @@ in other words, *<u>links</u>*
 
 ### Link States
 
-1. `:link` represents a link which the user has **not visited, clicked, or interacted with yet**. 
+1. `:link` represents a link which the user has **not visited, clicked, or interacted with yet**.
 
-2. `:visited` state applies when a user has already **visited the page** being linked to. By default, this turns the link **purple** - but you can leverage *CSS* to provide a different visual indication to the user. 
+2. `:visited` state applies when a user has already **visited the page** being linked to. By default, this turns the link **purple** - but you can leverage _CSS_ to provide a different visual indication to the user.
 
 3. `:hover` state applies when a user is **hovering cursor over a link**. This state is helpful for providing extra **attention** to a link, to ensure a user actually intends to click it.
 
-4. `:focus` state applies when we **focus on a link**. (*Optional*, but helpful for when **navigating the site with keyboard**.)
+4. `:focus` state applies when we **focus on a link**. (_Optional_, but helpful for when **navigating the site with keyboard**.)
 
-5. `:active` state applies to links that are being **activated by the user**. This typically means **clicking on the link with the primary mouse button** by left clicking, in most cases. This state can be helpful for showing a user that the element they clicked on is *interactive*. 
+5. `:active` state applies to links that are being **activated by the user**. This typically means **clicking on the link with the primary mouse button** by left clicking, in most cases. This state can be helpful for showing a user that the element they clicked on is _interactive_.
 
 &nbsp;
 
@@ -205,7 +199,7 @@ in other words, *<u>links</u>*
 
 &nbsp;
 
-## Search Engine Optimization (`SEO`) 
+## Search Engine Optimization (`SEO`)
 
 A practice that optimizes web pages so they become **more visible** and **rank higher** on **search engines**.
 
@@ -213,8 +207,8 @@ A practice that optimizes web pages so they become **more visible** and **rank h
 
   ```html
   <meta
-  name="description"
-  content="Discover expert tips and techniques for gardening in small spaces, choosing the right plants, and maintaining a thriving garden."
+    name="description"
+    content="Discover expert tips and techniques for gardening in small spaces, choosing the right plants, and maintaining a thriving garden."
   />
   ```
 
@@ -236,14 +230,14 @@ The open graph protocol enables you to **control how your website's content appe
   <meta property="og:type" content="website" />
   ```
 
-  - Examples of this content include *articles*, *websites*, *videos*, or *music*.
+  - Examples of this content include _articles_, _websites_, _videos_, or _music_.
 
 - `og:image`
 
   ```html
   <meta
-  content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
-  property="og:image"
+    content="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png"
+    property="og:image"
   />
   ```
 
@@ -257,27 +251,32 @@ The open graph protocol enables you to **control how your website's content appe
 
   - **Homepage** URL
 
-There are many more `OG` *properties* that you can set, like `description`, `audio`, `video` and `locale`. However, the open graph `url`, `image`, `type`, and `title` are the most important ones to include.
+There are many more `OG` _properties_ that you can set, like `description`, `audio`, `video` and `locale`. However, the open graph `url`, `image`, `type`, and `title` are the most important ones to include.
 
 &nbsp;
 
 ## Working w/ Audio & Video
 
-The audio and video elements allow you to **add sound and video content** to your HTML documents. 
+The audio and video elements allow you to **add sound and video content** to your HTML documents.
 
-- The **audio** element supports popular audio formats like `mp3`, `wav`, and `ogg`. 
+- The **audio** element supports popular audio formats like `mp3`, `wav`, and `ogg`.
 
   ```html
-  <audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3"></audio>
+  <audio
+    src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3"
+  ></audio>
   ```
 
   If you want to **see the audio player** on the page, then you can add the audio element with the `controls` attribute.
 
   ```html
-  <audio src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3" controls></audio>
+  <audio
+    src="https://cdn.freecodecamp.org/curriculum/js-music-player/cruising-for-a-musing.mp3"
+    controls
+  ></audio>
   ```
 
-  `Note`: Some browsers, such as **Safari**, *may not* display a volume control by default even when the controls attribute is present.
+  `Note`: Some browsers, such as **Safari**, _may not_ display a volume control by default even when the controls attribute is present.
 
   The `loop` attribute is a boolean attribute that makes the audio replay continuously.
 
@@ -289,7 +288,7 @@ The audio and video elements allow you to **add sound and video content** to you
   ></audio>
   ```
 
-  Another attribute you can use is the `muted` attribute. When present in the `audio` element, this boolean attribute will start the audio in a muted state. 
+  Another attribute you can use is the `muted` attribute. When present in the `audio` element, this boolean attribute will start the audio in a muted state.
 
   ```html
   <audio
@@ -300,7 +299,7 @@ The audio and video elements allow you to **add sound and video content** to you
   ></audio>
   ```
 
-  When it comes to *audio file types*, there are **differences in which browsers support which type**. To accommodate this, you can use `source` elements inside the `audio` element and the browser will select the first source that it *understands*. 
+  When it comes to _audio file types_, there are **differences in which browsers support which type**. To accommodate this, you can use `source` elements inside the `audio` element and the browser will select the first source that it _understands_.
 
   ```html
   <audio controls>
@@ -310,7 +309,7 @@ The audio and video elements allow you to **add sound and video content** to you
   </audio>
   ```
 
-  `Note`: The `source` element is a **void element** so it does not have a closing *tag*.
+  `Note`: The `source` element is a **void element** so it does not have a closing _tag_.
 
 &nbsp;
 
@@ -339,7 +338,7 @@ The audio and video elements allow you to **add sound and video content** to you
   ></video>
   ```
 
-  If you wanted to display an image while the video is downloading, you can use the `poster` attribute. 
+  If you wanted to display an image while the video is downloading, you can use the `poster` attribute.
 
   ```html
   <video
@@ -382,28 +381,23 @@ There are 3 things to consider while working with images.
 
 1. Size
 
-    A smaller resolution results in a smaller file size. (duh?)
+   A smaller resolution results in a smaller file size. (duh?)
+   - ideally, your images should be the **same scale as the rendered size** on the page.
 
-      - ideally, your images should be the **same scale as the rendered size** on the page. 
+2. Format
+   - **Raster formats**, i.e, **pixel-based**, with the **data tracking the color value in each pixel**. They **do not** _upscale_ well.
+     1. PNG
+     2. JPG
 
-2. Format 
-
-    - **Raster formats**, i.e, **pixel-based**, with the **data tracking the color value in each pixel**. They **do not** *upscale* well. 
-
-      1. PNG
-      2. JPG
-
-    - Modern & Web Optimized Formats
-
-      1. SVG
-      2. WEBP
-      3. AVIF
+   - Modern & Web Optimized Formats
+     1. SVG
+     2. WEBP
+     3. AVIF
 
 3. Compression
 
-    **Lossless** means that the **original data can be perfectly reconstructed** from the compressed data. 
-    
-    - if you try to compress a `JPG` image, it will result in a degraded quality since it is not lossless. 
+   **Lossless** means that the **original data can be perfectly reconstructed** from the compressed data.
+   - if you try to compress a `JPG` image, it will result in a degraded quality since it is not lossless.
 
 &nbsp;
 
@@ -416,8 +410,7 @@ images are considered **intellectual property**, this means that they are **prot
 - **Purchase** a license from the copyright holder.
 
 - incorporate the image in a way that falls under **fair use**.
-
-    - Some examples of fair use would be to comment on, or review the art, or create a parody of the image.
+  - Some examples of fair use would be to comment on, or review the art, or create a parody of the image.
 
 #### Permissive Licenses
 
@@ -427,11 +420,11 @@ images are considered **intellectual property**, this means that they are **prot
 
 An image under the **public domain** has no copyright attached to it and is free to be used **without any restrictions**.
 
-- images licensed specifically under the Creative Commons 0 (`CC0`) license are considered *public domain*.
+- images licensed specifically under the Creative Commons 0 (`CC0`) license are considered _public domain_.
 
 &nbsp;
 
-There are also sites like **Pixabay** and **Unsplash**, which offer `free-to-use` images. 
+There are also sites like **Pixabay** and **Unsplash**, which offer `free-to-use` images.
 
 &nbsp;
 
@@ -441,11 +434,11 @@ There are also sites like **Pixabay** and **Unsplash**, which offer `free-to-use
 
 ### Scalable Vector Graphic (`SVG`)
 
-A vector graphic **tracks data based on paths and equations** to plot *points*, *lines*, and *curves*.
+A vector graphic **tracks data based on paths and equations** to plot _points_, _lines_, and _curves_.
 
 - Can be **scaled to any size** without impacting the quality.
 
-- Generally used for *icons* and *logos*.
+- Generally used for _icons_ and _logos_.
 
 &nbsp;
 
@@ -453,21 +446,38 @@ SVGs specifically have the added benefit of storing data in `XML`. This means yo
 
 ```html
 <!-- This will display a smily face 🙂 -->
-<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="45" stroke="black" stroke-width="4" fill="yellow" />
+<svg
+  width="100"
+  height="100"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle
+    cx="50"
+    cy="50"
+    r="45"
+    stroke="black"
+    stroke-width="4"
+    fill="yellow"
+  />
   <circle cx="35" cy="40" r="5" fill="black" />
   <circle cx="65" cy="40" r="5" fill="black" />
-  <path d="M35 65 Q50 80 65 65" stroke="black" stroke-width="4" fill="transparent" />
+  <path
+    d="M35 65 Q50 80 65 65"
+    stroke="black"
+    stroke-width="4"
+    fill="transparent"
+  />
 </svg>
 ```
 
 Each SVG element has **attributes that control its appearance and position** within the drawing area.
 
-- The `svg` element is the **container for the whole drawing**. It sets up the space where all the shapes appear. Everything you want to draw with SVG, such as *circles*, *lines*, or *paths*, goes inside the svg element.
+- The `svg` element is the **container for the whole drawing**. It sets up the space where all the shapes appear. Everything you want to draw with SVG, such as _circles_, _lines_, or _paths_, goes inside the svg element.
 
 - The `circle` element is used to **make the face and the eyes**. One large circle forms the yellow face, and two smaller circles make the eyes.
 
-- The `path` element is used to **draw the smile**. It creates a *curved line* for the mouth.
+- The `path` element is used to **draw the smile**. It creates a _curved line_ for the mouth.
 
 &nbsp;
 
@@ -475,18 +485,42 @@ Here are some more examples of SVGs
 
 ```html
 <!-- Star Icon -->
-<svg width="50" height="50" viewBox="0 0 24 24" fill="gold" xmlns="http://www.w3.org/2000/svg">
-  <path d="M12 2L14.9 8.6L22 9.3L17 14.1L18.3 21.2L12 17.8L5.7 21.2L7 14.1L2 9.3L9.1 8.6L12 2Z"/>
+<svg
+  width="50"
+  height="50"
+  viewBox="0 0 24 24"
+  fill="gold"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M12 2L14.9 8.6L22 9.3L17 14.1L18.3 21.2L12 17.8L5.7 21.2L7 14.1L2 9.3L9.1 8.6L12 2Z"
+  />
 </svg>
 
 <!-- Heart Icon -->
-<svg width="50" height="50" viewBox="0 0 24 24" fill="crimson" xmlns="http://www.w3.org/2000/svg">
-  <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 6 4 4 6.5 4C8 4 9.5 4.8 10.5 6.09C11.5 4.8 13 4 14.5 4C17 4 19 6 19 8.5C19 12.28 15.6 15.36 10.45 20.04L12 21.35Z"/>
+<svg
+  width="50"
+  height="50"
+  viewBox="0 0 24 24"
+  fill="crimson"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 6 4 4 6.5 4C8 4 9.5 4.8 10.5 6.09C11.5 4.8 13 4 14.5 4C17 4 19 6 19 8.5C19 12.28 15.6 15.36 10.45 20.04L12 21.35Z"
+  />
 </svg>
 
 <!-- Checkmark Icon -->
-<svg width="50" height="50" viewBox="0 0 24 24" fill="green" xmlns="http://www.w3.org/2000/svg">
-  <path d="M20.29 5.71L9 17L3.71 11.71L5.12 10.29L9 14.17L18.88 4.29L20.29 5.71Z"/>
+<svg
+  width="50"
+  height="50"
+  viewBox="0 0 24 24"
+  fill="green"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M20.29 5.71L9 17L3.71 11.71L5.12 10.29L9 14.17L18.88 4.29L20.29 5.71Z"
+  />
 </svg>
 ```
 
@@ -498,7 +532,7 @@ Here are some more examples of SVGs
 
 ## Replaced Elements
 
-An element whose **content is determined by an external resource** rather than by CSS itself. 
+An element whose **content is determined by an external resource** rather than by CSS itself.
 
 - `img`
 
@@ -506,13 +540,13 @@ An element whose **content is determined by an external resource** rather than b
 
 - `video`
 
-With replaced elements, you can **control** the **position**, or **layout** of an element. But your **CSS cannot directly modify the content** of that element. 
+With replaced elements, you can **control** the **position**, or **layout** of an element. But your **CSS cannot directly modify the content** of that element.
 
 ```html
-<img src="example-img-url" alt="Descriptive text goes here">
+<img src="example-img-url" alt="Descriptive text goes here" />
 ```
 
-`Note`: You can **control how it appears**, but you **cannot modify the image** itself. 
+`Note`: You can **control how it appears**, but you **cannot modify the image** itself.
 
 &nbsp;
 
@@ -523,20 +557,20 @@ it **embeds an external site** on your web page.
 - Embedded YouTube Video
 
   ```html
-  <iframe 
-    width="400" 
-    height="200" 
+  <iframe
+    width="400"
+    height="200"
     src="https://www.youtube.com/embed/ApXoWvfEYVU"
     title="Post Malone, Swae Lee - Sunflower (Spider-Man: Into the Spider-Verse)"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin" 
+    referrerpolicy="strict-origin-when-cross-origin"
     allowfullscreen
   ></iframe>
   ```
 
   - The `allow` attribute lets you define **what an `iframe` can or can't do**. This is called an **allowlist**.
 
-  - items in an **allowlist** can be separated by **semicolons**(`;`) or **spaces**(` `), and **both can be used together**. 
+  - items in an **allowlist** can be separated by **semicolons**(`;`) or **spaces**(` `), and **both can be used together**.
 
   - `accelerometer` lets the `iframe` use **motion sensors** so it can detect things like device **tilting and rotation**.
 
@@ -546,9 +580,9 @@ it **embeds an external site** on your web page.
 
   - `gyroscope` allows access to the device’s **motion and orientation** sensors.
 
-  - `web-share` allows sharing the iframe content through the device's **native share dialogs**. 
+  - `web-share` allows sharing the iframe content through the device's **native share dialogs**.
 
-  - `referrerpolicy` is the rule that determines **how much detail you share** when your page connects to another page. 
+  - `referrerpolicy` is the rule that determines **how much detail you share** when your page connects to another page.
 
 - Embedded Map
 
@@ -569,12 +603,12 @@ The element itself is **replaced with** the external object: **the site**. Your 
 
 ### Other Replaced Elements
 
-There are some other replaced elements, such as `video`, and `embed`. And **some elements behave as replaced elements under specific circumstances**. 
+There are some other replaced elements, such as `video`, and `embed`. And **some elements behave as replaced elements under specific circumstances**.
 
 - Here's an example of an `input` element with the `type` attribute set to `image`:
 
   ```html
-  <input type="image" alt="Descriptive text goes here" src="example-img-url">
+  <input type="image" alt="Descriptive text goes here" src="example-img-url" />
   ```
 
   - This type of `input` is **considered to be a replaced element**, but other `input` types like `text`, or `email` are **not replaced elements**.
@@ -585,7 +619,7 @@ There are some other replaced elements, such as `video`, and `embed`. And **some
 
 ## Semantic HTML
 
-Semantics are the **meaning of words, or phrases**, in a *language*. The semantic meaning of an element refers to **what special information** that element *conveys*.
+Semantics are the **meaning of words, or phrases**, in a _language_. The semantic meaning of an element refers to **what special information** that element _conveys_.
 
 - Using proper semantic HTML will ensure the best experience for users with **assistive technology** like screen readers.
 
@@ -601,16 +635,16 @@ Most elements have **semantic** meaning. The `div` element is one of the very fe
 
 - The navigation section element, `nav`, for sections with **navigation links**.
 
-    ```html
-    <header>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Products</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
-    ```
+  ```html
+  <header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Products</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  ```
 
 - The `section` element for **grouping related** information.
 
@@ -629,9 +663,7 @@ Most elements have **semantic** meaning. The `div` element is one of the very fe
 - **Do not** skip from `h1` to `h3` directly.
 
 - **Do not** use `<h1></h1>` to create **larger text** on your page.
-
-  - **Use the correct structural element**, and *style* it with **CSS**. 
-
+  - **Use the correct structural element**, and _style_ it with **CSS**.
 
 ```html
 <section>
@@ -656,7 +688,6 @@ Finally, depending on how **incorrect** your structure is, your HTML may not eve
 - Used in the **early days of HTML**.
 
 - **Deprecated** and **not recommended** anymore due to their limitations and negative impact on accessibility and maintainability.
-
   - `center`
 
     ```html
@@ -678,15 +709,15 @@ Finally, depending on how **incorrect** your structure is, your HTML may not eve
     </p>
     ```
 
-  - `font` 
-    
+  - `font`
+
     ```html
-    <font size="7" color="blue">This text is blue and large.</font> 
+    <font size="7" color="blue">This text is blue and large.</font>
     ```
 
 &nbsp;
 
-`Note`: While this element **still works**, you should not use it *because* the **font size and color should always be set in CSS**, not in HTML.
+`Note`: While this element **still works**, you should not use it _because_ the **font size and color should always be set in CSS**, not in HTML.
 
 &nbsp;
 
@@ -704,27 +735,25 @@ Finally, depending on how **incorrect** your structure is, your HTML may not eve
 <p>There is a certain <i lang="fr">je ne sais quoi</i> in the air.</p>
 ```
 
-- it was originally used for **presentational** purposes to display the text in ***italics***.
+- it was originally used for **presentational** purposes to display the text in **_italics_**.
 
-- The `i` element does not indicate if the text is important or not, it only shows that it's *somehow different from the surrounding text*.
+- The `i` element does not indicate if the text is important or not, it only shows that it's _somehow different from the surrounding text_.
 
 &nbsp;
 
-`em` is used to *emphasize* the **importance** of the text. You should use this element for parts of the text that *require a special emphasis compared to surrounding text*.
+`em` is used to _emphasize_ the **importance** of the text. You should use this element for parts of the text that _require a special emphasis compared to surrounding text_.
 
 ```html
-<p>
-  Never give up on <em>your</em> dreams.
-</p>
+<p>Never give up on <em>your</em> dreams.</p>
 ```
 
 &nbsp;
 
-`Note`: Even if it looks the same when the text was inside the *idiomatic text* element, the *semantic emphasis* element conveys its **meaning** and **importance** behind the scenes.
+`Note`: Even if it looks the same when the text was inside the _idiomatic text_ element, the _semantic emphasis_ element conveys its **meaning** and **importance** behind the scenes.
 
 &nbsp;
 
-`Note #2`: it's important to know that these elements **should not be used for presentational purposes** only. if you need to display the text in italics, but the text *doesn't* have a special purpose, style, or meaning in the paragraph, you should **use CSS instead**.
+`Note #2`: it's important to know that these elements **should not be used for presentational purposes** only. if you need to display the text in italics, but the text _doesn't_ have a special purpose, style, or meaning in the paragraph, you should **use CSS instead**.
 
 &nbsp;
 
@@ -743,27 +772,25 @@ The "**bring attention to**" element, `b`, is commonly used to highlight **keywo
 
 &nbsp;
 
-`strong` is a semantic HTML element that *emphasizes* text that is **crucial**, or **urgent**.
+`strong` is a semantic HTML element that _emphasizes_ text that is **crucial**, or **urgent**.
 
 - The `strong` element communicates that **sense of urgency**.
 
 - if you need to emphasize the **importance** of the text, you should use the `strong` element instead of the `b` element.
 
 ```html
-<p>
-  <strong>Warning:</strong> This product may cause allergic reactions.
-</p>
+<p><strong>Warning:</strong> This product may cause allergic reactions.</p>
 ```
 
 &nbsp;
 
-`Note`: Visually both are very **similar**, because they are both rendered as **bold** by default. But their **meanings** are quite *different*. While the `"bring attention to"` element only draws **attention** to the text, without indicating the higher level of importance, the `strong` element does more than that. it conveys a sense of **importance**, or **urgency**.
+`Note`: Visually both are very **similar**, because they are both rendered as **bold** by default. But their **meanings** are quite _different_. While the `"bring attention to"` element only draws **attention** to the text, without indicating the higher level of importance, the `strong` element does more than that. it conveys a sense of **importance**, or **urgency**.
 
 &nbsp;
 
 ## Description Lists
 
-Description lists are perfect for presenting **terms** and **definitions** in an organized and *easy-to-read* format, like in a glossary, or real dictionary, where you can find **words** with their corresponding **definitions**.
+Description lists are perfect for presenting **terms** and **definitions** in an organized and _easy-to-read_ format, like in a glossary, or real dictionary, where you can find **words** with their corresponding **definitions**.
 
 ```html
 <dl>
@@ -776,15 +803,15 @@ Description lists are perfect for presenting **terms** and **definitions** in an
 </dl>
 ```
 
-- The **description list** element, `dl`, which is the **container** for the entire list. 
+- The **description list** element, `dl`, which is the **container** for the entire list.
 
-- The **description term** element, `dt`, or *title**
+- The **description term** element, `dt`, or \*title\*\*
 
 - The **description details** element, `dd`, for the description, or **details** associated with that term.
 
 &nbsp;
 
-`Note`: Other use cases for description lists include **product specifications**, **frequently asked questions**, **contact information**, and **metadata**. Essentially, when you have *two* related pieces of information in a **key-value** pair format, where one acts as a *label*, the **key**, and the other acts as *additional related information*, the **value**, you can use a description list.
+`Note`: Other use cases for description lists include **product specifications**, **frequently asked questions**, **contact information**, and **metadata**. Essentially, when you have _two_ related pieces of information in a **key-value** pair format, where one acts as a _label_, the **key**, and the other acts as _additional related information_, the **value**, you can use a description list.
 
 &nbsp;
 
@@ -799,12 +826,12 @@ The quoted elements are used to **distinguish quoted text from the surrounding c
 - Representing a section **quoted from another source**.
 
 - if the source of the quote has an address, you can cite it with the `cite` **attribute**. The value of this attribute should be a **valid URL**.
-
-  - While this attribute *doesn't* change the presentation of the block quote, it's very *helpful* for giving **screen readers** and **search engines** more information about the quote. 
+  - While this attribute _doesn't_ change the presentation of the block quote, it's very _helpful_ for giving **screen readers** and **search engines** more information about the quote.
 
 ```html
 <blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
-  "Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?"
+  "Can you imagine what it would be like to be a successful developer? To have
+  built software systems that people rely upon?"
 </blockquote>
 ```
 
@@ -814,18 +841,22 @@ The quoted elements are used to **distinguish quoted text from the surrounding c
 
 ### `<cite></cite>` element
 
-if you want to *attribute the source visually*, you can add a citation element, `cite`, *outside of the block quotation element*. 
+if you want to _attribute the source visually_, you can add a citation element, `cite`, _outside of the block quotation element_.
 
-- This is **different** from the cite *attribute*.
+- This is **different** from the cite _attribute_.
 
-- it is uses to mark up the **title** of a referenced ***creative work*** like a **book**, article, **song**, **film**, **website**, or **research paper**.
+- it is uses to mark up the **title** of a referenced **_creative work_** like a **book**, article, **song**, **film**, **website**, or **research paper**.
 
 ```html
 <div>
   <blockquote cite="https://www.freecodecamp.org/news/learn-to-code-book/">
-    Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?
+    Can you imagine what it would be like to be a successful developer? To have
+    built software systems that people rely upon?
   </blockquote>
-  <p>—Quincy Larson, <cite>How to Learn to Code and Get a Developer Job [Full Book].</cite></p>
+  <p>
+    —Quincy Larson,
+    <cite>How to Learn to Code and Get a Developer Job [Full Book].</cite>
+  </p>
 </div>
 ```
 
@@ -837,9 +868,9 @@ it is used for **short inline quotations from other sources**.
 
 - Short quotations.
 
-- Quoted text is *part of the paragraph* and it's surrounded by quotation marks (`" "`).
+- Quoted text is _part of the paragraph_ and it's surrounded by quotation marks (`" "`).
 
-- You can also add a `cite` attribute to *attribute* the source.
+- You can also add a `cite` attribute to _attribute_ the source.
 
 ```html
 <p>
@@ -860,45 +891,39 @@ it is used for **short inline quotations from other sources**.
 
 An abbreviation is a **shortened form** of a word or phrase. it is used for writing **concise** text.
 
-- Acronyms 
+- Acronyms
+  - Acronyms are pronounced as _words_.
 
-  - Acronyms are pronounced as *words*.
-
-  - An *acronym* is a word formed from the *initial letters of a phrase*, with each letter representing the **first** letter of a word in that phrase.
-
+  - An _acronym_ is a word formed from the _initial letters of a phrase_, with each letter representing the **first** letter of a word in that phrase.
     - GUI: Graphical User interface
 
-
 - initialisms
-
-  - initialisms are pronounced as *individual* letters.
-
-    - HTML:  HyperText Markup Language
+  - initialisms are pronounced as _individual_ letters.
+    - HTML: HyperText Markup Language
 
 &nbsp;
 
 ### `<abbr></abbr>` (Abbreviation Element)
 
-The abbreviation element is providing helpful **context** behind the scenes, but users will still see the initialism as *normal text*.
+The abbreviation element is providing helpful **context** behind the scenes, but users will still see the initialism as _normal text_.
 
 ```html
-<p>
-  <abbr>HTML</abbr> is the foundation of the web.
-</p>
+<p><abbr>HTML</abbr> is the foundation of the web.</p>
 ```
 
-- if you want to help users understand what this initialism *means*, you can *show its full form* with the `title` attribute.
+- if you want to help users understand what this initialism _means_, you can _show its full form_ with the `title` attribute.
 
   ```html
   <p>
-    <abbr title="HyperText Markup Language">HTML</abbr> is the foundation of the web.
+    <abbr title="HyperText Markup Language">HTML</abbr> is the foundation of the
+    web.
   </p>
   ```
-  -  The *style* of the abbreviation element will **change** when you add this attribute.
-  
-  -  When the user *hovers* over the abbreviation, the full form is displayed as a **tooltip**.
 
-  - Use `title` attribute *only* for those that might need **additional context**.
+  - The _style_ of the abbreviation element will **change** when you add this attribute.
+  - When the user _hovers_ over the abbreviation, the full form is displayed as a **tooltip**.
+
+  - Use `title` attribute _only_ for those that might need **additional context**.
 
 &nbsp;
 
@@ -908,9 +933,9 @@ The abbreviation element is providing helpful **context** behind the scenes, but
 
 ## `<address></address>` (Address Element)
 
-The *contact address* element is used to represent **contact information** for a section on a web page. The `address` element is *versatile* and can be used for **business** pages, **author** pages, **personal** sites, and more.
+The _contact address_ element is used to represent **contact information** for a section on a web page. The `address` element is _versatile_ and can be used for **business** pages, **author** pages, **personal** sites, and more.
 
-- When it comes to building out your website's **contact** sections, you should use the *semantic* `address` element over a *generic* element like a `div`.
+- When it comes to building out your website's **contact** sections, you should use the _semantic_ `address` element over a _generic_ element like a `div`.
 
 ```html
 <address>
@@ -927,7 +952,7 @@ The *contact address* element is used to represent **contact information** for a
 
 &nbsp;
 
-`Note`: One of the *downsides* of using a `mailto` link is that users often perceive it as **spam**. *Unfortunately*, a lot of *spammers will use this option to send emails* to users. So just keep that in mind when you're using it.
+`Note`: One of the _downsides_ of using a `mailto` link is that users often perceive it as **spam**. _Unfortunately_, a lot of _spammers will use this option to send emails_ to users. So just keep that in mind when you're using it.
 
 &nbsp;
 
@@ -936,16 +961,14 @@ The *contact address* element is used to represent **contact information** for a
 The `time` element is used to represent a specific moment in time.
 
 ```html
-<p>
-  The reservations are for <time datetime="20:00">20:00 </time>
-</p>
+<p>The reservations are for <time datetime="20:00">20:00 </time></p>
 ```
 
-- The `datetime` attribute is used to *translate* dates and times into a **machine-readable** format.
+- The `datetime` attribute is used to _translate_ dates and times into a **machine-readable** format.
 
-- Aids *SEO* & browser effectiveness.
+- Aids _SEO_ & browser effectiveness.
 
-- The **value** for the `datetime` attribute must be either a *valid* **year**, valid **month**, valid **time**, local date, global **date**, or **valid duration** *string*.
+- The **value** for the `datetime` attribute must be either a _valid_ **year**, valid **month**, valid **time**, local date, global **date**, or **valid duration** _string_.
 
   ```html
   <p>
@@ -955,13 +978,13 @@ The `time` element is used to represent a specific moment in time.
 
   - The value for the `datetime` attribute is in the `ISO 8601` format. ISO 8601 is an **international standard** to represent **dates** and **times**.
 
-  - The **first** part of that **value** is the **year, month and day**. 
+  - The **first** part of that **value** is the **year, month and day**.
 
   - The capital `T` in the value is a **separator** between the date and time.
 
 &nbsp;
 
-`Note`: Whenever you need to *represent* **events**, publication **dates**, or **appointments**, it is best to use the `time` element.
+`Note`: Whenever you need to _represent_ **events**, publication **dates**, or **appointments**, it is best to use the `time` element.
 
 &nbsp;
 
@@ -969,7 +992,7 @@ The `time` element is used to represent a specific moment in time.
 
 ### Superscript Element
 
-The **superscript element** is used to display a piece of text as a superscript. 
+The **superscript element** is used to display a piece of text as a superscript.
 
 ```html
 <p>2<sup>2</sup> (2 squared) is 4.</p>
@@ -981,7 +1004,6 @@ The **superscript element** is used to display a piece of text as a superscript.
 
 ### Subscript Element
 
-
 To represent chemical equations inside HTML, one would use the **subscript element**.
 
 ```html
@@ -989,7 +1011,6 @@ To represent chemical equations inside HTML, one would use the **subscript eleme
 ```
 
 - This element uses a subscript which displays a **lowered baseline** using smaller text.
-
 
 &nbsp;
 
@@ -1012,7 +1033,7 @@ The inline code element is used to represent **short snippets of code** inside t
 
 - For technical articles and documentation pages.
 
-- The code element is meant to represent a **single line of code**. 
+- The code element is meant to represent a **single line of code**.
 
 &nbsp;
 
@@ -1085,13 +1106,75 @@ The `ruby` element represents **small text shown above or below** the main text.
 
 &nbsp;
 
-## 
+## Forms
 
+The `form` element in HTML is used to **gather user information**, such as names and email addresses.
 
+```html
+<form action="url-goes-here">
+  <!-- input elements go here -->
+</form>
+```
 
+- The `action` attribute specifies where the form data will be sent upon submission.
 
+### `input` Element
 
+To **collect specific information**, like names and email addresses.
+
+```html
+<form action="">
+  <input type="text" />
+</form>
+```
+
+- input elements are **void elements** and do not have closing tags.
+
+- The `type` attribute defines the **data type expected** from the user.
+
+### `label` Element
+
+To add a label for the input.
+
+```html
+<form action="">
+  <label>
+    Full Name:
+    <input type="text" />
+  </label>
+</form>
+```
+
+- By nesting an `input` inside a `label` element, you create an **implicit association** between the label and the input field. The term "implicit" refers to something that is understood or inferred without needing to be explicitly stated or defined with additional attributes or elements.
+
+### Explicit Association
+
+To **explicitly** associate a `label` with an `input`, you can use the `for` attribute.
+
+```html
+<form action="">
+  <label for="email"> Email Address: </label>
+  <input type="email" id="email" />
+</form>
+```
+
+- When using an explicit association, the values for the `for` attribute and `id` need to be the **same**.
+
+### `placeholder` Attribute
+
+To show **additional hint** to the users about the expected input.
+
+```html
+<form action="">
+  <label for="email"> Email Address: </label>
+  <input type="email" id="email" placeholder="example@email.com" />
+</form>
+```
+
+- it should be a short text to show the **format** and the type of data expected.
 
 &nbsp;
 
+## 
 
+&nbsp;

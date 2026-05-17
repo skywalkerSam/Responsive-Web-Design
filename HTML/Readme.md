@@ -1175,6 +1175,55 @@ To show **additional hint** to the users about the expected input.
 
 &nbsp;
 
+## Button Element
+
+The button element is used to **perform a particular action** when it is activated. Like, submitting a form, showing a modal, or toggling a side menu open and closed. 
+
+```html
+<button>Start Game</button>
+```
+
+- The `type` attribute which controls the **behavior** of the button when it is activated. 
+
+  ```html
+  <button type="button">Show Alert</button>
+  ```
+
+- `type="submit"`
+
+  ```html
+  <form action="">
+    <label for="email">Email address:</label>
+    <input type="email" id="email" name="email" />
+    <button type="submit">Submit form</button>
+  </form>
+  ```
+
+- `type="reset"`
+
+  ```html
+  <form action="">
+    <label for="email">Email address:</label>
+    <input type="email" id="email" name="email" />
+    <button type="reset">Reset form</button>
+    <button type="submit">Submit form</button>
+  </form>
+  ```
+
+### `input` Element Button
+
+The `input` element also has a `type` attribute with the possible values of `submit`, `reset`, and `button`.
+
+```html
+<input class="start-btn" type="button" value="Start Game" />
+```
+
+- The `value` attribute is used to show the button text. 
+
+- `input` elements are **void** elements, which means they **cannot have child nodes**, such as text, and can only have a start tag.
+
+&nbsp;
+
 ## 
 
 &nbsp;

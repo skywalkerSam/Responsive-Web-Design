@@ -1224,6 +1224,53 @@ The `input` element also has a `type` attribute with the possible values of `sub
 
 &nbsp;
 
-## 
+## Client-Side Form Validation
+
+HTML form controls, like inputs, have a lot of **built-in validation** that you can use to check for invalid data.
+
+- The term "client-side" refers to **everything that happens on the user's computer or device**, like the part of a website or app you interact with directly. This includes the **layout**, **design**, and any **interactive features**.
+
+- The term "server-side" refers to **everything that happens on the server, the computer, or system, that hosts the website or app**. This includes **processing data**, **running applications**, and **handling requests** that come from the user's device.
+
+### `required` Attribute
+
+The `required` attribute specifies that the user needs to fill out that portion of the form before it gets submitted. 
+
+```html
+<form action="">
+  <label for="email">Email Address (Required field):</label>
+  <input required type="email" name="email" id="email" />
+  <button type="submit">Submit Form</button>
+</form>
+```
+
+### `minlength` & `maxlength` Attributes
+
+The `minlength` and `maxlength` attributes are used to set the minimum and maximum length in characters.
+
+```html
+<form action="">
+  <label for="email">Email Address (Required field):</label>
+  <input
+    required
+    type="email"
+    name="email"
+    id="email"
+    minlength="4"
+    maxlength="64"
+  />
+  <button type="submit">Submit Form</button>
+</form>
+```
+
+&nbsp;
+
+`Note`: While client-side validation is important, **you also need server-side validation** for added security. Malicious users can bypass client-side checks, so robust server-side measures are essential.
+
+&nbsp;
+
+## Form States
+
+
 
 &nbsp;

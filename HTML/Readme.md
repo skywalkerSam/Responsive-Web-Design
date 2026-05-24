@@ -1271,6 +1271,48 @@ The `minlength` and `maxlength` attributes are used to set the minimum and maxim
 
 ## Form States
 
+In HTML, form controls, like inputs, can be in different stages or conditions like a `focused` state, `readonly` state, or `disabled` state.
+
+```html
+<input type="email" name="email" id="email" />
+```
+
+- The `default` state of an email address input is a **blank input**. 
+
+- When the user *clicks* on a form control or *selects* it with the keyboard's `tab` key, then that means it is in the `focused` state. When an input is in the `focused` state, most browsers will show a blue **highlighted border around the input**. 
+  
+  - But you can choose to add additional styles in *CSS*.
+
+- Another form state is the `disabled` state. This state shows users that an **input cannot be focused or activated**.
+
+  ```html
+  <input disabled type="email" name="email" id="email" />
+  ```
+
+  - You can choose to add additional styles for the disabled state using *CSS*.
+
+- `readonly` state is when a form control, like an input, is **not editable by the user**.
+
+  ```html
+  <input
+    readonly
+    type="email"
+    name="email"
+    id="email"
+    value="example@email.com"
+  />
+  ```
+
+  - The `value` attribute is used to set the value shown inside the input field.
+
+  - A key *difference* between the `disabled` state and `readonly` state is that readonly can be **focused** while the disabled state *cannot*.
+
+&nbsp;
+
+## 
+
+
 
 
 &nbsp;
+

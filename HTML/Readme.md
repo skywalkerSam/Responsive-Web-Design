@@ -1380,6 +1380,46 @@ The `textarea` element is a **multi-line text input** control that allows users 
 
 &nbsp;
 
-##
+## Tables
+
+HTML tables aren't used as much these days as they u*sed to be*. But, as a front-end developer, you should still be familiar with them. Tables are **one of the earliest ways devs had for displaying data** in a browser way back in the 1990s.
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>The title of this table</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>First Row</th>
+      <td>
+        First Data Cell
+      </td>
+    </tr>
+    <tr>
+      <th>Second Row</th>
+      <td>
+        Second Data Cell
+      </td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <th>The footer of this table, which might contain date of publication, author credits, or other meta information.</th>
+    </tr>
+  </tfoot>
+</table>
+```
+
+- Use it only for **displaying tabular data**.
+
+&nbsp;
+
+## 
+
+
+
 
 &nbsp;

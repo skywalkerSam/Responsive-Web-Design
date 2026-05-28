@@ -1111,12 +1111,16 @@ The `ruby` element represents **small text shown above or below** the main text.
 The `form` element in HTML is used to **gather user information**, such as names and email addresses.
 
 ```html
-<form action="url-goes-here">
-  <!-- input elements go here -->
+<form method="value-goes-here" action="url-goes-here">
+  <fieldset>
+  <!-- inputs go inside here-->
+  </fieldset>
 </form>
 ```
 
-- The `action` attribute specifies where the form data will be sent upon submission.
+- The `action` attribute is used to specify where the form data should be sent when the form is submitted.
+
+- The `method` attribute is used to specify the HTTP method to use when sending the form data. The most common methods are `GET` and `POST`.
 
 ### `input` Element
 
@@ -1309,10 +1313,73 @@ In HTML, form controls, like inputs, can be in different stages or conditions li
 
 &nbsp;
 
-## 
+## Radio Buttons
 
+Radio buttons are used to **select one option from a list** of options.
 
+```html
+<input type="radio" id="yes" name="first-time" value="yes">
+<label for="yes">Yes</label>
+<input type="radio" id="no" name="first-time" value="no">
+<label for="no">No</label>
+```
 
+- The radio buttons are grouped together by using the same `name` attribute value.
 
 &nbsp;
 
+## Checkboxes
+
+Checkboxes are used to **select multiple options from a list**.
+
+```html
+<fieldset>
+  <legend>Food Options</legend>
+  <input type="checkbox" id="pizza" name="food" value="pizza">
+  <label for="pizza">Pizza</label>
+  <input type="checkbox" id="burger" name="food" value="burger">
+  <label for="burger">Burger</label>
+</fieldset>
+```
+
+- The `value` attribute is used to specify the value that will be **sent to the server** when the form is submitted.
+
+- To make a checkbox input checked by default, you can add the `checked` attribute.
+
+&nbsp;
+
+## Dropdown Menu
+
+`select` and `option` elements are used to make selections from a dropdown menu.
+
+```html
+<label for="city">Choose a City: </label>
+<select id="city" name="city">
+  <option value="new-york">New York</option>
+  <option value="los-angeles">Los Angeles</option>
+  <option selected value="chicago">Chicago</option>
+  <option value="miami">Miami</option>
+</select>
+```
+
+- To make an `option` selected by **default**, you can add the `selected` attribute to the `option` element you want to be selected.
+
+&nbsp;
+
+## Textarea
+
+The `textarea` element is a **multi-line text input** control that allows users to enter text that is longer than a single line. it can be used to create a **comment box**, a **message input**, or other text input that requires multiple lines.
+
+```html
+<textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+```
+
+- The `rows` attribute is used to specify the visible **height** of the textarea
+
+- The `cols` attribute is used to specify the visible **width** of the textarea.
+
+&nbsp;
+
+##
+
+&nbsp;

@@ -1113,7 +1113,7 @@ The `form` element in HTML is used to **gather user information**, such as names
 ```html
 <form method="value-goes-here" action="url-goes-here">
   <fieldset>
-  <!-- inputs go inside here-->
+    <!-- inputs go inside here-->
   </fieldset>
 </form>
 ```
@@ -1181,13 +1181,13 @@ To show **additional hint** to the users about the expected input.
 
 ## Button Element
 
-The button element is used to **perform a particular action** when it is activated. Like, submitting a form, showing a modal, or toggling a side menu open and closed. 
+The button element is used to **perform a particular action** when it is activated. Like, submitting a form, showing a modal, or toggling a side menu open and closed.
 
 ```html
 <button>Start Game</button>
 ```
 
-- The `type` attribute which controls the **behavior** of the button when it is activated. 
+- The `type` attribute which controls the **behavior** of the button when it is activated.
 
   ```html
   <button type="button">Show Alert</button>
@@ -1222,7 +1222,7 @@ The `input` element also has a `type` attribute with the possible values of `sub
 <input class="start-btn" type="button" value="Start Game" />
 ```
 
-- The `value` attribute is used to show the button text. 
+- The `value` attribute is used to show the button text.
 
 - `input` elements are **void** elements, which means they **cannot have child nodes**, such as text, and can only have a start tag.
 
@@ -1238,7 +1238,7 @@ HTML form controls, like inputs, have a lot of **built-in validation** that you 
 
 ### `required` Attribute
 
-The `required` attribute specifies that the user needs to fill out that portion of the form before it gets submitted. 
+The `required` attribute specifies that the user needs to fill out that portion of the form before it gets submitted.
 
 ```html
 <form action="">
@@ -1281,11 +1281,10 @@ In HTML, form controls, like inputs, can be in different stages or conditions li
 <input type="email" name="email" id="email" />
 ```
 
-- The `default` state of an email address input is a **blank input**. 
+- The `default` state of an email address input is a **blank input**.
 
-- When the user *clicks* on a form control or *selects* it with the keyboard's `tab` key, then that means it is in the `focused` state. When an input is in the `focused` state, most browsers will show a blue **highlighted border around the input**. 
-  
-  - But you can choose to add additional styles in *CSS*.
+- When the user _clicks_ on a form control or _selects_ it with the keyboard's `tab` key, then that means it is in the `focused` state. When an input is in the `focused` state, most browsers will show a blue **highlighted border around the input**.
+  - But you can choose to add additional styles in _CSS_.
 
 - Another form state is the `disabled` state. This state shows users that an **input cannot be focused or activated**.
 
@@ -1293,7 +1292,7 @@ In HTML, form controls, like inputs, can be in different stages or conditions li
   <input disabled type="email" name="email" id="email" />
   ```
 
-  - You can choose to add additional styles for the disabled state using *CSS*.
+  - You can choose to add additional styles for the disabled state using _CSS_.
 
 - `readonly` state is when a form control, like an input, is **not editable by the user**.
 
@@ -1309,7 +1308,7 @@ In HTML, form controls, like inputs, can be in different stages or conditions li
 
   - The `value` attribute is used to set the value shown inside the input field.
 
-  - A key *difference* between the `disabled` state and `readonly` state is that readonly can be **focused** while the disabled state *cannot*.
+  - A key _difference_ between the `disabled` state and `readonly` state is that readonly can be **focused** while the disabled state _cannot_.
 
 &nbsp;
 
@@ -1318,9 +1317,9 @@ In HTML, form controls, like inputs, can be in different stages or conditions li
 Radio buttons are used to **select one option from a list** of options.
 
 ```html
-<input type="radio" id="yes" name="first-time" value="yes">
+<input type="radio" id="yes" name="first-time" value="yes" />
 <label for="yes">Yes</label>
-<input type="radio" id="no" name="first-time" value="no">
+<input type="radio" id="no" name="first-time" value="no" />
 <label for="no">No</label>
 ```
 
@@ -1335,9 +1334,9 @@ Checkboxes are used to **select multiple options from a list**.
 ```html
 <fieldset>
   <legend>Food Options</legend>
-  <input type="checkbox" id="pizza" name="food" value="pizza">
+  <input type="checkbox" id="pizza" name="food" value="pizza" />
   <label for="pizza">Pizza</label>
-  <input type="checkbox" id="burger" name="food" value="burger">
+  <input type="checkbox" id="burger" name="food" value="burger" />
   <label for="burger">Burger</label>
 </fieldset>
 ```
@@ -1386,28 +1385,28 @@ HTML tables aren't used as much these days as they u*sed to be*. But, as a front
 
 ```html
 <table>
+  <caption>
+    Calculus Final Exam Grades
+  </caption>
   <thead>
     <tr>
-      <th>The title of this table</th>
+      <th>Last Name</th>
+      <th>First Name</th>
+      <th>Grade</th>
     </tr>
   </thead>
   <tbody>
+    <tr></tr>
     <tr>
-      <th>First Row</th>
-      <td>
-        First Data Cell
-      </td>
-    </tr>
-    <tr>
-      <th>Second Row</th>
-      <td>
-        Second Data Cell
-      </td>
+      <td>Williams</td>
+      <td>Natalie</td>
+      <td>83</td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
-      <th>The footer of this table, which might contain date of publication, author credits, or other meta information.</th>
+      <td colspan="2">Average Grade</td>
+      <td>78.8</td>
     </tr>
   </tfoot>
 </table>
@@ -1417,9 +1416,6 @@ HTML tables aren't used as much these days as they u*sed to be*. But, as a front
 
 &nbsp;
 
-## 
-
-
-
+##
 
 &nbsp;

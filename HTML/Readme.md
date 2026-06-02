@@ -1416,6 +1416,34 @@ HTML tables aren't used as much these days as they u*sed to be*. But, as a front
 
 &nbsp;
 
-##
+## HTML Validator
+
+An HTML validator is a tool that **checks the validity of your HTML** code against the standard HTML specifications. it helps you **identify errors** and **warnings** in your HTML code, ensuring your web pages are correctly structured and compliant with web standards.
+
+HTML is a very forgiving language – **elements still render even when you make mistakes**, like forgetting to include a closing tag. This happens because browsers use a **parsing algorithm** that handles common errors and tries to render HTML as closely as possible to the author's intention. But *this could backfire sometimes*.
+
+- validator.w3.org
+
+- jsonformatter.org
+
+&nbsp;
+
+### DOM Inspector & DevTools
+
+The DOM inspector allows you to **inspect the HTML structure of the page** you are on.
+
+- The DOM stands for **Document Object Model**. it is a *tree-like* structure that represents the elements on a page
+
+The **developer tools** allow you to **inspect the HTML, CSS, and JavaScript of the page** you are on.
+
+- `Elements`: This tab shows you the **HTML structure** of the page you are on.
+
+- `Console`: This tab shows you any **errors*** that might be occurring on the page. 
+
+When you are building out your projects, you will frequently run into issues where your **programs are not working as expected**. Programmers often refer to issues as **bugs**. The process of finding and fixing these bugs is known as **debugging**.
+
+&nbsp;
+
+## 
 
 &nbsp;

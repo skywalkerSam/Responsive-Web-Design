@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Survey Form</title>
+  </head>
+
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">
+      This is a survey for the impact of Music in our lives.
+    </p>
+    <form action="" id="survey-form" method="get">
+      <fieldset>
+        <legend>Who are you?</legend>
+        <label id="name-label" for="name">Name</label>
+        <input placeholder="Sam" type="text" name="name" id="name" required />
+
+        <label id="email-label" for="email">Email</label>
+        <input
+          required
+          placeholder="sam@skywalkersam.dev"
+          type="email"
+          name="email"
+          id="email"
+        />
+
+        <label id="number-label" for="number">Age</label>
+        <input
+          placeholder="21"
+          type="number"
+          name="number"
+          id="number"
+          min="6"
+          max="122"
+        />
+
+        <label
+          >Sex:
+          <input type="radio" name="sex" id="male" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" name="sex" id="female" value="female" />
+          <label for="female">Female</label>
+          <input type="radio" name="sex" id="other" value="other" />
+          <label for="other">Other</label>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your taste in music!</legend>
+        <label for="dropdown">Favourite Genre:</label>
+        <select name="dropdown" id="dropdown">
+          <option value="acoustic">Acoustic</option>
+          <option value="clssical">Classical</option>
+          <option value="country-folk">Country/Folk</option>
+          <option value="dance">Dance</option>
+          <option value="electronic">Electronic</option>
+          <option value="hip-hop">Hip Hop</option>
+          <option value="jazz">Jazz</option>
+          <option value="latin">Latin</option>
+          <option value="pop" selected>Pop</option>
+          <option value="rock">Rock</option>
+          <option value="rnb">R&B</option>
+        </select>
+
+        <label
+          >Music Experience:
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="listen-music"
+            value="listen-music"
+          />
+          <label for="listen-music">Listen to Music</label>
+          <input
+            type="checkbox"
+            name="checkbox"
+            id="create-music"
+            value="create-music"
+          />
+          <label for="create-music">Create Music</label>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Would you like to tell us your story? (Optional)</legend>
+        <textarea name="comments" id="comments" rows="10" cols="50"></textarea>
+      </fieldset>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </body>
+</html>

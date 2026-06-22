@@ -1484,5 +1484,32 @@ Accessibility is essential for web development. By developing with **inclusivity
 
 ## Screen Readers
 
+Screen readers are *assistive technology* programs that **help blind and visually impaired people use computers and mobile devices**.
+
+There's a common misconception that screen readers are `text-to-speech` devices. However, *text-to-speech* is just one of the features of a screen reader. **Some screen readers even render the text to braille output** instead of speech.
+
+Screen reader programs are also not only made for the *blind* and *visually impaired*. *Dyslexic* individuals and people with *cognitive* disabilities also use screen readers. 
+
+All the popular *operating systems* out there have screen readers *built-in*.
+
+- **macOS** & **iOS** both have **VoiceOver** built-in. You can enable it on your computer by pressing `CMD + F5`. You can access it on iPhones through `Settings`.
+
+- **Windows** computers have **Narrator** built-in. You can turn it on by pressing `WIN + CTRL + ENTER`. 
+
+  - NonVisual Desktop Access (**NVDA**) & Job Access With Speech (**JAWS**) are also available for Windows computers. 
+
+    - NVDA is free and *open-source*, while JAWS is *paid*.
+
+- **Linux** has **Orca** for the *desktop* environment & **Speakup** for the Linux *terminal*.
+
+- **Android** phones have **TalkBack** built-in. You can turn it on by accessing `Settings > Special Function > Accessibility > Talkback`.
+
+  - Some Android devices also have **Ella** & **Select to Speak** built-in.
+
+&nbsp;
+
+## Braille Keyboards/Large Text
+
+
 
 &nbsp;

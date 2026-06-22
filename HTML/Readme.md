@@ -1444,6 +1444,45 @@ When you are building out your projects, you will frequently run into issues whe
 
 &nbsp;
 
-## 
+## Accessibility
+
+Accessibility involves **creating products and services that everyone can use**. 
+
+in the context of web development, it is **building websites that everyone can understand and interact with**, including people with *visual*, *auditory*, *motor*, and *cognitive* disabilities.
+
+- Blindness.
+- Low vision.
+- Color blindness.
+- Deafness.
+- Difficulty using keyboards, mice, or touchscreens.
+- Attention disorders.
+- Memory issues.
+- Difficulty speaking or understanding spoken language.
+- Sensitivity to flashing lights.
+
+To help you create accessible websites, the World Wide Web Consortium, known as **W3C**, developed a set of **international standards** that you can follow **to make your websites more accessible and easier to use** for people with *disabilities*.
+
+These standards are known as the "Web Content Accessibility Guidelines" (**WCAG**).
+
+These guidelines are designed with four core principles in mind, known as **POUR**.
+
+- `P` stands for **Perceivable**. Users must be able to perceive the information that you are presenting. For example, you can provide *alternative text* for images, so users who access your website with a screen reader can understand them.
+
+- `O` stands for **Operable**. Users must be able to interact with the user interface. For example, you can make sure that all functionality is accessible through the *keyboard* too, not just the mouse.
+
+- `U` stands for **Understandable**. Users must be able to understand the information. For example, you can avoid *complex sentences* and use simple language as much as possible.
+
+- `R` stands for **Robust**. A wide range of browsers and other tools, including *assistive technologies*, must be able to interpret the *content*.
+
+Using **semantic HTML** is very helpful for making your website *compatible* with different browsers and *assistive technologies*.
+
+To check if you are following these guidelines correctly, you can access the Quick Reference of the World Wide Web Consortium. There, you will find a comprehensive list of criteria and techniques.
+
+Accessibility is essential for web development. By developing with **inclusivity in mind**, you can ensure that everyone can access and engage with your content, **promote equality** and create a better user experience for everyone around the world.
+
+&nbsp;
+
+## Screen Readers
+
 
 &nbsp;

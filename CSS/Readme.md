@@ -492,7 +492,88 @@ li {
 
 ## `list-style`
 
+it is used to **control the appearance of lists** on a webpage.
 
+Whether you're working with ordered lists (`ol`) or unordered lists (`ul`), the `list-style` *property* allows you to customize how list items are displayed.
+
+The `list-style` property is actually a **shorthand** for *three* other properties.
+
+- `list-style-type` property allows you to **define the type of bullet point or number** used in a list.
+
+  - For unordered lists (`ul`), you can choose from several *bullet styles*, such as **discs**, **circles**, or **squares**.
+
+  - For ordered lists (`ol`), you can use different *numbering systems*, like **decimal**, **Roman** numerals, or even **alphabetical** characters.
+
+  ```html
+  <ul style="list-style-type: square;">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+  ```
+
+- `list-style-position` property **controls the position of the bullet or number** in relation to the list item’s content. There are *two* values you can use:
+
+  - `outside`: The bullet or number **appears outside** the content. (default behavior)
+
+  - `inside`: The bullet or number **appears inside** the content, which may cause the text to wrap and align with the bullet or number.
+
+    ```html
+    <ul style="list-style-position: inside;">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <ul style="list-style-position: outside;">
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+    </ul>
+    ```
+
+- `list-style-image` property **allows you to use an image as the bullet point** for your list items. This can be useful for adding a *unique visual style* to your lists.
+
+  ```html
+  <head>
+    <style>
+      ul {
+        list-style-image: url('https://cdn.freecodecamp.org/platform/universal/freecodecamp-org-gravatar.jpeg');
+        list-style-position: inside;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+  </body>
+  ```
+
+  - Make sure that the **image you choose is small and appropriate** for the design of your webpage. if the image is too large or complex, it can make the list harder to read.
+
+  - if the image is **unavailable** or not rendered, the **square bullets will be used as a fallback**.
+
+&nbsp;
+
+You can combine the three properties – `list-style-type`, `list-style-position`, and `list-style-image` – into a single `list-style` shorthand property.
+
+- The **order of the values in the shorthand doesn’t matter**, but all three can be specified together.
+
+```html
+<ul style="list-style: square inside url('https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg');">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+```
+
+&nbsp;
+
+## Default Link Styles
+
+Default link styles play a crucial role in enhancing usability and accessibility on the web.
 
 
 

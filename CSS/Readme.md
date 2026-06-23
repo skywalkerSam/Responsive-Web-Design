@@ -58,14 +58,6 @@ h2 {
 }
 ```
 
-### Default link styles
-
-- You change the properties of a link when the link has been **visited** by using a _pseudo-selector_ that looks like `a:visited { propertyName: propertyValue; }`.
-
-- You change the properties of a link when the mouse **hovers** over them by using a _pseudo-selector_ that looks like `a:hover { propertyName: propertyValue; }`.
-
-- You change the properties of a link when the link is being **clicked** by using a _pseudo-selector_ that looks like `a:active { propertyName: propertyValue; }`.
-
 &nbsp;
 
 ## Units
@@ -85,7 +77,7 @@ h2 {
 
 CSS combinators are used to define the relationship between selectors in CSS. They help in selecting elements based on their relationship to other elements, which allows for more precise and efficient styling.
 
-- A **descendant** combinator is used to target elements matched by the second selector if they are nested within an ancestor element that matches the first selector. An ancestor can be a parent element or a parent's parent.
+- A **descendant** combinator is used to target elements matched by the second selector if they are **nested within an ancestor element that matches the first selector**. An ancestor can be a parent element or a parent's parent.
 
   ```css
   figure img {
@@ -93,7 +85,7 @@ CSS combinators are used to define the relationship between selectors in CSS. Th
   }
   ```
 
-- The **child** combinator (`>`) in CSS is used to select elements that are direct children of a specified parent element.
+- The **child** combinator (`>`) in CSS is used to select elements that are **direct children of a specified parent element**.
 
   This combinator targets only elements with a _specific_ parent, making your CSS rules more precise and preventing _unintended_ styling of deeper nested elements.
 
@@ -117,7 +109,7 @@ CSS combinators are used to define the relationship between selectors in CSS. Th
   }
   ```
 
-- The **next-sibling** combinator (`+`) in CSS selects an element that immediately follows a specified sibling element. This combinator is useful when you want to apply styles to an element that directly follows another element, allowing for targeted styling based on the element's position relative to its siblings.
+- The **next-sibling** combinator (`+`) in CSS selects an element that immediately follows a specified sibling element. This combinator is useful when you want to **apply styles to an element that directly follows another element**, allowing for targeted styling based on the element's position relative to its siblings.
 
   ```html
   <figure>
@@ -139,7 +131,7 @@ CSS combinators are used to define the relationship between selectors in CSS. Th
   }
   ```
 
-- The **subsequent-sibling** combinator (`~`) in CSS selects **all** siblings of a specified element that come after it. Unlike the _next-sibling_ combinator, which targets only the immediately following sibling, the _subsequent-sibling_ combinator (`~`) can target **any** siblings that follow the specified element, offering greater flexibility in _styling_.
+- The **subsequent-sibling** combinator (`~`) in CSS selects **all siblings of a specified element that come after it**. Unlike the _next-sibling_ combinator, which targets only the immediately following sibling, the _subsequent-sibling_ combinator (`~`) can target **any** siblings that follow the specified element, offering greater flexibility in _styling_.
 
   ```html
   <div class="container">
@@ -651,6 +643,65 @@ a:active {
 &nbsp;
 
 ## Link States
+
+Link states are important for **helping users recognize links and providing clear feedback after interactions**, which improves both *usability* and *accessibility*.
+
+Additionally, clear link states enhance the overall user experience by **providing immediate feedback on user interactions**, reducing *confusion* and improving the site's navigability.
+
+These states can be styled using something called `pseudo-classes` in CSS.
+
+A `pseudo-class` is a **keyword** added to a selector that **specifies a special state of the selected element**. 
+
+```css
+A:B {
+  property: value;
+}
+```
+
+- `:link` pseudo-class styles **unvisited links**, indicating that they are *clickable*.
+
+  ```css
+  /* Normal state (unvisited link) */
+  a:link { 
+    color: red;
+  }
+  ```
+
+- `:visited` styles **links that have already been visited or clicked**, helping users track which links they have *clicked* before.
+
+  ```css
+  /* Visited link */
+  a:visited {
+    color: green;
+  }
+  ```
+
+- `:hover` changes the link's style when the **user hovers over** it, providing a **visual cue** that the link is *interactive*. 
+
+  ```css
+  /* Hover state */
+  a:hover {
+    color: green;
+  }
+  ```
+
+- `:focus` adds styles **around the link when it is focused**, such as when navigating with a **keyboard**, or enhancing *accessibility*.
+
+  ```css
+  /* Focus state */
+  a:focus {
+    outline: 2px solid orange;
+  }
+  ```
+
+- `:active` changes the link's styles **while the link is being clicked**, providing **immediate feedback** to the user that their *action* is being registered.
+
+  ```css
+  /* Active state */
+  a:active {
+    color: pink;
+  }
+  ```
 
 
 

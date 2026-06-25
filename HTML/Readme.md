@@ -1508,8 +1508,57 @@ All the popular *operating systems* out there have screen readers *built-in*.
 
 &nbsp;
 
-## Braille Keyboards/Large Text
+## Large Text & Braille Keyboards
 
+Large text & braille keyboards are designed **for users with visual disabilities**. 
+
+in **Large Text Keyboards**, also called *Large Print Keyboards*, the letters, numbers, and symbols are larger compared to standard keyboards. Most of them also have **enhanced contrast and brightness**.
+
+- A large print keyboard made by the brand `MaxiAids` has yellow keys with black, big, and bold letters, numbers, and symbols on them. This is helpful for people with low vision.
+
+**Braille keyboards** provide a completely **tactile experience for people with more severe vision disabilities**, including people who are *blind*.
+
+- Braille is a **tactile reading and writing system**. It consists of raised **dots** arranged in specific patterns to represent letters, numbers, and punctuation.
+
+Some keyboards combine both approaches: large fonts and braille patterns in the keys. This is helpful for people with visual disabilities and for people who are learning braille.
+
+&nbsp;
+
+## Alternative Pointing Devices (Trackballs, Joysticks, & Touchpads)
+
+Alternative pointing devices are input devices that make good **alternatives to the traditional mouse**. They are essential for improving computer accessibility for those with *disabilities*, forelimb impairments, and limited mobility.
+
+A **trackball** is a **stationary pointing device that consists of a large, movable ball** within a socket. it also includes additional buttons for clicking and performing other functions.
+
+- Trackballs reduce the physical movement the user needs for navigation, making them ideal for users with *mobility* issues.
+
+A **joystick** is a pointing device primarily designed for **games** and certain industrial applications like **machinery control**. it consists of **a lever that pivots up, down, left, and right, and often includes additional buttons** for various actions.
+
+- Joysticks provide **precise control over movement and actions** within digital environments. This makes them popular for **flight simulators**, **cranes**, **driving games**, and other applications requiring **precise directional input**.
+
+- Because joysticks **accommodate larger and more deliberate movements**, they are beneficial for individuals with *tremors*, *unsteady hands*, 
+
+- They also **reduce the strain and pain that comes with repetitive movements**, making them ideal for individuals with *arthritis* and *carpal tunnel syndrome*.
+
+A **touchpad** is a **flat, touch-sensitive device** built into laptops and some keyboards. it allows users to control the cursor on the screen by sliding their fingers across its surface.
+
+- Most people see touchpads as **a better alternative to a mouse** because they significantly enhance navigation by supporting **multi-touch gestures** like *pinch-to-zoom*, *two-finger* scrolling, *tap-to-click*, and *three-finger* swipes.
+
+- Touchpad is also **ideal for individuals with low arm or hand movement** because the forelimb is almost always **stationary** while using it. it is also suitable for people with *arthritis* and *joint pain* because they don't get to move their arms too much.
+
+&nbsp;
+
+## Screen Magnifiers
+
+
+
+
+&nbsp;
+
+
+
+
+&nbsp;
 
 
 &nbsp;

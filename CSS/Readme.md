@@ -477,7 +477,6 @@ li {
 - `line-height: 2;` sets the line height to be **twice the font size**, creating more vertical space within each list item.
 
 - if list items have **multiple lines** of text, the line-height will affect the spacing between those lines, but it **does not directly adjust the spacing between separate list items** themselves.
-
   - To control the spacing between **individual list items**, you would use `margin` or `padding` properties instead.
 
 &nbsp;
@@ -486,15 +485,14 @@ li {
 
 it is used to **control the appearance of lists** on a webpage.
 
-Whether you're working with ordered lists (`ol`) or unordered lists (`ul`), the `list-style` *property* allows you to customize how list items are displayed.
+Whether you're working with ordered lists (`ol`) or unordered lists (`ul`), the `list-style` _property_ allows you to customize how list items are displayed.
 
-The `list-style` property is actually a **shorthand** for *three* other properties.
+The `list-style` property is actually a **shorthand** for _three_ other properties.
 
 - `list-style-type` property allows you to **define the type of bullet point or number** used in a list.
+  - For unordered lists (`ul`), you can choose from several _bullet styles_, such as **discs**, **circles**, or **squares**.
 
-  - For unordered lists (`ul`), you can choose from several *bullet styles*, such as **discs**, **circles**, or **squares**.
-
-  - For ordered lists (`ol`), you can use different *numbering systems*, like **decimal**, **Roman** numerals, or even **alphabetical** characters.
+  - For ordered lists (`ol`), you can use different _numbering systems_, like **decimal**, **Roman** numerals, or even **alphabetical** characters.
 
   ```html
   <ul style="list-style-type: square;">
@@ -504,8 +502,7 @@ The `list-style` property is actually a **shorthand** for *three* other properti
   </ul>
   ```
 
-- `list-style-position` property **controls the position of the bullet or number** in relation to the list item’s content. There are *two* values you can use:
-
+- `list-style-position` property **controls the position of the bullet or number** in relation to the list item’s content. There are _two_ values you can use:
   - `outside`: The bullet or number **appears outside** the content. (default behavior)
 
   - `inside`: The bullet or number **appears inside** the content, which may cause the text to wrap and align with the bullet or number.
@@ -523,13 +520,13 @@ The `list-style` property is actually a **shorthand** for *three* other properti
     </ul>
     ```
 
-- `list-style-image` property **allows you to use an image as the bullet point** for your list items. This can be useful for adding a *unique visual style* to your lists.
+- `list-style-image` property **allows you to use an image as the bullet point** for your list items. This can be useful for adding a _unique visual style_ to your lists.
 
   ```html
   <head>
     <style>
       ul {
-        list-style-image: url('https://cdn.freecodecamp.org/platform/universal/freecodecamp-org-gravatar.jpeg');
+        list-style-image: url("https://cdn.freecodecamp.org/platform/universal/freecodecamp-org-gravatar.jpeg");
         list-style-position: inside;
       }
     </style>
@@ -554,7 +551,9 @@ You can combine the three properties – `list-style-type`, `list-style-position
 - The **order of the values in the shorthand doesn’t matter**, but all three can be specified together.
 
 ```html
-<ul style="list-style: square inside url('https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg');">
+<ul
+  style="list-style: square inside url('https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg');"
+>
   <li>Item 1</li>
   <li>Item 2</li>
   <li>Item 3</li>
@@ -567,7 +566,7 @@ You can combine the three properties – `list-style-type`, `list-style-position
 
 The primary purpose of default link styles is to **provide clear visual cues that help users distinguish between interactive and non-interactive elements** on a webpage.
 
-These styles, typically **blue for unvisited** links and **purple for visited** links, have become a *standard* that users have come to expect and rely on when navigating websites.
+These styles, typically **blue for unvisited** links and **purple for visited** links, have become a _standard_ that users have come to expect and rely on when navigating websites.
 
 ```css
 /* default */
@@ -583,27 +582,24 @@ a:visited {
 
 These styles serve several important functions.
 
-- Firstly, the **blue** color for unvisited links **stands out against most background colors and text**, making links **easily identifiable**. 
+- Firstly, the **blue** color for unvisited links **stands out against most background colors and text**, making links **easily identifiable**.
+  - This contrast is crucial for users to quickly scan a page and find _navigational_ elements or important information.
 
-  - This contrast is crucial for users to quickly scan a page and find *navigational* elements or important information.
+- The **underline** further **emphasizes that the text is clickable**, providing an additional **visual cue**.
+  - This is particularly helpful for users who may be _colorblind_ or have difficulty distinguishing colors.
 
-- The **underline** further **emphasizes that the text is clickable**, providing an additional **visual cue**. 
-
-  - This is particularly helpful for users who may be *colorblind* or have difficulty distinguishing colors.
-
-- The **change in color** for visited links (typically to **purple**) helps users **keep track of where they've been**. 
-
+- The **change in color** for visited links (typically to **purple**) helps users **keep track of where they've been**.
   - This feature is invaluable for navigating large websites or conducting research, as it **prevents users from inadvertently revisiting the same pages**.
 
 &nbsp;
 
-While it's common for designers to modify these default styles to match a website's *aesthetic*, it's crucial to **maintain the core principles** behind them.
+While it's common for designers to modify these default styles to match a website's _aesthetic_, it's crucial to **maintain the core principles** behind them.
 
 - Ensure that links are still clearly **distinguishable** from regular text.
 
-- There's a **visible difference** between *visited* and *unvisited* links.
+- There's a **visible difference** between _visited_ and _unvisited_ links.
 
-- The chosen colors provide **sufficient contrast** with the *background*.
+- The chosen colors provide **sufficient contrast** with the _background_.
 
   ```css
   a:link {
@@ -644,30 +640,30 @@ a:active {
 
 ## Link States
 
-Link states are important for **helping users recognize links and providing clear feedback after interactions**, which improves both *usability* and *accessibility*.
+Link states are important for **helping users recognize links and providing clear feedback after interactions**, which improves both _usability_ and _accessibility_.
 
-Additionally, clear link states enhance the overall user experience by **providing immediate feedback on user interactions**, reducing *confusion* and improving the site's navigability.
+Additionally, clear link states enhance the overall user experience by **providing immediate feedback on user interactions**, reducing _confusion_ and improving the site's navigability.
 
 These states can be styled using something called `pseudo-classes` in CSS.
 
-A `pseudo-class` is a **keyword** added to a selector that **specifies a special state of the selected element**. 
+A `pseudo-class` is a **keyword** added to a selector that **specifies a special state of the selected element**.
 
 ```css
-A:B {
+A:b {
   property: value;
 }
 ```
 
-- `:link` pseudo-class styles **unvisited links**, indicating that they are *clickable*.
+- `:link` pseudo-class styles **unvisited links**, indicating that they are _clickable_.
 
   ```css
   /* Normal state (unvisited link) */
-  a:link { 
+  a:link {
     color: red;
   }
   ```
 
-- `:visited` styles **links that have already been visited or clicked**, helping users track which links they have *clicked* before.
+- `:visited` styles **links that have already been visited or clicked**, helping users track which links they have _clicked_ before.
 
   ```css
   /* Visited link */
@@ -676,7 +672,7 @@ A:B {
   }
   ```
 
-- `:hover` changes the link's style when the **user hovers over** it, providing a **visual cue** that the link is *interactive*. 
+- `:hover` changes the link's style when the **user hovers over** it, providing a **visual cue** that the link is _interactive_.
 
   ```css
   /* Hover state */
@@ -685,7 +681,7 @@ A:B {
   }
   ```
 
-- `:focus` adds styles **around the link when it is focused**, such as when navigating with a **keyboard**, or enhancing *accessibility*.
+- `:focus` adds styles **around the link when it is focused**, such as when navigating with a **keyboard**, or enhancing _accessibility_.
 
   ```css
   /* Focus state */
@@ -694,7 +690,7 @@ A:B {
   }
   ```
 
-- `:active` changes the link's styles **while the link is being clicked**, providing **immediate feedback** to the user that their *action* is being registered.
+- `:active` changes the link's styles **while the link is being clicked**, providing **immediate feedback** to the user that their _action_ is being registered.
 
   ```css
   /* Active state */
@@ -703,7 +699,117 @@ A:B {
   }
   ```
 
+&nbsp;
+
+## `background-image`
+
+```html
+<style>
+  body {
+    background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+  }
+</style>
+```
+
+When working with background images in CSS, you have **several properties at your disposal to control how these images are displayed**.
+
+- `background-size`: When you want to set the size for the background image.
+  - You can use `contain` to scale the image **as large as possible without cropping or stretching**.
+
+    ```html
+    <style>
+      body {
+        background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+        background-size: contain;
+        min-height: 100px;
+      }
+    </style>
+    ```
+
+  - if we use the `cover` value, then the background image will **scale to cover the entire `body` element while maintaining its aspect ratio**.
+
+    ```html
+    <style>
+      body {
+        background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+        background-size: cover;
+        min-height: 100px;
+      }
+    </style>
+    ```
+
+- `background-repeat`: **By default, background images repeat both horizontally and vertically to fill the entire element**. However, you can control this behavior. You can use the `background-repeat` property with the value set to `no-repeat`.
+
+  ```html
+  <style>
+    body {
+      background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      min-height: 100px;
+    }
+  </style>
+  ```
+
+  - if you wanted to **repeat the background image horizontally**, you can use the `repeat-x` value for the `background-repeat` property. And if you wanted to repeat the background image **vertically**, you can use the `repeat-y` value.
+
+    ```html
+    <!-- repeat-x -->
+    <style>
+      body {
+        background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+        background-size: contain;
+        background-repeat: repeat-x;
+        min-height: 100px;
+      }
+    </style>
+
+    <!-- repeat-y -->
+    <style>
+      body {
+        background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+        background-size: contain;
+        background-repeat: repeat-y;
+        min-height: 100px;
+      }
+    </style>
+    ```
+
+- `background-position`: it allows you to **set where in the element the background image appears**. You can use keywords like `top`, `bottom`, `left`, `right`, and `center`, or _specific pixel_ or _percentage_ values.
+
+  ```html
+  <style>
+    body {
+      background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center top;
+      min-height: 100px;
+    }
+  </style>
+  ```
+
+- `background-attachment`: it determines **whether the background image _scrolls_ with the content or remains _fixed_** when the page is scrolled.
+  - The value is set to `scroll` by **default**.
+
+  ```html
+  <style>
+    body {
+      background-image: url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+      background-position: center top;
+      background-attachment: fixed;
+    }
+  </style>
+  ```
+
+&nbsp;
+
+## Background Gradient
 
 
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;

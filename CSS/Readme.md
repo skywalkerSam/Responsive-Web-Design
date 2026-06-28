@@ -806,9 +806,63 @@ When working with background images in CSS, you have **several properties at you
 
 ## Background Gradient
 
+A background gradient in CSS is a **smooth transition between two or more colors** that can be applied to the *background* of an *element*. Gradients allow you to create **visually appealing backgrounds** without needing *images*.
 
+### Linear gradients 
+
+A linear gradient **transitions colors along a straight line**. 
+
+- You can define the **direction** and the **colors** involved.
+
+```css
+background: linear-gradient(direction, color-stop1, color-stop2, ...);
+```
+
+- The `direction` specifies the direction of the gradient. it can be an **angle** (such as `45deg`), a **keyword** (such as `to right`, `to bottom`), or a *side/corner*.
+
+- `color-stop` specifies the colors and positions where the **gradient transitions** occur.
+
+  ```css
+  .linear-gradient{
+    background: linear-gradient(195deg, red, black, blue);
+    height: 100vh;
+  }
+  ```
 
 &nbsp;
+
+### Radial gradients.
+
+A radial gradient **transitions colors radiating from an origin** (usually the *center*) outward in a *circular* or *elliptical* shape.
+
+```css
+background: radial-gradient(shape size at position, color-stop1, color-stop2, ...);
+```
+
+- `shape` specifies the **shape of gradient** which could be *circle* or *ellipse*.
+
+- `size` determines the **size of the gradient's ending shape** which could be `closest-side`, `closest-corner`, `farthest-side` or `farthest-corner`.
+
+- `position` determines the **position of the gradient's center** which could be specified using **keywords** (such as `center`, `top left`, `bottom right`) or **precise values** (such as `50% 50%`, `10px 20px`).
+
+- `color stops` are a list of colors that the **gradient transitions** through. 
+
+  - **Each color stop can optionally include a `position` value** (*percentage* or *length*) indicating where the color should be placed.
+
+  ```css
+  .radial-gradient{
+    background: radial-gradient(circle closest-side at center, black 50%, red, black);
+    height: 60vh;
+  }
+  ```
+
+  - The `closest-side` keyword makes the gradient's ending shape fit the closest side of the element.
+
+&nbsp;
+
+##
+
+
 
 &nbsp;
 

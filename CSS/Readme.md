@@ -909,14 +909,53 @@ Another consideration is **avoiding placing text over busy or complex background
 
 &nbsp;
 
-## Add Borders Around images
+## Borders Around images
 
+### `border` Property. 
 
+This property is a shorthand that **allows you to set the width, style, and color** of the border, all at once.
 
+```css
+img {
+  border: 2px solid red;
+}
+```
 
+- You can use `dashed`, `dotted`, or `double` along with `solid` for styling.
+
+```css
+/* For more control over each side of the border */
+img {
+  border-top: 10px solid red;
+  border-right: 10px dashed green;
+  border-bottom: 10px dotted blue;
+  border-left: 10px double purple;
+}
+```
+
+```css
+/* For rounded corners */
+img {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+```
 
 &nbsp;
 
+### `outline` Property
+
+While similar to border, outline **doesn't affect the element's dimensions or layout**.
+
+```css
+img {
+  outline: 3px solid gold;
+}
+```
+
+&nbsp;
+
+##
 
 
 &nbsp;

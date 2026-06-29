@@ -806,11 +806,11 @@ When working with background images in CSS, you have **several properties at you
 
 ## Background Gradient
 
-A background gradient in CSS is a **smooth transition between two or more colors** that can be applied to the *background* of an *element*. Gradients allow you to create **visually appealing backgrounds** without needing *images*.
+A background gradient in CSS is a **smooth transition between two or more colors** that can be applied to the _background_ of an _element_. Gradients allow you to create **visually appealing backgrounds** without needing _images_.
 
-### Linear gradients 
+### Linear gradients
 
-A linear gradient **transitions colors along a straight line**. 
+A linear gradient **transitions colors along a straight line**.
 
 - You can define the **direction** and the **colors** involved.
 
@@ -818,12 +818,12 @@ A linear gradient **transitions colors along a straight line**.
 background: linear-gradient(direction, color-stop1, color-stop2, ...);
 ```
 
-- The `direction` specifies the direction of the gradient. it can be an **angle** (such as `45deg`), a **keyword** (such as `to right`, `to bottom`), or a *side/corner*.
+- The `direction` specifies the direction of the gradient. it can be an **angle** (such as `45deg`), a **keyword** (such as `to right`, `to bottom`), or a _side/corner_.
 
 - `color-stop` specifies the colors and positions where the **gradient transitions** occur.
 
   ```css
-  .linear-gradient{
+  .linear-gradient {
     background: linear-gradient(195deg, red, black, blue);
     height: 100vh;
   }
@@ -833,25 +833,34 @@ background: linear-gradient(direction, color-stop1, color-stop2, ...);
 
 ### Radial gradients.
 
-A radial gradient **transitions colors radiating from an origin** (usually the *center*) outward in a *circular* or *elliptical* shape.
+A radial gradient **transitions colors radiating from an origin** (usually the _center_) outward in a _circular_ or _elliptical_ shape.
 
 ```css
-background: radial-gradient(shape size at position, color-stop1, color-stop2, ...);
+background: radial-gradient(
+  shape size at position,
+  color-stop1,
+  color-stop2,
+  ...
+);
 ```
 
-- `shape` specifies the **shape of gradient** which could be *circle* or *ellipse*.
+- `shape` specifies the **shape of gradient** which could be _circle_ or _ellipse_.
 
 - `size` determines the **size of the gradient's ending shape** which could be `closest-side`, `closest-corner`, `farthest-side` or `farthest-corner`.
 
 - `position` determines the **position of the gradient's center** which could be specified using **keywords** (such as `center`, `top left`, `bottom right`) or **precise values** (such as `50% 50%`, `10px 20px`).
 
-- `color stops` are a list of colors that the **gradient transitions** through. 
-
-  - **Each color stop can optionally include a `position` value** (*percentage* or *length*) indicating where the color should be placed.
+- `color stops` are a list of colors that the **gradient transitions** through.
+  - **Each color stop can optionally include a `position` value** (_percentage_ or _length_) indicating where the color should be placed.
 
   ```css
-  .radial-gradient{
-    background: radial-gradient(circle closest-side at center, black 50%, red, black);
+  .radial-gradient {
+    background: radial-gradient(
+      circle closest-side at center,
+      black 50%,
+      red,
+      black
+    );
     height: 60vh;
   }
   ```
@@ -862,8 +871,55 @@ background: radial-gradient(shape size at position, color-stop1, color-stop2, ..
 
 ## Accessibility Considerations for Backgrounds
 
+One of the primary accessibility concerns related to backgrounds is ensuring that there is **sufficient contrast between the background and the text**.
+
+- Without adequate contrast, users with _visual impairments_, including those with _low vision_ or _color blindness_, may **struggle to read the content** on the page.
+
+**Contrast** refers to **the difference in lightness or darkness between two colors**.
+
+- Sufficient contrast between the background color and the text color is **essential for readability**.
+
+&nbsp;
+
+The Web Content Accessibility Guidelines (**WCAG**) recommend a **minimum contrast ratio of `4.5:1` for normal text** and **`3:1` for large text**.
+
+```html
+<!--Poor Contrast-->
+<p style="color: lightgray; background-color: whitesmoke;">
+  This is an example of poor contrast.
+</p>
+
+<!--Good Contrast-->
+<p style="color: white; background-color: darkslategray;">
+  This is an example of good contrast.
+</p>
+```
+
+&nbsp;
+
+Another consideration is **avoiding placing text over busy or complex backgrounds**, such as images or gradients with multiple colors.
+
+- Busy backgrounds can make it **hard to distinguish the text from the background**, regardless of the contrast.
+
+&nbsp;
+
+**Background music or auto-playing videos can be distracting** for some users, particularly those with _cognitive disabilities_.
+
+- if you include background audio, **always provide a way for users to mute or pause the audio**.
+
+&nbsp;
+
+## Add Borders Around images
+
+
+
+
+
+&nbsp;
+
 
 
 &nbsp;
 
 &nbsp;
+

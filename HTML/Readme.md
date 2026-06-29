@@ -1586,10 +1586,37 @@ All the mainstream Operating Systems have at least one magnifier built into them
 
 ## Voice Recognition
 
+Voice recognition tools **let people with disabilities use their voice to pass commands to perform various tasks** instead of using traditional input devices like *keyboards* and *mice*. 
+
+- People with *visual impairments*, including those with *low-vision* or *blindness*.
+
+- individuals with *mobility impairments*, such as limited use of hands and arms or conditions like *arthritis* and *carpal tunnel syndrome*.
+
+- Those recovering from hand or arm *injuries*.
+
+- individuals with *cognitive disorders*, like *memory issues* or *attention deficit disorders*.
+
+- Elderly individuals who might find it easier to use voice commands.
+
+All the mainstream Operating Systems have some kind of voice recognition *built-in*.
+
+- Voice Control for macOS/iOS
+
+- Voice Access for Android
+
+- Windows Speech Recognition for Windows (referred to as Voice Access in the most recent versions of Windows). 
+
+  - Dragon by Nuance is a popular third-party voice recognition software for Windows.
+
+&nbsp;
+
+## Accessibility Auditing Tools
 
 
 
 &nbsp;
 
+
+&nbsp;
 
 &nbsp;

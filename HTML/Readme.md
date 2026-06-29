@@ -1550,10 +1550,41 @@ A **touchpad** is a **flat, touch-sensitive device** built into laptops and some
 
 ## Screen Magnifiers
 
+Screen magnifiers are tools that help people with *low vision* and other *visual impairments* better access digital content and the web.
 
+Screen magnifiers work by **enlarging texts, graphics, and other elements** on a computer or mobile device screen. Many screen magnifiers allow users to enlarge the display by more than `200%`. Users can then navigate the page using their pointing device or keyboard. Additionally, most magnifiers offer **customizable zoom percentages** and other features in their settings.
 
+Optimizing for screen magnifiers:
+
+- Using **scalable fonts** so the user can resize the page without the layout breaking.
+    
+- Ensuring the user interface adapts to different screen sizes through **responsive design**.
+
+- Using **high-contrast color schemes** and **customizable colors**.
+
+- **implementing a non-sticky and tiny navbar** so users can still see content when using magnifiers.
+
+- **Using regular HTML text** instead of images of text.
+    
+- Providing **feedback** directly next to the element that triggers it, and more.
+
+All the mainstream Operating Systems have at least one magnifier built into them by their manufacturers. Here are the name of some third-party ones.
+
+- iZoom for Windows.
+
+- ZoomText for Windows.
+
+- LunarPlus for Windows.
+
+- ClaroView for both macOS and Windows.
+
+- Zoomify - Screen Magnifier for macOS.
+
+- Loupe for macOS.
 
 &nbsp;
+
+## Voice Recognition
 
 
 

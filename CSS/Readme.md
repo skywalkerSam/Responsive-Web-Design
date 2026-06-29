@@ -860,7 +860,7 @@ background: radial-gradient(shape size at position, color-stop1, color-stop2, ..
 
 &nbsp;
 
-##
+## Accessibility Considerations for Backgrounds
 
 
 

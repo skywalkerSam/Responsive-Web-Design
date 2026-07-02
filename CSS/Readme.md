@@ -974,7 +974,9 @@ img {
 
 &nbsp;
 
-## Design
+## Common Design Terms
+
+
 
 &nbsp;
 

@@ -1,0 +1,41 @@
+main {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.centered {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  /* height: 100vh; */
+}
+
+.outlined {
+  outline: 2px solid skyblue;
+}
+
+h1 {
+  margin-top: 10%;
+}
+li {
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+a:link {
+  color: blue;
+}
+a:visited {
+  color: purple;
+}
+a:hover {
+  color: green;
+}
+a:focus {
+  outline: 2px solid orange;
+}
+a:active {
+  color: salmon;
+}
+

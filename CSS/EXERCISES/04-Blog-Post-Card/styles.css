@@ -1,0 +1,63 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(
+    circle closest-side at center,
+    black 50%,
+    red,
+    black
+  );
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.blog-post-card {
+  background: white;
+  border-radius: 15px;
+  width: 25vw;
+  text-align: center;
+  outline: 2px double black;
+}
+
+.post-img {
+  width: inherit;
+  border-bottom: 2px double black;
+  border-radius: inherit;
+}
+
+.post-content {
+  padding: 4%;
+}
+
+.post-title {
+  margin: 4%;
+  color: black;
+}
+
+.post-excerpt {
+  margin: 4%;
+  color: black;
+}
+
+.read-more {
+  color: black;
+  background-color: skyblue;
+  outline: 4px double skyblue;
+  margin: 4%;
+  padding: 4%;
+  border-radius: 15px;
+  display: inline-block;
+}
+
+.read-more:hover {
+  background-color: aquamarine;
+}
+
+a {
+  text-decoration: none;
+}

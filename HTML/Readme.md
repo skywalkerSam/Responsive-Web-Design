@@ -1420,7 +1420,7 @@ HTML tables aren't used as much these days as they u*sed to be*. But, as a front
 
 An HTML validator is a tool that **checks the validity of your HTML** code against the standard HTML specifications. it helps you **identify errors** and **warnings** in your HTML code, ensuring your web pages are correctly structured and compliant with web standards.
 
-HTML is a very forgiving language – **elements still render even when you make mistakes**, like forgetting to include a closing tag. This happens because browsers use a **parsing algorithm** that handles common errors and tries to render HTML as closely as possible to the author's intention. But *this could backfire sometimes*.
+HTML is a very forgiving language – **elements still render even when you make mistakes**, like forgetting to include a closing tag. This happens because browsers use a **parsing algorithm** that handles common errors and tries to render HTML as closely as possible to the author's intention. But _this could backfire sometimes_.
 
 - validator.w3.org
 
@@ -1432,18 +1432,274 @@ HTML is a very forgiving language – **elements still render even when you make
 
 The DOM inspector allows you to **inspect the HTML structure of the page** you are on.
 
-- The DOM stands for **Document Object Model**. it is a *tree-like* structure that represents the elements on a page
+- The DOM stands for **Document Object Model**. it is a _tree-like_ structure that represents the elements on a page
 
 The **developer tools** allow you to **inspect the HTML, CSS, and JavaScript of the page** you are on.
 
 - `Elements`: This tab shows you the **HTML structure** of the page you are on.
 
-- `Console`: This tab shows you any **errors*** that might be occurring on the page. 
+- `Console`: This tab shows you any **errors\*** that might be occurring on the page.
 
 When you are building out your projects, you will frequently run into issues where your **programs are not working as expected**. Programmers often refer to issues as **bugs**. The process of finding and fixing these bugs is known as **debugging**.
 
 &nbsp;
 
-## 
+## Accessibility
+
+Accessibility involves **creating products and services that everyone can use**.
+
+in the context of web development, it is **building websites that everyone can understand and interact with**, including people with _visual_, _auditory_, _motor_, and _cognitive_ disabilities.
+
+- Blindness.
+- Low vision.
+- Color blindness.
+- Deafness.
+- Difficulty using keyboards, mice, or touchscreens.
+- Attention disorders.
+- Memory issues.
+- Difficulty speaking or understanding spoken language.
+- Sensitivity to flashing lights.
+
+To help you create accessible websites, the World Wide Web Consortium, known as **W3C**, developed a set of **international standards** that you can follow **to make your websites more accessible and easier to use** for people with _disabilities_.
+
+These standards are known as the "Web Content Accessibility Guidelines" (**WCAG**).
+
+These guidelines are designed with four core principles in mind, known as **POUR**.
+
+- `P` stands for **Perceivable**. Users must be able to perceive the information that you are presenting. For example, you can provide _alternative text_ for images, so users who access your website with a screen reader can understand them.
+
+- `O` stands for **Operable**. Users must be able to interact with the user interface. For example, you can make sure that all functionality is accessible through the _keyboard_ too, not just the mouse.
+
+- `U` stands for **Understandable**. Users must be able to understand the information. For example, you can avoid _complex sentences_ and use simple language as much as possible.
+
+- `R` stands for **Robust**. A wide range of browsers and other tools, including _assistive technologies_, must be able to interpret the _content_.
+
+Using **semantic HTML** is very helpful for making your website _compatible_ with different browsers and _assistive technologies_.
+
+To check if you are following these guidelines correctly, you can access the Quick Reference of the World Wide Web Consortium. There, you will find a comprehensive list of criteria and techniques.
+
+Accessibility is essential for web development. By developing with **inclusivity in mind**, you can ensure that everyone can access and engage with your content, **promote equality** and create a better user experience for everyone around the world.
+
+&nbsp;
+
+## Screen Readers
+
+Screen readers are _assistive technology_ programs that **help blind and visually impaired people use computers and mobile devices**.
+
+There's a common misconception that screen readers are `text-to-speech` devices. However, _text-to-speech_ is just one of the features of a screen reader. **Some screen readers even render the text to braille output** instead of speech.
+
+Screen reader programs are also not only made for the _blind_ and _visually impaired_. _Dyslexic_ individuals and people with _cognitive_ disabilities also use screen readers.
+
+All the popular _operating systems_ out there have screen readers _built-in_.
+
+- **macOS** & **iOS** both have **VoiceOver** built-in. You can enable it on your computer by pressing `CMD + F5`. You can access it on iPhones through `Settings`.
+
+- **Windows** computers have **Narrator** built-in. You can turn it on by pressing `WIN + CTRL + ENTER`.
+  - NonVisual Desktop Access (**NVDA**) & Job Access With Speech (**JAWS**) are also available for Windows computers.
+    - NVDA is free and _open-source_, while JAWS is _paid_.
+
+- **Linux** has **Orca** for the _desktop_ environment & **Speakup** for the Linux _terminal_.
+
+- **Android** phones have **TalkBack** built-in. You can turn it on by accessing `Settings > Special Function > Accessibility > Talkback`.
+  - Some Android devices also have **Ella** & **Select to Speak** built-in.
+
+&nbsp;
+
+## Large Text & Braille Keyboards
+
+Large text & braille keyboards are designed **for users with visual disabilities**.
+
+in **Large Text Keyboards**, also called _Large Print Keyboards_, the letters, numbers, and symbols are larger compared to standard keyboards. Most of them also have **enhanced contrast and brightness**.
+
+- A large print keyboard made by the brand `MaxiAids` has yellow keys with black, big, and bold letters, numbers, and symbols on them. This is helpful for people with low vision.
+
+**Braille keyboards** provide a completely **tactile experience for people with more severe vision disabilities**, including people who are _blind_.
+
+- Braille is a **tactile reading and writing system**. It consists of raised **dots** arranged in specific patterns to represent letters, numbers, and punctuation.
+
+Some keyboards combine both approaches: large fonts and braille patterns in the keys. This is helpful for people with visual disabilities and for people who are learning braille.
+
+&nbsp;
+
+## Alternative Pointing Devices (Trackballs, Joysticks, & Touchpads)
+
+Alternative pointing devices are input devices that make good **alternatives to the traditional mouse**. They are essential for improving computer accessibility for those with _disabilities_, forelimb impairments, and limited mobility.
+
+A **trackball** is a **stationary pointing device that consists of a large, movable ball** within a socket. it also includes additional buttons for clicking and performing other functions.
+
+- Trackballs reduce the physical movement the user needs for navigation, making them ideal for users with _mobility_ issues.
+
+A **joystick** is a pointing device primarily designed for **games** and certain industrial applications like **machinery control**. it consists of **a lever that pivots up, down, left, and right, and often includes additional buttons** for various actions.
+
+- Joysticks provide **precise control over movement and actions** within digital environments. This makes them popular for **flight simulators**, **cranes**, **driving games**, and other applications requiring **precise directional input**.
+
+- Because joysticks **accommodate larger and more deliberate movements**, they are beneficial for individuals with _tremors_, _unsteady hands_,
+
+- They also **reduce the strain and pain that comes with repetitive movements**, making them ideal for individuals with _arthritis_ and _carpal tunnel syndrome_.
+
+A **touchpad** is a **flat, touch-sensitive device** built into laptops and some keyboards. it allows users to control the cursor on the screen by sliding their fingers across its surface.
+
+- Most people see touchpads as **a better alternative to a mouse** because they significantly enhance navigation by supporting **multi-touch gestures** like _pinch-to-zoom_, _two-finger_ scrolling, _tap-to-click_, and _three-finger_ swipes.
+
+- Touchpad is also **ideal for individuals with low arm or hand movement** because the forelimb is almost always **stationary** while using it. it is also suitable for people with _arthritis_ and _joint pain_ because they don't get to move their arms too much.
+
+&nbsp;
+
+## Screen Magnifiers
+
+Screen magnifiers are tools that help people with _low vision_ and other _visual impairments_ better access digital content and the web.
+
+Screen magnifiers work by **enlarging texts, graphics, and other elements** on a computer or mobile device screen. Many screen magnifiers allow users to enlarge the display by more than `200%`. Users can then navigate the page using their pointing device or keyboard. Additionally, most magnifiers offer **customizable zoom percentages** and other features in their settings.
+
+Optimizing for screen magnifiers:
+
+- Using **scalable fonts** so the user can resize the page without the layout breaking.
+- Ensuring the user interface adapts to different screen sizes through **responsive design**.
+
+- Using **high-contrast color schemes** and **customizable colors**.
+
+- **implementing a non-sticky and tiny navbar** so users can still see content when using magnifiers.
+
+- **Using regular HTML text** instead of images of text.
+- Providing **feedback** directly next to the element that triggers it, and more.
+
+All the mainstream Operating Systems have at least one magnifier built into them by their manufacturers. Here are the name of some third-party ones.
+
+- iZoom for Windows.
+
+- ZoomText for Windows.
+
+- LunarPlus for Windows.
+
+- ClaroView for both macOS and Windows.
+
+- Zoomify - Screen Magnifier for macOS.
+
+- Loupe for macOS.
+
+&nbsp;
+
+## Voice Recognition
+
+Voice recognition tools **let people with disabilities use their voice to pass commands to perform various tasks** instead of using traditional input devices like _keyboards_ and _mice_.
+
+- People with _visual impairments_, including those with _low-vision_ or _blindness_.
+
+- individuals with _mobility impairments_, such as limited use of hands and arms or conditions like _arthritis_ and _carpal tunnel syndrome_.
+
+- Those recovering from hand or arm _injuries_.
+
+- individuals with _cognitive disorders_, like _memory issues_ or _attention deficit disorders_.
+
+- Elderly individuals who might find it easier to use voice commands.
+
+All the mainstream Operating Systems have some kind of voice recognition _built-in_.
+
+- Voice Control for macOS/iOS
+
+- Voice Access for Android
+
+- Windows Speech Recognition for Windows (referred to as Voice Access in the most recent versions of Windows).
+  - Dragon by Nuance is a popular third-party voice recognition software for Windows.
+
+&nbsp;
+
+## Accessibility Auditing Tools
+
+An accessibility auditing tool is an application that helps you improve the accessibility of your digital content by **reporting accessibility issues** that can be easily found through automated testing.
+
+it is important to note that while **automated accessibility tools** have a role in improving accessibility, they typically will only find about **a third of all possible accessibility issues**.
+
+Therefore, it is important not to rely on them entirely to evaluate the accessibility of your content. **Manual testing**, preferably by people with _disabilities_, will always be required to **ensure that your content is as accessible as possible**.
+
+- **Google Lighthouse** is a popular web metric checker you can use directly within Chrome DevTools or online.
+  - Accessibility
+
+  - SEO
+
+  - Best practices
+
+  - Performance
+
+- if you want **more reliable metrics**, consider using the web version. The downside is that it doesn't support testing local websites. You can access the web version on `pagespeed.web.dev`.
+
+- **WAVE** is another reliable accessibility checker you can use as a **Chrome extension** or on the web.
+  - All you need to do is enter the URL of your website and a **comprehensive accessibility report** will be generated for you. This report includes accessibility features implemented, _ARIA_, and _contrasts_.
+
+- The **IBM Equal Access Accessibility Checker** is another robust tool for improving digital content accessibility. With it, you can scan your websites for accessibility issues and generate a detailed report.
+  - it can be used as a **Chrome extension**, **Firefox add-on**, or **NPM package**.
+
+&nbsp;
+
+## Use Proper Heading Structure
+
+**Proper use of headings creates a visual hierarchy** for users to navigate and understand your web page.
+
+- Using a logical heading hierarchy **allows screen reader users to understand the structure of your content and navigate the content** quickly.
+  - **Screen readers can list all headings on a page**, allowing users to jump directly to the sections they need.
+
+- Creating appropriate heading text that accurately describes the content that follows **helps everyone find the information they need** on your site.
+  - it also **helps users with keyboard jump between sections without the need to `TAB` through every link**.
+
+- As an additional benefit, well-formed headings **may also improve the SEO** of your site.
+
+&nbsp;
+
+**Think of headings as the foundation of your site**. Without a good foundation, the accessibility of your content will _suffer_.
+
+- People with _partial sight_ or _cognitive disabilities_ need to process information _quickly_ and _easily_ to **reduce cognitive load**.
+
+&nbsp;
+
+While proper arrangement of headings is important, **it is also necessary to make heading texts clear and descriptive**.
+
+- Use headings in a hierarchy that **reflects clear organization**.
+  - The **page title** should be an `h1`
+
+  - **Major sections** should be introduced with `h2` headings
+
+  - **Sub-sections** with `h3`, and so on, down to h6.
+
+- **Each page should have a single `h1` element** representing the main topic or title.
+
+- **Don't skip from h1 to h3**, or from h2 to h4, and so on.
+
+- **Use clear and descriptive text** that summarizes the content that follows each heading.
+
+- **Don't use a heading in isolation**; some content must follow the heading.
+
+- **Use appropriate headings where necessary instead of formatting text to look like headings**.
+
+```html
+<!-- Page title -->
+<h1>What is HTML</h1>
+
+<!-- First section -->
+<section>
+  <h2>Introduction to HTML</h2>
+  <p>
+    HTML stands for HyperText Markup Language. It is the standard language for
+    creating web pages.
+  </p>
+</section>
+<!-- Second section -->
+<section>
+  <h2>History of HTML</h2>
+  <p>HTML began to take shape in the early 90s</p>
+  <h3>Origins</h3>
+  <p>
+    HTML was created by Tim Berners-Lee in 1991. It has evolved significantly
+    over the years.
+  </p>
+</section>
+```
+
+&nbsp;
+
+##
+
+
+
+&nbsp;
 
 &nbsp;

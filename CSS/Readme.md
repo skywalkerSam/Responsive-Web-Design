@@ -802,6 +802,18 @@ When working with background images in CSS, you have **several properties at you
   </style>
   ```
 
+- `background` Property: This is the **shorthand property for setting all background properties in one declaration**.
+
+  ```html
+  <style>
+    body {
+      background: center top no-repeat
+        url("https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg");
+      min-height: 100px;
+    }
+  </style>
+  ```
+
 &nbsp;
 
 ## Background Gradient
@@ -867,6 +879,13 @@ background: radial-gradient(
 
   - The `closest-side` keyword makes the gradient's ending shape fit the closest side of the element.
 
+  ```css
+  .radial-gradient {
+    background: radial-gradient(circle, red 30%, black, white);
+    height: 100vh;
+  }
+  ```
+
 &nbsp;
 
 ## Accessibility Considerations for Backgrounds
@@ -911,7 +930,7 @@ Another consideration is **avoiding placing text over busy or complex background
 
 ## Borders Around images
 
-### `border` Property. 
+### `border` Property.
 
 This property is a shorthand that **allows you to set the width, style, and color** of the border, all at once.
 
@@ -955,10 +974,8 @@ img {
 
 &nbsp;
 
-##
-
-
-&nbsp;
+## Design
 
 &nbsp;
 
+&nbsp;

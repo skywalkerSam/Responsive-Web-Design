@@ -1427,7 +1427,7 @@ The `textarea` element is a **multi-line text input** control that allows users 
 
 ## Tables
 
-HTML tables aren't used as much these days as they u*sed to be*. But, as a front-end developer, you should still be familiar with them. Tables are **one of the earliest ways devs had for displaying data** in a browser way back in the 1990s.
+HTML tables aren't used as much these days as they _used to be_. But, as a front-end developer, you should still be familiar with them. Tables are **one of the earliest ways devs had for displaying data** in a browser way back in the 1990s.
 
 ```html
 <table>
@@ -1459,6 +1459,124 @@ HTML tables aren't used as much these days as they u*sed to be*. But, as a front
 ```
 
 - Use it only for **displaying tabular data**.
+
+&nbsp;
+
+### Accessible Tables
+
+Create accessible tables that everyone can understand, especially for users using assistive technologies like **screen reader**.
+
+- Use `caption` Element: You can write the caption (or **title**) of a table, so users, especially those who use assistive technologies, can quickly understand the table's purpose and content.
+  - This way, screen readers and other assistive technologies can provide more context by **announcing the caption before reading the content**.
+
+  ```html
+  <table>
+    <caption>
+      Our Pets
+    </caption>
+    <thead>
+      <tr>
+        <!-- Column Headers -->
+        <th>Name</th>
+        <th>Age</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Nora</th>
+        <!-- Row Header -->
+        <td>5</td>
+        <td>Dog</td>
+      </tr>
+      <tr>
+        <th>Gino</th>
+        <!-- Row Header -->
+        <td>2</td>
+        <td>Cat</td>
+      </tr>
+    </tbody>
+  </table>
+  ```
+
+  - Associating the data cells with their corresponding headers is also very important for screen readers.
+
+&nbsp;
+
+- The `scope` Attribute: it **determines if a header is a row header or a column header**. Screen readers may guess this correctly from the table's structure, but it's usually **recommended to explicitly indicate the scope** to ensure clarity.
+  - The `scope` attribute has four possible values. The two you will use most often are `col` for column and `row` for row.
+
+  ```html
+  <table>
+    <caption>
+      Our Pets
+    </caption>
+    <thead>
+      <tr>
+        <!-- Now they have scope -->
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Nora</th>
+        <td>5</td>
+        <td>Dog</td>
+      </tr>
+      <tr>
+        <th scope="row">Gino</th>
+        <td>2</td>
+        <td>Cat</td>
+      </tr>
+    </tbody>
+  </table>
+  ```
+
+- if a column or row header spans across multiple cells, the scope will also be applied to each one of the cells individually. (**NOT Recommended!**)
+
+  ```html
+  <table>
+    <tbody>
+      <tr>
+        <td></td>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+      </tr>
+      <tr>
+        <th rowspan="2" scope="row">Dogs</th>
+        <th scope="row">Nora</th>
+        <td>5</td>
+      </tr>
+      <tr>
+        <th scope="row">Gino</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th rowspan="2" scope="row">Cats</th>
+        <th scope="row">Lulu</th>
+        <td>10</td>
+      </tr>
+      <tr>
+        <th scope="row">Elizabeth</th>
+        <td>6</td>
+      </tr>
+    </tbody>
+  </table>
+  ```
+
+  - However, some screen readers may not be able to interpret tables with complex structures, so you should also try to flatten the table as much as possible to **avoid row and column headers that span across multiple cells**.
+
+  - For **cell width**, it's recommended to **avoid using fixed values**. You should use relative values instead, like _percentages_.
+
+  - Try to **avoid defining cell height**. This will allow users to adjust the text size to fit their needs.
+
+  - You should **let the browser determine the table width** whenever possible, to reduce the need for horizontal scrolling.
+
+&nbsp;
+
+`Note`: Your goal should always be to **make sure users can access this information**, even if their screen readers can handle complex table structures.
 
 &nbsp;
 
@@ -1678,6 +1796,8 @@ Therefore, it is important not to rely on them entirely to evaluate the accessib
 &nbsp;
 
 ##
+
+&nbsp;
 
 &nbsp;
 

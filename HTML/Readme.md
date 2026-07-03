@@ -1184,7 +1184,11 @@ To **collect specific information**, like names and email addresses.
 
 ### `label` Element
 
-To add a label for the input.
+To add a *label* for the `input`.
+
+Labels help people with *disabilities*, make forms more user-friendly for everyone, and ultimately improve form conversion rates.
+
+- Screen readers often rely on *labels* to describe the purpose of input fields. 
 
 ```html
 <form action="">

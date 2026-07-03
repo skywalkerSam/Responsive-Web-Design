@@ -654,26 +654,72 @@ Most elements have **semantic** meaning. The `div` element is one of the very fe
 
 &nbsp;
 
-## Structural Hierarchy
+Depending on how **incorrect** your structure is, your HTML may not even be technically valid. When this happens, **the web browser has to effectively guess what you meant to do**. And what it guesses **might not even be what you want** at all.
 
-- There can be only **one** `<h1></h1>` element per page.
+&nbsp;
 
-- There can be **multiple** `<h2></h2>` elements.
+## Use Proper Heading Structure
 
-- **Do not** skip from `h1` to `h3` directly.
+**Proper use of headings creates a visual hierarchy** for users to navigate and understand your web page.
 
-- **Do not** use `<h1></h1>` to create **larger text** on your page.
-  - **Use the correct structural element**, and _style_ it with **CSS**.
+- Using a logical heading hierarchy **allows screen reader users to understand the structure of your content and navigate the content** quickly.
+  - **Screen readers can list all headings on a page**, allowing users to jump directly to the sections they need.
+
+- Creating appropriate heading text that accurately describes the content that follows **helps everyone find the information they need** on your site.
+  - it also **helps users with keyboard jump between sections without the need to `TAB` through every link**.
+
+- As an additional benefit, well-formed headings **may also improve the SEO** of your site.
+
+&nbsp;
+
+**Think of headings as the foundation of your site**. Without a good foundation, the accessibility of your content will _suffer_.
+
+- People with _partial sight_ or _cognitive disabilities_ need to process information _quickly_ and _easily_ to **reduce cognitive load**.
+
+&nbsp;
+
+While proper arrangement of headings is important, **it is also necessary to make heading texts clear and descriptive**.
+
+- Use headings in a hierarchy that **reflects clear organization**.
+  - The **page title** should be an `h1`
+
+  - **Major sections** should be introduced with `h2` headings
+
+  - **Sub-sections** with `h3`, and so on, down to h6.
+
+- **Each page should have a single `h1` element** representing the main topic or title.
+
+- **Don't skip from h1 to h3**, or from h2 to h4, and so on.
+
+- **Use clear and descriptive text** that summarizes the content that follows each heading.
+
+- **Don't use a heading in isolation**; some content must follow the heading.
+
+- **Use appropriate headings where necessary instead of formatting text to look like headings**.
 
 ```html
+<!-- Page title -->
+<h1>What is HTML</h1>
+
+<!-- First section -->
 <section>
-  <h1>freeCodeCamp</h1>
-  <h2>Learn Front-End Development</h2>
-  <h3>Introduction to HTML</h3>
+  <h2>Introduction to HTML</h2>
+  <p>
+    HTML stands for HyperText Markup Language. It is the standard language for
+    creating web pages.
+  </p>
+</section>
+<!-- Second section -->
+<section>
+  <h2>History of HTML</h2>
+  <p>HTML began to take shape in the early 90s</p>
+  <h3>Origins</h3>
+  <p>
+    HTML was created by Tim Berners-Lee in 1991. It has evolved significantly
+    over the years.
+  </p>
 </section>
 ```
-
-Finally, depending on how **incorrect** your structure is, your HTML may not even be technically valid. When this happens, **the web browser has to effectively guess what you meant to do**. And what it guesses **might not even be what you want** at all.
 
 &nbsp;
 
@@ -1631,74 +1677,7 @@ Therefore, it is important not to rely on them entirely to evaluate the accessib
 
 &nbsp;
 
-## Use Proper Heading Structure
-
-**Proper use of headings creates a visual hierarchy** for users to navigate and understand your web page.
-
-- Using a logical heading hierarchy **allows screen reader users to understand the structure of your content and navigate the content** quickly.
-  - **Screen readers can list all headings on a page**, allowing users to jump directly to the sections they need.
-
-- Creating appropriate heading text that accurately describes the content that follows **helps everyone find the information they need** on your site.
-  - it also **helps users with keyboard jump between sections without the need to `TAB` through every link**.
-
-- As an additional benefit, well-formed headings **may also improve the SEO** of your site.
-
-&nbsp;
-
-**Think of headings as the foundation of your site**. Without a good foundation, the accessibility of your content will _suffer_.
-
-- People with _partial sight_ or _cognitive disabilities_ need to process information _quickly_ and _easily_ to **reduce cognitive load**.
-
-&nbsp;
-
-While proper arrangement of headings is important, **it is also necessary to make heading texts clear and descriptive**.
-
-- Use headings in a hierarchy that **reflects clear organization**.
-  - The **page title** should be an `h1`
-
-  - **Major sections** should be introduced with `h2` headings
-
-  - **Sub-sections** with `h3`, and so on, down to h6.
-
-- **Each page should have a single `h1` element** representing the main topic or title.
-
-- **Don't skip from h1 to h3**, or from h2 to h4, and so on.
-
-- **Use clear and descriptive text** that summarizes the content that follows each heading.
-
-- **Don't use a heading in isolation**; some content must follow the heading.
-
-- **Use appropriate headings where necessary instead of formatting text to look like headings**.
-
-```html
-<!-- Page title -->
-<h1>What is HTML</h1>
-
-<!-- First section -->
-<section>
-  <h2>Introduction to HTML</h2>
-  <p>
-    HTML stands for HyperText Markup Language. It is the standard language for
-    creating web pages.
-  </p>
-</section>
-<!-- Second section -->
-<section>
-  <h2>History of HTML</h2>
-  <p>HTML began to take shape in the early 90s</p>
-  <h3>Origins</h3>
-  <p>
-    HTML was created by Tim Berners-Lee in 1991. It has evolved significantly
-    over the years.
-  </p>
-</section>
-```
-
-&nbsp;
-
 ##
-
-
 
 &nbsp;
 

@@ -974,10 +974,109 @@ img {
 
 &nbsp;
 
-## Common Design Terms
+## Basic Design Terminology
+
+(For more: Open "CSS/EXERCISES/05-ShopMate-Demo")
+
+### Layout
+
+Layout is **how the visual elements are arranged on a page** or screen to communicate a message. it is like **the blueprint** of a design.
+
+Designers must consider the _placement_, _size_, and _hierarchy_ of each element.
+
+- Text
+
+- images
+
+- White space
+
+#### Alignment
+
+Alignment is **how the elements are placed in relation to one another**. Using alignment correctly is helpful for making the design look clean and organized.
+
+Designers create **visual order by aligning elements along imaginary lines, edges, or a central point**.
+
+&nbsp;
+
+### Composition
+
+Composition is **the art of arranging elements to create a harmonious design**. it determines how elements like _images_, _text_, and _shapes_ relate to each other and contribute to the design in an **artistic** way.
+
+While layout mostly focuses on the **placement** of the elements, composition also considers the **artistic impact** that this placement will have in the overall design.
+
+Composition is closely related to concepts of **balance**.
+
+- Balance is **how the visual weight is distributed** within a composition.
+
+- A balanced design feels harmonious.
+
+Designers aim to **create an equilibrium through symmetrical or asymmetrical arrangements**.
+
+&nbsp;
+
+### Hierarchy
+
+Hierarchy **establishes the order of importance** of the elements in a design.
+
+You can implement a visual hierarchy with _size_, _color_, _contrast_, _alignment_, _white space_, and even _typography_.
+
+- it is about making sure **the most important information is noticed first**.
+
+&nbsp;
+
+### Contrast
+
+Contrast is used to **create clear distinctions** between the elements, it is helpful for **guiding user attention** to what you want to _emphasize_.
+
+You can do this through **variations** in _color_, _size_, _shape_, _texture_, or any other _visual_ characteristic.
+
+- Strong contrast is also helpful for improving readability.
+
+&nbsp;
+
+### White Space
+
+White Space, also known as "negative space", is **the empty space** in a design.
+
+- it is **the area surrounding** the elements.
+
+- it can be **space in any color or texture**.
+
+- its purpose is to **improve readability** and **enhance the visual hierarchy** of a design.
+
+&nbsp;
+
+### User interface
+
+The user interface, also known as **UI**, is **how humans interact with computers**.
+
+A user interface includes the **visual** and **interactive** elements that users can see on their screens, like _icons_, _images_, _text_, _menus_, _links_, and _buttons_.
+
+&nbsp;
+
+### User Experience
+
+The user experience, also known as **UX**, is about **how users feel when using a product or service**.
+
+An application with a well-designed user experience is **intuitive, easy to use, efficient, accessible, and enjoyable**.
+
+The user interface plays a key role in making the user experience as easy and enjoyable as possible, so they are very closely related.
+
+&nbsp;
+
+## Background & Foreground Relationship: Contrast
+
 
 
 
 &nbsp;
 
+
 &nbsp;
+
+
+&nbsp;
+
+
+&nbsp;
+

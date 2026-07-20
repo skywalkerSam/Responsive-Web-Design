@@ -1184,11 +1184,11 @@ To **collect specific information**, like names and email addresses.
 
 ### `label` Element
 
-To add a *label* for the `input`.
+To add a _label_ for the `input`.
 
-Labels help people with *disabilities*, make forms more user-friendly for everyone, and ultimately improve form conversion rates.
+Labels help people with _disabilities_, make forms more user-friendly for everyone, and ultimately improve form conversion rates.
 
-- Screen readers often rely on *labels* to describe the purpose of input fields. 
+- Screen readers often rely on _labels_ to describe the purpose of input fields.
 
 ```html
 <form action="">
@@ -1799,10 +1799,56 @@ Therefore, it is important not to rely on them entirely to evaluate the accessib
 
 &nbsp;
 
-##
+## The Purpose of WAI-ARIA
+
+The primary purpose of WAI-ARIA is to **improve accessibility for dynamic content and UI components** that do not have native HTML equivalents.
+
+- WAI-ARIA stands for **Web Accessibility Initiative** - **Accessible Rich Internet Applications**.
+
+WAI-ARIA works by introducing **a set of attributes you can add to HTML elements to provide additional semantic information**.
+
+- These attributes are categorized into **roles**, **states**, and **properties**.
+
+- it offers **specific rules for making dynamic and interactive content accessible** for users of _assistive technologies_.
+
+&nbsp;
+
+ARIA properties provide **additional details** about elements.
+
+For example, the **aria-labelledby** property lets you **connect an element to a specific label**:
+
+```html
+<h2 id="header-id">About freeCodeCamp</h2>
+<button id="button-id" aria-labelledby="header-id button-id">Learn More</button>
+```
+
+- This will make the elements understandable and navigable for users of assistive technologies.
+
+&nbsp;
+
+To get the best out of WAI-ARIA, try to **stick with native HTML whenever possible** since it generally provides more accessibility out of the box.
+
+Also, make sure your WAI-ARIA states and properties update with the content in *real time*.
+
+`Note`: Avoid **overusing** ARIA, as it can often be **confusing**.
+
+&nbsp;
+
+## ARIA Roles
+
+An ARIA `role` defines the **purpose of an element** within a _website_ or _web app_.
+
+```html
+<div role="button">Click Me</div>
+```
+
+- By doing this you are indicating to assistive technology that the element is a button.
+
+- Roles **do not provide any functionality**.
 
 &nbsp;
 
 &nbsp;
 
 &nbsp;
+

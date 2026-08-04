@@ -1828,7 +1828,7 @@ For example, the **aria-labelledby** property lets you **connect an element to a
 
 To get the best out of WAI-ARIA, try to **stick with native HTML whenever possible** since it generally provides more accessibility out of the box.
 
-Also, make sure your WAI-ARIA states and properties update with the content in *real time*.
+Also, make sure your WAI-ARIA states and properties update with the content in _real time_.
 
 `Note`: Avoid **overusing** ARIA, as it can often be **confusing**.
 
@@ -1836,15 +1836,189 @@ Also, make sure your WAI-ARIA states and properties update with the content in *
 
 ## ARIA Roles
 
-An ARIA `role` defines the **purpose of an element** within a _website_ or _web app_.
+ARIA roles specify the **semantic meaning** of HTML elements.
+
+- Essential for making web content accessible to people who use _assistive technologies_, like screen readers.
+
+  ```html
+  <div role="button">Click Me!</div>
+  ```
+
+  - By doing this you are indicating to assistive technology that the element is a `button`.
+
+&nbsp;
+
+**Semantic HTML elements already have an ARIA role assigned by _default_**.
 
 ```html
-<div role="button">Click Me</div>
+<button>Example button</button>
 ```
 
-- By doing this you are indicating to assistive technology that the element is a button.
+- The `button` element has an ARIA role of button by _default_.
 
-- Roles **do not provide any functionality**.
+&nbsp;
+
+**Non-semantic elements do not have a role**.
+
+To specify the ARIA role of an element, you need to add the `role` attribute, like this `role="ARIA role"`, where the value is the name of a role in the ARIA specification.
+
+```html
+<div class="alert" id="exp-warning" role="alert">
+  <span class="hidden">Your log in session will expire in 3 minutes.</span>
+</div>
+```
+
+- Screen readers will not know how to interpret the purpose of a `div`, if you don't specify its `role` explicitly.
+
+&nbsp;
+
+ARIA Roles **do not provide any functionality**, they only _inform_.
+
+For example, adding a role of _button_ to a `div` does not automatically make it clickable. it is the responsibility of the developer to add the expected behavior that allows the `div` to act like a _button_.
+
+- in most cases, it is just better to use the `button` element.
+
+&nbsp;
+
+There are six main categories of ARIA roles:
+
+### 1. Document structure roles
+
+Document structure roles define the overall _structure_ of the web page.
+
+- With these roles, assistive technologies can understand the _relationships_ between different sections and help users navigate the content.
+
+&nbsp;
+
+However, **most** of the document structure roles are **not used in modern web development** because browsers already support **equivalent semantic HTML elements**, which should be prioritized whenever possible.
+
+- You should only specify the roles that do not have an equivalent semantic element.
+  - For example: `toolbar`, `tooltip`, `feed`, `math`, `presentation`, `none`, and `note`.
+
+    ```html
+    <div role="math" aria-label="x squared + y squared = 3">
+      x<sup>2</sup> + y<sup>2</sup> = 3
+    </div>
+    ```
+
+    - The `div` contains a mathematical equation.
+
+    - The `aria-label` attribute should be **a string that represents the expression**.
+
+&nbsp;
+
+### 2. Widget roles
+
+Widget roles define the **purpose and functionality of interactive elements**.
+
+- Examples of widget roles include `scrollbar`, `searchbox`, `separator` (when focusable), `slider`, `spinbutton`, `switch`, `tab`, `tabpanel`, and `treeitem`.
+
+  ```html
+  <div class="search-container" role="search">
+    <label for="searchbox" class="visually-hidden">Search</label>
+
+    <div
+      id="searchbox"
+      class="searchbox"
+      role="searchbox"
+      aria-label="Search the site"
+      tabindex="0"
+      contenteditable="true"
+    ></div>
+
+    <button type="button" aria-label="Submit search">Search</button>
+  </div>
+  ```
+
+  - Some of these roles have equivalent semantic elements. You should **prioritize the semantic element over the role**, if there is one.
+    - For example, you should favor using the HTML `button` element over adding a `role` of _button_ to a `div`.
+
+&nbsp;
+
+### 3. Landmark roles
+
+Landmark roles **classify and label the primary sections** of a web page.
+
+- Screen readers use them to provide convenient navigation to important sections of a page.
+
+&nbsp;
+
+You should **use them sparingly** to keep the overall layout _simple_ and _easy_ to understand.
+
+- Examples of landmark roles are `banner`, `complementary`, `contentinfo`, `form`, `main`, `navigation`, `region`, and `search`.
+
+- And each of these roles have a corresponding HTML equivalent, such as `header`, `footer`, `aside`, `form`, `main`, `nav`, `section`, and `search`.
+
+  ```html
+  <div role="banner" class="site-banner">
+    <h1>Accessible Web Design</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  ```
+
+  - if you **use the proper HTML elements to define the sections** of your page then it is not necessary to explicitly add the `role` attribute to these elements.
+    &nbsp;
+
+### 4. Live region roles
+
+Live region roles define **elements with content that will change dynamically**.
+
+This way, screen readers and other _assistive technologies_ can **announce changes** to users with visual disabilities.
+
+- These roles include: `alert`, `log`, `marquee`, `status`, and `timer`.
+
+  ```html
+  <div class="status-demo">
+    <button id="update-status-btn">Check Status</button>
+    <div id="status-msg" role="status" class="status-message">
+      No updates yet.
+    </div>
+  </div>
+  ```
+
+&nbsp;
+
+### 5. Window roles
+
+Window roles define sub-windows, like **pop-up modal dialogs**. These roles include `alertdialog` and `dialog`. 
+
+`Note`: it is now considered a best practice to **use the HTML `dialog` element** and its associated JavaScript methods instead of manually creating a dialog.
+
+```html
+<button id="open-dialog">Open Dialog</button>
+
+<div id="custom-dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title" class="dialog">
+  <div class="dialog-content">
+    <h3 id="dialog-title">Confirm Action</h3>
+    <p>Are you sure you want to delete this file?</p>
+    <div class="dialog-actions">
+      <button id="confirm-btn">Yes</button>
+      <button id="close-dialog">Cancel</button>
+    </div>
+  </div>
+</div>
+```
+
+&nbsp;
+
+### 6. Abstract roles
+
+These roles help **organize the document**. 
+
+They're **only meant to be used internally by the browser**, not by developers. And so, you should know that they exist* but you shouldn't use them on your websites or web applications.
+
+&nbsp;
+
+## `aria-label` & `aria-labelledby` Attributes
+
+
 
 &nbsp;
 

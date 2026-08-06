@@ -1116,13 +1116,13 @@ When you're looking at scaling in your web design, you're looking at the **size 
 
 &nbsp;
 
-Scale is also important for **interactivity**, and the ability to actually use your website. 
+Scale is also important for **interactivity**, and the ability to actually use your website.
 
 - if the text in a navigation bar is not at an appropriate scale, smartphone users will have a hard time tapping on the links.
 
 &nbsp;
 
-Scale doesn't apply just to *text*, though. it is also important for *images*. 
+Scale doesn't apply just to _text_, though. it is also important for _images_.
 
 - While the scale of a banner image might make sense for a desktop layout, it might be too large on a mobile layout.
 
@@ -1132,9 +1132,8 @@ Scale doesn't apply just to *text*, though. it is also important for *images*.
 
 Alignment is the process of **arranging text and images** in a way that creates a **visual connection** between elements.
 
-- When you are designing web pages, it is important to create **cohesive** and **visually appealing** designs. One way to achieve this is through the use of *alignment*.
-
-  - it helps to create **a sense of order and organization** on the page, making it easier for users to navigate and *understand* the content.
+- When you are designing web pages, it is important to create **cohesive** and **visually appealing** designs. One way to achieve this is through the use of _alignment_.
+  - it helps to create **a sense of order and organization** on the page, making it easier for users to navigate and _understand_ the content.
 
 &nbsp;
 
@@ -1142,7 +1141,7 @@ There are several types of alignment you can use, but the basic ones are:
 
 ### Left Alignment (Horizontal)
 
-it is **commonly used with text** where each element is **aligned to the left margin**. 
+it is **commonly used with text** where each element is **aligned to the left margin**.
 
 - Aligning all of the headings and paragraphs on a web page to the left margin makes it **easier for the user to read and follow the content**.
 
@@ -1157,7 +1156,10 @@ it is **commonly used with text** where each element is **aligned to the left ma
     margin: 0 auto;
   }
 
-  h1, h2, h3, p {
+  h1,
+  h2,
+  h3,
+  p {
     text-align: left;
     margin: 10px 0;
   }
@@ -1168,24 +1170,31 @@ it is **commonly used with text** where each element is **aligned to the left ma
 </style>
 
 <h1>Why Left Alignment Matters</h1>
-<p>Left alignment is one of the most common and effective ways to present text on web pages.</p>
+<p>
+  Left alignment is one of the most common and effective ways to present text on
+  web pages.
+</p>
 
 <h2>Consistency</h2>
-<p>Aligning all headings and paragraphs to the left margin creates a clean and consistent reading flow.</p>
+<p>
+  Aligning all headings and paragraphs to the left margin creates a clean and
+  consistent reading flow.
+</p>
 
 <h3>Easy to Follow</h3>
-<p>Users can easily scan and follow content without confusion or misalignment.</p>
+<p>
+  Users can easily scan and follow content without confusion or misalignment.
+</p>
 ```
 
 &nbsp;
 
 ### Right Alignment (Horizontal)
 
-The opposite of left alignment is right alignment, where each element is **aligned to the right margin**. 
+The opposite of left alignment is right alignment, where each element is **aligned to the right margin**.
 
 - This is often used on websites to **display additional content** like **promotional banners** or **advertisements**.
-
-  - An *AD that is aligned to the right margin makes it **stand out from the rest** of the content on the page, and **doesn't distract** the user from the main content.
+  - An \*AD that is aligned to the right margin makes it **stand out from the rest** of the content on the page, and **doesn't distract** the user from the main content.
 
 ```html
 <style>
@@ -1198,7 +1207,10 @@ The opposite of left alignment is right alignment, where each element is **align
     margin: 0 auto;
   }
 
-  h1, h2, h3, p {
+  h1,
+  h2,
+  h3,
+  p {
     text-align: right;
     margin: 10px 0;
   }
@@ -1210,20 +1222,29 @@ The opposite of left alignment is right alignment, where each element is **align
 </style>
 
 <h1>Right Alignment in Web Design</h1>
-<p>Right alignment is commonly used to display additional or promotional content on websites.</p>
+<p>
+  Right alignment is commonly used to display additional or promotional content
+  on websites.
+</p>
 
 <h2>Secondary Content</h2>
-<p>Aligning text to the right margin can help separate it visually from the main content.</p>
+<p>
+  Aligning text to the right margin can help separate it visually from the main
+  content.
+</p>
 
 <h3>Promotional Use</h3>
-<p>This alignment is often chosen for banners, advertisements, or sidebar messages.</p>
+<p>
+  This alignment is often chosen for banners, advertisements, or sidebar
+  messages.
+</p>
 ```
 
 &nbsp;
 
 ### Center Alignment (Horizontal)
 
-Center alignment is where elements are **centered on the page**. 
+Center alignment is where elements are **centered on the page**.
 
 - This is often used for **headings**, **logos**, and other important **elements that you want to draw attention to**.
 
@@ -1238,7 +1259,10 @@ Center alignment is where elements are **centered on the page**.
     margin: 0 auto;
   }
 
-  h1, h2, h3, p {
+  h1,
+  h2,
+  h3,
+  p {
     text-align: center;
     margin: 10px 0;
   }
@@ -1253,13 +1277,22 @@ Center alignment is where elements are **centered on the page**.
 </style>
 
 <h1>Center Alignment for Impact</h1>
-<p>Center alignment is perfect for drawing attention to headings and important elements.</p>
+<p>
+  Center alignment is perfect for drawing attention to headings and important
+  elements.
+</p>
 
 <h2>Eye-Catching Layout</h2>
-<p>By centering key content, you make it stand out and create a balanced visual appeal.</p>
+<p>
+  By centering key content, you make it stand out and create a balanced visual
+  appeal.
+</p>
 
 <h3>Common Uses</h3>
-<p>This technique is often used for logos, hero headings, and call-to-action messages.</p>
+<p>
+  This technique is often used for logos, hero headings, and call-to-action
+  messages.
+</p>
 ```
 
 &nbsp;
@@ -1268,7 +1301,7 @@ Center alignment is where elements are **centered on the page**.
 
 Justified alignment is when text is **aligned to both the left and right margins**.
 
-- This is typically used for **descriptive passages** or **articles**, and creates a *clean* and **professional** look.
+- This is typically used for **descriptive passages** or **articles**, and creates a _clean_ and **professional** look.
 
 ```html
 <style>
@@ -1296,14 +1329,16 @@ Justified alignment is when text is **aligned to both the left and right margins
 <h1>Justified Alignment for Clean Text Blocks</h1>
 
 <p>
-  Justified alignment ensures that each line of text stretches evenly between the left and right margins. 
-  This creates a smooth, block-like appearance that looks very polished and professional. 
-  It’s commonly used in newspapers, magazines, and formal documents where a uniform look is desired.
+  Justified alignment ensures that each line of text stretches evenly between
+  the left and right margins. This creates a smooth, block-like appearance that
+  looks very polished and professional. It’s commonly used in newspapers,
+  magazines, and formal documents where a uniform look is desired.
 </p>
 
 <p>
-  However, care should be taken with justified text to avoid uneven spacing or "rivers" of white space, 
-  especially on narrow columns or screens. Proper hyphenation and responsive design can help maintain readability.
+  However, care should be taken with justified text to avoid uneven spacing or
+  "rivers" of white space, especially on narrow columns or screens. Proper
+  hyphenation and responsive design can help maintain readability.
 </p>
 ```
 
@@ -1313,9 +1348,8 @@ Justified alignment is when text is **aligned to both the left and right margins
 
 it is used to **align elements along a vertical axis**.
 
-- Vertical alignment can be used, for example, for a **contact form** on a website. 
-
-  - Aligning all of the form inputs like the *name*, *email*, and *message fields* along a vertical axis makes it easier for the user to fill out the form.
+- Vertical alignment can be used, for example, for a **contact form** on a website.
+  - Aligning all of the form inputs like the _name_, _email_, and _message fields_ along a vertical axis makes it easier for the user to fill out the form.
 
 ```html
 <style>
@@ -1339,7 +1373,8 @@ it is used to **align elements along a vertical axis**.
     margin-bottom: 5px;
   }
 
-  input, textarea {
+  input,
+  textarea {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -1363,13 +1398,23 @@ it is used to **align elements along a vertical axis**.
 
 <form>
   <label for="name">Name</label>
-  <input type="text" id="name" name="name" placeholder="e.g., Jane Doe">
+  <input type="text" id="name" name="name" placeholder="e.g., Jane Doe" />
 
   <label for="email">Email</label>
-  <input type="email" id="email" name="email" placeholder="janedoe@example.com">
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="janedoe@example.com"
+  />
 
   <label for="message">Message</label>
-  <textarea id="message" name="message" rows="4" placeholder="Write your message here"></textarea>
+  <textarea
+    id="message"
+    name="message"
+    rows="4"
+    placeholder="Write your message here"
+  ></textarea>
 
   <button type="submit">Submit</button>
 </form>
@@ -1379,7 +1424,40 @@ it is used to **align elements along a vertical axis**.
 
 ## Whitespace 101
 
+White space refers to any type of **space around elements** like _images_, _text_, and _buttons_.
 
+White space is important in design because it **helps create a balance between the elements** on the page.
+
+&nbsp;
+
+Types of White Spaces:
+
+- **Macro** White Space: The **space between larger elements** like _images_, _text blocks_, and _buttons_.
+
+- **Active** White Space: The space that is **intentionally created to help guide the user's eye** and **draw attention** to certain elements on the page.
+  - On the freeCodeCamp homepage, the CTA `button` is **visually separated** from other elements.
+    - By using white space effectively, we can help to make a CTA `button` more **prominent** and **encourage users to click** on it.
+
+- **Passive** White Space: The **space that is left over** after all the elements on a page have been placed.
+
+- **Micro** White Space: The **space between individual characters in a line of text**.
+  - it is important because it helps to **improve readability and legibility**, making it easier for users to scan and understand the content.
+
+&nbsp;
+
+**The Law of Proximity**: This law states that _elements_ that are **close together** are perceived as being **related**, while _elements_ that are **far apart** are perceived as being **unrelated**.
+
+- You can use white space to help group related elements together and help users navigate through the content on your page.
+
+&nbsp;
+
+## Working w/ images
+
+
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 

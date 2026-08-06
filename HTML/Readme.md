@@ -1987,14 +1987,20 @@ This way, screen readers and other _assistive technologies_ can **announce chang
 
 ### 5. Window roles
 
-Window roles define sub-windows, like **pop-up modal dialogs**. These roles include `alertdialog` and `dialog`. 
+Window roles define sub-windows, like **pop-up modal dialogs**. These roles include `alertdialog` and `dialog`.
 
 `Note`: it is now considered a best practice to **use the HTML `dialog` element** and its associated JavaScript methods instead of manually creating a dialog.
 
 ```html
 <button id="open-dialog">Open Dialog</button>
 
-<div id="custom-dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title" class="dialog">
+<div
+  id="custom-dialog"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="dialog-title"
+  class="dialog"
+>
   <div class="dialog-content">
     <h3 id="dialog-title">Confirm Action</h3>
     <p>Are you sure you want to delete this file?</p>
@@ -2010,14 +2016,100 @@ Window roles define sub-windows, like **pop-up modal dialogs**. These roles incl
 
 ### 6. Abstract roles
 
-These roles help **organize the document**. 
+These roles help **organize the document**.
 
-They're **only meant to be used internally by the browser**, not by developers. And so, you should know that they exist* but you shouldn't use them on your websites or web applications.
+They're **only meant to be used internally by the browser**, not by developers. And so, you should know that they exist\* but you shouldn't use them on your websites or web applications.
 
 &nbsp;
 
 ## `aria-label` & `aria-labelledby` Attributes
 
+For people using screen readers, the `aria-label` and `aria-labelledby` attributes provide **crucial information about page elements that might be unclear or invisible**.
+
+- Both `aria-label` and `aria-labelledby` attributes **help screen readers understand what elements do**.
+  - They both provide **labels for elements to enhance accessibility** for _screen readers_.
+
+- it is important to make sure that all users, including those living with disabilities, can access websites without issues.
+
+&nbsp;
+
+The `aria-label` attribute is an **invisible label for interactive elements**.
+
+- it adds a **text label** to an element that _screen readers_ can read.
+
+- it is especially useful for elements that **do not have visible text** but still **need to be described by screen readers**.
+  - For example, `buttons` with **only icons** often need `aria-label` to convey their "purpose".
+
+    ```html
+    <button aria-label="Search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    ```
+
+    - The `aria-label` attribute tells _screen readers_ what **text** to use in place of the _icon_.
+
+    - if the button contained the text "Search" instead of an icon, then there would be no need for the `aria-label` attribute as the text would provide the label for the button.
+
+For input elements, the `aria-label` attribute provides a label directly if there isn't a visible label associated with the _input_.
+
+&nbsp;
+
+The `aria-labelledby` attribute does the **exact same thing** as the `aria-label` attribute, but instead of defining the text directly in the attribute, **you use a reference to text that already exists** on the page.
+
+- The existing text must have an `id` attribute, which will be used for the **reference value** in the `aria-labelledby` attribute.
+
+  ```html
+  <input type="text" aria-labelledby="search-btn" />
+  <button type="button" id="search-btn">Search</button>
+  ```
+
+  - The **text** for the `button` is being used as the **label** for the search `input`.
+
+&nbsp;
+
+Combining **multiple** `id` values into a **single** `aria-labelledby` attribute value is also possible.
+
+```html
+<div>
+  <span id="volume-label">Volume</span>
+  <span id="volume-details">Adjust the volume level</span>
+  <input
+    type="range"
+    min="0"
+    max="100"
+    value="30"
+    aria-labelledby="volume-label volume-details"
+  />
+</div>
+```
+
+- For the slider, the _screen reader_ will look out for the content of the `volume-label` and `volume-details` elements and announce "Volume Adjust the volume level".
+
+&nbsp;
+
+A few advantages to using `aria-labelledby` over `aria-label`:
+
+- if someone is using a **translation service** to translate the content on your page, the text in an `aria-label` attribute **may not always be translated**.
+
+- Using `aria-labelledby` can also help **prevent a mismatch** between the visible label text and the invisible label for screen reader users.
+  - Updating the visible text will **automatically update the invisible label**.
+
+- `aria-labelledby` can make it much easier to programmatically **create complex invisible labels** consisting of **multiple sources** of text.
+
+&nbsp;
+
+`Note`: Do not use `aria-label` and `aria-labelledby` on an element at the same time. For in this case, the invisible label for screen readers will always be **determined by** `aria-labelledby` and `aria-label` will be completely **ignored**.
+
+&nbsp;
+
+## `aria-hidden` Attribute
+
+if you ever need to **display content** while at the same time **hiding it from people who use assistive technology**, like *screen readers*, you can use the `aria-hidden` attribute.
+
+- You just need to add it to the HTML element that you want to hide and set its value to `true`, like this: `aria-hidden="true"`.
+
+
+
 
 
 &nbsp;
@@ -2026,3 +2118,8 @@ They're **only meant to be used internally by the browser**, not by developers. 
 
 &nbsp;
 
+&nbsp;
+
+&nbsp;
+
+&nbsp;

@@ -1453,7 +1453,294 @@ Types of White Spaces:
 
 ## Working w/ images
 
+**Create responsive images**.
 
+Responsive images are **images that scale to fit the size of the screen** they are being viewed on.
+
+- This is important because it **ensures that your images look good on all devices**, from _desktops_ to _smartphones_.
+
+  ```html
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #fefefe;
+      color: #333;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      max-width: 600px;
+      margin: 20px auto;
+      line-height: 1.7;
+      text-align: justify;
+    }
+  </style>
+
+  <h1>Responsive Cat Image</h1>
+
+  <img
+    src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+    alt="Two cats peacefully sleeping together."
+  />
+
+  <p>
+    This image automatically scales based on the screen size. Whether you're
+    viewing on a desktop or a mobile phone, it adjusts its size without losing
+    proportions, making the design clean and user-friendly on all devices.
+  </p>
+  ```
+
+&nbsp;
+
+Factor: **The Resolution of An image**
+
+Higher quality images with **better resolution** have **more pixels per inch** (PPI).
+
+- Pixels are **small squares that make up an image**.
+
+- Pixels per inch, or PPI, is **the number of pixels in one inch** of an image.
+  - The **higher the PPI**, the **better the image quality**.
+
+Make sure that your images are **high quality** and **look good on all devices**.
+
+- This means that you should **use high resolution images** that are _optimized_ for the web.
+
+&nbsp;
+
+Factor: **The Size of An image**
+
+Make sure that your **images are the right size**, and are **NOT** too large, or too small.
+
+Using **large images** that are meant to fit in **smaller spaces** in the design can **slow down the website** and make it harder for users to load your site.
+
+- Make sure that your images are the **right size** and are **optimized** for the web.
+
+&nbsp;
+
+### image placement
+
+- **Balance**: The **distribution of visual weight** in a design.
+  - Make sure there is **a good balance between text and images** on the site, so it creates a **harmonious** design.
+
+  ```html
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .text {
+      flex: 1 1 400px;
+    }
+
+    .text h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .text p {
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .image {
+      flex: 1 1 400px;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+
+  <div class="container">
+    <div class="text">
+      <h2>Balanced Layout</h2>
+      <p>
+        Balance is essential in web design. By evenly distributing visual
+        weight—such as pairing this block of text with a complementary image—you
+        create a layout that feels calm, structured, and easy to navigate.
+      </p>
+    </div>
+
+    <div class="image">
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+        alt="Two cats peacefully sleeping together."
+      />
+    </div>
+  </div>
+  ```
+
+- **Hierarchy**: The **order in which elements are viewed** on a page.
+  - Make sure that images that align with **important content are placed higher** than images that are _less important_.
+
+  ```html
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 30px 20px;
+      background-color: #fff;
+      color: #222;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+  </style>
+
+  <div class="section">
+    <img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+      alt="Two cats peacefully sleeping together."
+    />
+    <h2>Our Feline Rescue Mission</h2>
+    <p>
+      This image supports one of our most important stories — the rescue of 12
+      stray cats from a storm drain. Placing it at the top ensures visitors
+      connect emotionally with our mission right away.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Upcoming Fundraiser</h2>
+    <p>
+      Join us for a small fundraising event to support our shelter. It’ll be a
+      fun, casual afternoon with snacks, games, and of course — plenty of cats!
+    </p>
+    <img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+      alt="Two cats peacefully sleeping together."
+    />
+  </div>
+  ```
+
+- **Alignment**: The **placement of elements in relation to each other**.
+  - Make sure that your images are **aligned with the text and other elements** on your site, so that it creates a **cohesive design**.
+
+  ```html
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px 20px;
+      background-color: #ffffff;
+      color: #222;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .aligned-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .aligned-content img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .aligned-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .aligned-text h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .aligned-text p {
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+  </style>
+
+  <div class="aligned-content">
+    <img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+      alt="Two cats peacefully sleeping together."
+    />
+
+    <div class="aligned-text">
+      <h2>Aligned Elements</h2>
+      <p>
+        In this example, the image is aligned horizontally next to the text
+        block. This creates a visually cohesive layout, where both elements feel
+        like they belong together. Proper alignment like this improves
+        readability and reinforces structure in your design.
+      </p>
+    </div>
+  </div>
+  ```
+
+&nbsp;
+
+Factor: **The Accessibility of An image**
+
+Make sure that the **images are accessible to all users**, including those with _visual impairments_.
+
+- This means that you should **use alt text for your images** so that _screen readers_ can read the text to users who are _visually impaired_.
+
+&nbsp;
+
+## Progressive Enhancement
+
+
+
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 

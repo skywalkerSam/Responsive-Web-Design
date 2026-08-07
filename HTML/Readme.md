@@ -2104,11 +2104,68 @@ A few advantages to using `aria-labelledby` over `aria-label`:
 
 ## `aria-hidden` Attribute
 
-if you ever need to **display content** while at the same time **hiding it from people who use assistive technology**, like *screen readers*, you can use the `aria-hidden` attribute.
+This attribute **hides the element and all of its children from the accessibility tree**, while keeping them visible on the page.
 
-- You just need to add it to the HTML element that you want to hide and set its value to `true`, like this: `aria-hidden="true"`.
+- if you ever need to **display content** while at the same time **hiding it from people who use assistive technology**, like _screen readers_, you can use the `aria-hidden` attribute.
+  - You just need to add it to the HTML element that you want to hide and set its value to `true`, like this: `aria-hidden="true"`.
+    - **icons** and **images** that only have a _decorative_ purpose.
 
+    - Duplicated content.
 
+&nbsp;
+
+`aria-hidden` only hides content from assistive technology, such as _screen readers_. if the content should be **hidden from everyone**, then **you should NOT use `aria-hidden` to hide it**.
+
+- in this case you could set the CSS `display` property to `none` to **remove it from the rendered page** and the accessibility tree.
+
+- The `aria-hidden` attribute only **removes the element** from the **accessibility tree**. it does **NOT** remove it from the **DOM**.
+
+  ```html
+  <head>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <button>
+    <i class="fa-solid fa-gear" aria-hidden="true"></i>
+    <span class="label">Settings</span>
+  </button>
+  ```
+
+  - We only keep the text exposed to assistive technologies to **avoid any confusion that may arise from the redundancy** of having both an **icon** and **text** for the same purpose.
+
+&nbsp;
+
+You do **NOT** need to use `aria-hidden` when:
+
+- The HTML element already has a `hidden` attribute.
+
+- The element or the element's ancestor is already _hidden_ with `display: none`.
+
+- The element or the element's ancestor is already _hidden_ with `visibility: hidden`.
+
+in these three cases, the element is **already hidden from the accessibility tree**, so the `aria-hidden` attribute is **NOT** necessary.
+
+&nbsp;
+
+`Note`: Setting `aria-hidden` to `false` will **NOT expose the element** to assistive technologies, if any of its **parents** has this _attribute_ set to `true`.
+
+&nbsp;
+
+in general, **all content and functionality available on the page should also be available to people using assistive technology**.
+
+- The use case for `aria-hidden` is **very narrow** and **should be limited primarily to making the experience cleaner for screen reader users** by removing purely _decorative_ or _duplicate_ information.
+  - Use it only for **decorative elements** that do **NOT** contribute to the **main content**.
+
+- Do **NOT** use `aria-hidden` **to hide content that you don't think screen reader users would be interested in**.
+  - Screen reader users **deserve to have access to all information** on the page.
+
+&nbsp;
+
+## `aria-describedby` Attribute
 
 
 

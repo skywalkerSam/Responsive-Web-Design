@@ -1733,14 +1733,42 @@ Make sure that the **images are accessible to all users**, including those with 
 
 ## Progressive Enhancement
 
+Progressive enhancement is a design approach that ensures **all users**, **regardless of browser or device**, can access the **essential content and functionality** of an application.
 
+it focuses on delivering **a core experience** that works for _everyone_, **while offering extra features and improvements** to users with more advanced browsers or better internet connections.
 
+Core Principles:
+
+- All **core content** and **basic functionality** should be **accessible on all browsers**.
+
+- All **advanced layouts** should be provided through **external CSS** stylesheets.
+
+- All **advanced functionality** should be provided through **external JavaScript** files.
+
+- A user's **browser preferences should be respected**.
 
 &nbsp;
 
-&nbsp;
+Using a progressive enhancement approach makes your applications **more accessible**, because **core content and functionality should NOT be blocked in "unsupported" environments**.
+
+- A progressive enhancement approach can also help **improve the performance** of your applications.
+
+- Those users that are working with **slower internet connection** speeds will still be able to access the content because the **browser will download the necessary resources first**.
+
+- Progressive enhancement can also help improve the visibility (**SEO**) of your applications.
+  - Search engines will be able to crawl the content of your applications because the **core content is available in the initial HTML response**.
 
 &nbsp;
+
+While some have criticized this approach deeming that it is **not always realistic** for applications that _rely heavily on JavaScript_ for their functionality, it **is still a good practice** to follow when building applications.
+
+&nbsp;
+
+## User-Centered Design
+
+
+
+
 
 &nbsp;
 

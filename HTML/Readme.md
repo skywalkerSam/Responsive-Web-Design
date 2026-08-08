@@ -2167,13 +2167,47 @@ in general, **all content and functionality available on the page should also be
 
 ## `aria-describedby` Attribute
 
+it is used to **provide additional information** about an _element_ to screen reader users by **referencing existing content** on the page.
 
+- it creates a **programmatic association between the element and the content** (technically referred to as an **accessible description**), which screen readers can use to inform users of the additional information when they interact with the element.
+  - The most common use for `aria-describedby` is to **associate instructions and error messages with form inputs**.
+
+    ```html
+    <form>
+      <label for="password">Password:</label>
+      <input type="password" id="password" aria-describedby="password-help" />
+      <p id="password-help">
+        Your password must be at least 8 characters long.
+      </p>
+    </form>
+    ```
+
+    - We are using the `aria-describedby` attribute to associate the password `input` field with the **password requirements** in the paragraph element.
 
 &nbsp;
 
-&nbsp;
+Another good use case for the `aria-describedby` attribute is when you have a **delete** `button`.
+
+- Here is an example of a delete `button` followed by a message describing what will happen when the button is `clicked`:
+
+  ```html
+  <button aria-describedby="delete-message">Delete</button>
+
+  <p id="delete-message">Warning! All deletions are permanent.</p>
+  ```
+
+  - Just like in the earlier example, we associate the delete `button` with the **message** using the `aria-describedby` attribute.
+    - The `id` value and the value of the `aria-describedby` attribute **must match**.
 
 &nbsp;
+
+The `aria-describedby` attribute is a powerful attribute that can be used to **help ensure that additional information about an element is provided to screen reader users when they interact** with the element.
+
+it is most commonly used to associate instructions and error messages with form inputs in order to **reduce the chance that screen reader users will miss these messages** as they navigate the form.
+
+&nbsp;
+
+##
 
 &nbsp;
 

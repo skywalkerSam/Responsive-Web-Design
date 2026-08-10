@@ -851,7 +851,7 @@ Description lists are perfect for presenting **terms** and **definitions** in an
 
 - The **description list** element, `dl`, which is the **container** for the entire list.
 
-- The **description term** element, `dt`, or \*title\*\*
+- The **description term** element, `dt`, or **title**
 
 - The **description details** element, `dd`, for the description, or **details** associated with that term.
 
@@ -930,6 +930,16 @@ it is used for **short inline quotations from other sources**.
 &nbsp;
 
 `Note`: You should use `blockquote` for **extended quotations** from other sources and inline quotes (`q`) for **short quotations** from other sources that should be part of existing paragraphs.
+
+&nbsp;
+
+## `<span></span>`
+
+A `span` element is **a generic inline container** for content.
+
+it is commonly used **to style a piece of text differently from the surrounding text**.
+
+- Or, to wrap text and give it an `id` that other elements such as, **ARIA attributes can reference**.
 
 &nbsp;
 
@@ -2207,7 +2217,10 @@ it is most commonly used to associate instructions and error messages with form 
 
 &nbsp;
 
-##
+## `alt` Attribute
+
+
+
 
 &nbsp;
 

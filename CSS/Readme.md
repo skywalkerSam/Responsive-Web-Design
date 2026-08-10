@@ -1766,9 +1766,110 @@ While some have criticized this approach deeming that it is **not always realist
 
 ## User-Centered Design
 
+User-centered design is **a web development approach that prioritizes the end user**, from their needs to their preferences and limitations.
+
+The goal of user-centered design is to craft a _web page_ that is **intuitive**, **efficient** to use, and **pleasing** for your users to _interact_ with.
+
+&nbsp;
+
+One of the first aspects of user-centered design is to **consider the target demographics**.
+
+For example, if your intended user-base is **younger**, you might leverage more flashy **eye-catching designs** that grab their _attention_ immediately.
+
+For an **older** audience, you might focus more on **clear and streamlined designs without distractions**.
+
+&nbsp;
+
+Another aspect to consider is the **goal of the end users**.
+
+For example, if you're building an **e-commerce** page for your products, you probably don't want to advertise someone else's products on your page.
+
+But if you're building a **personal blog**, you might include **advertisement elements to generate revenue** from _passive readers_.
+
+&nbsp;
+
+**User behavior** is an important factor as well.
+
+You'll want to leverage an **analytics tool**, like _Google Analytics_, to measure **how your users engage with your pages**.
+
+- This can reveal areas where users might be getting "stuck" and leaving your page, or **opportunities to improve the overall interaction flow**.
+
+&nbsp;
+
+A key to user-centered design is to **actually involve your users**. Providing **a feedback channel** where they can share their experiences and pain points with your site allows you to capture vital information and iterate further to improve.
+
+Ultimately, User-centered design means **you need to put the user at the forefront of your decision making**, whether that's through _research_ or direct _feedback_.
+
+&nbsp;
+
+### User Research
+
+User research is the **systematic study of the people who use your product**.
+
+The goal is to **measure user needs**, **behaviors**, and **pain points**.
+
+&nbsp;
+
+Net Promoter Score (**NPS**): it measures **how likely your users are to recommend your product** to a friend.
+
+- NPS is measured through **a survey offered at key milestones** along the user's journey, such as after _7 days_, _30 days_, and _90 days_.
+
+- NPS is measured on **a scale of** `0` to `10`, with `9` and `10` indicating an **active promoter** of your site.
+
+&nbsp;
+
+Another research vector is an **exit interview**.
+
+This is **a survey** you show to your users **when they cancel a subscription** or **delete an account**.
+
+- Data from this survey can give you **insight into the factors causing user churn**, so you can address them.
+
+&nbsp;
+
+### Testing
+
+User testing refers to the practice of **capturing data from users as they interface with your application**.
+
+For example, **a video game going through beta testing** is a form of _user testing_.
+
+&nbsp;
+
+One you might run into as a _web developer_ is **A/B testing**.
+
+- A/B testing involves **shipping a new feature to a randomly selected subset** of your user base.
+  - You can then leverage _analytics data_ to **determine if the feature is beneficial**.
+
+&nbsp;
+
+### User Requirements
+
+User requirements refer to **the stories** or **rubric** that your application needs to follow.
+
+- This can **inform the development process**.
+
+&nbsp;
+
+User requirements might be **defined by user research**, or **industry standards**. They can even be defined by **stakeholder input**.
+
+These requirements may be **functional**, meaning **they dictate how your application should work**, or **non-functional**, meaning **they define how your application should behave**.
+
+&nbsp;
+
+User requirements are **NOT static**, either.
+
+The information from both **user testing** and **user research** can **impact the requirements**, and they will change as your user base changes.
+
+&nbsp;
+
+## Designing A Dark Mode Feature
 
 
 
+
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 

@@ -1861,11 +1861,60 @@ The information from both **user testing** and **user research** can **impact th
 
 &nbsp;
 
-## Designing A Dark Mode Feature
+## Designing A [Dark Mode Toggle](./EXERCISES/08-Dark-Mode-Toggle/index.html)
+
+Dark mode is a special feature on web applications where you can change the default light color scheme to a **dark color scheme**.
+
+This helps **reduce eye strain** and **improve readability in low-light conditions**.
+
+&nbsp;
+
+Here are some **best practices** to ensure that your **dark mode** feature is _effective_ and _user-friendly_.
+
+The first consideration is the **avoidance of saturated colors** in _dark mode_.
+
+- **Saturated** colors are **colors that are bright and intense**.
+  - For example, a **bright magenta** button against a **dark gray** background can be **too intense** and _cause eye strain_.
+
+instead, you should **use desaturated colors** in _dark mode_.
+
+- **Desaturated** colors are **colors that are less intense**, **have a lower saturation** level, and are more **comfortable to look at** in _dark mode_.
+
+&nbsp;
+
+Another consideration with _dark mode_ is the use of pure **black backgrounds** with **white text**.
+
+- While this _high contrast_ can be effective, it can also be **too harsh** on the _eyes_.
+
+_instead_, consider using a **dark gray background** with **light gray text** for a _softer contrast_.
+
+- Text will be **easier on the eyes** and **more comfortable to read** in _dark mode_.
+
+&nbsp;
+
+Another consideration is the use of dark mode with the site's **brand identity**.
+
+- A brand identity is **a set of visual elements that represent a brand**, such as the _logo_, _colors_, and _typography_.
+
+When implementing dark mode, you should **consider how the dark mode feature is consistent with your brand's colors and style**.
+
+- it is fine to have the brand _icon_ and _buttons_ at full _saturation_, while the _surrounding elements_ are _desaturated_.
+
+&nbsp;
+
+in general, when it comes to _design_, you always want to **be mindful of the user experience** and **contrast levels**.
+
+&nbsp;
+
+## Designing Breadcrumbs
 
 
 
 
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 

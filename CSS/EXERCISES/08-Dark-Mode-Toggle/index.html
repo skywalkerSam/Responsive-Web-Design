@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Toggle</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Dark Mode Toggle Demo</h1>
+
+    <br />
+    <hr />
+    <br />
+
+    <button id="theme-toggle">Toggle Dark Mode</button>
+
+    <section class="color-saturation">
+      <h1>Color Saturation in Dark Mode</h1>
+      <p>
+        Compare the two buttons below. The first uses a saturated color, the
+        second is desaturated for better accessibility in dark mode.
+      </p>
+
+      <div class="buttons">
+        <button class="saturated">Saturated Button</button>
+        <button class="desaturated">Desaturated Button</button>
+      </div>
+    </section>
+
+    <br />
+    <hr />
+    <br />
+
+    <section class="contrast-comparison">
+      <h1>Dark Mode Contrast Comparison</h1>
+      <p>
+        Compare the two sections below. One uses pure black and white, the other
+        uses dark gray and light gray for better readability.
+      </p>
+
+      <div class="dark-mode-examples">
+        <div class="box harsh-dark">
+          <h2>High Contrast</h2>
+          <p>
+            Pure black background with white text. While readable, it can be
+            harsh on the eyes.
+          </p>
+        </div>
+
+        <div class="box soft-dark">
+          <h2>Soft Contrast</h2>
+          <p>
+            Dark gray background with light gray text. Easier to read and more
+            comfortable for long periods.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

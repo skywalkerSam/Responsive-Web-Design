@@ -159,9 +159,7 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
 
 &nbsp;
 
-## Anchor Tags (`<a></a>`)
-
-in other words, _<u>links</u>_
+## Links: Anchor Tags (`<a></a>`)
 
 ```html
 <a href="https://freecodecamp.org" target="_blank">Visit freeCodeCamp</a>
@@ -196,6 +194,62 @@ in other words, _<u>links</u>_
 &nbsp;
 
 `Note`: When you use these states to style your links, **there is a specific order you need to write your CSS in**: `:link`, `:visited`, `:hover`, `:focus`, then `:active`.
+
+&nbsp;
+
+### Good Link Text
+
+The first visible benefit of a good link text is that **it makes it easier for everyone to find information quickly**.
+
+Descriptive links **help users know where they're headed** and **what they'll access**.
+
+- This ensures the user doesn't feel _lost_ and improves the overall user experience.
+
+&nbsp;
+
+For those using _screen readers_, a clear and descriptive link text is a _must_.
+
+- Screen readers read the link text aloud, so a text like "**Read our accessibility guide**" is way _better_ than "_Click here._"
+
+Descriptive links also help people with _cognitive disabilities_ by providing **clear context**.
+
+&nbsp;
+
+Best practices to keep in mind while writing link texts:
+
+- Make sure links are **visually distinct** by using **underlining** (`__`) and other _visual cues_, so users can easily _identify_ and _navigate_ them.
+
+- **Avoid generic link texts** like "_here_", "_click here_", and "_more-info_" as they don't provide any useful information.
+
+  ```html
+  <a href="/link-to-topic">More info</a>
+
+  <a href="/link-to-topic"> Learn more about our accessibility efforts </a>
+  ```
+
+- **Aim for concise and descriptive link texts**, ideally between `2-5` _words_, that convey the _link's purpose_.
+
+  ```html
+  <a href="webinar-details-link">Details</a>
+
+  <a href="webinar-details-link"> Get details about our upcoming webinar </a>
+  ```
+
+- **Avoid** _jargon_ and **abbreviations** that users _may not understand_.
+
+- **Focus on the destination, NOT the action**.
+  - For example, "**user behavior results**", _instead_ of "_click here to read more_".
+
+- **Do NOT repeat the same link text for different destinations**.
+
+- Place links in a way that they **make sense within the surrounding text**.
+  - For example, "**for more details, visit our events page**" _instead_ of "_Click here for more_".
+
+  ```html
+  <a href="/blog-post-link">Read more</a>
+
+  <a href="/blog-post-link"> Read our latest blog post on web accessibility </a>
+  ```
 
 &nbsp;
 
@@ -375,13 +429,17 @@ The audio and video elements allow you to **add sound and video content** to you
 
 &nbsp;
 
+### Accessible Audio & Video Content
+
+&nbsp;
+
 ## Working w/ images & SVGs
 
 There are 3 things to consider while working with images.
 
 1. Size
 
-   A smaller resolution results in a smaller file size. (duh?)
+   A _smaller resolution_ results in a _smaller file size_. (duh?)
    - ideally, your images should be the **same scale as the rendered size** on the page.
 
 2. Format
@@ -429,6 +487,83 @@ There are also sites like **Pixabay** and **Unsplash**, which offer `free-to-use
 &nbsp;
 
 `Note`: Always **be mindful of the copyright and licensing** when you use an image in your website.
+
+&nbsp;
+
+### `alt` Attribute
+
+**Alternative text**, often abbreviated as _alt text_, is **a brief text description of an image**.
+
+it provides **essential information about the image** for people with _visual disabilities_, such as people who use _screen readers_ and other _assistive technologies_.
+
+- A person with a _visual disability_ will not be able to know what's in the image unless it's described in the _alt text_.
+  - An example of **bad** _alt text_ for _an image of a puppy_ would be "A cute puppy."
+    - This text is **not specific enough** to convey the _important details_ of the image, like what does the puppy look like? Where is the puppy? Are there any important objects around the puppy?
+
+    ```html
+    <img src="puppy.png" alt="A cute puppy." />
+
+    <img
+      src="puppy.png"
+      alt="A black and white puppy with an orange collar lies on its belly in the sand, looking off to the side. A bright orange ball rests near its front paws."
+    />
+    ```
+
+    ```html
+    <img src="resort.png" alt="A resort." />
+
+    <img
+      src="resort.png"
+      alt="Tropical resort featuring a swimming pool surrounded by palm trees and bungalows."
+    />
+    ```
+
+Ultimately, the **alt text** you use for an _image_ **should reflect the primary purpose for including the image on the page**, and the _information_ you provide should give people with _visual disabilities_ the image the **necessary details to understand that purpose**.
+
+&nbsp;
+
+Alternative text is also **used by search engines to understand images**.
+
+Some browsers may also display it when an image is _not loaded properly_. This can happen when the image file is _missing_ or when the user has _connectivity issues_.
+
+&nbsp;
+
+Best practices for writing a good `alt` text:
+
+- You should try to **keep alt text short**.
+  - it should be **detailed enough** to understand the image **but not so long** that it becomes confusing.
+
+- Focus on the **most important aspects** of the _image_.
+  - You should **NOT** try to describe _every little detail_.
+
+- You can just **start the description directly**.
+  - You do **NOT** need to start with "_image of_" or "_picture of_."
+
+- it is usually recommended to **end the alt text with a period**(`.`) for consistency.
+
+- **if the image is a link** to another page, _instead_ of describing the image itself, **the alt text should describe what will happen if one clicks** on it.
+
+  ```html
+  <a href="about.html">
+    <img src="arrow-right.png" alt="Go to next page." />
+  </a>
+  ```
+
+- Also, **if there's similar text around the image**, you do **NOT** need to write it again.
+
+&nbsp;
+
+**Only images that convey important information should have `alt` text**.
+
+if an image is only used for **decorative** purposes, **it should have null (`""`) alt text**, so it can be _ignored_ by _screen readers_ and other _assistive technologies_.
+
+```html
+<img src="decorative_image.jpg" alt="" />
+```
+
+But, **every image on your website should have an `alt` attribute**, even if it's _empty_.
+
+if you omit the `alt` attribute completely, some **screen readers will read the file name instead**, which can be _distracting_ for people who use _assistive technologies_, so this is **NOT** recommended.
 
 &nbsp;
 
@@ -2217,86 +2352,7 @@ it is most commonly used to associate instructions and error messages with form 
 
 &nbsp;
 
-## `alt` Attribute
-
-**Alternative text**, often abbreviated as _alt text_, is **a brief text description of an image**.
-
-it provides **essential information about the image** for people with _visual disabilities_, such as people who use _screen readers_ and other _assistive technologies_.
-
-- A person with a _visual disability_ will not be able to know what's in the image unless it's described in the _alt text_.
-  - An example of **bad** _alt text_ for _an image of a puppy_ would be "A cute puppy."
-    - This text is **not specific enough** to convey the _important details_ of the image, like what does the puppy look like? Where is the puppy? Are there any important objects around the puppy?
-
-  - An example of **good alternative text** would be: "A black and white puppy with an orange collar lies on its belly in the sand, looking off to the side. A bright orange ball rests near its front paws."
-
-    ```html
-    <img
-      src="puppy.png"
-      alt="A black and white puppy with an orange collar lies on its belly in the sand, looking off to the side. A bright orange ball rests near its front paws."
-    />
-    ```
-
-    ```html
-    <img
-      src="resort.png"
-      alt="Tropical resort featuring a swimming pool surrounded by palm trees and bungalows."
-    />
-    ```
-
-Ultimately, the **alt text** you use for an _image_ **should reflect the primary purpose for including the image on the page**, and the _information_ you provide should give people with _visual disabilities_ the image the **necessary details to understand that purpose**.
-
-&nbsp;
-
-Alternative text is also **used by search engines to understand images**.
-
-Some browsers may also display it when an image is _not loaded properly_. This can happen when the image file is _missing_ or when the user has _connectivity issues_.
-
-&nbsp;
-
-Best practices for writing a good `alt` text:
-
-- You should try to **keep alt text short**.
-  - it should be **detailed enough** to understand the image **but not so long** that it becomes confusing.
-
-- Focus on the **most important aspects** of the _image_.
-  - You should **NOT** try to describe _every little detail_.
-
-- You can just **start the description directly**.
-  - You do **NOT** need to start with "_image of_" or "_picture of_."
-
-- it is usually recommended to **end the alt text with a period**(`.`) for consistency.
-
-- **if the image is a link** to another page, _instead_ of describing the image itself, **the alt text should describe what will happen if one clicks** on it.
-
-  ```html
-  <a href="about.html">
-    <img src="arrow-right.png" alt="Go to next page." />
-  </a>
-  ```
-
-- Also, **if there's similar text around the image**, you do **NOT** need to write it again.
-
-&nbsp;
-
-**Only images that convey important information should have `alt` text**.
-
-if an image is only used for **decorative** purposes, **it should have null (`""`) alt text**, so it can be _ignored_ by _screen readers_ and other _assistive technologies_.
-
-```html
-<img src="decorative_image.jpg" alt="" />
-```
-
-But, **every image on your website should have an `alt` attribute**, even if it's _empty_.
-
-if you omit the `alt` attribute completely, some **screen readers will read the file name instead**, which can be _distracting_ for people who use _assistive technologies_, so this is **NOT** recommended.
-
-&nbsp;
-
-## Good Link Text
-
-&nbsp;
-
-&nbsp;
+##
 
 &nbsp;
 

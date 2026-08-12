@@ -1908,15 +1908,83 @@ in general, when it comes to _design_, you always want to **be mindful of the us
 
 ## Designing Breadcrumbs
 
+Breadcrumbs are **a navigation aid that shows the user where they are** in the site's _hierarchy_.
 
+When it comes to web design, there are many types of _navigational aids_ you can use. Examples include _top navigation bars_, _sidebars_, and _footers_.
 
+- But if your site is on the more _complex side_ with **deeper levels of navigation**, you might want to consider using _breadcrumbs_.
 
+  ```html
+  <div class="breadcrumbs">Home / Electronics / Phones / Smartphone XYZ</div>
+  ```
+
+  - in most websites, _breadcrumbs_ are displayed at **the top** of the page, showing the user **the path they took to get to the current page**.
+
+The use of _breadcrumbs_ is helpful because it can help users understand **where they are** in the site's _hierarchy_ and **how to navigate back** to the previous pages.
+
+- This is especially useful when a user has come from a search result or an _external link_ and needs to **understand the context of the page they are on**.
 
 &nbsp;
 
-&nbsp;
+When it comes to designing _breadcrumbs_, there are a few _considerations_ to keep in mind:
+
+The _first_ is to decide on what **the separator** will be.
+
+- The _separator_ is **the character that separates the different levels of the hierarchy**.
+  - Common separators include the greater than sign (`>`), right angle quotation marks (`»`) ,and the forward slash (`/`).
+
+    ```html
+    <div class="breadcrumbs">
+      Home &gt; Electronics &gt; Phones &gt; Smartphone XYZ
+    </div>
+    ```
+
+The _second_ consideration is **the placement** of the _breadcrumbs_.
+
+Breadcrumbs are **typically placed at the top of the page**, either **above or below the main navigation bar**.
+
+- Users shouldn't have to _struggle_ to find the _breadcrumbs_, so **make sure they are visible** and **easy to locate**.
+
+  ```html
+  <nav class="main-nav">
+    <a href="#">Home</a>
+    <a href="#">Electronics</a>
+    <a href="#">Phones</a>
+  </nav>
+  <div class="breadcrumbs">
+    Home &gt; Electronics &gt; Phones &gt; Smartphone XYZ
+  </div>
+  ```
+
+Another consideration is **the size** of the _breadcrumbs_.
+
+You want to **make sure the breadcrumbs are large enough to be easily read**, _but_ **not so large** that they take up _too much space_ on the page.
+
+Remember, the breadcrumbs are **NOT** meant to serve as a _primary navigation tool_, but _rather_ as **a secondary navigational aid**.
+
+- in websites where there is a lot of information on a page, users can easily see _where they are_ in the hierarchy and _navigate back_ to previous pages using _breadcrumbs_.
+
+  ```html
+  <div class="breadcrumbs">
+    Home &gt; Electronics &gt; Phones &gt; Smartphone XYZ
+  </div>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  ```
 
 &nbsp;
+
+if your site is _simple_ and has a _shallow hierarchy_, _breadcrumbs might not be necessary_.
+
+- A shallow hierarchy means that the site has only a _few levels of navigation_, so breadcrumbs _might not add much value_.
+
+Typically, you will see breadcrumbs on _e-commerce_ sites, _news_ sites, and other sites with a _deep hierarchy_ like _technical documentation_ sites.
+
+&nbsp;
+
+## Designing Cards
 
 &nbsp;
 

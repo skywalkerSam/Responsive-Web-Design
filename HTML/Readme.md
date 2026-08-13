@@ -309,7 +309,9 @@ There are many more `OG` _properties_ that you can set, like `description`, `aud
 
 &nbsp;
 
-## Working w/ Audio & Video
+## Working Audio & Video
+
+### Audio Tag
 
 The audio and video elements allow you to **add sound and video content** to your HTML documents.
 
@@ -367,69 +369,151 @@ The audio and video elements allow you to **add sound and video content** to you
 
 &nbsp;
 
-- The **video** element supports `mp4`, `ogg`, and `webm` formats.
+### Video Tag
 
-  ```html
-  <video
+The **video** element supports `mp4`, `ogg`, and `webm` formats.
+
+```html
+<video
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  loop
+  controls
+  muted
+  width="400"
+></video>
+```
+
+Add the `autoplay` attribute to the opening video tag so the video plays automatically.
+
+```html
+<video
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  autoplay
+  loop
+  controls
+  muted
+  width="400"
+></video>
+```
+
+If you wanted to display an image while the video is downloading, you can use the `poster` attribute.
+
+```html
+<video
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  loop
+  controls
+  muted
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  width="400"
+></video>
+```
+
+You can also use the `source` element inside a `video` element, just like you did with the `audio` element. This lets you provide the same video in **multiple formats**, and the browser will choose the first one it can play.
+
+```html
+<video
+  controls
+  width="400"
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+>
+  <source
     src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-    loop
-    controls
-    muted
-    width="400"
-  ></video>
-  ```
+    type="video/mp4"
+  />
+  <source
+    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.webm"
+    type="video/webm"
+  />
+  Your browser does not support the video tag.
+</video>
+```
 
-  Add the `autoplay` attribute to the opening video tag so the video plays automatically.
-
-  ```html
-  <video
-    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-    autoplay
-    loop
-    controls
-    muted
-    width="400"
-  ></video>
-  ```
-
-  If you wanted to display an image while the video is downloading, you can use the `poster` attribute.
-
-  ```html
-  <video
-    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-    loop
-    controls
-    muted
-    poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-    width="400"
-  ></video>
-  ```
-
-  You can also use the `source` element inside a `video` element, just like you did with the `audio` element. This lets you provide the same video in **multiple formats**, and the browser will choose the first one it can play.
-
-  ```html
-  <video
-    controls
-    width="400"
-    poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-  >
-    <source
-      src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-      type="video/mp4"
-    />
-    <source
-      src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.webm"
-      type="video/webm"
-    />
-    Your browser does not support the video tag.
-  </video>
-  ```
-
-  **MIME** (Multipurpose Internet Mail Extensions) is a standard to describe documents in other forms besides ASCII text, for example, audio, video, and images. (`type="video/mp4"`, `type="video/webm"`, `type="video/ogg"`, `type="video/quicktime"`, etc.)
+**MIME** (Multipurpose Internet Mail Extensions) is a standard to describe documents in other forms besides ASCII text, for example, audio, video, and images. (`type="video/mp4"`, `type="video/webm"`, `type="video/ogg"`, `type="video/quicktime"`, etc.)
 
 &nbsp;
 
-### Accessible Audio & Video Content
+### Accessible Media Element: `track`
+
+A _video_ is not just about _visuals_ but also _audio_, so the first thing you should consider doing is adding **captions** or **subtitles** to your video content.
+
+- **Captions** provide the **text version of spoken words** and important _non-verbal_ sounds, like _music_ or _laughter_, **synchronized** with the video.
+
+- **Subtitles** are essential **for people who don't understand the language** that is being spoken in the video.
+  - This helps not only people who are _deaf_ or _hard of hearing_ but also those watching videos in _noisy or quiet environments_.
+
+&nbsp;
+
+To add _captions_ or _subtitles_ to your video or audio content, you can use the `track` element _inside_ your `video` or `audio` element.
+
+```html
+<video
+  width="400"
+  height="300"
+  controls
+  src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
+>
+  <track src="captions.vtt" kind="captions" srclang="en" label="English" />
+</video>
+
+<audio controls src="sample.mp3">
+  <track src="captions.vtt" kind="captions" srclang="en" label="English" />
+</audio>
+```
+
+- The `kind` attribute is used to **tell the track element how it should be used**.
+  - Valid values for the `kind` attribute include `captions`, `subtitles`, `chapters`, and `metadata`.
+
+- The `srclang` attribute represents the **language for the `track` content**.
+
+- The `label` attribute is a **descriptive title for the text track** that browsers use to _identify_ and _display_ it in **the list of available text tracks**.
+
+&nbsp;
+
+#### Transcript
+
+Provide a **transcript** for your _audio_ and _video_ content.
+
+- A **transcript** is a **text version of all the spoken words** in your _audio_ or _video_.
+
+Unlike _captions_, **transcripts don’t need to be synchronized** with the _media_.
+
+- Transcripts are useful for _deaf people_ and those _hard of hearing_.
+
+- They're also _beneficial_ for people **who prefer reading** instead of _watching_ or _listening_.
+
+Transcripts also make your content **searchable**, allowing users to quickly _find specific parts_ of your _audio_ or _video_.
+
+- if you have a video or audio on a website, you can simply add the transcript below the audio or video:
+
+  ```html
+  <audio controls>
+    <source src="audio.mp3" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Transcript -->
+  <h3>Transcript</h3>
+  <p>[Speaker 1]: Welcome to the tutorial on making accessible content</p>
+  <p>[Speaker 2]: Today, we'll cover captions, transcripts, and more.</p>
+
+  <!-- Rest of transcript -->
+  ```
+
+  - if you're publishing videos on a video-sharing platform like **YouTube** or Vimeo, they have **automatic captions and transcripts** for videos.
+    - But if you're _not satisfied_, you can use services like _veed.io_, _Rev_, _Amara_, and _Descript_.
+
+&nbsp;
+
+Other ways to make your video and audio content _more accessible_, include:
+
+- Adding **a sign language overlay** for videos for _deaf people_ and those hard of hearing.
+
+- Providing **volume and speed controls**.
+
+- Ensuring **good contrast** for _on-screen text_.
+
+- Offering **multiple formats**.
 
 &nbsp;
 

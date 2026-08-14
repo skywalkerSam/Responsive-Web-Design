@@ -2436,16 +2436,106 @@ it is most commonly used to associate instructions and error messages with form 
 
 &nbsp;
 
-##
+## Keyboard Accessibility
+
+Many users rely on _keyboards_ instead of _mice_ due to _physical disabilities_, _repetitive strain injuries_, or _personal preference_.
+
+This includes users of _screen readers_ and those who _may_ not have a working mouse.
+
+Keyboard accessibility ensures these users can navigate web applications effectively without barriers.
 
 &nbsp;
 
-&nbsp;
+Many users rely on the `Tab` key to move through interactive elements on a webpage.
+
+By default, browsers let users _tab through elements_ like _links_, _buttons_, and _form fields_ in the order they appear in the HTML. This is called the **natural tab order**.
+
+The `tabindex` attribute allows you to **adjust which elements are focusable** or **change their focus order**.
+
+Basic Syntax:
+
+```html
+<element tabindex="number">Element Text</element>
+```
 
 &nbsp;
 
-&nbsp;
+The _value_ of `tabindex` determines **how the element behaves in keyboard navigation**.
+
+- `tabindex="0"` _adds_ the element to the **natural tab order**.
+
+  ```html
+  <button>First</button>
+  <div tabindex="0">Second</div>
+  <a href="#">Third</a>
+  ```
+
+  - Tabbing will move _focus_ from the `button` to the `div`, then to the `a`, following their order in the HTML.
+
+- `tabindex="-1"` _makes_ an element **focusable programmatically**.
+  - This is useful for **managing focus in elements that are NOT normally focusable**, such as _headings_, _containers_, _dialogs_, or _error messages_.
+
+    ```html
+    <p tabindex="-1">Sorry, there was an error with your submission.</p>
+    ```
+
+    - in this example, the `p` is **NOT** part of the _normal tab order_, so users can NOT reach it by pressing the `Tab` key. However, if you set focus to this element via a **script**, the message will be brought to the _user's attention_.
 
 &nbsp;
+
+When the `tabindex` is **greater** _than_ `0` it _sets_ a **custom tab order**. So elements with **lower positive values are focused first**.
+
+```html
+<input tabindex="2" />
+<input tabindex="1" />
+<input tabindex="3" />
+```
+
+- in this example, tabbing will _focus_ the `input` with `tabindex="1"` _first_, then `2`, then `3`, **regardless of their order in the HTML**.
+
+Custom positive values are sometimes used in **complex widgets**, such as a _toolbar_ where you want **a specific navigation order**.
+
+However, this approach is **discouraged**, because it can make _navigation_ **confusing** and **hard to maintain**, especially as the page _grows_ or _changes_.
+
+&nbsp;
+
+`accesskey` attribute allows you to **define a key that focuses on** or **activates a particular element**.
+
+- The exact **key combination to activate** the `accesskey` **may vary** _depending_ on the **browser** and **operating system**.
+  - For **Windows**: `ALT + Specified Key`
+
+  - For **Mac**: `CTRL + Option + Specified Key`
+
+The `accesskey` attribute can be **problematic**, because it may **conflict with existing shortcuts** or behave _inconsistently_ across devices and keyboards, and is often **NOT intuitive** for users to discover or remember.
+
+- Should you _choose_ to use `accesskey`, it should be done with **a clear guidance** to users, but _in most cases_ it's better to **avoid _accesskey_** in websites and web applications.
+
+```html
+<button accesskey="s">Save</button>
+<button accesskey="c">Cancel</button>
+<a href="index.html" accesskey="h">Home</a>
+```
+
+&nbsp;
+
+Make sure you **provide clear focus indicators**.
+
+The focus indicator should be _styled_ in a way that makes it **obvious which element currently has focus**.
+
+in order to be _accessible_, the indicator must have a **minimum color contrast** of at least `3:1` with the _background color_ it covers.
+
+- if you feel the **default browser focus indicator** is _not enough_, you can **override** it by targeting the `focus` state of the element.
+
+  ```css
+  button:focus {
+    outline: 2px solid #005fcc;
+  }
+  ```
+
+  - The `outline` property is used to define the **outline around the element**.
+
+&nbsp;
+
+`Note`: You should also **avoid keyboard traps**, which occur when a user _cannot move focus_ away from a certain element in components like _modals_ and _popups_.
 
 &nbsp;

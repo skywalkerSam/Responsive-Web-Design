@@ -1984,13 +1984,50 @@ Typically, you will see breadcrumbs on _e-commerce_ sites, _news_ sites, and oth
 
 &nbsp;
 
-## Designing Cards
+## Designing [Cards](./EXERCISES/09-Cards/index.html)
+
+Card components are used to help **display information in a structured way**, and are a very common occurrence in _e-commerce_, _social media_, and _news sites_.
+
+Best Practices:
+
+The _first_ consideration for card design should be **simplicity**.
+
+You don't want your cards to be _visually cluttered_ or display _too much_ information.
+
+- For example, if a card design is _visually cluttered_, there will be _too much_ information for the user to process _all at once_.
 
 &nbsp;
 
-&nbsp;
+_Another_ thing to consider is where the user can **click on the card**.
+
+- Some card designs will have a single `button`, making it _obvious_ where the user can _click_.
+
+- Other card designs will have the **entire card clickable**.
+  - When the user _hovers_ over any part of the card, the card will **change color** or have a **shadow effect** to indicate that the card is _clickable_.
+
+`Note`: Whatever design you choose, it needs to be **consistent** throughout your site and easy for the user to understand.
 
 &nbsp;
+
+Another consideration is the use of **quality media** on your cards.
+
+Choosing **high-quality media** can significantly **enhance the user experience**.
+
+if you are using images or videos for say a product card, the higher the _quality_ the more the user will be _interested_ in that product.
+
+- But, if you use _poor media quality_, then the user \*might not _trust_ the quality of your _products_ and _services_.
+
+&nbsp;
+
+One of the last things to consider is the use of **color hierarchy**.
+
+You want to make sure that the **most important information** on the card is the **most prominent**.
+
+- You can use **bright colors for important elements** like a _call-to-action_ `button`, and **light colors** for **less important** items on a card.
+
+&nbsp;
+
+## Designing infinite Scrolls
 
 &nbsp;
 

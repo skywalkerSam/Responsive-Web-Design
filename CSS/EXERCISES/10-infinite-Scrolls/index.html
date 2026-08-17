@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>infinite Scroll Demo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- <div class="pagination">
+      <div class="post">Post 1</div>
+      <div class="post">Post 2</div>
+      <div class="post">Post 3</div>
+    </div>
+    <div class="pagination-controls">
+      <button class="prev" disabled>Previous</button>
+      <button class="next">Next</button>
+    </div> -->
+
+    <main>
+      <h1>infinte Scroll Demo</h1>
+      <div class="infinite-scroll">
+        <div class="post">Post 1</div>
+        <div class="post">Post 2</div>
+        <div class="post">Post 3</div>
+        <div class="post">Post 4</div>
+        <div class="post">Post 5</div>
+        <div class="post">Post 6</div>
+        <div class="post">Post 7</div>
+        <div class="post">Post 8</div>
+        <div class="post">Post 9</div>
+        <div class="post">Post 10</div>
+        <!-- More posts will load here as the user scrolls down -->
+      </div>
+
+      <!-- <button class="load-more">Load More</button> -->
+
+      <div class="loading-indicator" style="display: none">Loading...</div>
+
+      <button id="back-to-top" class="back-to-top">↑ Back to Top</button>
+    </main>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

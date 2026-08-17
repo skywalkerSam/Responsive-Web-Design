@@ -2027,7 +2027,60 @@ You want to make sure that the **most important information** on the card is the
 
 &nbsp;
 
-## Designing infinite Scrolls
+## Designing [infinite Scrolls](./EXERCISES/10-infinite-Scrolls/index.html)
+
+infinite scrolling is **a design pattern that loads more content as the user scrolls** down the page.
+
+Oftentimes, this is used on social media sites like _Twitter_ or _instagram_.
+
+- For example, if you are logged in and want to see more _tweets_ or _posts_, you can scroll down and more _tweets_ and _posts_ will load.
+
+&nbsp;
+
+### Pagination
+
+Pagination is **a design pattern that breaks up content into pages**.
+
+- This is often used when there is a _lot of content_ to display.
+  - An example of pagination is when you _search_ for something on _Google_ and you see the search results on _multiple pages_.
+
+&nbsp;
+
+With _pagination_, you have to **click on a button to go to the next page**.
+
+With _infinite scrolling_, you just **keep scrolling down and more content will load**.
+
+`Note`: infinite scrolling is also used as a _substitute_ for pagination.
+
+&nbsp;
+
+Best practices for implementing **infinite Scrolls**:
+
+- Provide a "**Load More**" `button` that loads the next set of results when the user _clicks_ on it.
+  - This is a good way to give the user **control over when they want to see more content**.
+
+- Add a "**Back**" `button` that gives users **the ability to go back** to the previous page **without having to scroll** all the way back up.
+  - "_Back to the top_" `button` which leads users _back to the top_ of the page of results.
+
+- Provide a **loading indicator**.
+  - Users should have **a clear indication that more content is being loaded**; otherwise, they might think that the page is _broken_.
+
+- Keep the `footer` _accessible_ to the user.
+  - if the footer contains **important** information, then it should be **accessible** to the user at all times.
+
+&nbsp;
+
+## Designing Modal Dialogs
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 

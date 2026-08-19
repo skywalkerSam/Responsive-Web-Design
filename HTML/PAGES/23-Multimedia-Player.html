@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multimedia Player</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: linear-gradient(90deg, rgb(255, 200, 0), rgb(0, 255, 157));
+      }
+
+      main {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      main h1 {
+        font-size: 4rem;
+        margin: 60px auto;
+      }
+
+      section {
+        margin: 20px auto;
+      }
+
+      main section h2 {
+        font-size: 1.7rem;
+      }
+
+      .transcript {
+        max-width: 768px;
+      }
+
+      .transcript p {
+        line-height: 1.7;
+        text-align: justify;
+      }
+
+      .iframe {
+        margin: 20px auto 80px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Multimedia Player Demo</h1>
+      <section>
+        <h2>Audio Demo: Sailing Away</h2>
+        <audio controls aria-label="A sample audio">
+          <source
+            src="https://cdn.freecodecamp.org/curriculum/js-music-player/sailing-away.mp3"
+            type="audio/mp3"
+          />
+        </audio>
+      </section>
+
+      <section>
+        <h2>Video Demo: What is a map method and how does it work?</h2>
+        <video
+          width="720px"
+          src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
+          controls
+        >
+          <source
+            src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
+            type="video/mp4"
+          />
+          <track
+            src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.vtt"
+            kind="subtitles"
+            srclang="en"
+            label="English"
+          />
+        </video>
+      </section>
+
+      <section class="transcript">
+        <h2>Transcript</h2>
+        <p>
+          What is the map method and how does it work? The map method is a
+          powerful and widely used function in JavaScript that operates on
+          arrays. It is designed to create a new array by applying a given
+          function to each element of the original array. This method does not
+          modify the original array, but instead returns a new array containing
+          the results of the function applied to each element. Here's an example
+          of using the map method on an array of numbers. To create a new array
+          where each number is doubled, we are using the map method. The map
+          method accepts a callback function where the function is called on
+          every single element in the array. In this case, each number in the
+          array will be multiplied by two. The result will be a new array of the
+          numbers 2, 4, 6, 8, 10. The callback function can accept up to three
+          arguments. The first argument is the current element being processed.
+          The second argument is the index of the current element being
+          processed. The third argument is the array where map is being called
+          on. Understanding and effectively using the map method can
+          significantly improve your ability to work with arrays in JavaScript.
+          In future lecture videos, we'll dive deeper into more advanced uses of
+          map and explore how it can be a powerful tool for building. Dynamic
+          and efficient programs.
+        </p>
+      </section>
+
+      <section class="iframe">
+        <h2>
+          iframe Demo: Post Malone, Swae Lee - Sunflower (Spider-Man: Into the
+          Spider-Verse)
+        </h2>
+        <iframe
+          frameborder="0"
+          width="1366"
+          height="768"
+          src="https://www.youtube.com/embed/ApXoWvfEYVU"
+          title="Post Malone, Swae Lee - Sunflower (Spider-Man: Into the Spider-Verse)"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </main>
+  </body>
+</html>

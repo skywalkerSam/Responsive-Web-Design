@@ -2070,13 +2070,34 @@ Best practices for implementing **infinite Scrolls**:
 
 &nbsp;
 
-## Designing Modal Dialogs
+## Designing [Modal Dialogs](./EXERCISES/11-Modal-Dialogs/index.html)
+
+Modal the type of **pop-up** that a website might show you on top of their content.
+
+- HTML has a `dialog` element that you can use to create _modals_.
+
+- The content behind a modal is usually _dimmed_.
+  - This helps the user visually _focus_ on the area you want them to interact with – in this case, the _modal_.
 
 &nbsp;
 
-&nbsp;
+Best Practices:
+
+- Allow the user to **click outside** of the modal to **close** it.
+
+- You'll often see very **prominent buttons** on modals. These are called **CTAs**, or `call-to-action`.
+  - You want these to be **easily identifiable** since the purpose of interrupting the user's flow with a modal is to **prompt them to take a specific action**.
+
+  - Modals should _also_ have a **close** `button`.
+    - While you may really want the user to _click_ on your CTAs, it's _important_ to **give them an option to back out** of the modal and _resume_ whatever they were previously doing.
 
 &nbsp;
+
+`Note`: There are, _of course_, **accessibility concerns** with _modals_, such as correctly managing focus on elements. However, if you use these general practices as your starting point, you'll have a solid foundation to build on.
+
+&nbsp;
+
+## Progress indication
 
 &nbsp;
 

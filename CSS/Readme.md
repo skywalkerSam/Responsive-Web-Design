@@ -2097,7 +2097,49 @@ Best Practices:
 
 &nbsp;
 
-## Progress indication
+## [Progress indication](./EXERCISES/12-Progress-indication-Bar/index.html)
+
+Progress indication is a way to show users _how far_ they are in a _process_, and _how much more_ they need to do.
+
+- it can be used in **forms**, **registration**, and **setup** processes.
+
+For example, you can use **a progress indication** bar to show users what is left to do when filling forms.
+
+- You don't want to create a _situation_ where the user needs to fill out a lengthy form and they don't know _how many more steps_ they need to complete.
+
+- **Transparency** is key so the user knows whether they have enough time to sit down and complete the form, or if they need to come back later.
+
+&nbsp;
+
+Best Practices:
+
+- Keep it _simple_.
+  - You do NOT want to _overwhelm_ the user with _too much information_ where they get _frustrated_ and leave the site.
+
+- Make it possible to _go back_ to **previous steps**.
+  - This is important because users may want to go back and _check_ their previous answers, or **make changes**.
+
+- Make the progress indication section **easy to find**.
+  - if the user can't find it, what's the point?
+
+- Have **clear** _section_ **titles**, **percentages**, or **steps**.
+  - if you just have a progress bar with _no context_, the user won't know _what it means_.
+
+&nbsp;
+
+## Designing Shopping Carts
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 

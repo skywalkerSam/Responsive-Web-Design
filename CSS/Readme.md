@@ -2127,11 +2127,46 @@ Best Practices:
 
 &nbsp;
 
-## Designing Shopping Carts
+## Designing A [Shopping Cart](./EXERCISES/13-Shopping-Cart/index.html)
+
+There are thousands of _e-commerce_ websites on the internet, and the shopping cart is a crucial part of the _e-commerce_ experience.
+
+- A **good** design can make the shopping cart experience more _enjoyable_ and _increase sales_.
+
+- A **poor** design can lead to _abandoned carts_ and _lost sales_.
 
 &nbsp;
 
+Best Practices:
+
+- The shopping cart **icon**.
+  - A common icon is **a shopping cart with a handle and wheels**.
+    - Other icons might be a _shopping bag_ or a _basket_.
+
+    - But, you shouldn't choose an _icon_ that is _too abstract_, or _difficult to understand_.
+
+- Make sure the **shopping cart** is **visible to users**, **at all times**.
+  - The _cart_ is usually displayed in the _upper right_ corner of the page.
+
+  - The _number of items_ in their cart should be displayed next to the _cart icon_.
+
+- Provide _a clear way_ for users to **update the quantity of items** in their cart.
+  - This can be done by providing a **quantity input field** next to _each item_ in the cart.
+
+  - You should also provide a "**Remove**" `button` next to _each item_ in the cart.
+
+- The **total cost of all items** in the _cart_ should be **displayed prominently** on the page.
+  - `Note`: Do **NOT** play _hide and seek_ with the user!
+
+- Provide a clear **call-to-action** `button` for users to _proceed to checkout_.
+  - This `button` should be the **most prominently displayed** element on the page, so users know exactly what to do next.
+    - You shouldn't have _too many buttons_ on the page, as this can lead to _confusion_.
+
+  - Use the _brand's_ **primary color** for the `button`, so it **stands out** from the rest of the page.
+
 &nbsp;
+
+## Progressive Disclosure
 
 &nbsp;
 

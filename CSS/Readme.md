@@ -2166,15 +2166,44 @@ Best Practices:
 
 &nbsp;
 
-## Progressive Disclosure
+## [Progressive Disclosure](./EXERCISES/14-Progressive-Disclosure/index.html)
+
+A progressive disclosure is **a design pattern used to only show users relevant content based on their current activity** and **hide the rest**.
+
+- This is done to **reduce cognitive load**, and make the user experience more _intuitive_.
 
 &nbsp;
 
-&nbsp;
+For example, when you use Google's search page, _most_ of your searches will be _simple_. So having a _simple user interface_ with very _few options_ makes sense. But for the few times you will need a _more advanced search_, Google provides _an advanced search option_ that will reveal _more options_.
+
+- You can find Google's advanced search option from the _settings menu_ on the Google homepage. Or you can go to `google.com/advanced_search`
 
 &nbsp;
 
+Another example of _progressive disclosure_ would be the "_More details_" `button` on products in an _e-commerce_ website. When you visit a site like _Amazon_, you will see a list of product images in different categories.
+
+- This allows users to shop with _ease_, and NOT be _overwhelmed_ by _too much information_.
+
+if the user is _interested_ in a particular product, they can _click_ on the product image to reveal more details about the product.
+
+Displaying all of the information right away may be **overwhelming** for the user. So, by using _progressive disclosure_, the user can choose to see more information when they are ready.
+
 &nbsp;
+
+Best Practices:
+
+- All **important information should be visible**, at all times.
+  - Users should not have to _struggle to find_ key information because it is hidden by extra advanced features.
+
+- Provide a **single access point** for users to access _additional features_ or information.
+  - This could be a `button` or `link` that is **always visible** on the page.
+    - Adding **multiple access points** can be **confusing** for users and can lead to a poor user experience.
+
+- All **additional information** should be **available** when needed.
+
+&nbsp;
+
+## Deferred and Lazy Registration
 
 &nbsp;
 

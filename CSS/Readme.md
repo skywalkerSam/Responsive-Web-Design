@@ -2203,7 +2203,40 @@ Best Practices:
 
 &nbsp;
 
-## Deferred and Lazy Registration
+## Deferred/Lazy Registration
+
+Lazy registration is **a UI design pattern that allows users to browse and interact with your application without having to register**.
+
+- A good example of this would be an _e-commerce_ site.
+  - Users should be able to _browse_ through the products and add a few items to their _cart_.
+    - Then, if they are _interested_ in purchasing, they will need to _register_.
+
+- Another good example of lazy registration would be _YouTube_.
+  - YouTube is a video sharing platform with millions of videos on everything from _tech_, _pop culture_, _gaming_, and more.
+    - if someone visits YouTube, they can watch as many videos as they like _without_ needing to _sign in_ or register.
+      - However, if they want to _like_, _comment_, or _subscribe_ to a channel, they will _need to register_.
+
+The reason behind this is that users need to **see the value** the site offers and **feel** like the application is **safe** to provide their information.
+
+- Otherwise, they will NOT be willing to register and you will lose potential customers.
+
+&nbsp;
+
+**_The Trust Factor_**: You will need to make sure to **communicate that the user's sensitive data will be protected** and are secured with the site.
+
+&nbsp;
+
+## Design Briefs
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 

@@ -2291,7 +2291,53 @@ There will also usually be a _project manager_ who will be **responsible for coo
 
 &nbsp;
 
+## Common Design Tools
+
+Design is the _foundation_ of every _enterprise-level_ web application. This is why _designers_ and _developers_ work closely to create _user-focused_ interfaces that are _visually appealing_ and _functional_.
+
+Most of these _design tools_ excel in **_vector-based_ design** and **prototyping**.
+
+- _Vector-based_ design involves **creating digital art using mathematical formulas** to define _lines_, _shapes_, and _colors_.
+
+- _Prototyping_ refers to **the process of creating an interactive model of a product** or UI.
+
+&nbsp;
+
+Some common _vector-based_ design tools include:
+
+- **Figma**
+  - This _cloud-based_ tool specializes in User Interface and User Experience (`UI/UX`) design.
+
+- **Sketch** (Mac Only)
+  - it is popular for its _intuitive interface_ and _simplicity_, making it ideal for developers who want to _quickly create prototypes_.
+
+- **Adobe XD**
+  - A _vector-based_ design and prototyping tool for UI/UX design, known for its **seamless integration with other Adobe apps** like Photoshop, Illustrator, and After Effects.
+
+&nbsp;
+
+Some more design tools:
+
+- Canva
+- Framer
+- InVision
+- Adobe Photoshop
+- Adobe Illustrator
+- Miro
+
+&nbsp;
+
 ##
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 

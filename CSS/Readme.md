@@ -2228,11 +2228,70 @@ The reason behind this is that users need to **see the value** the site offers a
 
 ## Design Briefs
 
-&nbsp;
+When it comes to designing _new features_ or _applications_, a good first step would be to create _a design brief_.
+
+A _design brief_ is **a document that outlines the objectives**, **goals**, and **requirements** of a project.
+
+- it is **a roadmap that guides the design process** and ensures that the final product meets the needs of the client.
+  - Usually the _client_ will write the _design brief_ and it will serve as a working draft.
+
+  - Sometimes, the _designer_ might write one and consult with the client to make sure it meets their needs.
 
 &nbsp;
 
+A few **key elements** that should be included in a _design brief_:
+
+- The **overview** of the _project_ and _business_.
+  - This overview should include the **company's details**, **mission**, **values**, _unique_ **selling points**, and **products** or **services**.
+
+- **Document the goals and objectives** for the project.
+  - This should include the **purpose** of the project, and **the desired outcomes**.
+    - increasing traffic
+
+    - increasing the number of monthly page visits by X percent.
+
+- The **target audience**.
+  - The _design brief_ should include information about the **target demographics**, **interests**, and **needs** of the audience.
+    - You should also include information about the **competition** and how the project will _differentiate_ itself from the competition.
+
+- The **project scope**.
+  - This should include the **deliverables**, **timeline**, and **budget**.
+    - The _deliverables_ should include **a list of all the items that will be produced as part of the project**, such as _mockups_, and _final designs_.
+
+  - Without clearly defining _project scope_, things can get out of hand and go **over budget**.
+    - So, it is best to be **as detailed as possible** about _what is expected_ to be delivered and _by when_.
+
 &nbsp;
+
+One of the challenging aspects about project design is the **timescale** and **budget**.
+
+it is important to **be realistic about what can be achieved within the given timeframe and budget**.
+
+So, having a _design brief_ that _outlines_ these **constraints** is important.
+
+Once all of these details have been _discussed_ and _documented_, the design brief should be _reviewed_ and _approved_ by all _stakeholders_ before the project begins.
+
+At that point, _the designers_ can get started with their work.
+
+&nbsp;
+
+### The Developer
+
+The developer's role is to **take the designs**, **understand the project requirements**, and **turn them into a working product**.
+
+- This involves _writing code_, _testing_, and _debugging_ the application to **ensure that it meets the requirements outlined** in the _design brief_.
+
+Oftentimes, developers will work in _teams_ where the work is split up between _multiple developers_.
+
+&nbsp;
+
+### The Project Manager
+
+There will also usually be a _project manager_ who will be **responsible for coordinating** the work and **making sure the project stays on track**.
+
+&nbsp;
+
+##
 
 &nbsp;
 

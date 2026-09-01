@@ -2327,7 +2327,53 @@ Some more design tools:
 
 &nbsp;
 
-##
+## Units of Measurement in CSS
+
+As you design your pages, you will work with _different properties_ like **widths**, **heights**, **padding**, **margins**, and more. When you define these properties, you will need to specify **the length units of measurement** you want to use.
+
+There are two types of units you can use to define these properties:
+
+### 1. Absolute Units
+
+Absolute length units are of **fixed length** and are **NOT relative to anything else**.
+
+Some _absolute units_ include:
+
+- The `px` (_pixels_) unit, which is equal to _1/96th_ of an _inch_.
+  - Pixels are the _most common_ absolute unit used for providing **precise control over element's dimensions**, **spacing**, and **layout**.
+
+    ```css
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin: 10px;
+    }
+    ```
+
+    - Sometimes you might use _pixels_ for **margins**, **padding**, and **borders**.
+
+  `Note`: While `1px` is standardized as _1/96th_ of an _inch_ for the purposes of CSS layout, **the actual physical size of a pixel may differ depending on the display**.
+
+- The `in` (_inches_) unit, which is equal to _96px_
+
+- The `cm` (_centimeters_) unit, which is equal to _25.2/64_ of an _inch_
+
+- The `mm` (_millimeters_) unit, which is equal to _1/10th_ of a _centimeter_
+
+- The `q` (_quarter-millimeters_) unit, which is equal to _1/40th_ of a _centimeter_
+
+- The `pc` (_picas_) unit, which is equal to _1/6th_ of an _inch_
+
+- The `pt` (_points_) unit, which is equal to _1/72th_ of an _inch_
+
+&nbsp;
+
+### 2. Relative Units
+
+Relative means that the **length is relative to something else**, like _the size of the screen_ or _the size of the parent element_.
+
+#### I. Percentages (`%`)
 
 &nbsp;
 

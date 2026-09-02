@@ -2375,11 +2375,142 @@ Relative means that the **length is relative to something else**, like _the size
 
 #### I. Percentages (`%`)
 
-&nbsp;
+Percentages in CSS are _relative units_ that allow you to define **sizes**, **dimensions**, and other properties **as a proportion of their parent element**.
+
+When you use a percentage value, you're essentially saying, "_Make this X% of its container_." This makes percentages incredibly useful for creating **responsive designs that adapt to different screen sizes**.
+
+- Percentages are ideal for creating **fluid layouts** that adjust to _various screen sizes_. For instance, setting a container to `width: 80%` ensures it takes up **80% of its parent's width**, _regardless_ of the device.
+
+  ```css
+  .parent {
+    width: 100%;
+    height: 300px;
+    background-color: lightblue;
+  }
+
+  .parent .child {
+    width: 80%;
+    height: 100%;
+    background-color: red;
+  }
+  ```
+
+- Using percentages for **flexible images** is another _common_ practice. By applying `max-width: 100%` to images, you allow them to **scale down** on smaller screens while **maintaining their aspect ratio**.
+
+  ```css
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  ```
+
+- While _less common_, percentages can also be used for **font sizes** to create _scalable typography_. For example, `font-size: 120%` would make the text **20% larger than its parent's font size**.
+
+  ```css
+  .text-container {
+    font-size: 16px;
+  }
+
+  .text-container .text {
+    font-size: 120%;
+  }
+  ```
+
+- Percentages can be particularly handy for **vertical centering**. Here's an example of how you might use percentages with the `transform` property to _center an element vertically_.
+
+  ```css
+  .centered {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    background-color: red;
+  }
+  ```
+
+  - This example positions the element **50% from the top** of its container, then uses `transform` to **move it back up by half its own height**, effectively centering it vertically.
+
+**Percentages are always relative to something**. For horizontal properties like `width`, they're relative to the **parent's width**. For vertical properties like `height`, they're usually relative to the **parent's height** (_if specified_).
+
+- Keep in mind: _percentage-based heights_ can be _tricky_\* if the **parent** does NOT have a **defined height**.
+
+`Note`: _Be cautious_ when **nesting elements with percentage-based dimensions**, as this can lead to **unexpected results**.
 
 &nbsp;
 
+#### II. `em`
+
+`em` units are **relative to the font size of the element or the parent element**.
+
+When you are working with modular components like **buttons** or **cards**. By using `em` units, you can ensure that _all aspects_ of the component (such as `padding`, `margin`, and `border`) **scale proportionally with the font size**, keeping consistent proportions.
+
+if you are using `em` for the `font-size` property, **the size of the text will be relative to the font size of the parent element**.
+
+```css
+.para {
+  font-size: 20px;
+  margin-bottom: 1.5em;
+  border: 2px solid red;
+}
+
+.blue-box {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+```
+
+- For the `para` class, we set the `font-size` to `20px` and the `margin-bottom` to `1.5em`.
+  - This means that the `margin` will be **`1.5` times the font size of the paragraph element**.
+    - `1.5em` results in **`30px` of margin at the bottom** of the paragraph.
+
+- if we _remove_ the `font-size` property from the `para` class, the `margin-bottom` will be relative to the `font-size` of the parent's, i.e., in this case, the `body` element, which has a _default_ `font-size` of `16px`.
+
 &nbsp;
+
+So, up until this point, we have been setting the font size for an element using pixels(`px`). But that does present some _challenges_ for users.
+
+Inside your _browser_ settings, you can control the _default font size_.
+
+For those with _visual impairments_, they may **increase the font size** to make it _easier to read_. But if you are setting pixels for the font sizes in your web designs, **the text will not scale proportionally** with the rest of the content.
+
+One way to address this issue is to use `rem` units for typography.
+
+&nbsp;
+
+#### III. `rem`
+
+A `rem` unit is **relative to the font size of the root element**, which is the `html` element.
+
+`rem` units are **preferred over pixels** for typography because they **scale proportionally with the user's browser settings**.
+
+- This makes your content **more accessible** to users with _visual impairments_.
+
+&nbsp;
+
+By default, the `font-size` of the `html` element is `16px`.
+
+if the user **increases the font size** in their _browser_ settings, the **`font-size` of the `html` element will increase**, and all `rem` units will **scale proportionally**.
+
+```css
+.para {
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+  border: 2px solid red;
+}
+```
+
+- By setting the `font-size` to `1.2rem`, the `font-size` of the paragraph element will be `1.2` times the `font-size` of the root element.
+  - if the user has NOT changed the default `font-size`, the `font-size` of the paragraph element will be `19.2px` because it is `1.2` times of `16px`.
+
+`Note`: `rem` units can also help maintain **consistent spacing** and **layout** across _different_ elements.
+
+&nbsp;
+
+#### IV. `vh` & `vw`
 
 &nbsp;
 

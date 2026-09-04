@@ -2512,9 +2512,71 @@ if the user **increases the font size** in their _browser_ settings, the **`font
 
 #### IV. `vh` & `vw`
 
-&nbsp;
+In CSS, `vh` and `vw` are _viewport-relative_ units that allow you to **size elements based on the dimensions of the browser window**.
+
+These units are particularly _useful_ for creating **responsive designs** that adapt to different screen sizes.
+
+- `vh` stands for "_viewport height_," and `1vh` is equal to `1%` of the viewport's height.
+
+- `vw` stands for "_viewport width_," and `1vw` is equal to `1%` of the viewport's width.
+  - This means that if you set an element's height to `100vh`, it will occupy **the full height of the viewport**, _regardless_ of the actual pixel dimensions of the device.
+
+These units are especially handy when you want to create **full-screen layouts** or _elements_ that maintain **a specific proportion of the screen**.
 
 &nbsp;
+
+The _advantage_ of `vh` and `vw` units is that **they respond to changes in the viewport size in _real-time_**.
+
+This means that if a user **resizes** their _browser window_, **elements sized with these units will adjust accordingly** _without_ needing to _reload_ the page.
+
+However, it's important to use these units _judiciously_.
+
+For example, you might want to use them to create a _hero_ `section` that always **fills the entire screen**.
+
+```css
+body {
+  margin: 0;
+  font-family: sans-serif;
+  border: 5px dashed #333;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-color: #add8e6;
+  padding: 2em;
+}
+```
+
+- This CSS ensures that _the hero section_ will always be exactly **the size of the viewport**, _regardless_ of the device's screen size.
+
+&nbsp;
+
+`vh` and `vw` units can also be used for typography to create **responsive text sizes**.
+
+```css
+h1 {
+  font-size: 5vw;
+}
+```
+
+- This will set the `font-size` of the `h1` element to `5%` of the _viewport width_, allowing the text to **scale smoothly with the browser window size**.
+
+`Note`: Setting `font-size` _solely_ with `vw` units, for example, can lead to text becoming **too small on narrow screens**, _or_ **too large on wide screens**.
+
+&nbsp;
+
+**Consideration for mobile devices**: The viewport height can change when the **browser's address bar** _appears_ or _disappears_, which can cause **unexpected layout shifts**, if you're using `vh` units extensively.
+
+In summary, `vh` and `vw` units are powerful tools for creating **responsive layouts and elements** that adapt to the viewport size.
+
+They're particularly useful for **_full-screen_ sections**, maintaining **aspect ratios**, and creating **smoothly scaling designs**.
+
+_However_, they should be used _thoughtfully_ and often in combination with other CSS techniques to ensure the best user experience across all devices.
+
+&nbsp;
+
+## The `calc()` Function
 
 &nbsp;
 

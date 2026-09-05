@@ -2578,6 +2578,104 @@ _However_, they should be used _thoughtfully_ and often in combination with othe
 
 ## The `calc()` Function
 
+With the `calc()` function, you can **perform calculations directly within your stylesheets** to determine property values _dynamically_.
+
+- You can **determine the value of a CSS property dynamically** based on different aspects of the _application_ or _viewport_.
+
+This means that you can create **flexible** and **responsive user interfaces** by calculating dimensions based on the _viewport size_ or other _elements_.
+
+- You can perform calculations on values that represent **length**, **angle**, **time**, **percentages**, and **numbers**.
+
+- You can also combine different _units_ like **pixels**, **percentages**, and **ems**.
+
+&nbsp;
+
+To use `calc()`, you pass an **expression as an argument**.
+
+- An _expression_ is a combination of _values_ and _operators_ that produce a _result_.
+
+- The _expression_ can also contain CSS _functions_ and _variables_, if you need to use them in your calculations.
+
+- All the _values_ in the _expression_, also called the _operands_, must have their **corresponding units**, like `px`, `em`, and percentage (`%`).
+
+  ```css
+  div {
+    color: white;
+    background-color: #1b1b32;
+    width: calc(50% - 20px);
+  }
+  ```
+
+  - The `width` is calculated _dynamically_.
+
+  - Percentage(`%`) is a _relative unit_. The value (`50%`) will be determined by the **width of the parent container**.
+    - Then, `20px` is _subtracted_ from the _value_.
+
+&nbsp;
+
+Depending on the _operator_, **different operands** may have **different units**.
+
+if there are **multiple operands** and **operators**, `calc()` will follow the **standard operator precedence** rule.
+
+- You can also add parentheses(`()`) to _establish_ the **order of the operations** if needed.
+
+&nbsp;
+
+### Best Practices for working with `calc()`
+
+- You must surround the addition (`+`) and subtraction (`-`) operators with _whitespace_(` `).
+
+  ```css
+  calc(100% - 30px)
+  ```
+
+- Even if you use the value `0` to represent _length_ in the _expression_, **you must include the _units_**.
+
+  ```css
+  calc(100% - 0px)
+  ```
+
+- if you use the multiplication operator(`*`), **one of the operands must be _unitless_**.
+
+  ```css
+  calc(5 * 50px)
+  calc(5px * 50)
+  ```
+
+- For the division operator(`/`), dividing by a _unitless_ number **scales the value** and **keeps its _unit_**.
+
+  ```css
+  calc(50% / 5)
+  ```
+
+  - Dividing two _values_ with _matching units_ is also **valid**, but it **cancels the units** out to **return a unitless number** (like `10`).
+
+    ```css
+    calc(50% / 5%)
+    ```
+
+`Note #1`: _Unitless values_ can only be used for certain CSS properties (such as `line-heigh`t or `flex-grow`):
+
+`Note #2`: You can also **nest** `calc()` **_function_ calls**, if you need to perform calculations and use those results in other calculations.
+
+&nbsp;
+
+##
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 &nbsp;
 
 &nbsp;

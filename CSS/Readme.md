@@ -356,6 +356,107 @@ ID selectors are among the most powerful selectors in CSS, allowing developers t
 
 &nbsp;
 
+## Pseudo-classes (`:pseudo-class`)
+
+Pseudo-classes are **special CSS keywords that allow you to select an element based on its specific state or position**.
+
+To use a _pseudo-class_, you add it to the selector by using a colon (`:`) followed by the _name_ of the `pseudo-class`:
+
+```css
+selector:pseudo-class {
+  /* CSS properties */
+}
+```
+
+&nbsp;
+
+The element's **state** _or_ **position** include:
+
+- When it's active (`:active`)
+  - it lets you **select the active state of an element**, like _clicking_ on a `button`:
+
+  ```css
+  button:active {
+    background: greenyellow;
+  }
+  ```
+
+- When it's being _hovered over_ by a mouse (`:hover`)
+  - it defines the **hover state of an element**, like _hovering_ over a `button` _or_ `link`:
+
+  ```css
+  a:hover {
+    text-decoration: none;
+    color: white;
+    background: crimson;
+  }
+  ```
+
+- When it's the _first child_ of a parent (`:first-child`)
+  - it selects an element that is **the first child of its parent element**, like targeting the _first paragraph_ element in a `div` container:
+
+  ```css
+  .container p:first-child {
+    background: lightcoral;
+    padding: 0.4rem;
+  }
+  ```
+
+- When it's the _last child_ of a parent (`:last-child`)
+
+  ```css
+  .container p:last-child {
+    background: lightcoral;
+    padding: 0.4rem;
+  }
+  ```
+
+- When a link has been visited (`:visited`)
+  - it lets you **style a link that has already been visited**.
+
+  ```css
+  a:visited {
+    color: purple;
+  }
+  ```
+
+- When it's disabled (`:disabled`)
+  - it lets you **style an interactive element in disabled mode**.
+
+  ```css
+  button:disabled {
+    background-color: lightgray;
+  }
+  ```
+
+&nbsp;
+
+Apart from the _pseudo-classes_ already mentioned, there are others like:
+
+- `:focus`
+
+- `:first-of-type`
+
+- `:last-of-type`
+
+- `:nth-of-type`
+
+- `:modal`
+
+- `:enabled`
+
+- `:checked`
+
+- `:required`, and more.
+
+&nbsp;
+
+### User Action Pseudo-classes
+
+
+
+&nbsp;
+
 ## `!important` Keyword
 
 The `!important` keyword in CSS is used to give a style rule the **highest priority**, allowing it to **override** any other declarations for a property. When used, it **forces** the browser to apply the specified style, **regardless of the specificity** of other _selectors_.
@@ -2661,8 +2762,6 @@ if there are **multiple operands** and **operators**, `calc()` will follow the *
 &nbsp;
 
 ##
-
-&nbsp;
 
 &nbsp;
 

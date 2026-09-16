@@ -356,107 +356,6 @@ ID selectors are among the most powerful selectors in CSS, allowing developers t
 
 &nbsp;
 
-## Pseudo-classes (`:pseudo-class`)
-
-Pseudo-classes are **special CSS keywords that allow you to select an element based on its specific state or position**.
-
-To use a _pseudo-class_, you add it to the selector by using a colon (`:`) followed by the _name_ of the `pseudo-class`:
-
-```css
-selector:pseudo-class {
-  /* CSS properties */
-}
-```
-
-&nbsp;
-
-The element's **state** _or_ **position** include:
-
-- When it's active (`:active`)
-  - it lets you **select the active state of an element**, like _clicking_ on a `button`:
-
-  ```css
-  button:active {
-    background: greenyellow;
-  }
-  ```
-
-- When it's being _hovered over_ by a mouse (`:hover`)
-  - it defines the **hover state of an element**, like _hovering_ over a `button` _or_ `link`:
-
-  ```css
-  a:hover {
-    text-decoration: none;
-    color: white;
-    background: crimson;
-  }
-  ```
-
-- When it's the _first child_ of a parent (`:first-child`)
-  - it selects an element that is **the first child of its parent element**, like targeting the _first paragraph_ element in a `div` container:
-
-  ```css
-  .container p:first-child {
-    background: lightcoral;
-    padding: 0.4rem;
-  }
-  ```
-
-- When it's the _last child_ of a parent (`:last-child`)
-
-  ```css
-  .container p:last-child {
-    background: lightcoral;
-    padding: 0.4rem;
-  }
-  ```
-
-- When a link has been visited (`:visited`)
-  - it lets you **style a link that has already been visited**.
-
-  ```css
-  a:visited {
-    color: purple;
-  }
-  ```
-
-- When it's disabled (`:disabled`)
-  - it lets you **style an interactive element in disabled mode**.
-
-  ```css
-  button:disabled {
-    background-color: lightgray;
-  }
-  ```
-
-&nbsp;
-
-Apart from the _pseudo-classes_ already mentioned, there are others like:
-
-- `:focus`
-
-- `:first-of-type`
-
-- `:last-of-type`
-
-- `:nth-of-type`
-
-- `:modal`
-
-- `:enabled`
-
-- `:checked`
-
-- `:required`, and more.
-
-&nbsp;
-
-### User Action Pseudo-classes
-
-
-
-&nbsp;
-
 ## `!important` Keyword
 
 The `!important` keyword in CSS is used to give a style rule the **highest priority**, allowing it to **override** any other declarations for a property. When used, it **forces** the browser to apply the specified style, **regardless of the specificity** of other _selectors_.
@@ -2761,7 +2660,206 @@ if there are **multiple operands** and **operators**, `calc()` will follow the *
 
 &nbsp;
 
-##
+## Pseudo-classes (`:pseudo-class`)
+
+Pseudo-classes are **special CSS keywords that allow you to select an element based on its specific state or position**.
+
+To use a _pseudo-class_, you add it to the selector by using a colon (`:`) followed by the _name_ of the `pseudo-class`:
+
+```css
+selector:pseudo-class {
+  /* CSS properties */
+}
+```
+
+&nbsp;
+
+The element's **state** _or_ **position** include:
+
+- `:active`
+  - The `:active` _pseudo-class_ applies styles when **an element is activated by the user**.
+    - For example, when the user **clicks** a button or a link, it provides **immediate visual feedback**, showing users that their actions are being recognized.
+
+    ```css
+    a:active {
+      color: crimson;
+    }
+    ```
+
+- `:hover`
+  - The `:hover` _pseudo-class_ is **triggered when a user hovers over an element with their mouse** or other pointing device.
+    - Developers often use it to create **visual feedback** for _buttons_, _links_, or any element that should respond to user attention.
+
+    ```css
+    .btn:hover {
+      background-color: darkgreen;
+      color: white;
+      cursor: pointer;
+    }
+    ```
+
+- `:focus`
+  - The `:focus` _pseudo-class_ applies styles **when an element gains focus**, typically through **keyboard navigation** _or_ when a **user clicks** into a form input.
+    - This is also crucial for _accessibility_.
+      - it ensures that users who rely heavily on keyboards can easily identify which element they are interacting with.
+
+    ```css
+    input:focus {
+      outline: 2px solid darkgreen;
+      border-radius: 4px;
+    }
+    ```
+
+- `:visited`
+  - The `:visited` _pseudo-class_ **targets a link user has visited**.
+    - This can be useful for helping users **distinguish** between pages they have already **visited** and the ones they are **yet to visit**.
+
+    ```css
+    a:visited {
+      color: purple;
+    }
+    ```
+
+- `:disabled`
+  - it lets you **style an interactive element in disabled mode**.
+
+    ```css
+    button:disabled {
+      background-color: lightgray;
+    }
+    ```
+
+- `:first-child`
+  - The `:first-child` _pseudo-class_ selects an element that is **the first child of its parent element**.
+    - Like targeting the _first paragraph_ element in a `div` container:
+
+    ```css
+    .container p:first-child {
+      background: lightcoral;
+      padding: 0.4rem;
+    }
+    ```
+
+- `:last-child`
+
+  ```css
+  .container p:last-child {
+    background: lightcoral;
+    padding: 0.4rem;
+  }
+  ```
+
+&nbsp;
+
+Apart from the _pseudo-classes_ already mentioned, there are others like:
+
+- `:first-of-type`
+
+- `:last-of-type`
+
+- `:nth-of-type`
+
+- `:modal`
+
+- `:enabled`
+
+- `:checked`
+
+- `:required`, and more.
+
+&nbsp;
+
+### User Action Pseudo-classes
+
+User feedback is a crucial element of web design.
+
+it is important for users to receive **visual cues when they interact with elements** on a website, such as _hovering_ over a button or _clicking_ a link.
+
+This feedback helps users **understand the state of interactive elements**, like indicating whether a link has been _visited_ or not.
+
+_User action pseudo-classes_ in CSS are **special keywords that allow you to provide visual feedback without needing JavaScript** or other programming languages.
+
+- `:active`
+  - Already explained above!
+
+- `:hover`
+  - Already explained above!
+
+- `:focus`
+  - Already explained above!
+
+- `:visited`
+  - Already explained above!
+
+- `:checked`
+  - The `:checked` _pseudo-class_ in CSS allows you to **style** form _elements_ such as **checkboxes** and **radio buttons** when they are _selected_ (checked).
+    - This _pseudo-class_ is useful for **customizing the appearance** of these elements to enhance user experience, even though **browsers provide default styles** for them.
+
+    ```css
+    .checkbox {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      vertical-align: middle;
+    }
+
+    .checkbox:hover {
+      border-color: #888;
+    }
+
+    .checkbox:checked {
+      background-color: #4caf50;
+      border-color: #4caf50;
+    }
+
+    .checkbox:checked::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 0px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .checkbox:focus {
+      outline: 2px solid #90caf9;
+      outline-offset: 2px;
+    }
+    ```
+
+    - In this example, we are using the `appearance` property set to `none` to **remove the default styling** applied by the browser to checkbox inputs.
+    - When the user **checks the box**, it will have a `background-color` of `green`.
+
+&nbsp;
+
+Other User Action Pseudo-classes include:
+
+- `:focus-within`
+  - For applying styles to an element when **it or any of its descendants have focus**.
+
+- `:enabled`
+  - For targeting form buttons or other elements that are currently enabled.
+
+- `:disabled`
+  - For targeting form buttons or other elements that are disabled.
+
+- `:target`
+  - For applying styles to **an element that is the target of a URL fragment** (the part of a URL after the `#` symbol).
+
+&nbsp;
+
+### input Pseudo-classes
+
+
 
 &nbsp;
 

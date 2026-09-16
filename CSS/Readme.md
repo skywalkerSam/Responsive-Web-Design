@@ -2841,7 +2841,7 @@ _User action pseudo-classes_ in CSS are **special keywords that allow you to pro
 
 &nbsp;
 
-Other User Action Pseudo-classes include:
+Some other _User Action Pseudo-classes_ include:
 
 - `:focus-within`
   - For applying styles to an element when **it or any of its descendants have focus**.
@@ -2859,11 +2859,70 @@ Other User Action Pseudo-classes include:
 
 ### input Pseudo-classes
 
+The appearance and behavior of input elements matter when building web forms.
 
+A form with inputs that respond to user actions goes a long way in improving user experience.
+
+- `:focus`
+  - Already explained above!
+
+- `:hover`
+  - Already explained above!
+
+- `:checked`
+  - Already explained above!
+
+- `:required`
+  - it targets input elements that have the `required` attribute.
+    - it signals to the user that they **must** fill out the field to submit the form.
+
+    ```css
+    input:required {
+      border: 2px solid orange;
+    }
+    ```
+
+- `:valid` & `:invalid`
+  - When validating forms, you can use the `:valid` _pseudo-class_ to style the input fields that **meet the validation criteria**, and `:invalid` to style the input fields that **do NOT meet the criteria**.
+    - Typically, you will use **green** for a _valid_ input and **red** for an _invalid_ input.
+
+    ```css
+    input:valid {
+      border-color: green;
+    }
+
+    input:invalid {
+      border-color: crimson;
+    }
+    ```
+
+- `:disabled`
+  - The `:disabled` _pseudo-class_ allows you to select and style input elements that have the `disabled` attribute.
+    - When an input is _disabled_, it cannot be _clicked_, _focused_, or _edited_.
+
+    ```css
+    .text-input:disabled {
+      background-color: lightgray;
+      cursor: not-allowed;
+    }
+    ```
 
 &nbsp;
 
+Some other _input Pseudo-classes_ include:
+
+- `:autofill`
+  - it applies styles to input fields that the browser automatically fills with saved data.
+
+- `:optional`
+  - it styles input elements that are _not required_ and can be left empty.
+
+- `:in-range` & `:out-of-range`
+  - it styles elements based on whether their values are within or outside **specified range constraints**.
+
 &nbsp;
+
+### Location Pseudo-classes
 
 &nbsp;
 

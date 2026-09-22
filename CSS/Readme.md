@@ -2924,7 +2924,81 @@ Some other _input Pseudo-classes_ include:
 
 ### Location Pseudo-classes
 
+Location _pseudo-classes_ are used for **styling links and elements that are targeted within the current document**.
+
+They offer a way to apply styles based on whether a link is _visited_ or whether an element is currently in _focus_.
+
+- `:link`
+  - The `:link` _pseudo-class_ allows you to **target all unvisited links** on a webpage.
+
+    ```css
+    a:link {
+      color: blue;
+    }
+    ```
+
+- `:visited`
+  - Once the user _clicks_ the link, the `:link` style no longer applies, and the `:visited` _pseudo-class_ takes over.
+
+    ```css
+    a:visited {
+      color: purple;
+    }
+    ```
+
+    - The `:visited` _pseudo-class_ helps users distinguish between links they have visited and those they have NOT.
+
+- `:any-link`
+  - The `:any-link` _pseudo-class_ is a combination of the `:link` and `:visited` pseudo-classes. it matches **any anchor element with an href attribute**, _regardless_ of whether it is visited or NOT.
+
+    ```css
+    a:any-link {
+      color: crimson;
+    }
+    ```
+
+- `:local-link`
+  - The `:local-link` _pseudo-class_ targets **links that point to the same document**. it can be useful when you want to **differentiate internal links from external ones**.
+    - Currently, no browser supports the `:local-link` pseudo-class.
+
+- `:target`
+  - The `:target` _pseudo-class_ **selects an element that matches the current URL fragment identifier**, for example, `#section1`.
+    - it is very useful for pages with **in-page navigation**.
+
+    ```html
+    <link rel="stylesheet" href="./styles.css" />
+    <nav id="table-of-contents">
+      <ul>
+        <li><a href="#section1">Introduction</a></li>
+        <li><a href="#section2">Features</a></li>
+      </ul>
+    </nav>
+
+    <section id="section1">
+      <h2>Introduction</h2>
+      <p>This is the introduction section.</p>
+    </section>
+
+    <section id="section2">
+      <h2>Features</h2>
+      <p>This section describes the features.</p>
+    </section>
+    ```
+
+    ```css
+    section:target {
+      background-color: green;
+      border: 2px solid green;
+      padding: 10px;
+    }
+    ```
+
+    - The `:target` pseudo-class **styles the `section` that matches where the user navigates to**.
+      - When the user _clicks_ on one of the navigation links, the `background-color` for that respective `section` will change to _green_.
+
 &nbsp;
+
+### Tree-structural Pseudo-classes
 
 &nbsp;
 

@@ -3000,7 +3000,221 @@ They offer a way to apply styles based on whether a link is _visited_ or whether
 
 ### Tree-structural Pseudo-classes
 
+_Tree-structural pseudo-classes_ allow you to **target** and **style** elements **based on their position within the document tree**.
+
+- **Document Tree**: The hierarchical structure of elements in an HTML document.
+
+Here is a list of _tree-structural pseudo-classes_:
+
+- `:root`
+  - ​​The `:root` _pseudo-class_ is usually the root `html` element.
+    - it helps you target the **highest level in the document**, so you can apply **common styles** to the entire document.
+
+      ```css
+      :root {
+        background: black;
+        color: aliceblue;
+      }
+      ```
+
+    - The `:root` _pseudo-class_ is also commonly used in setting **CSS variables**.
+
+      ```css
+      :root {
+        --main-font: "Arial, sans-serif";
+        --primary-color: blue;
+        --secondary-color: green;
+      }
+      ```
+
+      - With CSS variables, you get to **store values** and reuse them in your stylesheet.
+
+- `:empty`
+  - The `:empty` _pseudo-class_ are **elements with NO children** other than _white space_.
+
+    ```css
+    :empty {
+      background: black;
+    }
+    ```
+
+  - The most practical thing to do with empty elements is probably **NOT to display them at all**.
+
+    ```css
+    :empty {
+      display: none;
+    }
+    ```
+
+- `:nth-child(n)`
+  - it allows you to _select elements_ based on **their position within a parent**.
+    - The `n` can be a **specific number** or a keyword like **odd** or **even**.
+
+    ```html
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>$1.00</td>
+      </tr>
+      <tr>
+        <td>Banana</td>
+        <td>$0.50</td>
+      </tr>
+      <tr>
+        <td>Orange</td>
+        <td>$0.80</td>
+      </tr>
+    </table>
+    ```
+
+    ```css
+    th,
+    td {
+      border: 1px solid lightgray;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: orangered;
+    }
+
+    tr:nth-child(odd) {
+      background-color: lightgreen;
+    }
+    ```
+
+    - This is incredibly useful in styling _table cells_ based on position: _even_ and _odd_.
+
+  - `:nth-last-child(n)`
+    - it enables you to _select elements_ based on **their position within a parent** by **counting from the end**.
+
+- `:first-child`
+  - it selects the **first element in a parent** element or the document.
+
+    ```html
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    ```
+
+    ```css
+    li:first-child {
+      background-color: orangered;
+    }
+
+    li:last-child {
+      background-color: lightgreen;
+    }
+    ```
+
+    - Using the `:first-child` and `:last-child` pseudo-classes will select both `Item 1` and `Item 3` in the example above.
+
+  - `:last-child`
+    - it selects the **last element in a parent** element or the document.
+
+- `:only-child`
+  - it selects the **only element in a parent** element or the document.
+
+    ```html
+    <div class="container">
+      <div>This is the only item in this container.</div>
+    </div>
+
+    <div class="container">
+      <div>This is one of two items in this container.</div>
+      <div>Here is the second item.</div>
+    </div>
+    ```
+
+    ```css
+    .container div:only-child {
+      border: 2px solid crimson;
+      padding: 10px;
+      background-color: lightblue;
+    }
+    ```
+
+    - Here's an HTML example with two separate `div` elements. Using the `:only-child` _pseudo-class_ ensures **only the `div` element with a single child is selected**.
+
+- `:first-of-type`
+  - Select the **first occurrence of a specific element type** within its parent.
+
+    ```html
+    <section>
+      <h2>Introduction</h2>
+      <p>This is the first paragraph.</p>
+      <p>This is the second paragraph.</p>
+      <p>This is the third and last paragraph.</p>
+    </section>
+    ```
+
+    ```css
+    section p:first-of-type {
+      background-color: lightgreen;
+    }
+
+    section p:last-of-type {
+      background-color: lightblue;
+    }
+    ```
+
+    - `:first-of-type` and `:last-of-type` applies to the _first element_ and _last element_ within the `section` element.
+
+  - `:last-of-type`
+    - Select the **last occurrence** of a specific element type within its parent.
+
+- `:nth-of-type`
+  - it allows you to select **a specific element within its parent based on its position among siblings** of the same type.
+
+    ```html
+    <div class="container">
+      <p>First paragraph</p>
+      <p>Second paragraph</p>
+      <p>Third paragraph</p>
+    </div>
+    ```
+
+    ```css
+    p:nth-of-type(2) {
+      color: red;
+      font-weight: bold;
+    }
+    ```
+
+    - `:nth-of-type(2)` targets the _second element_ in the container.
+
+- `:only-of-type`
+  - it selects an element **if it is the only one of its type** within its parent.
+    - This can be useful for **emphasizing single items** or ensuring that they are **styled differently when they’re not part of a group**.
+
+      ```html
+      <div class="container">
+        <p>The only paragraph</p>
+      </div>
+
+      <div class="container">
+        <p>The first paragraph</p>
+        <p>The second paragraph</p>
+      </div>
+      ```
+
+      ```css
+      p:only-of-type {
+        border: 4px solid green;
+      }
+      ```
+
+      - in the example above, there are two `div` elements with one having a single element. The CSS only applies to the first container.
+
 &nbsp;
+
+### Functional Pseudo-classes
 
 &nbsp;
 

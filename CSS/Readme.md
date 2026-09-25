@@ -3216,7 +3216,137 @@ Here is a list of _tree-structural pseudo-classes_:
 
 ### Functional Pseudo-classes
 
+_Functional pseudo-classes_ allow you to **select** elements **based on more complex conditions and relationships**.
+
+Unlike _regular pseudo-classes_ which target elements based on a _state_, for example, `:hover`, `:focus`, **_functional pseudo-classes_ accept arguments within parentheses**`()`, hence the name "_functional pseudo-classes_".
+
+- `:is()`
+  - The `:is()` pseudo-class is useful when you want to **style a group of elements that share some**, **but not all**, **characteristics**.
+    - For example, you might want to style different types of buttons on your website, including `button` elements, _links_ styled as buttons, and `input` elements with types `submit` and `reset`.
+
+    ```html
+    <button>Example Button</button>
+    <a href="#" class="button">Link styled like a button</a>
+    <input type="submit" value="Submit" />
+    <input type="reset" value="Reset" />
+    ```
+
+    ```css
+    /* Without the :is() function */
+    button,
+    a.button,
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: darkblue;
+      color: white;
+      border: 1px solid darkblue;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      margin: 5px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    button:hover,
+    a.button:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: blue;
+      border-color: blue;
+    }
+
+    /* With :is() */
+    :is(button, a.button, input[type="submit"], input[type="reset"]) {
+      background-color: darkblue;
+      color: white;
+      border: 1px solid darkblue;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      margin: 5px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    :is(button, a.button, input[type="submit"], input[type="reset"]):hover {
+      background-color: blue;
+      border-color: blue;
+    }
+    ```
+
+- `:where()`
+  - The `:where()` `pseudo-class` functions **similarly to** `:is()`, but it **does NOT increase the specificity** of your selectors.
+  - This makes it **ideal for applying styles without affecting the specificity** of other rules.
+    - For example, you can use the `:where()` function to apply zero `margin` and `padding` to heading elements.
+      - This ensures that the reset **won't interfere with more specific styles you might apply later**.
+
+    ```css
+    :where(h1, h2, h3) {
+      margin: 0;
+      padding: 0;
+    }
+    ```
+
+- `:has()`
+  - it allows you to **apply styles to a parent element based on the presence or state of its child** elements.
+    - For example, the CSS below will only apply to any `article` element that has an `h2` in it:
+
+    ```html
+    <article>
+      <h2>Subheading</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </article>
+
+    <article>
+      <h3>A point</h3>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </article>
+    ```
+
+    ```css
+    article:has(h2) {
+      border: 2px solid hotpink;
+    }
+    ```
+
+- `:not()`
+  - The `:not()` _pseudo-class_ is ideal for situations **where you want to apply styles to a group of elements**, **excluding one _or_ more specific exceptions**.
+    - in the CSS below, any `button` that is NOT a _primary button_ will have a _grey background_:
+
+    ```html
+    <button class="primary">Primary Button</button>
+    <button class="secondary">Secondary Button</button>
+    <button class="danger">Another Secondary Button</button>
+    ```
+
+    ```css
+    button {
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      color: white;
+    }
+
+    button.primary {
+      background-color: deepskyblue;
+    }
+
+    button:not(.primary) {
+      background-color: grey;
+    }
+    ```
+
 &nbsp;
+
+### Pseudo-elements
 
 &nbsp;
 

@@ -2660,7 +2660,7 @@ if there are **multiple operands** and **operators**, `calc()` will follow the *
 
 &nbsp;
 
-## Pseudo-classes (`:pseudo-class`)
+## Pseudo-classes (`:`)
 
 Pseudo-classes are **special CSS keywords that allow you to select an element based on its specific state or position**.
 
@@ -3346,7 +3346,158 @@ Unlike _regular pseudo-classes_ which target elements based on a _state_, for ex
 
 &nbsp;
 
-### Pseudo-elements
+## Pseudo-elements (`::`)
+
+_Pseudo-elements_ are **virtual** _or_ **synthetic elements** that don't directly match any actual HTML elements.
+
+They allow you to **style specific parts of an element** _or_ **insert content before or after without adding extra HTML**.
+
+- But they **cannot exist independently**.
+
+**Originating Element**:: The element to which a _pseudo-element_ is attached.
+
+&nbsp;
+
+To apply a _pseudo-element_, **attach it to the original element's selector** using a double colon (`::`).
+
+- The selector can be _any type_, such as a **class** _or_ **ID** selector.
+
+  ```css
+  selector::pseudo-element {
+    property: value;
+  }
+  ```
+
+  - This _double colon_(`::`) is what distinguishes _pseudo-elements_ from _pseudo-classes_, which use a _single colon_(`:`).
+
+&nbsp;
+
+### `::before` & `::after`
+
+`::before` lets you _insert_ content _just before_ the element's content.
+
+`::after` lets you _insert_ content _after_ it.
+
+in the example, we will use **absolute positioning** and the `::before` _pseudo-element_ to _add a star_ before the button's text.
+
+```css
+.cta-button {
+  background-color: lightseagreen;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cta-button::before {
+  content: "⭐";
+  position: absolute;
+  left: 3px;
+  top: 8px;
+  font-size: 0.75rem;
+}
+```
+
+- The `content` property is used to represent the **content you wish to add** before or after the button text.
+
+You can also attach a _pseudo-class_ to the content you insert into another content with the `::before` and `::after` pseudo-elements.
+
+- For example, a _hover state_ for the content:
+
+  ```css
+  .cta-button {
+    background-color: orange;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .cta-button::after {
+    content: "➡️";
+    position: absolute;
+    right: 5px;
+    bottom: 6px;
+    font-size: 1.125rem;
+    transition: transform 0.3s ease;
+  }
+
+  .cta-button:hover::after {
+    transform: translateX(2px);
+  }
+  ```
+
+  - With `transform: translateX(2px)` in the _hover state_, the content gets _pushed to the right_ by `2px` any time the user _hovers_ on the button.
+    - `transform` allows you to **rotate**, **skew**, **scale**, or **translate** an element in _a particular direction_.
+
+  - The `transition` property in the `::after` itself ensures the process takes `0.3s` with _ease_.
+
+&nbsp;
+
+### `::first-letter`
+
+it _targets_ the **first letter of an element's content**, allowing you to _style it_.
+
+```css
+p::first-letter {
+  font-size: 4rem;
+}
+```
+
+&nbsp;
+
+### `::marker`
+
+it lets you _select the marker_, **bullet** or **numbering** of **list items**(`li`) for _styling_.
+
+```html
+<ul>
+  <li>Unordered list item 1</li>
+  <li>Unordered list item 2</li>
+  <li>Unordered list item 3</li>
+  <li>Unordered list item 4</li>
+</ul>
+
+<ol>
+  <li>Ordered list item 1</li>
+  <li>Ordered list item 2</li>
+  <li>Ordered list item 3</li>
+  <li>Ordered list item 4</li>
+</ol>
+```
+
+```css
+li::marker {
+  color: crimson;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+```
+
+&nbsp;
+
+Some more _pseudo-elements_ include:
+
+- `::placeholder`
+
+- `::spelling-error`
+
+- `::selection`
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 

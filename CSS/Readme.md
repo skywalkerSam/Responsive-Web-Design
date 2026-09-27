@@ -1076,7 +1076,7 @@ Colors with a **higher contrast** will be more visually **distinct**, whereas co
 
 &nbsp;
 
-### [Contrast Ratio](./EXERCISES/06-Contrast-Ratio.html)
+### [Contrast Ratio](./EXERCISES/06-Contrast-Ratios/index.html)
 
 There are three aspects that impact the contrast ratio.
 
@@ -1092,7 +1092,7 @@ Text with a contrast ratio of `7:1` is considered the **AAA** standard, and ensu
 
 &nbsp;
 
-## [Good Visual Hierarchy](./EXERCISES/07-Good-Visual-Hierarchy.html)
+## [Good Visual Hierarchy](./EXERCISES/07-Good-Visual-Hierarchy/index.html)
 
 Visual hierarchy refers to the way you **layout** and **display** the content of your page to **guide the viewer's attention in a specfic order**.
 

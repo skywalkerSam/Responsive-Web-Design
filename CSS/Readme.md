@@ -3432,6 +3432,22 @@ You can also attach a _pseudo-class_ to the content you insert into another cont
     - `transform` allows you to **rotate**, **skew**, **scale**, or **translate** an element in _a particular direction_.
 
   - The `transition` property in the `::after` itself ensures the process takes `0.3s` with _ease_.
+    - The _values_ that the `transition` property accepts are, _in order_: 
+      - The **property that the transition is applied to**
+
+      - The **duration of the transition**
+
+      - And, **the timing**.
+
+    - if there are **multiple properties** that have a _transition_, you can write the values for each _separated by a comma_(`,`)
+
+      ```css
+      p {
+        transition: property1 0.1s, property2 0.6s linear;
+      }
+      ```
+      - if a **value is omitted**, like _the timing_ for the first property, **a default value is applied**.
+
 
 &nbsp;
 

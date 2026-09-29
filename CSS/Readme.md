@@ -1092,6 +1092,27 @@ Text with a contrast ratio of `7:1` is considered the **AAA** standard, and ensu
 
 &nbsp;
 
+## Hex Code
+
+A _hex-code_ is a **_six-digit_ combination of numbers and letters used to represent colors**.
+
+it starts with a `#` followed by _three pairs_:
+
+- The **first two** digits represent **red**
+
+- The **next two** represent **green**
+
+- The **last two** represent **blue**
+  - For example, `#ffffff` is _pure white_ because it has the _maximum value_ for _red_, _green_, and _blue_.
+
+You can also add **two extra digits at the end** to control **opacity** (called the **alpha channel**).
+
+- in `#ffffff1a`, the `1a` makes the _white_ color **semi-transparent**.
+
+The **lower the alpha** value, the **more transparent the color** appears.
+
+&nbsp;
+
 ## [Good Visual Hierarchy](./EXERCISES/07-Good-Visual-Hierarchy/index.html)
 
 Visual hierarchy refers to the way you **layout** and **display** the content of your page to **guide the viewer's attention in a specfic order**.
@@ -3432,7 +3453,7 @@ You can also attach a _pseudo-class_ to the content you insert into another cont
     - `transform` allows you to **rotate**, **skew**, **scale**, or **translate** an element in _a particular direction_.
 
   - The `transition` property in the `::after` itself ensures the process takes `0.3s` with _ease_.
-    - The _values_ that the `transition` property accepts are, _in order_: 
+    - The _values_ that the `transition` property accepts are, _in order_:
       - The **property that the transition is applied to**
 
       - The **duration of the transition**
@@ -3443,11 +3464,13 @@ You can also attach a _pseudo-class_ to the content you insert into another cont
 
       ```css
       p {
-        transition: property1 0.1s, property2 0.6s linear;
+        transition:
+          property1 0.1s,
+          property2 0.6s linear;
       }
       ```
-      - if a **value is omitted**, like _the timing_ for the first property, **a default value is applied**.
 
+      - if a **value is omitted**, like _the timing_ for the first property, **a default value is applied**.
 
 &nbsp;
 

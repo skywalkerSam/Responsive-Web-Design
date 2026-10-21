@@ -159,9 +159,7 @@ Blockquotes are used to indicate a section of text that is a quotation from anot
 
 &nbsp;
 
-## Anchor Tags (`<a></a>`)
-
-in other words, _<u>links</u>_
+## Links: Anchor Tags (`<a></a>`)
 
 ```html
 <a href="https://freecodecamp.org" target="_blank">Visit freeCodeCamp</a>
@@ -196,6 +194,62 @@ in other words, _<u>links</u>_
 &nbsp;
 
 `Note`: When you use these states to style your links, **there is a specific order you need to write your CSS in**: `:link`, `:visited`, `:hover`, `:focus`, then `:active`.
+
+&nbsp;
+
+### Good Link Text
+
+The first visible benefit of a good link text is that **it makes it easier for everyone to find information quickly**.
+
+Descriptive links **help users know where they're headed** and **what they'll access**.
+
+- This ensures the user doesn't feel _lost_ and improves the overall user experience.
+
+&nbsp;
+
+For those using _screen readers_, a clear and descriptive link text is a _must_.
+
+- Screen readers read the link text aloud, so a text like "**Read our accessibility guide**" is way _better_ than "_Click here._"
+
+Descriptive links also help people with _cognitive disabilities_ by providing **clear context**.
+
+&nbsp;
+
+Best practices to keep in mind while writing link texts:
+
+- Make sure links are **visually distinct** by using **underlining** (`__`) and other _visual cues_, so users can easily _identify_ and _navigate_ them.
+
+- **Avoid generic link texts** like "_here_", "_click here_", and "_more-info_" as they don't provide any useful information.
+
+  ```html
+  <a href="/link-to-topic">More info</a>
+
+  <a href="/link-to-topic"> Learn more about our accessibility efforts </a>
+  ```
+
+- **Aim for concise and descriptive link texts**, ideally between `2-5` _words_, that convey the _link's purpose_.
+
+  ```html
+  <a href="webinar-details-link">Details</a>
+
+  <a href="webinar-details-link"> Get details about our upcoming webinar </a>
+  ```
+
+- **Avoid** _jargon_ and **abbreviations** that users _may not understand_.
+
+- **Focus on the destination, NOT the action**.
+  - For example, "**user behavior results**", _instead_ of "_click here to read more_".
+
+- **Do NOT repeat the same link text for different destinations**.
+
+- Place links in a way that they **make sense within the surrounding text**.
+  - For example, "**for more details, visit our events page**" _instead_ of "_Click here for more_".
+
+  ```html
+  <a href="/blog-post-link">Read more</a>
+
+  <a href="/blog-post-link"> Read our latest blog post on web accessibility </a>
+  ```
 
 &nbsp;
 
@@ -255,7 +309,9 @@ There are many more `OG` _properties_ that you can set, like `description`, `aud
 
 &nbsp;
 
-## Working w/ Audio & Video
+## Working Audio & Video
+
+### Audio Tag
 
 The audio and video elements allow you to **add sound and video content** to your HTML documents.
 
@@ -313,65 +369,151 @@ The audio and video elements allow you to **add sound and video content** to you
 
 &nbsp;
 
-- The **video** element supports `mp4`, `ogg`, and `webm` formats.
+### Video Tag
 
-  ```html
-  <video
+The **video** element supports `mp4`, `ogg`, and `webm` formats.
+
+```html
+<video
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  loop
+  controls
+  muted
+  width="400"
+></video>
+```
+
+Add the `autoplay` attribute to the opening video tag so the video plays automatically.
+
+```html
+<video
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  autoplay
+  loop
+  controls
+  muted
+  width="400"
+></video>
+```
+
+If you wanted to display an image while the video is downloading, you can use the `poster` attribute.
+
+```html
+<video
+  src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
+  loop
+  controls
+  muted
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+  width="400"
+></video>
+```
+
+You can also use the `source` element inside a `video` element, just like you did with the `audio` element. This lets you provide the same video in **multiple formats**, and the browser will choose the first one it can play.
+
+```html
+<video
+  controls
+  width="400"
+  poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
+>
+  <source
     src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-    loop
-    controls
-    muted
-    width="400"
-  ></video>
-  ```
+    type="video/mp4"
+  />
+  <source
+    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.webm"
+    type="video/webm"
+  />
+  Your browser does not support the video tag.
+</video>
+```
 
-  Add the `autoplay` attribute to the opening video tag so the video plays automatically.
+**MIME** (Multipurpose Internet Mail Extensions) is a standard to describe documents in other forms besides ASCII text, for example, audio, video, and images. (`type="video/mp4"`, `type="video/webm"`, `type="video/ogg"`, `type="video/quicktime"`, etc.)
+
+&nbsp;
+
+### Accessible Media Element: `track`
+
+A _video_ is not just about _visuals_ but also _audio_, so the first thing you should consider doing is adding **captions** or **subtitles** to your video content.
+
+- **Captions** provide the **text version of spoken words** and important _non-verbal_ sounds, like _music_ or _laughter_, **synchronized** with the video.
+
+- **Subtitles** are essential **for people who don't understand the language** that is being spoken in the video.
+  - This helps not only people who are _deaf_ or _hard of hearing_ but also those watching videos in _noisy or quiet environments_.
+
+&nbsp;
+
+To add _captions_ or _subtitles_ to your video or audio content, you can use the `track` element _inside_ your `video` or `audio` element.
+
+```html
+<video
+  width="400"
+  height="300"
+  controls
+  src="https://cdn.freecodecamp.org/curriculum/labs/what-is-the-map-method-and-how-does-it-work.mp4"
+>
+  <track src="captions.vtt" kind="captions" srclang="en" label="English" />
+</video>
+
+<audio controls src="sample.mp3">
+  <track src="captions.vtt" kind="captions" srclang="en" label="English" />
+</audio>
+```
+
+- The `kind` attribute is used to **tell the track element how it should be used**.
+  - Valid values for the `kind` attribute include `captions`, `subtitles`, `chapters`, and `metadata`.
+
+- The `srclang` attribute represents the **language for the `track` content**.
+
+- The `label` attribute is a **descriptive title for the text track** that browsers use to _identify_ and _display_ it in **the list of available text tracks**.
+
+&nbsp;
+
+#### Transcript
+
+Provide a **transcript** for your _audio_ and _video_ content.
+
+- A **transcript** is a **text version of all the spoken words** in your _audio_ or _video_.
+
+Unlike _captions_, **transcripts don’t need to be synchronized** with the _media_.
+
+- Transcripts are useful for _deaf people_ and those _hard of hearing_.
+
+- They're also _beneficial_ for people **who prefer reading** instead of _watching_ or _listening_.
+
+Transcripts also make your content **searchable**, allowing users to quickly _find specific parts_ of your _audio_ or _video_.
+
+- if you have a video or audio on a website, you can simply add the transcript below the audio or video:
 
   ```html
-  <video
-    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-    autoplay
-    loop
-    controls
-    muted
-    width="400"
-  ></video>
+  <audio controls>
+    <source src="audio.mp3" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Transcript -->
+  <h3>Transcript</h3>
+  <p>[Speaker 1]: Welcome to the tutorial on making accessible content</p>
+  <p>[Speaker 2]: Today, we'll cover captions, transcripts, and more.</p>
+
+  <!-- Rest of transcript -->
   ```
 
-  If you wanted to display an image while the video is downloading, you can use the `poster` attribute.
+  - if you're publishing videos on a video-sharing platform like **YouTube** or Vimeo, they have **automatic captions and transcripts** for videos.
+    - But if you're _not satisfied_, you can use services like _veed.io_, _Rev_, _Amara_, and _Descript_.
 
-  ```html
-  <video
-    src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-    loop
-    controls
-    muted
-    poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-    width="400"
-  ></video>
-  ```
+&nbsp;
 
-  You can also use the `source` element inside a `video` element, just like you did with the `audio` element. This lets you provide the same video in **multiple formats**, and the browser will choose the first one it can play.
+Other ways to make your video and audio content _more accessible_, include:
 
-  ```html
-  <video
-    controls
-    width="400"
-    poster="https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217"
-  >
-    <source
-      src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-      type="video/mp4"
-    />
-    <source
-      src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.webm"
-      type="video/webm"
-    />
-    Your browser does not support the video tag.
-  </video>
-  ```
+- Adding **a sign language overlay** for videos for _deaf people_ and those hard of hearing.
 
-  **MIME** (Multipurpose Internet Mail Extensions) is a standard to describe documents in other forms besides ASCII text, for example, audio, video, and images. (`type="video/mp4"`, `type="video/webm"`, `type="video/ogg"`, `type="video/quicktime"`, etc.)
+- Providing **volume and speed controls**.
+
+- Ensuring **good contrast** for _on-screen text_.
+
+- Offering **multiple formats**.
 
 &nbsp;
 
@@ -381,7 +523,7 @@ There are 3 things to consider while working with images.
 
 1. Size
 
-   A smaller resolution results in a smaller file size. (duh?)
+   A _smaller resolution_ results in a _smaller file size_. (duh?)
    - ideally, your images should be the **same scale as the rendered size** on the page.
 
 2. Format
@@ -429,6 +571,83 @@ There are also sites like **Pixabay** and **Unsplash**, which offer `free-to-use
 &nbsp;
 
 `Note`: Always **be mindful of the copyright and licensing** when you use an image in your website.
+
+&nbsp;
+
+### `alt` Attribute
+
+**Alternative text**, often abbreviated as _alt text_, is **a brief text description of an image**.
+
+it provides **essential information about the image** for people with _visual disabilities_, such as people who use _screen readers_ and other _assistive technologies_.
+
+- A person with a _visual disability_ will not be able to know what's in the image unless it's described in the _alt text_.
+  - An example of **bad** _alt text_ for _an image of a puppy_ would be "A cute puppy."
+    - This text is **not specific enough** to convey the _important details_ of the image, like what does the puppy look like? Where is the puppy? Are there any important objects around the puppy?
+
+    ```html
+    <img src="puppy.png" alt="A cute puppy." />
+
+    <img
+      src="puppy.png"
+      alt="A black and white puppy with an orange collar lies on its belly in the sand, looking off to the side. A bright orange ball rests near its front paws."
+    />
+    ```
+
+    ```html
+    <img src="resort.png" alt="A resort." />
+
+    <img
+      src="resort.png"
+      alt="Tropical resort featuring a swimming pool surrounded by palm trees and bungalows."
+    />
+    ```
+
+Ultimately, the **alt text** you use for an _image_ **should reflect the primary purpose for including the image on the page**, and the _information_ you provide should give people with _visual disabilities_ the image the **necessary details to understand that purpose**.
+
+&nbsp;
+
+Alternative text is also **used by search engines to understand images**.
+
+Some browsers may also display it when an image is _not loaded properly_. This can happen when the image file is _missing_ or when the user has _connectivity issues_.
+
+&nbsp;
+
+Best practices for writing a good `alt` text:
+
+- You should try to **keep alt text short**.
+  - it should be **detailed enough** to understand the image **but not so long** that it becomes confusing.
+
+- Focus on the **most important aspects** of the _image_.
+  - You should **NOT** try to describe _every little detail_.
+
+- You can just **start the description directly**.
+  - You do **NOT** need to start with "_image of_" or "_picture of_."
+
+- it is usually recommended to **end the alt text with a period**(`.`) for consistency.
+
+- **if the image is a link** to another page, _instead_ of describing the image itself, **the alt text should describe what will happen if one clicks** on it.
+
+  ```html
+  <a href="about.html">
+    <img src="arrow-right.png" alt="Go to next page." />
+  </a>
+  ```
+
+- Also, **if there's similar text around the image**, you do **NOT** need to write it again.
+
+&nbsp;
+
+**Only images that convey important information should have `alt` text**.
+
+if an image is only used for **decorative** purposes, **it should have null (`""`) alt text**, so it can be _ignored_ by _screen readers_ and other _assistive technologies_.
+
+```html
+<img src="decorative_image.jpg" alt="" />
+```
+
+But, **every image on your website should have an `alt` attribute**, even if it's _empty_.
+
+if you omit the `alt` attribute completely, some **screen readers will read the file name instead**, which can be _distracting_ for people who use _assistive technologies_, so this is **NOT** recommended.
 
 &nbsp;
 
@@ -654,26 +873,72 @@ Most elements have **semantic** meaning. The `div` element is one of the very fe
 
 &nbsp;
 
-## Structural Hierarchy
+Depending on how **incorrect** your structure is, your HTML may not even be technically valid. When this happens, **the web browser has to effectively guess what you meant to do**. And what it guesses **might not even be what you want** at all.
 
-- There can be only **one** `<h1></h1>` element per page.
+&nbsp;
 
-- There can be **multiple** `<h2></h2>` elements.
+## Use Proper Heading Structure
 
-- **Do not** skip from `h1` to `h3` directly.
+**Proper use of headings creates a visual hierarchy** for users to navigate and understand your web page.
 
-- **Do not** use `<h1></h1>` to create **larger text** on your page.
-  - **Use the correct structural element**, and _style_ it with **CSS**.
+- Using a logical heading hierarchy **allows screen reader users to understand the structure of your content and navigate the content** quickly.
+  - **Screen readers can list all headings on a page**, allowing users to jump directly to the sections they need.
+
+- Creating appropriate heading text that accurately describes the content that follows **helps everyone find the information they need** on your site.
+  - it also **helps users with keyboard jump between sections without the need to `TAB` through every link**.
+
+- As an additional benefit, well-formed headings **may also improve the SEO** of your site.
+
+&nbsp;
+
+**Think of headings as the foundation of your site**. Without a good foundation, the accessibility of your content will _suffer_.
+
+- People with _partial sight_ or _cognitive disabilities_ need to process information _quickly_ and _easily_ to **reduce cognitive load**.
+
+&nbsp;
+
+While proper arrangement of headings is important, **it is also necessary to make heading texts clear and descriptive**.
+
+- Use headings in a hierarchy that **reflects clear organization**.
+  - The **page title** should be an `h1`
+
+  - **Major sections** should be introduced with `h2` headings
+
+  - **Sub-sections** with `h3`, and so on, down to h6.
+
+- **Each page should have a single `h1` element** representing the main topic or title.
+
+- **Don't skip from h1 to h3**, or from h2 to h4, and so on.
+
+- **Use clear and descriptive text** that summarizes the content that follows each heading.
+
+- **Don't use a heading in isolation**; some content must follow the heading.
+
+- **Use appropriate headings where necessary instead of formatting text to look like headings**.
 
 ```html
+<!-- Page title -->
+<h1>What is HTML</h1>
+
+<!-- First section -->
 <section>
-  <h1>freeCodeCamp</h1>
-  <h2>Learn Front-End Development</h2>
-  <h3>Introduction to HTML</h3>
+  <h2>Introduction to HTML</h2>
+  <p>
+    HTML stands for HyperText Markup Language. It is the standard language for
+    creating web pages.
+  </p>
+</section>
+<!-- Second section -->
+<section>
+  <h2>History of HTML</h2>
+  <p>HTML began to take shape in the early 90s</p>
+  <h3>Origins</h3>
+  <p>
+    HTML was created by Tim Berners-Lee in 1991. It has evolved significantly
+    over the years.
+  </p>
 </section>
 ```
-
-Finally, depending on how **incorrect** your structure is, your HTML may not even be technically valid. When this happens, **the web browser has to effectively guess what you meant to do**. And what it guesses **might not even be what you want** at all.
 
 &nbsp;
 
@@ -805,7 +1070,7 @@ Description lists are perfect for presenting **terms** and **definitions** in an
 
 - The **description list** element, `dl`, which is the **container** for the entire list.
 
-- The **description term** element, `dt`, or \*title\*\*
+- The **description term** element, `dt`, or **title**
 
 - The **description details** element, `dd`, for the description, or **details** associated with that term.
 
@@ -884,6 +1149,16 @@ it is used for **short inline quotations from other sources**.
 &nbsp;
 
 `Note`: You should use `blockquote` for **extended quotations** from other sources and inline quotes (`q`) for **short quotations** from other sources that should be part of existing paragraphs.
+
+&nbsp;
+
+## `<span></span>`
+
+A `span` element is **a generic inline container** for content.
+
+it is commonly used **to style a piece of text differently from the surrounding text**.
+
+- Or, to wrap text and give it an `id` that other elements such as, **ARIA attributes can reference**.
 
 &nbsp;
 
@@ -1138,7 +1413,11 @@ To **collect specific information**, like names and email addresses.
 
 ### `label` Element
 
-To add a label for the input.
+To add a _label_ for the `input`.
+
+Labels help people with _disabilities_, make forms more user-friendly for everyone, and ultimately improve form conversion rates.
+
+- Screen readers often rely on _labels_ to describe the purpose of input fields.
 
 ```html
 <form action="">
@@ -1381,7 +1660,7 @@ The `textarea` element is a **multi-line text input** control that allows users 
 
 ## Tables
 
-HTML tables aren't used as much these days as they u*sed to be*. But, as a front-end developer, you should still be familiar with them. Tables are **one of the earliest ways devs had for displaying data** in a browser way back in the 1990s.
+HTML tables aren't used as much these days as they _used to be_. But, as a front-end developer, you should still be familiar with them. Tables are **one of the earliest ways devs had for displaying data** in a browser way back in the 1990s.
 
 ```html
 <table>
@@ -1413,6 +1692,124 @@ HTML tables aren't used as much these days as they u*sed to be*. But, as a front
 ```
 
 - Use it only for **displaying tabular data**.
+
+&nbsp;
+
+### Accessible Tables
+
+Create accessible tables that everyone can understand, especially for users using assistive technologies like **screen reader**.
+
+- Use `caption` Element: You can write the caption (or **title**) of a table, so users, especially those who use assistive technologies, can quickly understand the table's purpose and content.
+  - This way, screen readers and other assistive technologies can provide more context by **announcing the caption before reading the content**.
+
+  ```html
+  <table>
+    <caption>
+      Our Pets
+    </caption>
+    <thead>
+      <tr>
+        <!-- Column Headers -->
+        <th>Name</th>
+        <th>Age</th>
+        <th>Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Nora</th>
+        <!-- Row Header -->
+        <td>5</td>
+        <td>Dog</td>
+      </tr>
+      <tr>
+        <th>Gino</th>
+        <!-- Row Header -->
+        <td>2</td>
+        <td>Cat</td>
+      </tr>
+    </tbody>
+  </table>
+  ```
+
+  - Associating the data cells with their corresponding headers is also very important for screen readers.
+
+&nbsp;
+
+- The `scope` Attribute: it **determines if a header is a row header or a column header**. Screen readers may guess this correctly from the table's structure, but it's usually **recommended to explicitly indicate the scope** to ensure clarity.
+  - The `scope` attribute has four possible values. The two you will use most often are `col` for column and `row` for row.
+
+  ```html
+  <table>
+    <caption>
+      Our Pets
+    </caption>
+    <thead>
+      <tr>
+        <!-- Now they have scope -->
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Type</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Nora</th>
+        <td>5</td>
+        <td>Dog</td>
+      </tr>
+      <tr>
+        <th scope="row">Gino</th>
+        <td>2</td>
+        <td>Cat</td>
+      </tr>
+    </tbody>
+  </table>
+  ```
+
+- if a column or row header spans across multiple cells, the scope will also be applied to each one of the cells individually. (**NOT Recommended!**)
+
+  ```html
+  <table>
+    <tbody>
+      <tr>
+        <td></td>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+      </tr>
+      <tr>
+        <th rowspan="2" scope="row">Dogs</th>
+        <th scope="row">Nora</th>
+        <td>5</td>
+      </tr>
+      <tr>
+        <th scope="row">Gino</th>
+        <td>2</td>
+      </tr>
+      <tr>
+        <th rowspan="2" scope="row">Cats</th>
+        <th scope="row">Lulu</th>
+        <td>10</td>
+      </tr>
+      <tr>
+        <th scope="row">Elizabeth</th>
+        <td>6</td>
+      </tr>
+    </tbody>
+  </table>
+  ```
+
+  - However, some screen readers may not be able to interpret tables with complex structures, so you should also try to flatten the table as much as possible to **avoid row and column headers that span across multiple cells**.
+
+  - For **cell width**, it's recommended to **avoid using fixed values**. You should use relative values instead, like _percentages_.
+
+  - Try to **avoid defining cell height**. This will allow users to adjust the text size to fit their needs.
+
+  - You should **let the browser determine the table width** whenever possible, to reduce the need for horizontal scrolling.
+
+&nbsp;
+
+`Note`: Your goal should always be to **make sure users can access this information**, even if their screen readers can handle complex table structures.
 
 &nbsp;
 
@@ -1631,75 +2028,514 @@ Therefore, it is important not to rely on them entirely to evaluate the accessib
 
 &nbsp;
 
-## Use Proper Heading Structure
+## The Purpose of WAI-ARIA
 
-**Proper use of headings creates a visual hierarchy** for users to navigate and understand your web page.
+The primary purpose of WAI-ARIA is to **improve accessibility for dynamic content and UI components** that do not have native HTML equivalents.
 
-- Using a logical heading hierarchy **allows screen reader users to understand the structure of your content and navigate the content** quickly.
-  - **Screen readers can list all headings on a page**, allowing users to jump directly to the sections they need.
+- WAI-ARIA stands for **Web Accessibility Initiative** - **Accessible Rich Internet Applications**.
 
-- Creating appropriate heading text that accurately describes the content that follows **helps everyone find the information they need** on your site.
-  - it also **helps users with keyboard jump between sections without the need to `TAB` through every link**.
+WAI-ARIA works by introducing **a set of attributes you can add to HTML elements to provide additional semantic information**.
 
-- As an additional benefit, well-formed headings **may also improve the SEO** of your site.
+- These attributes are categorized into **roles**, **states**, and **properties**.
 
-&nbsp;
-
-**Think of headings as the foundation of your site**. Without a good foundation, the accessibility of your content will _suffer_.
-
-- People with _partial sight_ or _cognitive disabilities_ need to process information _quickly_ and _easily_ to **reduce cognitive load**.
+- it offers **specific rules for making dynamic and interactive content accessible** for users of _assistive technologies_.
 
 &nbsp;
 
-While proper arrangement of headings is important, **it is also necessary to make heading texts clear and descriptive**.
+ARIA properties provide **additional details** about elements.
 
-- Use headings in a hierarchy that **reflects clear organization**.
-  - The **page title** should be an `h1`
-
-  - **Major sections** should be introduced with `h2` headings
-
-  - **Sub-sections** with `h3`, and so on, down to h6.
-
-- **Each page should have a single `h1` element** representing the main topic or title.
-
-- **Don't skip from h1 to h3**, or from h2 to h4, and so on.
-
-- **Use clear and descriptive text** that summarizes the content that follows each heading.
-
-- **Don't use a heading in isolation**; some content must follow the heading.
-
-- **Use appropriate headings where necessary instead of formatting text to look like headings**.
+For example, the **aria-labelledby** property lets you **connect an element to a specific label**:
 
 ```html
-<!-- Page title -->
-<h1>What is HTML</h1>
+<h2 id="header-id">About freeCodeCamp</h2>
+<button id="button-id" aria-labelledby="header-id button-id">Learn More</button>
+```
 
-<!-- First section -->
-<section>
-  <h2>Introduction to HTML</h2>
-  <p>
-    HTML stands for HyperText Markup Language. It is the standard language for
-    creating web pages.
-  </p>
-</section>
-<!-- Second section -->
-<section>
-  <h2>History of HTML</h2>
-  <p>HTML began to take shape in the early 90s</p>
-  <h3>Origins</h3>
-  <p>
-    HTML was created by Tim Berners-Lee in 1991. It has evolved significantly
-    over the years.
-  </p>
-</section>
+- This will make the elements understandable and navigable for users of assistive technologies.
+
+&nbsp;
+
+To get the best out of WAI-ARIA, try to **stick with native HTML whenever possible** since it generally provides more accessibility out of the box.
+
+Also, make sure your WAI-ARIA states and properties update with the content in _real time_.
+
+`Note`: Avoid **overusing** ARIA, as it can often be **confusing**.
+
+&nbsp;
+
+## ARIA Roles
+
+ARIA roles specify the **semantic meaning** of HTML elements.
+
+- Essential for making web content accessible to people who use _assistive technologies_, like screen readers.
+
+  ```html
+  <div role="button">Click Me!</div>
+  ```
+
+  - By doing this you are indicating to assistive technology that the element is a `button`.
+
+&nbsp;
+
+**Semantic HTML elements already have an ARIA role assigned by _default_**.
+
+```html
+<button>Example button</button>
+```
+
+- The `button` element has an ARIA role of button by _default_.
+
+&nbsp;
+
+**Non-semantic elements do not have a role**.
+
+To specify the ARIA role of an element, you need to add the `role` attribute, like this `role="ARIA role"`, where the value is the name of a role in the ARIA specification.
+
+```html
+<div class="alert" id="exp-warning" role="alert">
+  <span class="hidden">Your log in session will expire in 3 minutes.</span>
+</div>
+```
+
+- Screen readers will not know how to interpret the purpose of a `div`, if you don't specify its `role` explicitly.
+
+&nbsp;
+
+ARIA Roles **do not provide any functionality**, they only _inform_.
+
+For example, adding a role of _button_ to a `div` does not automatically make it clickable. it is the responsibility of the developer to add the expected behavior that allows the `div` to act like a _button_.
+
+- in most cases, it is just better to use the `button` element.
+
+&nbsp;
+
+There are six main categories of ARIA roles:
+
+### 1. Document structure roles
+
+Document structure roles define the overall _structure_ of the web page.
+
+- With these roles, assistive technologies can understand the _relationships_ between different sections and help users navigate the content.
+
+&nbsp;
+
+However, **most** of the document structure roles are **not used in modern web development** because browsers already support **equivalent semantic HTML elements**, which should be prioritized whenever possible.
+
+- You should only specify the roles that do not have an equivalent semantic element.
+  - For example: `toolbar`, `tooltip`, `feed`, `math`, `presentation`, `none`, and `note`.
+
+    ```html
+    <div role="math" aria-label="x squared + y squared = 3">
+      x<sup>2</sup> + y<sup>2</sup> = 3
+    </div>
+    ```
+
+    - The `div` contains a mathematical equation.
+
+    - The `aria-label` attribute should be **a string that represents the expression**.
+
+&nbsp;
+
+### 2. Widget roles
+
+Widget roles define the **purpose and functionality of interactive elements**.
+
+- Examples of widget roles include `scrollbar`, `searchbox`, `separator` (when focusable), `slider`, `spinbutton`, `switch`, `tab`, `tabpanel`, and `treeitem`.
+
+  ```html
+  <div class="search-container" role="search">
+    <label for="searchbox" class="visually-hidden">Search</label>
+
+    <div
+      id="searchbox"
+      class="searchbox"
+      role="searchbox"
+      aria-label="Search the site"
+      tabindex="0"
+      contenteditable="true"
+    ></div>
+
+    <button type="button" aria-label="Submit search">Search</button>
+  </div>
+  ```
+
+  - Some of these roles have equivalent semantic elements. You should **prioritize the semantic element over the role**, if there is one.
+    - For example, you should favor using the HTML `button` element over adding a `role` of _button_ to a `div`.
+
+&nbsp;
+
+### 3. Landmark roles
+
+Landmark roles **classify and label the primary sections** of a web page.
+
+- Screen readers use them to provide convenient navigation to important sections of a page.
+
+&nbsp;
+
+You should **use them sparingly** to keep the overall layout _simple_ and _easy_ to understand.
+
+- Examples of landmark roles are `banner`, `complementary`, `contentinfo`, `form`, `main`, `navigation`, `region`, and `search`.
+
+- And each of these roles have a corresponding HTML equivalent, such as `header`, `footer`, `aside`, `form`, `main`, `nav`, `section`, and `search`.
+
+  ```html
+  <div role="banner" class="site-banner">
+    <h1>Accessible Web Design</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Articles</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  ```
+
+  - if you **use the proper HTML elements to define the sections** of your page then it is not necessary to explicitly add the `role` attribute to these elements.
+    &nbsp;
+
+### 4. Live region roles
+
+Live region roles define **elements with content that will change dynamically**.
+
+This way, screen readers and other _assistive technologies_ can **announce changes** to users with visual disabilities.
+
+- These roles include: `alert`, `log`, `marquee`, `status`, and `timer`.
+
+  ```html
+  <div class="status-demo">
+    <button id="update-status-btn">Check Status</button>
+    <div id="status-msg" role="status" class="status-message">
+      No updates yet.
+    </div>
+  </div>
+  ```
+
+&nbsp;
+
+### 5. Window roles
+
+Window roles define sub-windows, like **pop-up modal dialogs**. These roles include `alertdialog` and `dialog`.
+
+`Note`: it is now considered a best practice to **use the HTML `dialog` element** and its associated JavaScript methods instead of manually creating a dialog.
+
+```html
+<button id="open-dialog">Open Dialog</button>
+
+<div
+  id="custom-dialog"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="dialog-title"
+  class="dialog"
+>
+  <div class="dialog-content">
+    <h3 id="dialog-title">Confirm Action</h3>
+    <p>Are you sure you want to delete this file?</p>
+    <div class="dialog-actions">
+      <button id="confirm-btn">Yes</button>
+      <button id="close-dialog">Cancel</button>
+    </div>
+  </div>
+</div>
 ```
 
 &nbsp;
 
-##
+### 6. Abstract roles
 
+These roles help **organize the document**.
 
+They're **only meant to be used internally by the browser**, not by developers. And so, you should know that they exist\* but you shouldn't use them on your websites or web applications.
 
 &nbsp;
+
+## `aria-label` & `aria-labelledby` Attributes
+
+For people using screen readers, the `aria-label` and `aria-labelledby` attributes provide **crucial information about page elements that might be unclear or invisible**.
+
+- Both `aria-label` and `aria-labelledby` attributes **help screen readers understand what elements do**.
+  - They both provide **labels for elements to enhance accessibility** for _screen readers_.
+
+- it is important to make sure that all users, including those living with disabilities, can access websites without issues.
+
+&nbsp;
+
+The `aria-label` attribute is an **invisible label for interactive elements**.
+
+- it adds a **text label** to an element that _screen readers_ can read.
+
+- it is especially useful for elements that **do not have visible text** but still **need to be described by screen readers**.
+  - For example, `buttons` with **only icons** often need `aria-label` to convey their "purpose".
+
+    ```html
+    <button aria-label="Search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+    ```
+
+    - The `aria-label` attribute tells _screen readers_ what **text** to use in place of the _icon_.
+
+    - if the button contained the text "Search" instead of an icon, then there would be no need for the `aria-label` attribute as the text would provide the label for the button.
+
+For input elements, the `aria-label` attribute provides a label directly if there isn't a visible label associated with the _input_.
+
+&nbsp;
+
+The `aria-labelledby` attribute does the **exact same thing** as the `aria-label` attribute, but instead of defining the text directly in the attribute, **you use a reference to text that already exists** on the page.
+
+- The existing text must have an `id` attribute, which will be used for the **reference value** in the `aria-labelledby` attribute.
+
+  ```html
+  <input type="text" aria-labelledby="search-btn" />
+  <button type="button" id="search-btn">Search</button>
+  ```
+
+  - The **text** for the `button` is being used as the **label** for the search `input`.
+
+&nbsp;
+
+Combining **multiple** `id` values into a **single** `aria-labelledby` attribute value is also possible.
+
+```html
+<div>
+  <span id="volume-label">Volume</span>
+  <span id="volume-details">Adjust the volume level</span>
+  <input
+    type="range"
+    min="0"
+    max="100"
+    value="30"
+    aria-labelledby="volume-label volume-details"
+  />
+</div>
+```
+
+- For the slider, the _screen reader_ will look out for the content of the `volume-label` and `volume-details` elements and announce "Volume Adjust the volume level".
+
+&nbsp;
+
+A few advantages to using `aria-labelledby` over `aria-label`:
+
+- if someone is using a **translation service** to translate the content on your page, the text in an `aria-label` attribute **may not always be translated**.
+
+- Using `aria-labelledby` can also help **prevent a mismatch** between the visible label text and the invisible label for screen reader users.
+  - Updating the visible text will **automatically update the invisible label**.
+
+- `aria-labelledby` can make it much easier to programmatically **create complex invisible labels** consisting of **multiple sources** of text.
+
+&nbsp;
+
+`Note`: Do not use `aria-label` and `aria-labelledby` on an element at the same time. For in this case, the invisible label for screen readers will always be **determined by** `aria-labelledby` and `aria-label` will be completely **ignored**.
+
+&nbsp;
+
+## `aria-hidden` Attribute
+
+This attribute **hides the element and all of its children from the accessibility tree**, while keeping them visible on the page.
+
+- if you ever need to **display content** while at the same time **hiding it from people who use assistive technology**, like _screen readers_, you can use the `aria-hidden` attribute.
+  - You just need to add it to the HTML element that you want to hide and set its value to `true`, like this: `aria-hidden="true"`.
+    - **icons** and **images** that only have a _decorative_ purpose.
+
+    - Duplicated content.
+
+&nbsp;
+
+`aria-hidden` only hides content from assistive technology, such as _screen readers_. if the content should be **hidden from everyone**, then **you should NOT use `aria-hidden` to hide it**.
+
+- in this case you could set the CSS `display` property to `none` to **remove it from the rendered page** and the accessibility tree.
+
+- The `aria-hidden` attribute only **removes the element** from the **accessibility tree**. it does **NOT** remove it from the **DOM**.
+
+  ```html
+  <head>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <button>
+    <i class="fa-solid fa-gear" aria-hidden="true"></i>
+    <span class="label">Settings</span>
+  </button>
+  ```
+
+  - We only keep the text exposed to assistive technologies to **avoid any confusion that may arise from the redundancy** of having both an **icon** and **text** for the same purpose.
+
+&nbsp;
+
+You do **NOT** need to use `aria-hidden` when:
+
+- The HTML element already has a `hidden` attribute.
+
+- The element or the element's ancestor is already _hidden_ with `display: none`.
+
+- The element or the element's ancestor is already _hidden_ with `visibility: hidden`.
+
+in these three cases, the element is **already hidden from the accessibility tree**, so the `aria-hidden` attribute is **NOT** necessary.
+
+&nbsp;
+
+`Note`: Setting `aria-hidden` to `false` will **NOT expose the element** to assistive technologies, if any of its **parents** has this _attribute_ set to `true`.
+
+&nbsp;
+
+in general, **all content and functionality available on the page should also be available to people using assistive technology**.
+
+- The use case for `aria-hidden` is **very narrow** and **should be limited primarily to making the experience cleaner for screen reader users** by removing purely _decorative_ or _duplicate_ information.
+  - Use it only for **decorative elements** that do **NOT** contribute to the **main content**.
+
+- Do **NOT** use `aria-hidden` **to hide content that you don't think screen reader users would be interested in**.
+  - Screen reader users **deserve to have access to all information** on the page.
+
+&nbsp;
+
+## `aria-describedby` Attribute
+
+it is used to **provide additional information** about an _element_ to screen reader users by **referencing existing content** on the page.
+
+- it creates a **programmatic association between the element and the content** (technically referred to as an **accessible description**), which screen readers can use to inform users of the additional information when they interact with the element.
+  - The most common use for `aria-describedby` is to **associate instructions and error messages with form inputs**.
+
+    ```html
+    <form>
+      <label for="password">Password:</label>
+      <input type="password" id="password" aria-describedby="password-help" />
+      <p id="password-help">
+        Your password must be at least 8 characters long.
+      </p>
+    </form>
+    ```
+
+    - We are using the `aria-describedby` attribute to associate the password `input` field with the **password requirements** in the paragraph element.
+
+&nbsp;
+
+Another good use case for the `aria-describedby` attribute is when you have a **delete** `button`.
+
+- Here is an example of a delete `button` followed by a message describing what will happen when the button is `clicked`:
+
+  ```html
+  <button aria-describedby="delete-message">Delete</button>
+
+  <p id="delete-message">Warning! All deletions are permanent.</p>
+  ```
+
+  - Just like in the earlier example, we associate the delete `button` with the **message** using the `aria-describedby` attribute.
+    - The `id` value and the value of the `aria-describedby` attribute **must match**.
+
+&nbsp;
+
+The `aria-describedby` attribute is a powerful attribute that can be used to **help ensure that additional information about an element is provided to screen reader users when they interact** with the element.
+
+it is most commonly used to associate instructions and error messages with form inputs in order to **reduce the chance that screen reader users will miss these messages** as they navigate the form.
+
+&nbsp;
+
+## Keyboard Accessibility
+
+Many users rely on _keyboards_ instead of _mice_ due to _physical disabilities_, _repetitive strain injuries_, or _personal preference_.
+
+This includes users of _screen readers_ and those who _may_ not have a working mouse.
+
+Keyboard accessibility ensures these users can navigate web applications effectively without barriers.
+
+&nbsp;
+
+Many users rely on the `Tab` key to move through interactive elements on a webpage.
+
+By default, browsers let users _tab through elements_ like _links_, _buttons_, and _form fields_ in the order they appear in the HTML. This is called the **natural tab order**.
+
+The `tabindex` attribute allows you to **adjust which elements are focusable** or **change their focus order**.
+
+Basic Syntax:
+
+```html
+<element tabindex="number">Element Text</element>
+```
+
+&nbsp;
+
+The _value_ of `tabindex` determines **how the element behaves in keyboard navigation**.
+
+- `tabindex="0"` _adds_ the element to the **natural tab order**.
+
+  ```html
+  <button>First</button>
+  <div tabindex="0">Second</div>
+  <a href="#">Third</a>
+  ```
+
+  - Tabbing will move _focus_ from the `button` to the `div`, then to the `a`, following their order in the HTML.
+
+- `tabindex="-1"` _makes_ an element **focusable programmatically**.
+  - This is useful for **managing focus in elements that are NOT normally focusable**, such as _headings_, _containers_, _dialogs_, or _error messages_.
+
+    ```html
+    <p tabindex="-1">Sorry, there was an error with your submission.</p>
+    ```
+
+    - in this example, the `p` is **NOT** part of the _normal tab order_, so users can NOT reach it by pressing the `Tab` key. However, if you set focus to this element via a **script**, the message will be brought to the _user's attention_.
+
+&nbsp;
+
+When the `tabindex` is **greater** _than_ `0` it _sets_ a **custom tab order**. So elements with **lower positive values are focused first**.
+
+```html
+<input tabindex="2" />
+<input tabindex="1" />
+<input tabindex="3" />
+```
+
+- in this example, tabbing will _focus_ the `input` with `tabindex="1"` _first_, then `2`, then `3`, **regardless of their order in the HTML**.
+
+Custom positive values are sometimes used in **complex widgets**, such as a _toolbar_ where you want **a specific navigation order**.
+
+However, this approach is **discouraged**, because it can make _navigation_ **confusing** and **hard to maintain**, especially as the page _grows_ or _changes_.
+
+&nbsp;
+
+`accesskey` attribute allows you to **define a key that focuses on** or **activates a particular element**.
+
+- The exact **key combination to activate** the `accesskey` **may vary** _depending_ on the **browser** and **operating system**.
+  - For **Windows**: `ALT + Specified Key`
+
+  - For **Mac**: `CTRL + Option + Specified Key`
+
+The `accesskey` attribute can be **problematic**, because it may **conflict with existing shortcuts** or behave _inconsistently_ across devices and keyboards, and is often **NOT intuitive** for users to discover or remember.
+
+- Should you _choose_ to use `accesskey`, it should be done with **a clear guidance** to users, but _in most cases_ it's better to **avoid _accesskey_** in websites and web applications.
+
+```html
+<button accesskey="s">Save</button>
+<button accesskey="c">Cancel</button>
+<a href="index.html" accesskey="h">Home</a>
+```
+
+&nbsp;
+
+Make sure you **provide clear focus indicators**.
+
+The focus indicator should be _styled_ in a way that makes it **obvious which element currently has focus**.
+
+in order to be _accessible_, the indicator must have a **minimum color contrast** of at least `3:1` with the _background color_ it covers.
+
+- if you feel the **default browser focus indicator** is _not enough_, you can **override** it by targeting the `focus` state of the element.
+
+  ```css
+  button:focus {
+    outline: 2px solid #005fcc;
+  }
+  ```
+
+  - The `outline` property is used to define the **outline around the element**.
+
+&nbsp;
+
+`Note`: You should also **avoid keyboard traps**, which occur when a user _cannot move focus_ away from a certain element in components like _modals_ and _popups_.
 
 &nbsp;

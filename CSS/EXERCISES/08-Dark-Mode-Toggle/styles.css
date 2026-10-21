@@ -1,0 +1,82 @@
+body {
+  background-color: #f0f0f0;
+  color: #111;
+  font-family: sans-serif;
+  transition:
+    background 0.3s,
+    color 0.3s;
+  padding: 1rem;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1rem;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+.buttons button {
+  border: none;
+}
+
+.saturated {
+  background-color: #ff00ff;
+  color: white;
+}
+
+.desaturated {
+  background-color: #c472b5;
+  color: white;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark .saturated {
+  background-color: #ff00ff;
+  color: black;
+}
+
+body.dark .desaturated {
+  background-color: #925f88;
+  color: white;
+}
+
+.dark-mode-examples {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.box {
+  padding: 1rem;
+  border-radius: 8px;
+  width: 300px;
+  transition:
+    background 0.3s,
+    color 0.3s;
+  background-color: #ffffff;
+  color: #111;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .box.harsh-dark {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+body.dark .box.soft-dark {
+  background-color: #1e1e1e;
+  color: #cccccc;
+}
+
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}

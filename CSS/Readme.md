@@ -974,7 +974,2579 @@ img {
 
 &nbsp;
 
-## Design
+## Basic Design Terminology
+
+(For more: Open "CSS/EXERCISES/05-ShopMate-Demo")
+
+### Layout
+
+Layout is **how the visual elements are arranged on a page** or screen to communicate a message. it is like **the blueprint** of a design.
+
+Designers must consider the _placement_, _size_, and _hierarchy_ of each element.
+
+- Text
+
+- images
+
+- White space
+
+#### Alignment
+
+Alignment is **how the elements are placed in relation to one another**. Using alignment correctly is helpful for making the design look clean and organized.
+
+Designers create **visual order by aligning elements along imaginary lines, edges, or a central point**.
+
+&nbsp;
+
+### Composition
+
+Composition is **the art of arranging elements to create a harmonious design**. it determines how elements like _images_, _text_, and _shapes_ relate to each other and contribute to the design in an **artistic** way.
+
+While layout mostly focuses on the **placement** of the elements, composition also considers the **artistic impact** that this placement will have in the overall design.
+
+Composition is closely related to concepts of **balance**.
+
+- Balance is **how the visual weight is distributed** within a composition.
+
+- A balanced design feels harmonious.
+
+Designers aim to **create an equilibrium through symmetrical or asymmetrical arrangements**.
+
+&nbsp;
+
+### Hierarchy
+
+Hierarchy **establishes the order of importance** of the elements in a design.
+
+You can implement a visual hierarchy with _size_, _color_, _contrast_, _alignment_, _white space_, and even _typography_.
+
+- it is about making sure **the most important information is noticed first**.
+
+&nbsp;
+
+### Contrast
+
+Contrast is used to **create clear distinctions** between the elements, it is helpful for **guiding user attention** to what you want to _emphasize_.
+
+You can do this through **variations** in _color_, _size_, _shape_, _texture_, or any other _visual_ characteristic.
+
+- Strong contrast is also helpful for improving readability.
+
+&nbsp;
+
+### White Space
+
+White Space, also known as "negative space", is **the empty space** in a design.
+
+- it is **the area surrounding** the elements.
+
+- it can be **space in any color or texture**.
+
+- its purpose is to **improve readability** and **enhance the visual hierarchy** of a design.
+
+&nbsp;
+
+### User interface
+
+The user interface, also known as **UI**, is **how humans interact with computers**.
+
+A user interface includes the **visual** and **interactive** elements that users can see on their screens, like _icons_, _images_, _text_, _menus_, _links_, and _buttons_.
+
+&nbsp;
+
+### User Experience
+
+The user experience, also known as **UX**, is about **how users feel when using a product or service**.
+
+An application with a well-designed user experience is **intuitive, easy to use, efficient, accessible, and enjoyable**.
+
+The user interface plays a key role in making the user experience as easy and enjoyable as possible, so they are very closely related.
+
+&nbsp;
+
+## Background & Foreground Relationship: Contrast
+
+Contrast is **the difference between two colors** - or how easy it is to tell them apart.
+
+Colors with a **higher contrast** will be more visually **distinct**, whereas colors with a **lower contrast** will be more visually **similar**.
+
+- **Black** and **white** have a very **high** contrast ratio.
+
+- **Light blue** and **light purple** have **less** of a contrast.
+
+&nbsp;
+
+### [Contrast Ratio](./EXERCISES/06-Contrast-Ratios/index.html)
+
+There are three aspects that impact the contrast ratio.
+
+- **Hue**, which represents the **general color type**, like _red_, _blue_, _orange_.
+
+- **Saturation**, or the **"amount" of color present**.
+
+- **Lightness**, which represents **how much white is present** in the color.
+
+Text with a contrast ratio of `4.5:1` is considered the **AA** standard, which is the **bare minimum** you should follow to be accessible to most users.
+
+Text with a contrast ratio of `7:1` is considered the **AAA** standard, and ensures the **best** level of accessibility.
+
+&nbsp;
+
+## Hex Code
+
+A _hex-code_ is a **_six-digit_ combination of numbers and letters used to represent colors**.
+
+it starts with a `#` followed by _three pairs_:
+
+- The **first two** digits represent **red**
+
+- The **next two** represent **green**
+
+- The **last two** represent **blue**
+  - For example, `#ffffff` is _pure white_ because it has the _maximum value_ for _red_, _green_, and _blue_.
+
+You can also add **two extra digits at the end** to control **opacity** (called the **alpha channel**).
+
+- in `#ffffff1a`, the `1a` makes the _white_ color **semi-transparent**.
+
+The **lower the alpha** value, the **more transparent the color** appears.
+
+&nbsp;
+
+## [Good Visual Hierarchy](./EXERCISES/07-Good-Visual-Hierarchy/index.html)
+
+Visual hierarchy refers to the way you **layout** and **display** the content of your page to **guide the viewer's attention in a specfic order**.
+
+**A strong hierarchy can provide a clear path for the eye to follow**, ensuring that the information you convey is consumed in the order that you intended.
+
+- Use different **font sizes** for headings.
+
+- Create **distinct sections** for `navigation` and `footer`.
+
+- implement **callout boxes** and **Call-to-Action (CTA) buttons** for important information.
+
+&nbsp;
+
+## Scale 101
+
+The "scale" of something refers to its **size**.
+
+When you're looking at scaling in your web design, you're looking at the **size relationships between different elements**, and how these elements might adapt to different screen sizes.
+
+- Scaling is crucial in order to guide users through the content.
+
+&nbsp;
+
+Scale is also important for **interactivity**, and the ability to actually use your website.
+
+- if the text in a navigation bar is not at an appropriate scale, smartphone users will have a hard time tapping on the links.
+
+&nbsp;
+
+Scale doesn't apply just to _text_, though. it is also important for _images_.
+
+- While the scale of a banner image might make sense for a desktop layout, it might be too large on a mobile layout.
+
+&nbsp;
+
+## Alignment 101
+
+Alignment is the process of **arranging text and images** in a way that creates a **visual connection** between elements.
+
+- When you are designing web pages, it is important to create **cohesive** and **visually appealing** designs. One way to achieve this is through the use of _alignment_.
+  - it helps to create **a sense of order and organization** on the page, making it easier for users to navigate and _understand_ the content.
+
+&nbsp;
+
+There are several types of alignment you can use, but the basic ones are:
+
+### Left Alignment (Horizontal)
+
+it is **commonly used with text** where each element is **aligned to the left margin**.
+
+- Aligning all of the headings and paragraphs on a web page to the left margin makes it **easier for the user to read and follow the content**.
+
+```html
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fff;
+    color: #222;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+</style>
+
+<h1>Why Left Alignment Matters</h1>
+<p>
+  Left alignment is one of the most common and effective ways to present text on
+  web pages.
+</p>
+
+<h2>Consistency</h2>
+<p>
+  Aligning all headings and paragraphs to the left margin creates a clean and
+  consistent reading flow.
+</p>
+
+<h3>Easy to Follow</h3>
+<p>
+  Users can easily scan and follow content without confusion or misalignment.
+</p>
+```
+
+&nbsp;
+
+### Right Alignment (Horizontal)
+
+The opposite of left alignment is right alignment, where each element is **aligned to the right margin**.
+
+- This is often used on websites to **display additional content** like **promotional banners** or **advertisements**.
+  - An \*AD that is aligned to the right margin makes it **stand out from the rest** of the content on the page, and **doesn't distract** the user from the main content.
+
+```html
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fff;
+    color: #222;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    text-align: right;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+</style>
+
+<h1>Right Alignment in Web Design</h1>
+<p>
+  Right alignment is commonly used to display additional or promotional content
+  on websites.
+</p>
+
+<h2>Secondary Content</h2>
+<p>
+  Aligning text to the right margin can help separate it visually from the main
+  content.
+</p>
+
+<h3>Promotional Use</h3>
+<p>
+  This alignment is often chosen for banners, advertisements, or sidebar
+  messages.
+</p>
+```
+
+&nbsp;
+
+### Center Alignment (Horizontal)
+
+Center alignment is where elements are **centered on the page**.
+
+- This is often used for **headings**, **logos**, and other important **elements that you want to draw attention to**.
+
+```html
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fff;
+    color: #222;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+<h1>Center Alignment for Impact</h1>
+<p>
+  Center alignment is perfect for drawing attention to headings and important
+  elements.
+</p>
+
+<h2>Eye-Catching Layout</h2>
+<p>
+  By centering key content, you make it stand out and create a balanced visual
+  appeal.
+</p>
+
+<h3>Common Uses</h3>
+<p>
+  This technique is often used for logos, hero headings, and call-to-action
+  messages.
+</p>
+```
+
+&nbsp;
+
+### Justified Alignment
+
+Justified alignment is when text is **aligned to both the left and right margins**.
+
+- This is typically used for **descriptive passages** or **articles**, and creates a _clean_ and **professional** look.
+
+```html
+<style>
+  body {
+    font-family: Georgia, serif;
+    padding: 20px;
+    background-color: #fff;
+    color: #222;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  p {
+    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+</style>
+
+<h1>Justified Alignment for Clean Text Blocks</h1>
+
+<p>
+  Justified alignment ensures that each line of text stretches evenly between
+  the left and right margins. This creates a smooth, block-like appearance that
+  looks very polished and professional. It’s commonly used in newspapers,
+  magazines, and formal documents where a uniform look is desired.
+</p>
+
+<p>
+  However, care should be taken with justified text to avoid uneven spacing or
+  "rivers" of white space, especially on narrow columns or screens. Proper
+  hyphenation and responsive design can help maintain readability.
+</p>
+```
+
+&nbsp;
+
+### Vertical Alignment
+
+it is used to **align elements along a vertical axis**.
+
+- Vertical alignment can be used, for example, for a **contact form** on a website.
+  - Aligning all of the form inputs like the _name_, _email_, and _message fields_ along a vertical axis makes it easier for the user to fill out the form.
+
+```html
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #fff;
+    color: #222;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input,
+  textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<form>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" placeholder="e.g., Jane Doe" />
+
+  <label for="email">Email</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    placeholder="janedoe@example.com"
+  />
+
+  <label for="message">Message</label>
+  <textarea
+    id="message"
+    name="message"
+    rows="4"
+    placeholder="Write your message here"
+  ></textarea>
+
+  <button type="submit">Submit</button>
+</form>
+```
+
+&nbsp;
+
+## Whitespace 101
+
+White space refers to any type of **space around elements** like _images_, _text_, and _buttons_.
+
+White space is important in design because it **helps create a balance between the elements** on the page.
+
+&nbsp;
+
+Types of White Spaces:
+
+- **Macro** White Space: The **space between larger elements** like _images_, _text blocks_, and _buttons_.
+
+- **Active** White Space: The space that is **intentionally created to help guide the user's eye** and **draw attention** to certain elements on the page.
+  - On the freeCodeCamp homepage, the CTA `button` is **visually separated** from other elements.
+    - By using white space effectively, we can help to make a CTA `button` more **prominent** and **encourage users to click** on it.
+
+- **Passive** White Space: The **space that is left over** after all the elements on a page have been placed.
+
+- **Micro** White Space: The **space between individual characters in a line of text**.
+  - it is important because it helps to **improve readability and legibility**, making it easier for users to scan and understand the content.
+
+&nbsp;
+
+**The Law of Proximity**: This law states that _elements_ that are **close together** are perceived as being **related**, while _elements_ that are **far apart** are perceived as being **unrelated**.
+
+- You can use white space to help group related elements together and help users navigate through the content on your page.
+
+&nbsp;
+
+## Working w/ images
+
+**Create responsive images**.
+
+Responsive images are **images that scale to fit the size of the screen** they are being viewed on.
+
+- This is important because it **ensures that your images look good on all devices**, from _desktops_ to _smartphones_.
+
+  ```html
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #fefefe;
+      color: #333;
+      text-align: center;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    p {
+      font-size: 16px;
+      max-width: 600px;
+      margin: 20px auto;
+      line-height: 1.7;
+      text-align: justify;
+    }
+  </style>
+
+  <h1>Responsive Cat Image</h1>
+
+  <img
+    src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+    alt="Two cats peacefully sleeping together."
+  />
+
+  <p>
+    This image automatically scales based on the screen size. Whether you're
+    viewing on a desktop or a mobile phone, it adjusts its size without losing
+    proportions, making the design clean and user-friendly on all devices.
+  </p>
+  ```
+
+&nbsp;
+
+Factor: **The Resolution of An image**
+
+Higher quality images with **better resolution** have **more pixels per inch** (PPI).
+
+- Pixels are **small squares that make up an image**.
+
+- Pixels per inch, or PPI, is **the number of pixels in one inch** of an image.
+  - The **higher the PPI**, the **better the image quality**.
+
+Make sure that your images are **high quality** and **look good on all devices**.
+
+- This means that you should **use high resolution images** that are _optimized_ for the web.
+
+&nbsp;
+
+Factor: **The Size of An image**
+
+Make sure that your **images are the right size**, and are **NOT** too large, or too small.
+
+Using **large images** that are meant to fit in **smaller spaces** in the design can **slow down the website** and make it harder for users to load your site.
+
+- Make sure that your images are the **right size** and are **optimized** for the web.
+
+&nbsp;
+
+### image placement
+
+- **Balance**: The **distribution of visual weight** in a design.
+  - Make sure there is **a good balance between text and images** on the site, so it creates a **harmonious** design.
+
+  ```html
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .text {
+      flex: 1 1 400px;
+    }
+
+    .text h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .text p {
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .image {
+      flex: 1 1 400px;
+    }
+
+    .image img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+
+  <div class="container">
+    <div class="text">
+      <h2>Balanced Layout</h2>
+      <p>
+        Balance is essential in web design. By evenly distributing visual
+        weight—such as pairing this block of text with a complementary image—you
+        create a layout that feels calm, structured, and easy to navigate.
+      </p>
+    </div>
+
+    <div class="image">
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+        alt="Two cats peacefully sleeping together."
+      />
+    </div>
+  </div>
+  ```
+
+- **Hierarchy**: The **order in which elements are viewed** on a page.
+  - Make sure that images that align with **important content are placed higher** than images that are _less important_.
+
+  ```html
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 30px 20px;
+      background-color: #fff;
+      color: #222;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .section h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+  </style>
+
+  <div class="section">
+    <img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+      alt="Two cats peacefully sleeping together."
+    />
+    <h2>Our Feline Rescue Mission</h2>
+    <p>
+      This image supports one of our most important stories — the rescue of 12
+      stray cats from a storm drain. Placing it at the top ensures visitors
+      connect emotionally with our mission right away.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Upcoming Fundraiser</h2>
+    <p>
+      Join us for a small fundraising event to support our shelter. It’ll be a
+      fun, casual afternoon with snacks, games, and of course — plenty of cats!
+    </p>
+    <img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+      alt="Two cats peacefully sleeping together."
+    />
+  </div>
+  ```
+
+- **Alignment**: The **placement of elements in relation to each other**.
+  - Make sure that your images are **aligned with the text and other elements** on your site, so that it creates a **cohesive design**.
+
+  ```html
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px 20px;
+      background-color: #ffffff;
+      color: #222;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .aligned-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .aligned-content img {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .aligned-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .aligned-text h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .aligned-text p {
+      font-size: 16px;
+      line-height: 1.7;
+      text-align: justify;
+    }
+  </style>
+
+  <div class="aligned-content">
+    <img
+      src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg"
+      alt="Two cats peacefully sleeping together."
+    />
+
+    <div class="aligned-text">
+      <h2>Aligned Elements</h2>
+      <p>
+        In this example, the image is aligned horizontally next to the text
+        block. This creates a visually cohesive layout, where both elements feel
+        like they belong together. Proper alignment like this improves
+        readability and reinforces structure in your design.
+      </p>
+    </div>
+  </div>
+  ```
+
+&nbsp;
+
+Factor: **The Accessibility of An image**
+
+Make sure that the **images are accessible to all users**, including those with _visual impairments_.
+
+- This means that you should **use alt text for your images** so that _screen readers_ can read the text to users who are _visually impaired_.
+
+&nbsp;
+
+## Progressive Enhancement
+
+Progressive enhancement is a design approach that ensures **all users**, **regardless of browser or device**, can access the **essential content and functionality** of an application.
+
+it focuses on delivering **a core experience** that works for _everyone_, **while offering extra features and improvements** to users with more advanced browsers or better internet connections.
+
+Core Principles:
+
+- All **core content** and **basic functionality** should be **accessible on all browsers**.
+
+- All **advanced layouts** should be provided through **external CSS** stylesheets.
+
+- All **advanced functionality** should be provided through **external JavaScript** files.
+
+- A user's **browser preferences should be respected**.
+
+&nbsp;
+
+Using a progressive enhancement approach makes your applications **more accessible**, because **core content and functionality should NOT be blocked in "unsupported" environments**.
+
+- A progressive enhancement approach can also help **improve the performance** of your applications.
+
+- Those users that are working with **slower internet connection** speeds will still be able to access the content because the **browser will download the necessary resources first**.
+
+- Progressive enhancement can also help improve the visibility (**SEO**) of your applications.
+  - Search engines will be able to crawl the content of your applications because the **core content is available in the initial HTML response**.
+
+&nbsp;
+
+While some have criticized this approach deeming that it is **not always realistic** for applications that _rely heavily on JavaScript_ for their functionality, it **is still a good practice** to follow when building applications.
+
+&nbsp;
+
+## User-Centered Design
+
+User-centered design is **a web development approach that prioritizes the end user**, from their needs to their preferences and limitations.
+
+The goal of user-centered design is to craft a _web page_ that is **intuitive**, **efficient** to use, and **pleasing** for your users to _interact_ with.
+
+&nbsp;
+
+One of the first aspects of user-centered design is to **consider the target demographics**.
+
+For example, if your intended user-base is **younger**, you might leverage more flashy **eye-catching designs** that grab their _attention_ immediately.
+
+For an **older** audience, you might focus more on **clear and streamlined designs without distractions**.
+
+&nbsp;
+
+Another aspect to consider is the **goal of the end users**.
+
+For example, if you're building an **e-commerce** page for your products, you probably don't want to advertise someone else's products on your page.
+
+But if you're building a **personal blog**, you might include **advertisement elements to generate revenue** from _passive readers_.
+
+&nbsp;
+
+**User behavior** is an important factor as well.
+
+You'll want to leverage an **analytics tool**, like _Google Analytics_, to measure **how your users engage with your pages**.
+
+- This can reveal areas where users might be getting "stuck" and leaving your page, or **opportunities to improve the overall interaction flow**.
+
+&nbsp;
+
+A key to user-centered design is to **actually involve your users**. Providing **a feedback channel** where they can share their experiences and pain points with your site allows you to capture vital information and iterate further to improve.
+
+Ultimately, User-centered design means **you need to put the user at the forefront of your decision making**, whether that's through _research_ or direct _feedback_.
+
+&nbsp;
+
+### User Research
+
+User research is the **systematic study of the people who use your product**.
+
+The goal is to **measure user needs**, **behaviors**, and **pain points**.
+
+&nbsp;
+
+Net Promoter Score (**NPS**): it measures **how likely your users are to recommend your product** to a friend.
+
+- NPS is measured through **a survey offered at key milestones** along the user's journey, such as after _7 days_, _30 days_, and _90 days_.
+
+- NPS is measured on **a scale of** `0` to `10`, with `9` and `10` indicating an **active promoter** of your site.
+
+&nbsp;
+
+Another research vector is an **exit interview**.
+
+This is **a survey** you show to your users **when they cancel a subscription** or **delete an account**.
+
+- Data from this survey can give you **insight into the factors causing user churn**, so you can address them.
+
+&nbsp;
+
+### Testing
+
+User testing refers to the practice of **capturing data from users as they interface with your application**.
+
+For example, **a video game going through beta testing** is a form of _user testing_.
+
+&nbsp;
+
+One you might run into as a _web developer_ is **A/B testing**.
+
+- A/B testing involves **shipping a new feature to a randomly selected subset** of your user base.
+  - You can then leverage _analytics data_ to **determine if the feature is beneficial**.
+
+&nbsp;
+
+### User Requirements
+
+User requirements refer to **the stories** or **rubric** that your application needs to follow.
+
+- This can **inform the development process**.
+
+&nbsp;
+
+User requirements might be **defined by user research**, or **industry standards**. They can even be defined by **stakeholder input**.
+
+These requirements may be **functional**, meaning **they dictate how your application should work**, or **non-functional**, meaning **they define how your application should behave**.
+
+&nbsp;
+
+User requirements are **NOT static**, either.
+
+The information from both **user testing** and **user research** can **impact the requirements**, and they will change as your user base changes.
+
+&nbsp;
+
+## Designing A [Dark Mode Toggle](./EXERCISES/08-Dark-Mode-Toggle/index.html)
+
+Dark mode is a special feature on web applications where you can change the default light color scheme to a **dark color scheme**.
+
+This helps **reduce eye strain** and **improve readability in low-light conditions**.
+
+&nbsp;
+
+Here are some **best practices** to ensure that your **dark mode** feature is _effective_ and _user-friendly_.
+
+The first consideration is the **avoidance of saturated colors** in _dark mode_.
+
+- **Saturated** colors are **colors that are bright and intense**.
+  - For example, a **bright magenta** button against a **dark gray** background can be **too intense** and _cause eye strain_.
+
+instead, you should **use desaturated colors** in _dark mode_.
+
+- **Desaturated** colors are **colors that are less intense**, **have a lower saturation** level, and are more **comfortable to look at** in _dark mode_.
+
+&nbsp;
+
+Another consideration with _dark mode_ is the use of pure **black backgrounds** with **white text**.
+
+- While this _high contrast_ can be effective, it can also be **too harsh** on the _eyes_.
+
+_instead_, consider using a **dark gray background** with **light gray text** for a _softer contrast_.
+
+- Text will be **easier on the eyes** and **more comfortable to read** in _dark mode_.
+
+&nbsp;
+
+Another consideration is the use of dark mode with the site's **brand identity**.
+
+- A brand identity is **a set of visual elements that represent a brand**, such as the _logo_, _colors_, and _typography_.
+
+When implementing dark mode, you should **consider how the dark mode feature is consistent with your brand's colors and style**.
+
+- it is fine to have the brand _icon_ and _buttons_ at full _saturation_, while the _surrounding elements_ are _desaturated_.
+
+&nbsp;
+
+in general, when it comes to _design_, you always want to **be mindful of the user experience** and **contrast levels**.
+
+&nbsp;
+
+## Designing Breadcrumbs
+
+Breadcrumbs are **a navigation aid that shows the user where they are** in the site's _hierarchy_.
+
+When it comes to web design, there are many types of _navigational aids_ you can use. Examples include _top navigation bars_, _sidebars_, and _footers_.
+
+- But if your site is on the more _complex side_ with **deeper levels of navigation**, you might want to consider using _breadcrumbs_.
+
+  ```html
+  <div class="breadcrumbs">Home / Electronics / Phones / Smartphone XYZ</div>
+  ```
+
+  - in most websites, _breadcrumbs_ are displayed at **the top** of the page, showing the user **the path they took to get to the current page**.
+
+The use of _breadcrumbs_ is helpful because it can help users understand **where they are** in the site's _hierarchy_ and **how to navigate back** to the previous pages.
+
+- This is especially useful when a user has come from a search result or an _external link_ and needs to **understand the context of the page they are on**.
+
+&nbsp;
+
+When it comes to designing _breadcrumbs_, there are a few _considerations_ to keep in mind:
+
+The _first_ is to decide on what **the separator** will be.
+
+- The _separator_ is **the character that separates the different levels of the hierarchy**.
+  - Common separators include the greater than sign (`>`), right angle quotation marks (`»`) ,and the forward slash (`/`).
+
+    ```html
+    <div class="breadcrumbs">
+      Home &gt; Electronics &gt; Phones &gt; Smartphone XYZ
+    </div>
+    ```
+
+The _second_ consideration is **the placement** of the _breadcrumbs_.
+
+Breadcrumbs are **typically placed at the top of the page**, either **above or below the main navigation bar**.
+
+- Users shouldn't have to _struggle_ to find the _breadcrumbs_, so **make sure they are visible** and **easy to locate**.
+
+  ```html
+  <nav class="main-nav">
+    <a href="#">Home</a>
+    <a href="#">Electronics</a>
+    <a href="#">Phones</a>
+  </nav>
+  <div class="breadcrumbs">
+    Home &gt; Electronics &gt; Phones &gt; Smartphone XYZ
+  </div>
+  ```
+
+Another consideration is **the size** of the _breadcrumbs_.
+
+You want to **make sure the breadcrumbs are large enough to be easily read**, _but_ **not so large** that they take up _too much space_ on the page.
+
+Remember, the breadcrumbs are **NOT** meant to serve as a _primary navigation tool_, but _rather_ as **a secondary navigational aid**.
+
+- in websites where there is a lot of information on a page, users can easily see _where they are_ in the hierarchy and _navigate back_ to previous pages using _breadcrumbs_.
+
+  ```html
+  <div class="breadcrumbs">
+    Home &gt; Electronics &gt; Phones &gt; Smartphone XYZ
+  </div>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+  ```
+
+&nbsp;
+
+if your site is _simple_ and has a _shallow hierarchy_, _breadcrumbs might not be necessary_.
+
+- A shallow hierarchy means that the site has only a _few levels of navigation_, so breadcrumbs _might not add much value_.
+
+Typically, you will see breadcrumbs on _e-commerce_ sites, _news_ sites, and other sites with a _deep hierarchy_ like _technical documentation_ sites.
+
+&nbsp;
+
+## Designing [Cards](./EXERCISES/09-Cards/index.html)
+
+Card components are used to help **display information in a structured way**, and are a very common occurrence in _e-commerce_, _social media_, and _news sites_.
+
+Best Practices:
+
+The _first_ consideration for card design should be **simplicity**.
+
+You don't want your cards to be _visually cluttered_ or display _too much_ information.
+
+- For example, if a card design is _visually cluttered_, there will be _too much_ information for the user to process _all at once_.
+
+&nbsp;
+
+_Another_ thing to consider is where the user can **click on the card**.
+
+- Some card designs will have a single `button`, making it _obvious_ where the user can _click_.
+
+- Other card designs will have the **entire card clickable**.
+  - When the user _hovers_ over any part of the card, the card will **change color** or have a **shadow effect** to indicate that the card is _clickable_.
+
+`Note`: Whatever design you choose, it needs to be **consistent** throughout your site and easy for the user to understand.
+
+&nbsp;
+
+Another consideration is the use of **quality media** on your cards.
+
+Choosing **high-quality media** can significantly **enhance the user experience**.
+
+if you are using images or videos for say a product card, the higher the _quality_ the more the user will be _interested_ in that product.
+
+- But, if you use _poor media quality_, then the user \*might not _trust_ the quality of your _products_ and _services_.
+
+&nbsp;
+
+One of the last things to consider is the use of **color hierarchy**.
+
+You want to make sure that the **most important information** on the card is the **most prominent**.
+
+- You can use **bright colors for important elements** like a _call-to-action_ `button`, and **light colors** for **less important** items on a card.
+
+&nbsp;
+
+## Designing [infinite Scrolls](./EXERCISES/10-infinite-Scrolls/index.html)
+
+infinite scrolling is **a design pattern that loads more content as the user scrolls** down the page.
+
+Oftentimes, this is used on social media sites like _Twitter_ or _instagram_.
+
+- For example, if you are logged in and want to see more _tweets_ or _posts_, you can scroll down and more _tweets_ and _posts_ will load.
+
+&nbsp;
+
+### Pagination
+
+Pagination is **a design pattern that breaks up content into pages**.
+
+- This is often used when there is a _lot of content_ to display.
+  - An example of pagination is when you _search_ for something on _Google_ and you see the search results on _multiple pages_.
+
+&nbsp;
+
+With _pagination_, you have to **click on a button to go to the next page**.
+
+With _infinite scrolling_, you just **keep scrolling down and more content will load**.
+
+`Note`: infinite scrolling is also used as a _substitute_ for pagination.
+
+&nbsp;
+
+Best practices for implementing **infinite Scrolls**:
+
+- Provide a "**Load More**" `button` that loads the next set of results when the user _clicks_ on it.
+  - This is a good way to give the user **control over when they want to see more content**.
+
+- Add a "**Back**" `button` that gives users **the ability to go back** to the previous page **without having to scroll** all the way back up.
+  - "_Back to the top_" `button` which leads users _back to the top_ of the page of results.
+
+- Provide a **loading indicator**.
+  - Users should have **a clear indication that more content is being loaded**; otherwise, they might think that the page is _broken_.
+
+- Keep the `footer` _accessible_ to the user.
+  - if the footer contains **important** information, then it should be **accessible** to the user at all times.
+
+&nbsp;
+
+## Designing [Modal Dialogs](./EXERCISES/11-Modal-Dialogs/index.html)
+
+Modal the type of **pop-up** that a website might show you on top of their content.
+
+- HTML has a `dialog` element that you can use to create _modals_.
+
+- The content behind a modal is usually _dimmed_.
+  - This helps the user visually _focus_ on the area you want them to interact with – in this case, the _modal_.
+
+&nbsp;
+
+Best Practices:
+
+- Allow the user to **click outside** of the modal to **close** it.
+
+- You'll often see very **prominent buttons** on modals. These are called **CTAs**, or `call-to-action`.
+  - You want these to be **easily identifiable** since the purpose of interrupting the user's flow with a modal is to **prompt them to take a specific action**.
+
+  - Modals should _also_ have a **close** `button`.
+    - While you may really want the user to _click_ on your CTAs, it's _important_ to **give them an option to back out** of the modal and _resume_ whatever they were previously doing.
+
+&nbsp;
+
+`Note`: There are, _of course_, **accessibility concerns** with _modals_, such as correctly managing focus on elements. However, if you use these general practices as your starting point, you'll have a solid foundation to build on.
+
+&nbsp;
+
+## [Progress indication](./EXERCISES/12-Progress-indication-Bar/index.html)
+
+Progress indication is a way to show users _how far_ they are in a _process_, and _how much more_ they need to do.
+
+- it can be used in **forms**, **registration**, and **setup** processes.
+
+For example, you can use **a progress indication** bar to show users what is left to do when filling forms.
+
+- You don't want to create a _situation_ where the user needs to fill out a lengthy form and they don't know _how many more steps_ they need to complete.
+
+- **Transparency** is key so the user knows whether they have enough time to sit down and complete the form, or if they need to come back later.
+
+&nbsp;
+
+Best Practices:
+
+- Keep it _simple_.
+  - You do NOT want to _overwhelm_ the user with _too much information_ where they get _frustrated_ and leave the site.
+
+- Make it possible to _go back_ to **previous steps**.
+  - This is important because users may want to go back and _check_ their previous answers, or **make changes**.
+
+- Make the progress indication section **easy to find**.
+  - if the user can't find it, what's the point?
+
+- Have **clear** _section_ **titles**, **percentages**, or **steps**.
+  - if you just have a progress bar with _no context_, the user won't know _what it means_.
+
+&nbsp;
+
+## Designing A [Shopping Cart](./EXERCISES/13-Shopping-Cart/index.html)
+
+There are thousands of _e-commerce_ websites on the internet, and the shopping cart is a crucial part of the _e-commerce_ experience.
+
+- A **good** design can make the shopping cart experience more _enjoyable_ and _increase sales_.
+
+- A **poor** design can lead to _abandoned carts_ and _lost sales_.
+
+&nbsp;
+
+Best Practices:
+
+- The shopping cart **icon**.
+  - A common icon is **a shopping cart with a handle and wheels**.
+    - Other icons might be a _shopping bag_ or a _basket_.
+
+    - But, you shouldn't choose an _icon_ that is _too abstract_, or _difficult to understand_.
+
+- Make sure the **shopping cart** is **visible to users**, **at all times**.
+  - The _cart_ is usually displayed in the _upper right_ corner of the page.
+
+  - The _number of items_ in their cart should be displayed next to the _cart icon_.
+
+- Provide _a clear way_ for users to **update the quantity of items** in their cart.
+  - This can be done by providing a **quantity input field** next to _each item_ in the cart.
+
+  - You should also provide a "**Remove**" `button` next to _each item_ in the cart.
+
+- The **total cost of all items** in the _cart_ should be **displayed prominently** on the page.
+  - `Note`: Do **NOT** play _hide and seek_ with the user!
+
+- Provide a clear **call-to-action** `button` for users to _proceed to checkout_.
+  - This `button` should be the **most prominently displayed** element on the page, so users know exactly what to do next.
+    - You shouldn't have _too many buttons_ on the page, as this can lead to _confusion_.
+
+  - Use the _brand's_ **primary color** for the `button`, so it **stands out** from the rest of the page.
+
+&nbsp;
+
+## [Progressive Disclosure](./EXERCISES/14-Progressive-Disclosure/index.html)
+
+A progressive disclosure is **a design pattern used to only show users relevant content based on their current activity** and **hide the rest**.
+
+- This is done to **reduce cognitive load**, and make the user experience more _intuitive_.
+
+&nbsp;
+
+For example, when you use Google's search page, _most_ of your searches will be _simple_. So having a _simple user interface_ with very _few options_ makes sense. But for the few times you will need a _more advanced search_, Google provides _an advanced search option_ that will reveal _more options_.
+
+- You can find Google's advanced search option from the _settings menu_ on the Google homepage. Or you can go to `google.com/advanced_search`
+
+&nbsp;
+
+Another example of _progressive disclosure_ would be the "_More details_" `button` on products in an _e-commerce_ website. When you visit a site like _Amazon_, you will see a list of product images in different categories.
+
+- This allows users to shop with _ease_, and NOT be _overwhelmed_ by _too much information_.
+
+if the user is _interested_ in a particular product, they can _click_ on the product image to reveal more details about the product.
+
+Displaying all of the information right away may be **overwhelming** for the user. So, by using _progressive disclosure_, the user can choose to see more information when they are ready.
+
+&nbsp;
+
+Best Practices:
+
+- All **important information should be visible**, at all times.
+  - Users should not have to _struggle to find_ key information because it is hidden by extra advanced features.
+
+- Provide a **single access point** for users to access _additional features_ or information.
+  - This could be a `button` or `link` that is **always visible** on the page.
+    - Adding **multiple access points** can be **confusing** for users and can lead to a poor user experience.
+
+- All **additional information** should be **available** when needed.
+
+&nbsp;
+
+## Deferred/Lazy Registration
+
+Lazy registration is **a UI design pattern that allows users to browse and interact with your application without having to register**.
+
+- A good example of this would be an _e-commerce_ site.
+  - Users should be able to _browse_ through the products and add a few items to their _cart_.
+    - Then, if they are _interested_ in purchasing, they will need to _register_.
+
+- Another good example of lazy registration would be _YouTube_.
+  - YouTube is a video sharing platform with millions of videos on everything from _tech_, _pop culture_, _gaming_, and more.
+    - if someone visits YouTube, they can watch as many videos as they like _without_ needing to _sign in_ or register.
+      - However, if they want to _like_, _comment_, or _subscribe_ to a channel, they will _need to register_.
+
+The reason behind this is that users need to **see the value** the site offers and **feel** like the application is **safe** to provide their information.
+
+- Otherwise, they will NOT be willing to register and you will lose potential customers.
+
+&nbsp;
+
+**_The Trust Factor_**: You will need to make sure to **communicate that the user's sensitive data will be protected** and are secured with the site.
+
+&nbsp;
+
+## Design Briefs
+
+When it comes to designing _new features_ or _applications_, a good first step would be to create _a design brief_.
+
+A _design brief_ is **a document that outlines the objectives**, **goals**, and **requirements** of a project.
+
+- it is **a roadmap that guides the design process** and ensures that the final product meets the needs of the client.
+  - Usually the _client_ will write the _design brief_ and it will serve as a working draft.
+
+  - Sometimes, the _designer_ might write one and consult with the client to make sure it meets their needs.
+
+&nbsp;
+
+A few **key elements** that should be included in a _design brief_:
+
+- The **overview** of the _project_ and _business_.
+  - This overview should include the **company's details**, **mission**, **values**, _unique_ **selling points**, and **products** or **services**.
+
+- **Document the goals and objectives** for the project.
+  - This should include the **purpose** of the project, and **the desired outcomes**.
+    - increasing traffic
+
+    - increasing the number of monthly page visits by X percent.
+
+- The **target audience**.
+  - The _design brief_ should include information about the **target demographics**, **interests**, and **needs** of the audience.
+    - You should also include information about the **competition** and how the project will _differentiate_ itself from the competition.
+
+- The **project scope**.
+  - This should include the **deliverables**, **timeline**, and **budget**.
+    - The _deliverables_ should include **a list of all the items that will be produced as part of the project**, such as _mockups_, and _final designs_.
+
+  - Without clearly defining _project scope_, things can get out of hand and go **over budget**.
+    - So, it is best to be **as detailed as possible** about _what is expected_ to be delivered and _by when_.
+
+&nbsp;
+
+One of the challenging aspects about project design is the **timescale** and **budget**.
+
+it is important to **be realistic about what can be achieved within the given timeframe and budget**.
+
+So, having a _design brief_ that _outlines_ these **constraints** is important.
+
+Once all of these details have been _discussed_ and _documented_, the design brief should be _reviewed_ and _approved_ by all _stakeholders_ before the project begins.
+
+At that point, _the designers_ can get started with their work.
+
+&nbsp;
+
+### The Developer
+
+The developer's role is to **take the designs**, **understand the project requirements**, and **turn them into a working product**.
+
+- This involves _writing code_, _testing_, and _debugging_ the application to **ensure that it meets the requirements outlined** in the _design brief_.
+
+Oftentimes, developers will work in _teams_ where the work is split up between _multiple developers_.
+
+&nbsp;
+
+### The Project Manager
+
+There will also usually be a _project manager_ who will be **responsible for coordinating** the work and **making sure the project stays on track**.
+
+&nbsp;
+
+## Common Design Tools
+
+Design is the _foundation_ of every _enterprise-level_ web application. This is why _designers_ and _developers_ work closely to create _user-focused_ interfaces that are _visually appealing_ and _functional_.
+
+Most of these _design tools_ excel in **_vector-based_ design** and **prototyping**.
+
+- _Vector-based_ design involves **creating digital art using mathematical formulas** to define _lines_, _shapes_, and _colors_.
+
+- _Prototyping_ refers to **the process of creating an interactive model of a product** or UI.
+
+&nbsp;
+
+Some common _vector-based_ design tools include:
+
+- **Figma**
+  - This _cloud-based_ tool specializes in User Interface and User Experience (`UI/UX`) design.
+
+- **Sketch** (Mac Only)
+  - it is popular for its _intuitive interface_ and _simplicity_, making it ideal for developers who want to _quickly create prototypes_.
+
+- **Adobe XD**
+  - A _vector-based_ design and prototyping tool for UI/UX design, known for its **seamless integration with other Adobe apps** like Photoshop, Illustrator, and After Effects.
+
+&nbsp;
+
+Some more design tools:
+
+- Canva
+- Framer
+- InVision
+- Adobe Photoshop
+- Adobe Illustrator
+- Miro
+
+&nbsp;
+
+## Units of Measurement in CSS
+
+As you design your pages, you will work with _different properties_ like **widths**, **heights**, **padding**, **margins**, and more. When you define these properties, you will need to specify **the length units of measurement** you want to use.
+
+There are two types of units you can use to define these properties:
+
+### 1. Absolute Units
+
+Absolute length units are of **fixed length** and are **NOT relative to anything else**.
+
+Some _absolute units_ include:
+
+- The `px` (_pixels_) unit, which is equal to _1/96th_ of an _inch_.
+  - Pixels are the _most common_ absolute unit used for providing **precise control over element's dimensions**, **spacing**, and **layout**.
+
+    ```css
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      margin: 10px;
+    }
+    ```
+
+    - Sometimes you might use _pixels_ for **margins**, **padding**, and **borders**.
+
+  `Note`: While `1px` is standardized as _1/96th_ of an _inch_ for the purposes of CSS layout, **the actual physical size of a pixel may differ depending on the display**.
+
+- The `in` (_inches_) unit, which is equal to _96px_
+
+- The `cm` (_centimeters_) unit, which is equal to _25.2/64_ of an _inch_
+
+- The `mm` (_millimeters_) unit, which is equal to _1/10th_ of a _centimeter_
+
+- The `q` (_quarter-millimeters_) unit, which is equal to _1/40th_ of a _centimeter_
+
+- The `pc` (_picas_) unit, which is equal to _1/6th_ of an _inch_
+
+- The `pt` (_points_) unit, which is equal to _1/72th_ of an _inch_
+
+&nbsp;
+
+### 2. Relative Units
+
+Relative means that the **length is relative to something else**, like _the size of the screen_ or _the size of the parent element_.
+
+#### I. Percentages (`%`)
+
+Percentages in CSS are _relative units_ that allow you to define **sizes**, **dimensions**, and other properties **as a proportion of their parent element**.
+
+When you use a percentage value, you're essentially saying, "_Make this X% of its container_." This makes percentages incredibly useful for creating **responsive designs that adapt to different screen sizes**.
+
+- Percentages are ideal for creating **fluid layouts** that adjust to _various screen sizes_. For instance, setting a container to `width: 80%` ensures it takes up **80% of its parent's width**, _regardless_ of the device.
+
+  ```css
+  .parent {
+    width: 100%;
+    height: 300px;
+    background-color: lightblue;
+  }
+
+  .parent .child {
+    width: 80%;
+    height: 100%;
+    background-color: red;
+  }
+  ```
+
+- Using percentages for **flexible images** is another _common_ practice. By applying `max-width: 100%` to images, you allow them to **scale down** on smaller screens while **maintaining their aspect ratio**.
+
+  ```css
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  ```
+
+- While _less common_, percentages can also be used for **font sizes** to create _scalable typography_. For example, `font-size: 120%` would make the text **20% larger than its parent's font size**.
+
+  ```css
+  .text-container {
+    font-size: 16px;
+  }
+
+  .text-container .text {
+    font-size: 120%;
+  }
+  ```
+
+- Percentages can be particularly handy for **vertical centering**. Here's an example of how you might use percentages with the `transform` property to _center an element vertically_.
+
+  ```css
+  .centered {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 300px;
+    background-color: red;
+  }
+  ```
+
+  - This example positions the element **50% from the top** of its container, then uses `transform` to **move it back up by half its own height**, effectively centering it vertically.
+
+**Percentages are always relative to something**. For horizontal properties like `width`, they're relative to the **parent's width**. For vertical properties like `height`, they're usually relative to the **parent's height** (_if specified_).
+
+- Keep in mind: _percentage-based heights_ can be _tricky_\* if the **parent** does NOT have a **defined height**.
+
+`Note`: _Be cautious_ when **nesting elements with percentage-based dimensions**, as this can lead to **unexpected results**.
+
+&nbsp;
+
+#### II. `em`
+
+`em` units are **relative to the font size of the element or the parent element**.
+
+When you are working with modular components like **buttons** or **cards**. By using `em` units, you can ensure that _all aspects_ of the component (such as `padding`, `margin`, and `border`) **scale proportionally with the font size**, keeping consistent proportions.
+
+if you are using `em` for the `font-size` property, **the size of the text will be relative to the font size of the parent element**.
+
+```css
+.para {
+  font-size: 20px;
+  margin-bottom: 1.5em;
+  border: 2px solid red;
+}
+
+.blue-box {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+```
+
+- For the `para` class, we set the `font-size` to `20px` and the `margin-bottom` to `1.5em`.
+  - This means that the `margin` will be **`1.5` times the font size of the paragraph element**.
+    - `1.5em` results in **`30px` of margin at the bottom** of the paragraph.
+
+- if we _remove_ the `font-size` property from the `para` class, the `margin-bottom` will be relative to the `font-size` of the parent's, i.e., in this case, the `body` element, which has a _default_ `font-size` of `16px`.
+
+&nbsp;
+
+So, up until this point, we have been setting the font size for an element using pixels(`px`). But that does present some _challenges_ for users.
+
+Inside your _browser_ settings, you can control the _default font size_.
+
+For those with _visual impairments_, they may **increase the font size** to make it _easier to read_. But if you are setting pixels for the font sizes in your web designs, **the text will not scale proportionally** with the rest of the content.
+
+One way to address this issue is to use `rem` units for typography.
+
+&nbsp;
+
+#### III. `rem`
+
+A `rem` unit is **relative to the font size of the root element**, which is the `html` element.
+
+`rem` units are **preferred over pixels** for typography because they **scale proportionally with the user's browser settings**.
+
+- This makes your content **more accessible** to users with _visual impairments_.
+
+&nbsp;
+
+By default, the `font-size` of the `html` element is `16px`.
+
+if the user **increases the font size** in their _browser_ settings, the **`font-size` of the `html` element will increase**, and all `rem` units will **scale proportionally**.
+
+```css
+.para {
+  font-size: 1.2rem;
+  margin-bottom: 1.5em;
+  border: 2px solid red;
+}
+```
+
+- By setting the `font-size` to `1.2rem`, the `font-size` of the paragraph element will be `1.2` times the `font-size` of the root element.
+  - if the user has NOT changed the default `font-size`, the `font-size` of the paragraph element will be `19.2px` because it is `1.2` times of `16px`.
+
+`Note`: `rem` units can also help maintain **consistent spacing** and **layout** across _different_ elements.
+
+&nbsp;
+
+#### IV. `vh` & `vw`
+
+In CSS, `vh` and `vw` are _viewport-relative_ units that allow you to **size elements based on the dimensions of the browser window**.
+
+These units are particularly _useful_ for creating **responsive designs** that adapt to different screen sizes.
+
+- `vh` stands for "_viewport height_," and `1vh` is equal to `1%` of the viewport's height.
+
+- `vw` stands for "_viewport width_," and `1vw` is equal to `1%` of the viewport's width.
+  - This means that if you set an element's height to `100vh`, it will occupy **the full height of the viewport**, _regardless_ of the actual pixel dimensions of the device.
+
+These units are especially handy when you want to create **full-screen layouts** or _elements_ that maintain **a specific proportion of the screen**.
+
+&nbsp;
+
+The _advantage_ of `vh` and `vw` units is that **they respond to changes in the viewport size in _real-time_**.
+
+This means that if a user **resizes** their _browser window_, **elements sized with these units will adjust accordingly** _without_ needing to _reload_ the page.
+
+However, it's important to use these units _judiciously_.
+
+For example, you might want to use them to create a _hero_ `section` that always **fills the entire screen**.
+
+```css
+body {
+  margin: 0;
+  font-family: sans-serif;
+  border: 5px dashed #333;
+}
+
+.hero {
+  height: 100vh;
+  width: 100vw;
+  background-color: #add8e6;
+  padding: 2em;
+}
+```
+
+- This CSS ensures that _the hero section_ will always be exactly **the size of the viewport**, _regardless_ of the device's screen size.
+
+&nbsp;
+
+`vh` and `vw` units can also be used for typography to create **responsive text sizes**.
+
+```css
+h1 {
+  font-size: 5vw;
+}
+```
+
+- This will set the `font-size` of the `h1` element to `5%` of the _viewport width_, allowing the text to **scale smoothly with the browser window size**.
+
+`Note`: Setting `font-size` _solely_ with `vw` units, for example, can lead to text becoming **too small on narrow screens**, _or_ **too large on wide screens**.
+
+&nbsp;
+
+**Consideration for mobile devices**: The viewport height can change when the **browser's address bar** _appears_ or _disappears_, which can cause **unexpected layout shifts**, if you're using `vh` units extensively.
+
+In summary, `vh` and `vw` units are powerful tools for creating **responsive layouts and elements** that adapt to the viewport size.
+
+They're particularly useful for **_full-screen_ sections**, maintaining **aspect ratios**, and creating **smoothly scaling designs**.
+
+_However_, they should be used _thoughtfully_ and often in combination with other CSS techniques to ensure the best user experience across all devices.
+
+&nbsp;
+
+## The `calc()` Function
+
+With the `calc()` function, you can **perform calculations directly within your stylesheets** to determine property values _dynamically_.
+
+- You can **determine the value of a CSS property dynamically** based on different aspects of the _application_ or _viewport_.
+
+This means that you can create **flexible** and **responsive user interfaces** by calculating dimensions based on the _viewport size_ or other _elements_.
+
+- You can perform calculations on values that represent **length**, **angle**, **time**, **percentages**, and **numbers**.
+
+- You can also combine different _units_ like **pixels**, **percentages**, and **ems**.
+
+&nbsp;
+
+To use `calc()`, you pass an **expression as an argument**.
+
+- An _expression_ is a combination of _values_ and _operators_ that produce a _result_.
+
+- The _expression_ can also contain CSS _functions_ and _variables_, if you need to use them in your calculations.
+
+- All the _values_ in the _expression_, also called the _operands_, must have their **corresponding units**, like `px`, `em`, and percentage (`%`).
+
+  ```css
+  div {
+    color: white;
+    background-color: #1b1b32;
+    width: calc(50% - 20px);
+  }
+  ```
+
+  - The `width` is calculated _dynamically_.
+
+  - Percentage(`%`) is a _relative unit_. The value (`50%`) will be determined by the **width of the parent container**.
+    - Then, `20px` is _subtracted_ from the _value_.
+
+&nbsp;
+
+Depending on the _operator_, **different operands** may have **different units**.
+
+if there are **multiple operands** and **operators**, `calc()` will follow the **standard operator precedence** rule.
+
+- You can also add parentheses(`()`) to _establish_ the **order of the operations** if needed.
+
+&nbsp;
+
+### Best Practices for working with `calc()`
+
+- You must surround the addition (`+`) and subtraction (`-`) operators with _whitespace_(` `).
+
+  ```css
+  calc(100% - 30px)
+  ```
+
+- Even if you use the value `0` to represent _length_ in the _expression_, **you must include the _units_**.
+
+  ```css
+  calc(100% - 0px)
+  ```
+
+- if you use the multiplication operator(`*`), **one of the operands must be _unitless_**.
+
+  ```css
+  calc(5 * 50px)
+  calc(5px * 50)
+  ```
+
+- For the division operator(`/`), dividing by a _unitless_ number **scales the value** and **keeps its _unit_**.
+
+  ```css
+  calc(50% / 5)
+  ```
+
+  - Dividing two _values_ with _matching units_ is also **valid**, but it **cancels the units** out to **return a unitless number** (like `10`).
+
+    ```css
+    calc(50% / 5%)
+    ```
+
+`Note #1`: _Unitless values_ can only be used for certain CSS properties (such as `line-heigh`t or `flex-grow`):
+
+`Note #2`: You can also **nest** `calc()` **_function_ calls**, if you need to perform calculations and use those results in other calculations.
+
+&nbsp;
+
+## Pseudo-classes (`:`)
+
+Pseudo-classes are **special CSS keywords that allow you to select an element based on its specific state or position**.
+
+To use a _pseudo-class_, you add it to the selector by using a colon (`:`) followed by the _name_ of the `pseudo-class`:
+
+```css
+selector:pseudo-class {
+  /* CSS properties */
+}
+```
+
+&nbsp;
+
+The element's **state** _or_ **position** include:
+
+- `:active`
+  - The `:active` _pseudo-class_ applies styles when **an element is activated by the user**.
+    - For example, when the user **clicks** a button or a link, it provides **immediate visual feedback**, showing users that their actions are being recognized.
+
+    ```css
+    a:active {
+      color: crimson;
+    }
+    ```
+
+- `:hover`
+  - The `:hover` _pseudo-class_ is **triggered when a user hovers over an element with their mouse** or other pointing device.
+    - Developers often use it to create **visual feedback** for _buttons_, _links_, or any element that should respond to user attention.
+
+    ```css
+    .btn:hover {
+      background-color: darkgreen;
+      color: white;
+      cursor: pointer;
+    }
+    ```
+
+- `:focus`
+  - The `:focus` _pseudo-class_ applies styles **when an element gains focus**, typically through **keyboard navigation** _or_ when a **user clicks** into a form input.
+    - This is also crucial for _accessibility_.
+      - it ensures that users who rely heavily on keyboards can easily identify which element they are interacting with.
+
+    ```css
+    input:focus {
+      outline: 2px solid darkgreen;
+      border-radius: 4px;
+    }
+    ```
+
+- `:visited`
+  - The `:visited` _pseudo-class_ **targets a link user has visited**.
+    - This can be useful for helping users **distinguish** between pages they have already **visited** and the ones they are **yet to visit**.
+
+    ```css
+    a:visited {
+      color: purple;
+    }
+    ```
+
+- `:disabled`
+  - it lets you **style an interactive element in disabled mode**.
+
+    ```css
+    button:disabled {
+      background-color: lightgray;
+    }
+    ```
+
+- `:first-child`
+  - The `:first-child` _pseudo-class_ selects an element that is **the first child of its parent element**.
+    - Like targeting the _first paragraph_ element in a `div` container:
+
+    ```css
+    .container p:first-child {
+      background: lightcoral;
+      padding: 0.4rem;
+    }
+    ```
+
+- `:last-child`
+
+  ```css
+  .container p:last-child {
+    background: lightcoral;
+    padding: 0.4rem;
+  }
+  ```
+
+&nbsp;
+
+Apart from the _pseudo-classes_ already mentioned, there are others like:
+
+- `:first-of-type`
+
+- `:last-of-type`
+
+- `:nth-of-type`
+
+- `:modal`
+
+- `:enabled`
+
+- `:checked`
+
+- `:required`, and more.
+
+&nbsp;
+
+### User Action Pseudo-classes
+
+User feedback is a crucial element of web design.
+
+it is important for users to receive **visual cues when they interact with elements** on a website, such as _hovering_ over a button or _clicking_ a link.
+
+This feedback helps users **understand the state of interactive elements**, like indicating whether a link has been _visited_ or not.
+
+_User action pseudo-classes_ in CSS are **special keywords that allow you to provide visual feedback without needing JavaScript** or other programming languages.
+
+- `:active`
+  - Already explained above!
+
+- `:hover`
+  - Already explained above!
+
+- `:focus`
+  - Already explained above!
+
+- `:visited`
+  - Already explained above!
+
+- `:checked`
+  - The `:checked` _pseudo-class_ in CSS allows you to **style** form _elements_ such as **checkboxes** and **radio buttons** when they are _selected_ (checked).
+    - This _pseudo-class_ is useful for **customizing the appearance** of these elements to enhance user experience, even though **browsers provide default styles** for them.
+
+    ```css
+    .checkbox {
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      vertical-align: middle;
+    }
+
+    .checkbox:hover {
+      border-color: #888;
+    }
+
+    .checkbox:checked {
+      background-color: #4caf50;
+      border-color: #4caf50;
+    }
+
+    .checkbox:checked::after {
+      content: "";
+      position: absolute;
+      left: 4px;
+      top: 0px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .checkbox:focus {
+      outline: 2px solid #90caf9;
+      outline-offset: 2px;
+    }
+    ```
+
+    - In this example, we are using the `appearance` property set to `none` to **remove the default styling** applied by the browser to checkbox inputs.
+    - When the user **checks the box**, it will have a `background-color` of `green`.
+
+&nbsp;
+
+Some other _User Action Pseudo-classes_ include:
+
+- `:focus-within`
+  - For applying styles to an element when **it or any of its descendants have focus**.
+
+- `:enabled`
+  - For targeting form buttons or other elements that are currently enabled.
+
+- `:disabled`
+  - For targeting form buttons or other elements that are disabled.
+
+- `:target`
+  - For applying styles to **an element that is the target of a URL fragment** (the part of a URL after the `#` symbol).
+
+&nbsp;
+
+### input Pseudo-classes
+
+The appearance and behavior of input elements matter when building web forms.
+
+A form with inputs that respond to user actions goes a long way in improving user experience.
+
+- `:focus`
+  - Already explained above!
+
+- `:hover`
+  - Already explained above!
+
+- `:checked`
+  - Already explained above!
+
+- `:required`
+  - it targets input elements that have the `required` attribute.
+    - it signals to the user that they **must** fill out the field to submit the form.
+
+    ```css
+    input:required {
+      border: 2px solid orange;
+    }
+    ```
+
+- `:valid` & `:invalid`
+  - When validating forms, you can use the `:valid` _pseudo-class_ to style the input fields that **meet the validation criteria**, and `:invalid` to style the input fields that **do NOT meet the criteria**.
+    - Typically, you will use **green** for a _valid_ input and **red** for an _invalid_ input.
+
+    ```css
+    input:valid {
+      border-color: green;
+    }
+
+    input:invalid {
+      border-color: crimson;
+    }
+    ```
+
+- `:disabled`
+  - The `:disabled` _pseudo-class_ allows you to select and style input elements that have the `disabled` attribute.
+    - When an input is _disabled_, it cannot be _clicked_, _focused_, or _edited_.
+
+    ```css
+    .text-input:disabled {
+      background-color: lightgray;
+      cursor: not-allowed;
+    }
+    ```
+
+&nbsp;
+
+Some other _input Pseudo-classes_ include:
+
+- `:autofill`
+  - it applies styles to input fields that the browser automatically fills with saved data.
+
+- `:optional`
+  - it styles input elements that are _not required_ and can be left empty.
+
+- `:in-range` & `:out-of-range`
+  - it styles elements based on whether their values are within or outside **specified range constraints**.
+
+&nbsp;
+
+### Location Pseudo-classes
+
+Location _pseudo-classes_ are used for **styling links and elements that are targeted within the current document**.
+
+They offer a way to apply styles based on whether a link is _visited_ or whether an element is currently in _focus_.
+
+- `:link`
+  - The `:link` _pseudo-class_ allows you to **target all unvisited links** on a webpage.
+
+    ```css
+    a:link {
+      color: blue;
+    }
+    ```
+
+- `:visited`
+  - Once the user _clicks_ the link, the `:link` style no longer applies, and the `:visited` _pseudo-class_ takes over.
+
+    ```css
+    a:visited {
+      color: purple;
+    }
+    ```
+
+    - The `:visited` _pseudo-class_ helps users distinguish between links they have visited and those they have NOT.
+
+- `:any-link`
+  - The `:any-link` _pseudo-class_ is a combination of the `:link` and `:visited` pseudo-classes. it matches **any anchor element with an href attribute**, _regardless_ of whether it is visited or NOT.
+
+    ```css
+    a:any-link {
+      color: crimson;
+    }
+    ```
+
+- `:local-link`
+  - The `:local-link` _pseudo-class_ targets **links that point to the same document**. it can be useful when you want to **differentiate internal links from external ones**.
+    - Currently, no browser supports the `:local-link` pseudo-class.
+
+- `:target`
+  - The `:target` _pseudo-class_ **selects an element that matches the current URL fragment identifier**, for example, `#section1`.
+    - it is very useful for pages with **in-page navigation**.
+
+    ```html
+    <link rel="stylesheet" href="./styles.css" />
+    <nav id="table-of-contents">
+      <ul>
+        <li><a href="#section1">Introduction</a></li>
+        <li><a href="#section2">Features</a></li>
+      </ul>
+    </nav>
+
+    <section id="section1">
+      <h2>Introduction</h2>
+      <p>This is the introduction section.</p>
+    </section>
+
+    <section id="section2">
+      <h2>Features</h2>
+      <p>This section describes the features.</p>
+    </section>
+    ```
+
+    ```css
+    section:target {
+      background-color: green;
+      border: 2px solid green;
+      padding: 10px;
+    }
+    ```
+
+    - The `:target` pseudo-class **styles the `section` that matches where the user navigates to**.
+      - When the user _clicks_ on one of the navigation links, the `background-color` for that respective `section` will change to _green_.
+
+&nbsp;
+
+### Tree-structural Pseudo-classes
+
+_Tree-structural pseudo-classes_ allow you to **target** and **style** elements **based on their position within the document tree**.
+
+- **Document Tree**: The hierarchical structure of elements in an HTML document.
+
+Here is a list of _tree-structural pseudo-classes_:
+
+- `:root`
+  - ​​The `:root` _pseudo-class_ is usually the root `html` element.
+    - it helps you target the **highest level in the document**, so you can apply **common styles** to the entire document.
+
+      ```css
+      :root {
+        background: black;
+        color: aliceblue;
+      }
+      ```
+
+    - The `:root` _pseudo-class_ is also commonly used in setting **CSS variables**.
+
+      ```css
+      :root {
+        --main-font: "Arial, sans-serif";
+        --primary-color: blue;
+        --secondary-color: green;
+      }
+      ```
+
+      - With CSS variables, you get to **store values** and reuse them in your stylesheet.
+
+- `:empty`
+  - The `:empty` _pseudo-class_ are **elements with NO children** other than _white space_.
+
+    ```css
+    :empty {
+      background: black;
+    }
+    ```
+
+  - The most practical thing to do with empty elements is probably **NOT to display them at all**.
+
+    ```css
+    :empty {
+      display: none;
+    }
+    ```
+
+- `:nth-child(n)`
+  - it allows you to _select elements_ based on **their position within a parent**.
+    - The `n` can be a **specific number** or a keyword like **odd** or **even**.
+
+    ```html
+    <table>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+      </tr>
+      <tr>
+        <td>Apple</td>
+        <td>$1.00</td>
+      </tr>
+      <tr>
+        <td>Banana</td>
+        <td>$0.50</td>
+      </tr>
+      <tr>
+        <td>Orange</td>
+        <td>$0.80</td>
+      </tr>
+    </table>
+    ```
+
+    ```css
+    th,
+    td {
+      border: 1px solid lightgray;
+      padding: 8px;
+    }
+
+    tr:nth-child(even) {
+      background-color: orangered;
+    }
+
+    tr:nth-child(odd) {
+      background-color: lightgreen;
+    }
+    ```
+
+    - This is incredibly useful in styling _table cells_ based on position: _even_ and _odd_.
+
+  - `:nth-last-child(n)`
+    - it enables you to _select elements_ based on **their position within a parent** by **counting from the end**.
+
+- `:first-child`
+  - it selects the **first element in a parent** element or the document.
+
+    ```html
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    ```
+
+    ```css
+    li:first-child {
+      background-color: orangered;
+    }
+
+    li:last-child {
+      background-color: lightgreen;
+    }
+    ```
+
+    - Using the `:first-child` and `:last-child` pseudo-classes will select both `Item 1` and `Item 3` in the example above.
+
+  - `:last-child`
+    - it selects the **last element in a parent** element or the document.
+
+- `:only-child`
+  - it selects the **only element in a parent** element or the document.
+
+    ```html
+    <div class="container">
+      <div>This is the only item in this container.</div>
+    </div>
+
+    <div class="container">
+      <div>This is one of two items in this container.</div>
+      <div>Here is the second item.</div>
+    </div>
+    ```
+
+    ```css
+    .container div:only-child {
+      border: 2px solid crimson;
+      padding: 10px;
+      background-color: lightblue;
+    }
+    ```
+
+    - Here's an HTML example with two separate `div` elements. Using the `:only-child` _pseudo-class_ ensures **only the `div` element with a single child is selected**.
+
+- `:first-of-type`
+  - Select the **first occurrence of a specific element type** within its parent.
+
+    ```html
+    <section>
+      <h2>Introduction</h2>
+      <p>This is the first paragraph.</p>
+      <p>This is the second paragraph.</p>
+      <p>This is the third and last paragraph.</p>
+    </section>
+    ```
+
+    ```css
+    section p:first-of-type {
+      background-color: lightgreen;
+    }
+
+    section p:last-of-type {
+      background-color: lightblue;
+    }
+    ```
+
+    - `:first-of-type` and `:last-of-type` applies to the _first element_ and _last element_ within the `section` element.
+
+  - `:last-of-type`
+    - Select the **last occurrence** of a specific element type within its parent.
+
+- `:nth-of-type`
+  - it allows you to select **a specific element within its parent based on its position among siblings** of the same type.
+
+    ```html
+    <div class="container">
+      <p>First paragraph</p>
+      <p>Second paragraph</p>
+      <p>Third paragraph</p>
+    </div>
+    ```
+
+    ```css
+    p:nth-of-type(2) {
+      color: red;
+      font-weight: bold;
+    }
+    ```
+
+    - `:nth-of-type(2)` targets the _second element_ in the container.
+
+- `:only-of-type`
+  - it selects an element **if it is the only one of its type** within its parent.
+    - This can be useful for **emphasizing single items** or ensuring that they are **styled differently when they’re not part of a group**.
+
+      ```html
+      <div class="container">
+        <p>The only paragraph</p>
+      </div>
+
+      <div class="container">
+        <p>The first paragraph</p>
+        <p>The second paragraph</p>
+      </div>
+      ```
+
+      ```css
+      p:only-of-type {
+        border: 4px solid green;
+      }
+      ```
+
+      - in the example above, there are two `div` elements with one having a single element. The CSS only applies to the first container.
+
+&nbsp;
+
+### Functional Pseudo-classes
+
+_Functional pseudo-classes_ allow you to **select** elements **based on more complex conditions and relationships**.
+
+Unlike _regular pseudo-classes_ which target elements based on a _state_, for example, `:hover`, `:focus`, **_functional pseudo-classes_ accept arguments within parentheses**`()`, hence the name "_functional pseudo-classes_".
+
+- `:is()`
+  - The `:is()` pseudo-class is useful when you want to **style a group of elements that share some**, **but not all**, **characteristics**.
+    - For example, you might want to style different types of buttons on your website, including `button` elements, _links_ styled as buttons, and `input` elements with types `submit` and `reset`.
+
+    ```html
+    <button>Example Button</button>
+    <a href="#" class="button">Link styled like a button</a>
+    <input type="submit" value="Submit" />
+    <input type="reset" value="Reset" />
+    ```
+
+    ```css
+    /* Without the :is() function */
+    button,
+    a.button,
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: darkblue;
+      color: white;
+      border: 1px solid darkblue;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      margin: 5px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    button:hover,
+    a.button:hover,
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: blue;
+      border-color: blue;
+    }
+
+    /* With :is() */
+    :is(button, a.button, input[type="submit"], input[type="reset"]) {
+      background-color: darkblue;
+      color: white;
+      border: 1px solid darkblue;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-block;
+      margin: 5px;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    :is(button, a.button, input[type="submit"], input[type="reset"]):hover {
+      background-color: blue;
+      border-color: blue;
+    }
+    ```
+
+- `:where()`
+  - The `:where()` `pseudo-class` functions **similarly to** `:is()`, but it **does NOT increase the specificity** of your selectors.
+  - This makes it **ideal for applying styles without affecting the specificity** of other rules.
+    - For example, you can use the `:where()` function to apply zero `margin` and `padding` to heading elements.
+      - This ensures that the reset **won't interfere with more specific styles you might apply later**.
+
+    ```css
+    :where(h1, h2, h3) {
+      margin: 0;
+      padding: 0;
+    }
+    ```
+
+- `:has()`
+  - it allows you to **apply styles to a parent element based on the presence or state of its child** elements.
+    - For example, the CSS below will only apply to any `article` element that has an `h2` in it:
+
+    ```html
+    <article>
+      <h2>Subheading</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </article>
+
+    <article>
+      <h3>A point</h3>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </article>
+    ```
+
+    ```css
+    article:has(h2) {
+      border: 2px solid hotpink;
+    }
+    ```
+
+- `:not()`
+  - The `:not()` _pseudo-class_ is ideal for situations **where you want to apply styles to a group of elements**, **excluding one _or_ more specific exceptions**.
+    - in the CSS below, any `button` that is NOT a _primary button_ will have a _grey background_:
+
+    ```html
+    <button class="primary">Primary Button</button>
+    <button class="secondary">Secondary Button</button>
+    <button class="danger">Another Secondary Button</button>
+    ```
+
+    ```css
+    button {
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      border: none;
+      color: white;
+    }
+
+    button.primary {
+      background-color: deepskyblue;
+    }
+
+    button:not(.primary) {
+      background-color: grey;
+    }
+    ```
+
+&nbsp;
+
+## Pseudo-elements (`::`)
+
+_Pseudo-elements_ are **virtual** _or_ **synthetic elements** that don't directly match any actual HTML elements.
+
+They allow you to **style specific parts of an element** _or_ **insert content before or after without adding extra HTML**.
+
+- But they **cannot exist independently**.
+
+**Originating Element**:: The element to which a _pseudo-element_ is attached.
+
+&nbsp;
+
+To apply a _pseudo-element_, **attach it to the original element's selector** using a double colon (`::`).
+
+- The selector can be _any type_, such as a **class** _or_ **ID** selector.
+
+  ```css
+  selector::pseudo-element {
+    property: value;
+  }
+  ```
+
+  - This _double colon_(`::`) is what distinguishes _pseudo-elements_ from _pseudo-classes_, which use a _single colon_(`:`).
+
+&nbsp;
+
+### `::before` & `::after`
+
+`::before` lets you _insert_ content _just before_ the element's content.
+
+`::after` lets you _insert_ content _after_ it.
+
+in the example, we will use **absolute positioning** and the `::before` _pseudo-element_ to _add a star_ before the button's text.
+
+```css
+.cta-button {
+  background-color: lightseagreen;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cta-button::before {
+  content: "⭐";
+  position: absolute;
+  left: 3px;
+  top: 8px;
+  font-size: 0.75rem;
+}
+```
+
+- The `content` property is used to represent the **content you wish to add** before or after the button text.
+
+You can also attach a _pseudo-class_ to the content you insert into another content with the `::before` and `::after` pseudo-elements.
+
+- For example, a _hover state_ for the content:
+
+  ```css
+  .cta-button {
+    background-color: orange;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .cta-button::after {
+    content: "➡️";
+    position: absolute;
+    right: 5px;
+    bottom: 6px;
+    font-size: 1.125rem;
+    transition: transform 0.3s ease;
+  }
+
+  .cta-button:hover::after {
+    transform: translateX(2px);
+  }
+  ```
+
+  - With `transform: translateX(2px)` in the _hover state_, the content gets _pushed to the right_ by `2px` any time the user _hovers_ on the button.
+    - `transform` allows you to **rotate**, **skew**, **scale**, or **translate** an element in _a particular direction_.
+
+  - The `transition` property in the `::after` itself ensures the process takes `0.3s` with _ease_.
+    - The _values_ that the `transition` property accepts are, _in order_:
+      - The **property that the transition is applied to**
+
+      - The **duration of the transition**
+
+      - And, **the timing**.
+
+    - if there are **multiple properties** that have a _transition_, you can write the values for each _separated by a comma_(`,`)
+
+      ```css
+      p {
+        transition:
+          property1 0.1s,
+          property2 0.6s linear;
+      }
+      ```
+
+      - if a **value is omitted**, like _the timing_ for the first property, **a default value is applied**.
+
+&nbsp;
+
+### `::first-letter`
+
+it _targets_ the **first letter of an element's content**, allowing you to _style it_.
+
+```css
+p::first-letter {
+  font-size: 4rem;
+}
+```
+
+&nbsp;
+
+### `::marker`
+
+it lets you _select the marker_, **bullet** or **numbering** of **list items**(`li`) for _styling_.
+
+```html
+<ul>
+  <li>Unordered list item 1</li>
+  <li>Unordered list item 2</li>
+  <li>Unordered list item 3</li>
+  <li>Unordered list item 4</li>
+</ul>
+
+<ol>
+  <li>Ordered list item 1</li>
+  <li>Ordered list item 2</li>
+  <li>Ordered list item 3</li>
+  <li>Ordered list item 4</li>
+</ol>
+```
+
+```css
+li::marker {
+  color: crimson;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+```
+
+&nbsp;
+
+Some more _pseudo-elements_ include:
+
+- `::placeholder`
+
+- `::spelling-error`
+
+- `::selection`
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 

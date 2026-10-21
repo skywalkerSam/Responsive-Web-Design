@@ -1,0 +1,52 @@
+body {
+  font-family: sans-serif;
+  background: linear-gradient(90deg, grey, black);
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0 auto;
+  width: 90vw;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  line-height: 1.7;
+  text-align: center;
+  font-size: large;
+}
+
+hr,
+section {
+  width: 90%;
+  margin: 30px;
+}
+
+section h2 {
+  font-size: 2rem;
+  display: inline;
+  text-align: justify;
+}
+
+
+main {
+  margin: 30px auto;
+  min-height: 50vh;
+}
+
+section ul li {
+    list-style: circle;
+    line-height: 1.7;
+    font-size: large;
+    text-align: justify;
+}
+
+footer {
+  margin: 30px auto;
+}

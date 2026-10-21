@@ -1,0 +1,61 @@
+body {
+  font-family: sans-serif;
+  background: linear-gradient(90deg, salmon, wheat);
+  /* z-index: -1;
+  filter: blur(2px); */
+}
+
+main {
+  /* z-index: 1; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  font-size: 4rem;
+  margin: 80px auto;
+}
+
+main section dialog h2 {
+  font-size: 2rem;
+  margin: 40px auto;
+}
+
+main section dialog p {
+  font-size: large;
+  margin: 10px auto 60px auto;
+}
+
+#open-modal,
+.cta-subscribe {
+  background: linear-gradient(90deg, wheat, salmon);
+  margin: 40px 5px;
+  padding: 15px;
+  border: 2px solid burlywood;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: large;
+}
+
+dialog {
+  background: linear-gradient(90deg, salmon, wheat);
+  border: 2px solid burlywood;
+  border-radius: 10px;
+  padding: 20px 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.close-modal {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin: auto 15px;
+  font-size: large;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}

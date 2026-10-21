@@ -1,0 +1,126 @@
+body {
+  font-family: sans-serif;
+  background: radial-gradient(circle, red, black 10%);
+  /* background: radial-gradient(
+    circle closest-side at center,
+    black 50%,
+    red,
+    black
+  ); */
+  height: 100vh;
+  text-align: center;
+  color: aliceblue;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 15px;
+  margin: 20px auto;
+  box-shadow: 5px 5px 30px red;
+  background-color: transparent;
+}
+
+form {
+  padding: 60px 15px;
+}
+
+label {
+  font-size: 1.2rem;
+}
+
+label:not(.availability-radio),
+button[type="submit"] {
+  display: block;
+  margin: 10px auto;
+}
+
+fieldset {
+  width: 80%;
+  margin: 15px auto;
+  border-radius: 10px;
+  padding: 15px;
+  border-color: red;
+  margin-bottom: 60px;
+}
+
+fieldset legend {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+/* input::placeholder {
+  color: green;
+} */
+
+input:not(.availability-radio-btn),
+textarea,
+select {
+  background-color: transparent;
+  border-radius: 5px;
+  color: aliceblue;
+  padding: 5px 10px;
+  font-size: large;
+  margin-bottom: 15px;
+  outline: none;
+}
+
+select, select::picker(select) {
+  appearance: base-select;
+  /* background-color: transparent; */
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: aliceblue;
+}
+
+input:invalid,
+select:invalid,
+textarea:invalid {
+  border-color: red;
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+  border-color: green;
+}
+
+.radio-group input[type="radio"]:checked {
+  border-color: red;
+  background-color: black;
+  box-shadow: 5px 5px 30px red;
+}
+
+input[type="radio"]:checked + label {
+  color: green;
+}
+
+input:first-of-type {
+  border-radius: 5px;
+}
+
+button {
+  padding: 15px 45px;
+  margin: 10px auto;
+  font-size: 1.2rem;
+  color: red;
+  background-color: transparent;
+  border: 2px solid red;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  font-weight: bold;
+  border: 2px solid black;
+  background-color: red;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}

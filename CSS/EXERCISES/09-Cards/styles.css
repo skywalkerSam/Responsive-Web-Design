@@ -1,0 +1,140 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 5px;
+}
+
+section {
+  margin: 40px auto;
+}
+
+.cluttered-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  width: 300px;
+}
+
+.cluttered-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.cluttered-card h2 {
+  font-size: 1.5em;
+  margin: 8px 0;
+}
+
+.cluttered-card p {
+  font-size: 1em;
+  margin: 8px 0;
+}
+
+.cluttered-card button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.simple-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  width: 300px;
+  text-align: center;
+}
+
+.simple-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.simple-card h2 {
+  font-size: 1.5em;
+  margin: 8px 0;
+}
+
+.simple-card button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.clickable-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  width: 300px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.clickable-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.clickable-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.clickable-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.clickable-card h2 {
+  font-size: 1.5em;
+  margin: 8px 0;
+}
+
+.clickable-card button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin: 8px 0;
+}
+
+.card p {
+  padding: 5px;
+}
+
+.card button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Job Application Form</h1>
+    <div class="container">
+      <form action="">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Jane Doe"/>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="example@company.org"/>
+        <label for="position">Position</label>
+        <select name="position" id="position">
+          <option value="frontend-dev">Frontend Developer</option>
+          <option value="backend-dev">Backend Developer</option>
+          <option value="fullstack-dev">Full Stack Developer</option>
+          <option value="devops">DevOps</option>
+        </select>
+        <fieldset class="radio-group">
+          <legend>Availability</legend>
+          <input
+            type="radio"
+            name="availability"
+            id="availability-radio-full-time"
+            class="availability-radio-btn"
+            checked
+          />
+          <label for="availability-radio-full-time" class="availability-radio"
+            >Full Time</label
+          >
+          <input
+            type="radio"
+            name="availability"
+            id="availability-radio-part-time"
+            class="availability-radio-btn"
+          />
+          <label for="availability-radio-part-time" class="availability-radio"
+            >Part Time</label
+          >
+          <input
+            type="radio"
+            name="availability"
+            id="availability-radio-remote"
+            class="availability-radio-btn"
+          />
+          <label for="availability-radio-remote" class="availability-radio"
+            >Remote</label
+          >
+        </fieldset>
+        <label for="message">Why do you want this job?</label>
+        <textarea name="messsage" id="message" cols="50" rows="5" placeholder="i need money.)"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

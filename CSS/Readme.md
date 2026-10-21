@@ -3526,17 +3526,120 @@ Some more _pseudo-elements_ include:
 
 &nbsp;
 
-&nbsp;
+## Color Theory
+
+Color theory is the study of **how colors interact with each other** and **how they affect our perception**.
+
+it covers color **relationships**, color **harmony**, and the **psychological impact** of color.
+
+- Primary Colors
+  - **Yellow**, **blue**, and **red**, are the _fundamental hues_ from which all other colors are derived.
+
+- Secondary Colors
+  - Result from mixing **equal amounts of two primary colors**.
+    - Green
+    - Orange
+    - Purple
+
+- Tertiary Colors
+  - Result from combining a **primary color with a neighboring secondary color**.
+    - Yellow-Green
+    - Blue-Green
+    - Blue-Violet
+
+This is a **fundamental classification** in the world of color theory, but there are other ways to classify colors.
 
 &nbsp;
 
-&nbsp;
+### Warm & Cool Colors
+
+Colors can be classified as warm or cool, based on their **temperature**.
+
+- _Warm colors_ evoke feelings of **comfort**, **warmth**, and **coziness**.
+  - Reds
+  - Oranges
+  - Yellows
+
+- _Cool colors_ evoke feelings of **calmness**, **serenity**, and **professionalism**.
+  - Blues
+  - Greens
+  - Purples
 
 &nbsp;
 
-&nbsp;
+### Color Models
+
+Colors can also be represented through color models.
+
+They are **essential for describing and reproducing colors in a standard way**.
+
+Frequently used color models include the **RGB** model, the **HSV** model, and the **HSL** model.
+
+They represent colors _based on different properties_.
 
 &nbsp;
+
+### The Color Wheel
+
+The color wheel is **a circular diagram that shows how colors relate to each other**.
+
+An essential tool for designers because it helps them to select _color combinations_.
+
+This is very helpful for creating color **palettes** and color **schemes**.
+
+&nbsp;
+
+### Color Schemes
+
+A color scheme is **the set of colors chosen for a specific design** or project.
+
+They are usually _based on the principles of color theory_.
+
+By understanding the _relationships between colors_ on the wheel, you can develop different types of color schemes.
+
+- Analogous Color Scheme
+  - For _cohesive_ and _soothing_ experiences.
+
+  - They have _analogous colors_, which are **adjacent to each other in the color wheel**.
+
+- Complementary Color Scheme
+  - For **high contrast** and **visual impact**.
+
+  - in an RGB color wheel, complementary colors are located on the **opposite ends of the color wheel**, **relative to each other**.
+    - **Magenta** is complementary to **green**
+    - **Blue** is complementary to **yellow**
+    - **Red** is complementary to **cyan**
+
+- Triadic Color Scheme
+  - For **vibrant** colors.
+
+  - They are made from colors that are approximately **equidistant from each other**.
+    - if they are connected, they form **an equilateral triangle** on the color wheel.
+
+- Monochromatic Color Scheme
+  - All the colors are **derived from the same base color** by _adjusting_ its **lightness**, **darkness**, and **saturation**.
+
+  - This evokes a feeling of **unity** and **harmony**, while still creating _contrast_.
+
+&nbsp;
+
+Here are some _tips_ for using color effectively in web development:
+
+- Create a color **scheme** that defines your website's **branding**.
+
+- Use colors to **evoke the emotions** and perceptions that **align with your goals**.
+
+- Choose colors with **enough contrast** to make your website accessible for everyone.
+
+- Use color to **highlight important elements** of your website, like _buttons_.
+
+- Use color **consistently** and use it to create **a visual hierarchy**.
+
+Color theory is a core aspect of design. By understanding color psychology, harmonies, and accessibility, you can create effective designs, evoke emotions, and enhance user experience.
+
+&nbsp;
+
+## Named Colors
 
 &nbsp;
 

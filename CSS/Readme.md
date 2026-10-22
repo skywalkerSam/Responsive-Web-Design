@@ -3641,7 +3641,29 @@ Color theory is a core aspect of design. By understanding color psychology, harm
 
 ## Named Colors
 
+Predefined color names recognized by browsers.
+
+Named colors in CSS are a collection of **140** standard color names like **red**, **blue**, **yellow**, **aqua**, **fuchsia**, **black**, **tomato**, **cyan** and so on.
+
+```css
+body {
+  background-color: red;
+}
+```
+
+- Useful for quick **prototyping**, _simple designs_, and improving _code readability_.
+
 &nbsp;
+
+Named colors in CSS are **convenient but limited**, with only 140 available options.
+
+Their _limited range_ makes them _less suitable_ for complex designs requiring _precise color control_.
+
+They may **NOT** offer the precise shade needed for more **detailed designs**.
+
+&nbsp;
+
+## The RGB Color Model
 
 &nbsp;
 

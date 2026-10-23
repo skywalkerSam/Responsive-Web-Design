@@ -3665,6 +3665,72 @@ They may **NOT** offer the precise shade needed for more **detailed designs**.
 
 ## The RGB Color Model
 
+RGB stands for **Red**, **Green**, and **Blue** — the primary colors of light. These three colors are **combined in different intensities** to create a wide range of colors.
+
+The RGB color model is an **additive color model**, which means colors are created by combining light at varying intensities.
+
+The intensity of each color can range from `0` (which means **NO light**) to `255` (which means **FULL light**).
+
+By mixing **different levels** of _red_, _green_, and _blue_, you can **produce any color** you see on your screen.
+
+- **Black** is represented by `rgb(0, 0, 0)`, which means **NO light** for any of the three colors.
+
+- **White** is represented by `rgb(255, 255, 255)`, which means **FULL light** intensity for all three colors.
+
+- **Red** is represented by `rgb(255, 0, 0)`, with full intensity for red and none for green or blue.
+
+&nbsp;
+
+The RGB color model is **especially useful for digital media** because it **directly corresponds to how screens display colors**.
+
+Monitors and displays use tiny red, green, and blue pixels to create the colors you see. By controlling the intensity of these pixels through RGB values, you can achieve a wide range of colors for your web design.
+
+Additionally, the RGB model is ideal when working with dynamic designs.
+
+For instance, if you want to create **animations** or **color effects** that require _real-time_ changes, the flexibility of the RGB function allows you to _modify colors programmatically_.
+
+&nbsp;
+
+### The `rgb()` Function
+
+it allows you to **define colors using the RGB color model**.
+
+The function takes **three values**, each _representing the intensity_ of **red**, **green**, and **blue** light, respectively.
+
+```css
+element {
+  color: rgb(red, green, blue);
+}
+```
+
+- The **values** for _red_, _green_, and _blue_ can range from `0` to `255`, where `0` represents the **absence** of that color, and `255` represents **full saturation**.
+
+&nbsp;
+
+### Transparency w/ the `rgba()` Function
+
+it adds a fourth value —**alpha**— that **controls the transparency** of the color.
+
+The _alpha value_ ranges from `0` (**completely transparent**) to `1` (**completely opaque**).
+
+```css
+div {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+```
+
+&nbsp;
+
+## The HSL Color Model
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 &nbsp;
 
 &nbsp;

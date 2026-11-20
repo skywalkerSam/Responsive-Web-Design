@@ -834,18 +834,27 @@ background: linear-gradient(direction, color-stop1, color-stop2, ...);
   - An **angle** (`45deg`, `135deg`)
 
   - Or a **keyword** (`to top`, `to right`, `to bottom`, `to left`)
+
   - Or a _side/corner_.
 
 - `color-stop` specifies the colors and positions where the **gradient transitions** occur.
 
   ```css
   .linear-gradient {
-    background: linear-gradient(135deg, red, black, blue);
+    background: linear-gradient(135deg, red 60%, black, blue);
     height: 100vh;
   }
   ```
 
+  - The transition from `red` to `black` takes place at the `60%` point along the gradient line, so red takes up most of the available space.
+
   - There can be multiple color stops.
+
+  - These can be any type of color, including color keywords, `hex`, `rgb`, or `hsl`.
+
+&nbsp;
+
+`NOTE`: The `linear-gradient` function actually creates an **image element**, and is usually paired with the `background` property which can accept an image as a value.
 
 &nbsp;
 
@@ -921,7 +930,7 @@ background: radial-gradient(
 
 &nbsp;
 
-Gradients can be used wherever you'd use an image in CSS. 
+Gradients can be used wherever you'd use an image in CSS.
 
 This makes them versatile for creating backgrounds, buttons, or even text effects when combined with other CSS properties.
 
@@ -3931,6 +3940,16 @@ in the second case, `#4CAF50` is a shade of green:
 
 &nbsp;
 
+### Alpha Channel
+
+To add an alpha channel to a hex color, you add a **fourth pair** of characters at the end.
+
+Like the other pairs, it goes from `00`, fully _transparent_, to `FF`, fully _opaque_.
+
+- For example, `#FF000080` is pure red at about 50% opacity.
+
+&nbsp;
+
 ### Hex Code Shorthand
 
 in some cases, you may notice hex codes written in shorthand format, using only **three characters instead of six**.
@@ -3949,7 +3968,49 @@ They're ideal when you need **specific colors**, want to control exact shades th
 
 &nbsp;
 
+## `box-shadow`
+
+The `box-shadow` property lets you apply one or more shadows around an element.
+
+Here's the basic syntax:
+
+```css
+box-shadow: offsetX offsetY color;
+```
+
+- Both `offsetX` and `offsetY` accept number values in `px` and other CSS units.
+
+- A _positive_ `offsetX` value moves the shadow **right**, and a _negative_ value moves it **left**.
+
+- A _positive_ `offsetY` value moves the shadow **down**, and a _negative_ value moves it **up**.
+
 &nbsp;
+
+The _height_ and _width_ of the shadow is determined by the height and width of the element it's applied to.
+
+You can also use an _optional_ `spreadRadius` value to spread out the reach of the shadow.
+
+```css
+box-shadow: offsetX offsetY blurRadius color;
+```
+
+- if a blurRadius value isn't included, it **defaults to** `0` and produces _sharp edges_.
+
+- The **higher the value** of `blurRadius`, the **greater the blurring effect** is.
+
+&nbsp;
+
+if you wanted to **expand the shadow** out further, you can use the _optional_ `spreadRadius` value.
+
+```css
+box-shadow: offsetX offsetY blurRadius spreadRadius color;
+```
+
+- Like `blurRadius`, `spreadRadius` defaults to `0` if it isn't included.
+
+&nbsp;
+
+##
 
 &nbsp;
 

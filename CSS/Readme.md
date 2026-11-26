@@ -183,7 +183,7 @@ CSS combinators are used to define the relationship between selectors in CSS. Th
 
 `NOTE`: You change the behavior of a _block-level_ element to behave like an _inline element_ by: `display: inline;`
 
-### display: `inline-block`;
+### display: `inline-block`
 
 The inline-block property is a **hybrid** of these two behaviors. Like inline elements, inline-block elements remain in the text flow _without_ starting on a new line.
 
@@ -820,32 +820,47 @@ When working with background images in CSS, you have **several properties at you
 
 A background gradient in CSS is a **smooth transition between two or more colors** that can be applied to the _background_ of an _element_. Gradients allow you to create **visually appealing backgrounds** without needing _images_.
 
-### Linear gradients
+### Linear Gradients
 
-A linear gradient **transitions colors along a straight line**.
+Linear gradients create a **gradual blend between colors along a straight line**.
 
-- You can define the **direction** and the **colors** involved.
+You can control the _direction_ of this line and the _colors_ used.
 
 ```css
 background: linear-gradient(direction, color-stop1, color-stop2, ...);
 ```
 
-- The `direction` specifies the direction of the gradient. it can be an **angle** (such as `45deg`), a **keyword** (such as `to right`, `to bottom`), or a _side/corner_.
+- The `direction` specifies the direction of the gradient. it can be:
+  - An **angle** (`45deg`, `135deg`)
+
+  - Or a **keyword** (`to top`, `to right`, `to bottom`, `to left`)
+
+  - Or a _side/corner_.
 
 - `color-stop` specifies the colors and positions where the **gradient transitions** occur.
 
   ```css
   .linear-gradient {
-    background: linear-gradient(195deg, red, black, blue);
+    background: linear-gradient(135deg, red 60%, black, blue);
     height: 100vh;
   }
   ```
 
+  - The transition from `red` to `black` takes place at the `60%` point along the gradient line, so red takes up most of the available space.
+
+  - There can be multiple color stops.
+
+  - These can be any type of color, including color keywords, `hex`, `rgb`, or `hsl`.
+
 &nbsp;
 
-### Radial gradients.
+`NOTE`: The `linear-gradient` function actually creates an **image element**, and is usually paired with the `background` property which can accept an image as a value.
 
-A radial gradient **transitions colors radiating from an origin** (usually the _center_) outward in a _circular_ or _elliptical_ shape.
+&nbsp;
+
+### Radial Gradients
+
+Radial gradients create **circular _or_ elliptical gradients that radiate from a central point**.
 
 ```css
 background: radial-gradient(
@@ -856,35 +871,70 @@ background: radial-gradient(
 );
 ```
 
-- `shape` specifies the **shape of gradient** which could be _circle_ or _ellipse_.
+- `shape` specifies the **shape of gradient**
+  - `circle`
 
-- `size` determines the **size of the gradient's ending shape** which could be `closest-side`, `closest-corner`, `farthest-side` or `farthest-corner`.
+  - `ellipse`
 
-- `position` determines the **position of the gradient's center** which could be specified using **keywords** (such as `center`, `top left`, `bottom right`) or **precise values** (such as `50% 50%`, `10px 20px`).
+- `size` determines the **size of the gradient's ending shape**
+  - `closest-side`
+
+  - `closest-corner`
+
+  - `farthest-side`
+
+  - `farthest-corner`
+
+- `position` determines the **position of the gradient's center**
+  - `center`
+
+  - `top left`
+
+  - `bottom right`
+
+  - Or precise values
+    - `50% 50%`
+
+    - `10px 20px`
 
 - `color stops` are a list of colors that the **gradient transitions** through.
   - **Each color stop can optionally include a `position` value** (_percentage_ or _length_) indicating where the color should be placed.
 
-  ```css
-  .radial-gradient {
-    background: radial-gradient(
-      circle closest-side at center,
-      black 50%,
-      red,
-      black
-    );
-    height: 60vh;
-  }
-  ```
+&nbsp;
 
-  - The `closest-side` keyword makes the gradient's ending shape fit the closest side of the element.
+```css
+.radial-gradient {
+  background: radial-gradient(circle, black 30%, red 50%, black 50%);
+  height: 100vh;
+}
+```
 
-  ```css
-  .radial-gradient {
-    background: radial-gradient(circle, red 30%, black, white);
-    height: 100vh;
-  }
-  ```
+```css
+.radial-gradient {
+  background: radial-gradient(
+    circle farthest-side at center,
+    black 30%,
+    red 50%,
+    black 80%
+  );
+  height: 100vh;
+}
+```
+
+```css
+.custom-radial-gradient {
+  background: radial-gradient(ellipse at top left, yellow, black);
+  height: 100vh;
+}
+```
+
+&nbsp;
+
+Gradients can be used wherever you'd use an image in CSS.
+
+This makes them versatile for creating backgrounds, buttons, or even text effects when combined with other CSS properties.
+
+Remember, while gradients can enhance the visual appeal of your website, it's important to **ensure sufficient contrast** for accessibility, especially when using gradients behind text.
 
 &nbsp;
 
@@ -930,7 +980,7 @@ Another consideration is **avoiding placing text over busy or complex background
 
 ## Borders Around images
 
-### `border` Property.
+### `border` Property
 
 This property is a shorthand that **allows you to set the width, style, and color** of the border, all at once.
 
@@ -3525,6 +3575,465 @@ Some more _pseudo-elements_ include:
 - `::selection`
 
 &nbsp;
+
+## Color Theory
+
+Color theory is the study of **how colors interact with each other** and **how they affect our perception**.
+
+it covers color **relationships**, color **harmony**, and the **psychological impact** of color.
+
+- Primary Colors
+  - **Yellow**, **blue**, and **red**, are the _fundamental hues_ from which all other colors are derived.
+
+- Secondary Colors
+  - Result from mixing **equal amounts of two primary colors**.
+    - Green
+    - Orange
+    - Purple
+
+- Tertiary Colors
+  - Result from combining a **primary color with a neighboring secondary color**.
+    - Yellow-Green
+    - Blue-Green
+    - Blue-Violet
+
+This is a **fundamental classification** in the world of color theory, but there are other ways to classify colors.
+
+&nbsp;
+
+### Warm & Cool Colors
+
+Colors can be classified as warm or cool, based on their **temperature**.
+
+- _Warm colors_ evoke feelings of **comfort**, **warmth**, and **coziness**.
+  - Reds
+  - Oranges
+  - Yellows
+
+- _Cool colors_ evoke feelings of **calmness**, **serenity**, and **professionalism**.
+  - Blues
+  - Greens
+  - Purples
+
+&nbsp;
+
+### Color Models
+
+Colors can also be represented through color models.
+
+They are **essential for describing and reproducing colors in a standard way**.
+
+Frequently used color models include the **RGB** model, the **HSV** model, and the **HSL** model.
+
+They represent colors _based on different properties_.
+
+&nbsp;
+
+### The Color Wheel
+
+The color wheel is **a circular diagram that shows how colors relate to each other**.
+
+An essential tool for designers because it helps them to select _color combinations_.
+
+This is very helpful for creating color **palettes** and color **schemes**.
+
+&nbsp;
+
+### Color Schemes
+
+A color scheme is **the set of colors chosen for a specific design** or project.
+
+They are usually _based on the principles of color theory_.
+
+By understanding the _relationships between colors_ on the wheel, you can develop different types of color schemes.
+
+- Analogous Color Scheme
+  - For _cohesive_ and _soothing_ experiences.
+
+  - They have _analogous colors_, which are **adjacent to each other in the color wheel**.
+
+- Complementary Color Scheme
+  - For **high contrast** and **visual impact**.
+
+  - in an RGB color wheel, complementary colors are located on the **opposite ends of the color wheel**, **relative to each other**.
+    - **Magenta** is complementary to **green**
+    - **Blue** is complementary to **yellow**
+    - **Red** is complementary to **cyan**
+
+- Triadic Color Scheme
+  - For **vibrant** colors.
+
+  - They are made from colors that are approximately **equidistant from each other**.
+    - if they are connected, they form **an equilateral triangle** on the color wheel.
+
+- Monochromatic Color Scheme
+  - All the colors are **derived from the same base color** by _adjusting_ its **lightness**, **darkness**, and **saturation**.
+
+  - This evokes a feeling of **unity** and **harmony**, while still creating _contrast_.
+
+&nbsp;
+
+Here are some _tips_ for using color effectively in web development:
+
+- Create a color **scheme** that defines your website's **branding**.
+
+- Use colors to **evoke the emotions** and perceptions that **align with your goals**.
+
+- Choose colors with **enough contrast** to make your website accessible for everyone.
+
+- Use color to **highlight important elements** of your website, like _buttons_.
+
+- Use color **consistently** and use it to create **a visual hierarchy**.
+
+Color theory is a core aspect of design. By understanding color psychology, harmonies, and accessibility, you can create effective designs, evoke emotions, and enhance user experience.
+
+&nbsp;
+
+## Named Colors
+
+Predefined color names recognized by browsers.
+
+Named colors in CSS are a collection of **140** standard color names like **red**, **blue**, **yellow**, **aqua**, **fuchsia**, **black**, **tomato**, **cyan** and so on.
+
+```css
+body {
+  background-color: red;
+}
+```
+
+- Useful for quick **prototyping**, _simple designs_, and improving _code readability_.
+
+&nbsp;
+
+Named colors in CSS are **convenient but limited**, with only 140 available options.
+
+Their _limited range_ makes them _less suitable_ for complex designs requiring _precise color control_.
+
+They may **NOT** offer the precise shade needed for more **detailed designs**.
+
+&nbsp;
+
+## The RGB Color Model
+
+RGB stands for **Red**, **Green**, and **Blue** — the primary colors of light. These three colors are **combined in different intensities** to create a wide range of colors.
+
+The RGB color model is an **additive color model**, which means colors are created by combining light at varying intensities.
+
+The intensity of each color can range from `0` (which means **NO light**) to `255` (which means **FULL light**).
+
+By mixing **different levels** of _red_, _green_, and _blue_, you can **produce any color** you see on your screen.
+
+- **Black** is represented by `rgb(0, 0, 0)`, which means **NO light** for any of the three colors.
+
+- **White** is represented by `rgb(255, 255, 255)`, which means **FULL light** intensity for all three colors.
+
+- **Red** is represented by `rgb(255, 0, 0)`, with full intensity for red and none for green or blue.
+
+&nbsp;
+
+The RGB color model is **especially useful for digital media** because it **directly corresponds to how screens display colors**.
+
+Monitors and displays use tiny red, green, and blue pixels to create the colors you see. By controlling the intensity of these pixels through RGB values, you can achieve a wide range of colors for your web design.
+
+Additionally, the RGB model is ideal when working with dynamic designs.
+
+For instance, if you want to create **animations** or **color effects** that require _real-time_ changes, the flexibility of the RGB function allows you to _modify colors programmatically_.
+
+&nbsp;
+
+### The `rgb()` Function
+
+it allows you to **define colors using the RGB color model**.
+
+The function takes **three values**, each _representing the intensity_ of **red**, **green**, and **blue** light, respectively.
+
+```css
+element {
+  color: rgb(red, green, blue);
+}
+```
+
+- The **values** for _red_, _green_, and _blue_ can range from `0` to `255`, where `0` represents the **absence** of that color, and `255` represents **full saturation**.
+
+&nbsp;
+
+### Transparency w/ the `rgba()` Function
+
+it adds a fourth value —**alpha**— that **controls the transparency** of the color.
+
+The _alpha value_ ranges from `0` (**completely transparent**) to `1` (**completely opaque**).
+
+```css
+div {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+```
+
+&nbsp;
+
+## The HSL Color Model
+
+The HSL color model represents colors in a way that is more _in line_ with **how humans perceive color**. it is one of the most _versatile_ and _intuitive_ ways to work with color.
+
+HSL stands for **Hue**, **Saturation**, and **Lightness** — three key components that define a color.
+
+- **Hue** is the color type, represented as **an angle on the color wheel**, which ranges from `0` to `360` degrees.
+  - For example, `0` degrees represents _red_, `120` degrees is _green_, and `240` degrees is _blue_.
+
+  - By adjusting the _hue_, you shift through different colors on the spectrum.
+
+- **Saturation** refers to the purity or **intensity of the color**.
+  - it is measured as a percentage from `0%` (a **completely desaturated**, grayscale color) to `100%` (the **most vibrant** form of that color).
+
+- **Lightness** determines **how light _or_ dark the color is**.
+  - A lightness value of `0%` will produce **black**, `50%` will give you the **normal tone** of the _hue_, and `100%` will result in **white**.
+
+```css
+body {
+  background-color: hsl(0 100% 50% / 0.5);
+}
+
+p {
+  color: hsl(0 0% 0%);
+}
+```
+
+&nbsp;
+
+### The `hsl()` Function
+
+The modern syntax uses _space-separated_ values.
+
+```css
+element {
+  color: hsl(hue saturation lightness);
+}
+
+/* older comma-separated syntax */
+element {
+  color: hsl(hue, saturation, lightness);
+}
+```
+
+&nbsp;
+
+### Shades and Tints
+
+One of the main advantages of the HSL color model is its _intuitive nature_.
+
+it makes it easy to **adjust a color’s vibrancy _or_ lightness** by tweaking the **saturation** and **lightness** values without having to alter the core color (_hue_).
+
+For instance, if you want to create different shades or tints of the same color, you can simply adjust the lightness value.
+
+```css
+/* light blue */
+div.light {
+  background-color: hsl(240 100% 80%);
+}
+
+/* dark blue */
+div.dark {
+  background-color: hsl(240 100% 20%);
+  color: hsl(0 0% 100%);
+}
+```
+
+&nbsp;
+
+### Transparency
+
+Like the RGB model, the `hsl()` function also supports an _optional_ **alpha value** to control transparency.
+
+You add it after the `/` separator as a fourth parameter.
+
+```css
+element {
+  background-color: hsl(hue saturation lightness / alpha);
+}
+
+/* Traditional hsla() using comma-separated values */
+element {
+  background-color: hsla(hue, saturation, lightness, alpha);
+}
+```
+
+- `hsla(0, 100%, 50%, 0.5)` is the _legacy equivalent_ of `hsl(0 100% 50% / 0.5)`.
+
+- Both are supported by browsers, but the modern `hsl()` syntax with the `/` separator is now preferred.
+
+&nbsp;
+
+The HSL color model is particularly useful when you need to create color schemes and adjust shades or tints easily.
+
+Because HSL separates the _hue_ from _saturation_ and _lightness_, you can keep a consistent color theme while tweaking _lightness_ for shadows or highlights.
+
+This level of flexibility makes HSL a favorite for designers and developers alike.
+
+Additionally, HSL makes color values more _readable_ and _understandable_ when compared to other methods like _hex codes_ or _RGB_.
+
+You can more clearly see the intent behind the color and adjust accordingly, especially when experimenting with different designs.
+
+With the HSL color model, you gain more flexibility in controlling color tones, saturation, and lightness, making it a powerful tool for creating rich and dynamic designs in CSS.
+
+&nbsp;
+
+## Hex Codes
+
+Hexadecimal color values, or hex codes, are **a concise way to represent colors in the RGB color model**.
+
+Hex codes are popular because they are **precise** and **easy to use**.
+
+They allow you to _fine-tune_ your colors, making them ideal for designs where **consistency** is important.
+
+Most design software, such as Adobe Photoshop or Figma, provides hex codes for the colors you select, which makes it easy to copy and paste these values directly into your CSS files.
+
+&nbsp;
+
+A hex code (short for hexadecimal code) is **a _six-character_ string** used to represent colors in the RGB color model.
+
+The "hex" refers to the _base-16_ numbering system, which uses digits `0` to `9` and letters `A` to `F`.
+
+in the context of colors, hex codes specify the **amounts of red, green, and blue** (RGB) that make up a particular color.
+
+Each hex code starts with a hash symbol (`#`), followed by six characters that define the intensity of _red_, _green_, and _blue_ in the color.
+
+- For example, the hex code for black is `#000000`, and the hex code for white is `#FFFFFF`.
+
+- The _first two_ characters represent the **red** value, the _next two_ represent **green**, and the _last two_ represent **blue**.
+
+  ```css
+  element {
+    color: #RRGGBB;
+  }
+  ```
+
+  - Here, `#RRGGBB` is a _placeholder_ for the actual hex code.
+    - The `RR`, `GG`, and `BB` pairs each represent the intensity of red, green, and blue, respectively.
+
+  - These pairs can range from `00` (the **lowest** intensity) to `FF` (the **highest** intensity).
+    - The higher the number, the more of that color will be present in the final mix.
+
+&nbsp;
+
+Here’s a breakdown:
+
+```css
+h1 {
+  color: #ff5733; /* A reddish-orange color */
+}
+p {
+  background-color: #4caf50; /* A shade of green */
+}
+```
+
+in the first case, `#FF5733` is a _reddish-orange_ color:
+
+- `FF` is the _highest_ value for red (fully saturated).
+- `57` is a _moderate_ amount of green.
+- `33` is a _small_ amount of blue.
+
+in the second case, `#4CAF50` is a shade of green:
+
+- `4C` is a _low_ value for red.
+- `AF` is a _strong_ value for green.
+- `50` is a _moderate_ value for blue.
+
+&nbsp;
+
+### Alpha Channel
+
+To add an alpha channel to a hex color, you add a **fourth pair** of characters at the end.
+
+Like the other pairs, it goes from `00`, fully _transparent_, to `FF`, fully _opaque_.
+
+- For example, `#FF000080` is pure red at about 50% opacity.
+
+&nbsp;
+
+### Hex Code Shorthand
+
+in some cases, you may notice hex codes written in shorthand format, using only **three characters instead of six**.
+
+This is _possible_ when **both characters in each color pair are the same**.
+
+- For instance, `#FF5733` CANNOT be shortened, but `#FF5533` can be written as `#F53`.
+  - `#22FFBB` is equivalent to `#2FB`.
+
+  - `#FFFFFF` (white) CAN be written as `#FFF`.
+
+  - `#000000` (black) can be written as `#000`.
+
+&nbsp;
+
+Hex codes are popular for their **precision** and **compatibility**, allowing for over 16 million colors across all browsers.
+
+They're ideal when you need **specific colors**, want to control exact shades that aren't easily defined by named colors or HSL, or when you're copying colors from design software that provides hex codes by default.
+
+&nbsp;
+
+`NOTE:` Hex codes are NOT _case-sensitive_, which means that `#FF699A` can also be written as `#ff699a`.
+
+&nbsp;
+
+## `box-shadow`
+
+The `box-shadow` property lets you apply one or more shadows around an element.
+
+The _height_ and _width_ of the shadow is determined by the height and width of the element it's applied to.
+
+Here's the basic syntax:
+
+```css
+box-shadow: offsetX offsetY color;
+```
+
+- Both `offsetX` and `offsetY` accept number values in `px` and other CSS units.
+
+- A _positive_ `offsetX` value moves the shadow **right**, and a _negative_ value moves it **left**.
+
+- A _positive_ `offsetY` value moves the shadow **down**, and a _negative_ value moves it **up**.
+
+&nbsp;
+
+`NOTE:` if a value is `0`, you do NOT need to include a _unit_.
+
+&nbsp;
+
+### Blur Radius
+
+This _optional_ value controls how blurry the shadow appears.
+
+```css
+box-shadow: offsetX offsetY blurRadius color;
+```
+
+- if a `blurRadius` value is **NOT included**, it **defaults to** `0` and produces _sharp edges_.
+
+- The **higher the value** of `blurRadius`, the **greater the blurring effect** is.
+
+&nbsp;
+
+### Shadow Spread Radius
+
+This _optional_ value controls how much the shadow expands or shrinks.
+
+```css
+box-shadow: offsetX offsetY blurRadius spreadRadius color;
+```
+
+- Like `blurRadius`, `spreadRadius` defaults to `0` if it isn't included.
+
+&nbsp;
+
+### The `inset` Keyword
+
+Adding the `inset` keyword **places the shadow inside the element**, instead of outside.
+
+&nbsp;
+
+`NOTE:` You can apply **multiple shadows** by separating them with commas(`,`). Shadows are layered from front to back.
+
+##
 
 &nbsp;
 

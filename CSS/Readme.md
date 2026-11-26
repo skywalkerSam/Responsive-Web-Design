@@ -183,7 +183,7 @@ CSS combinators are used to define the relationship between selectors in CSS. Th
 
 `NOTE`: You change the behavior of a _block-level_ element to behave like an _inline element_ by: `display: inline;`
 
-### display: `inline-block`;
+### display: `inline-block`
 
 The inline-block property is a **hybrid** of these two behaviors. Like inline elements, inline-block elements remain in the text flow _without_ starting on a new line.
 
@@ -980,7 +980,7 @@ Another consideration is **avoiding placing text over busy or complex background
 
 ## Borders Around images
 
-### `border` Property.
+### `border` Property
 
 This property is a shorthand that **allows you to set the width, style, and color** of the border, all at once.
 
@@ -3956,9 +3956,12 @@ in some cases, you may notice hex codes written in shorthand format, using only 
 
 This is _possible_ when **both characters in each color pair are the same**.
 
-- For instance, `#FF5733` CANNOT be shortened, but `#FFFFFF` (white) CAN be written as `#FFF`.
+- For instance, `#FF5733` CANNOT be shortened, but `#FF5533` can be written as `#F53`.
+  - `#22FFBB` is equivalent to `#2FB`.
 
-- `#000000` (black) can be written as `#000`.
+  - `#FFFFFF` (white) CAN be written as `#FFF`.
+
+  - `#000000` (black) can be written as `#000`.
 
 &nbsp;
 
@@ -3968,9 +3971,15 @@ They're ideal when you need **specific colors**, want to control exact shades th
 
 &nbsp;
 
+`NOTE:` Hex codes are NOT _case-sensitive_, which means that `#FF699A` can also be written as `#ff699a`.
+
+&nbsp;
+
 ## `box-shadow`
 
 The `box-shadow` property lets you apply one or more shadows around an element.
+
+The _height_ and _width_ of the shadow is determined by the height and width of the element it's applied to.
 
 Here's the basic syntax:
 
@@ -3986,21 +3995,27 @@ box-shadow: offsetX offsetY color;
 
 &nbsp;
 
-The _height_ and _width_ of the shadow is determined by the height and width of the element it's applied to.
+`NOTE:` if a value is `0`, you do NOT need to include a _unit_.
 
-You can also use an _optional_ `spreadRadius` value to spread out the reach of the shadow.
+&nbsp;
+
+### Blur Radius
+
+This _optional_ value controls how blurry the shadow appears.
 
 ```css
 box-shadow: offsetX offsetY blurRadius color;
 ```
 
-- if a blurRadius value isn't included, it **defaults to** `0` and produces _sharp edges_.
+- if a `blurRadius` value is **NOT included**, it **defaults to** `0` and produces _sharp edges_.
 
 - The **higher the value** of `blurRadius`, the **greater the blurring effect** is.
 
 &nbsp;
 
-if you wanted to **expand the shadow** out further, you can use the _optional_ `spreadRadius` value.
+### Shadow Spread Radius
+
+This _optional_ value controls how much the shadow expands or shrinks.
 
 ```css
 box-shadow: offsetX offsetY blurRadius spreadRadius color;
@@ -4009,6 +4024,14 @@ box-shadow: offsetX offsetY blurRadius spreadRadius color;
 - Like `blurRadius`, `spreadRadius` defaults to `0` if it isn't included.
 
 &nbsp;
+
+### The `inset` Keyword
+
+Adding the `inset` keyword **places the shadow inside the element**, instead of outside.
+
+&nbsp;
+
+`NOTE:` You can apply **multiple shadows** by separating them with commas(`,`). Shadows are layered from front to back.
 
 ##
 

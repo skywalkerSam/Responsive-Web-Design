@@ -4033,9 +4033,114 @@ Adding the `inset` keyword **places the shadow inside the element**, instead of 
 
 `NOTE:` You can apply **multiple shadows** by separating them with commas(`,`). Shadows are layered from front to back.
 
-##
+&nbsp;
+
+## Best Practices for Styling Text Inputs
+
+- Accessibility
+  - Ensure the styles you apply to the text input are accessible.
+    - This means the **font** needs to be **adequately sized**, and the **color** needs to have **sufficient contrast** with the background.
+
+      ```css
+      label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 0.6rem 0.8rem;
+        font-size: 1rem;
+        border: 2px solid #555;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #111;
+      }
+
+      input[type="text"]:focus {
+        outline: 3px solid #1e90ff;
+        border-color: #1e90ff;
+      }
+      ```
+
+    - The **placeholder**, however, is often _forgotten_. it's important to remember that this is also text and you will likely need to change the styling to ensure it's **readable**.
+
+      ```css
+      input[type="email"]::placeholder {
+        color: #555;
+        opacity: 1;
+        font-style: italic;
+      }
+      ```
+
+- Layout Scaling
+  - The input should also **scale accordingly** when the user zooms the page.
+    - You should allow the user to modify the input.
+      - For example, if it's a `textarea` you should NOT remove the ability to _resize_ it.
+
+        ```css
+        textarea {
+          width: 100%;
+          min-height: 120px;
+          padding: 0.8rem;
+          font-size: 1rem;
+          border: 2px solid #555;
+          border-radius: 4px;
+          background-color: #fff;
+          color: #111;
+          resize: both;
+          box-sizing: border-box;
+        }
+
+        textarea::placeholder {
+          color: #555;
+          opacity: 1;
+        }
+
+        textarea:focus {
+          outline: 3px solid #1e90ff;
+          border-color: #1e90ff;
+        }
+        ```
+
+- Focus indicator
+  - Give the inputs a noticeable indicator when the element has focus, such as a bold border and a different color.
+
+    ```css
+    input:focus {
+      border-color: #1e90ff;
+      box-shadow: 0 0 0 3px rgba(30, 144, 255, 0.4);
+      outline: none;
+    }
+    ```
+
+- Error indicator
+  - When the user's text does NOT pass the input validation, there is a visual indicator that shows there is something _wrong_.
+
+    ```css
+    input.error {
+      border-color: #d93025;
+      background-color: #fff5f5;
+    }
+
+    input.error:focus {
+      border-color: #d93025;
+      box-shadow: 0 0 0 3px rgba(217, 48, 37, 0.4);
+    }
+
+    .error-message {
+      color: #d93025;
+      font-size: 0.95rem;
+      margin-top: 0.4rem;
+    }
+    ```
+
+    - it should be **noticeable** and **distinct** from the focus indicator.
 
 &nbsp;
+
+## issues w/ Styling Search inputs, Checkboxes, & Radios (`appearance: none`)
 
 &nbsp;
 
